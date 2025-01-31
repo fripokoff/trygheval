@@ -9,7 +9,7 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/trygheval">
       <App />
     </BrowserRouter>
   </React.StrictMode>
