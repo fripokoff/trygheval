@@ -1,0 +1,142 @@
+{
+    "success": true,
+    "data": [
+        {
+            "id": "679b8bb46679b9e6f921f766",
+            "status": "active",
+            "project_title": "Libft",
+            "number_of_student": 1,
+            "introduction": [
+                "- Restez polis, courtois, respectueux et constructifs pendant le processus d'évaluation. Le bien-être de la communauté repose là-dessus.",
+                "- Identifiez avec la personne évaluée ou le groupe évalué les éventuels dysfonctionnements de son travail. Prenez le temps d'en discuter et",
+                "débattez des problèmes identifiés.",
+                "- Vous devez prendre en compte qu'il peut y avoir de légères différences d'interprétation entre les instructions du projet, son scope et ses",
+                "fonctionnalités.",
+                "- Gardez un esprit ouvert et notez de la manière la plus honnête possible.",
+                "- La pédagogie n'est valide que si la peer-évaluation est faite sérieusement."
+            ],
+            "guidelines": [
+                "- Ne notez que ce qui est contenu dans le dépôt Git cloné de l'étudiant(e) ou du groupe.",
+                "- Vérifiez que le dépôt Git appartient bien à l'étudiant(e) ou au groupe, que le projet est bien celui attendu, et que \"git clone\" est utilisé dans un dossier vide.",
+                "- Vérifiez scrupuleusement qu'aucun alias n'a été utilisé pour vous tromper et assurez-vous que vous évaluez bien le rendu officiel.",
+                "- Afin d'éviter toute surprise, vérifiez avec l'étudiant(e) ou le groupe les potentiels scripts utilisés pour faciliter l'évaluation (par exemple, des scripts de tests ou d'automatisation).",
+                "- N'ayez pas une confiance aveugle dans les programmes de test ! Ces derniers pourraient être faux.",
+                "- Vérifiez le Makefile : pas de wildcard, ne re-link pas. Auquel cas, la note est de 0.",
+                "- Utilisez make, puis make --debug pour vous en assurer.",
+                "- Si vous n'avez pas fait le projet que vous allez évaluer, vous devez lire le sujet en entier avant de commencer l'évaluation.",
+                "- Utilisez les flags disponibles pour signaler un rendu vide, un programme ne fonctionnant pas, une erreur de Norme, de la triche... Dans ces situations, l'évaluation est terminée et la note est 0, ou -42 en cas de triche. Cependant, à l'exception des cas de triche, vous êtes encouragé(e)s à continuer la discussion sur le travail rendu, même si ce dernier est incomplet. Ceci afin d'identifier les erreurs à ne pas reproduire dans le futur.",
+                "- Pendant toute la durée de l'évaluation, aucun segfault ou autre arrêt inattendu, prémature ou incontrôlé ne sera toléré. Auquel cas, la note finale sera de 0. Utilisez le flag approprié. Vous ne devriez jamais avoir à éditer un fichier hormis un fichier de configuration si existant. Dans le cas ou vous souhaitez modifier un fichier, vous devez expliciter clairement les raisons de l'édition et être en accord avec l'étudiant(e) évalué(e) avant de faire quoi que ce soit.",
+                "- Vous devez aussi vérifier l'absence de fuites mémoire. Toute mémoire allouée sur le tas doit être libérée proprement avant la fin de l'exécution du programme. Vous avez le droit d'utiliser tout outil disponible sur la machine tel que leaks, valgrind ou e_fence. En cas de fuites mémoire, cochez le flag approprié."
+            ],
+            "attachments": [
+                " subject.pdf,https://github.com/Gabriel-Em/42_AcademyPlus---Libft---/blob/master/Libft%20-%20Subject(EN).pdf"
+            ],
+			"mandatorySections" : [
+				{
+					"id": "679b8bb46679b9e6f921f767",
+					"title": "Fonctions de la libC #1",
+					"subtitle": "Testez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :",
+					"description": "--ft_strlen\n--ft_memcpy\n--ft_memset\n--ft_bzero\n--ft_memmove\n--ft_memcmp\n--ft_memchr",
+					"conclusion": "**Ca fonctionne ?**",
+					"yes_no": true,
+					"sheetId": "679b8bb46679b9e6f921f766",
+					"created_at": "2025-01-30T14:24:52.691Z",
+					"updated_at": "2025-01-30T16:03:00.587Z"
+				},
+				{
+					"id": "679b8bb46679b9e6f921f768",
+					"title": "Fonctions de la libC #2",
+					"subtitle": "Testez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :",
+					"description": "--ft_isalpha\n--ft_isdigit\n--ft_isalnum\n--ft_isascii\n--ft_isprint",
+					"conclusion": "**Ca fonctionne ?**",
+					"yes_no": true,
+					"sheetId": "679b8bb46679b9e6f921f766",
+					"created_at": "2025-01-30T14:24:52.691Z",
+					"updated_at": "2025-01-30T16:03:00.587Z"
+				},
+				{
+					"id": "679b8bb46679b9e6f921f769",
+					"title": "Fonctions de la libC #3",
+					"subtitle": "Testez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :",
+					"description": "--ft_toupper\n--ft_tolower\n--ft_strchr\n--ft_strrchr",
+					"conclusion": "**Ca fonctionne ?**",
+					"yes_no": true,
+					"sheetId": "679b8bb46679b9e6f921f766",
+					"created_at": "2025-01-30T14:24:52.691Z",
+					"updated_at": "2025-01-30T16:03:00.587Z"
+				},
+				{
+					"id": "679b8bb46679b9e6f921f76a",
+					"title": "Fonctions de la libC #4",
+					"subtitle": "Testez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :",
+					"description": "--ft_strlcat\n--ft_strlcpy\n--ft_atoi\n--ft_strnstr\n--ft_strncmp\n--ft_calloc\n--ft_strdup",
+					"conclusion": "",
+					"yes_no": true,
+					"sheetId": "679b8bb46679b9e6f921f766",
+					"created_at": "2025-01-30T14:24:52.691Z",
+					"updated_at": "2025-01-30T16:03:00.587Z"
+				},
+				{
+					"id": "679b8bb46679b9e6f921f76b",
+					"title": "Fonctions supplémentaires #1",
+					"subtitle": "Testez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :",
+					"description": "--ft_substr\n--ft_strjoin\n--ft_putchar_fd\n--ft_putstr_fd\n--ft_putendl_fd\n--ft_putnbr_fd",
+					"conclusion": "**Ca fonctionne ?**",
+					"yes_no": true,
+					"sheetId": "679b8bb46679b9e6f921f766",
+					"created_at": "2025-01-30T14:24:52.691Z",
+					"updated_at": "2025-01-30T16:03:00.587Z"
+				},
+				{
+					"id": "679b8bb46679b9e6f921f76c",
+					"title": "Fonctions supplémentaires #2",
+					"subtitle": "Testez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :",
+					"description": "--ft_strmapi\n--ft_striteri\n--ft_strtrim\n--ft_split\n--ft_itoa",
+					"conclusion": "**Ca fonctionne ?**",
+					"yes_no": true,
+					"sheetId": "679b8bb46679b9e6f921f766",
+					"created_at": "2025-01-30T14:24:52.691Z",
+					"updated_at": "2025-01-30T16:03:00.587Z"
+				}
+			],
+			"bonusSections" : [
+				{
+					"id": "679b8bb56679b9e6f921f76e",
+					"title": "ft_lstnew",
+					"subtitle": "",
+					"description": " **Ca fonctionne ?**",
+					"conclusion": "",
+					"yes_no": true,
+					"sheetId": "679b8bb46679b9e6f921f766",
+					"created_at": "2025-01-30T14:24:53.279Z",
+					"updated_at": "2025-01-30T16:03:00.642Z"
+				}
+			],
+			"gradingOptions" :[
+				{
+					"id": "679b8bb56679b9e6f921f76d",
+					"ok": true,
+					"outstanding": true,
+					"empty_work": true,
+					"incomplete_work": true,
+					"invalid_compilation": true,
+					"norme": true,
+					"cheat": true,
+					"crash": true,
+					"concerning_situations": true,
+					"leaks": true,
+					"forbidden_functions": true,
+					"cannot_support": true,
+					"sheetId": "679b8bb46679b9e6f921f766",
+					"created_at": "2025-01-30T14:24:53.173Z",
+					"updated_at": "2025-01-30T16:03:00.620Z"
+				}
+			],
+            "optional_bonus_sections": null,
+            "cursus_id": "1",
+            "created_at": "2025-01-30T14:24:52.136Z",
+            "updated_at": "2025-01-30T16:03:00.447Z"
+        }
+    ],
+    "message": "Sheets found successfully"
+}
