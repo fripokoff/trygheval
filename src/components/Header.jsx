@@ -9,7 +9,7 @@ export default function Header() {
         <div className='bg-gray-800 w-full text-white'>
             <div className='max-w-7xl mx-auto flex items-center justify-between py-3 px-5 2xl:px-0'>
                 <a href='/'>
-                    <img src='/42_evals.png' alt='Logo' className='h-[36px]' />
+                    <img src='./42_evals.png' alt='Logo' className='h-[36px]' />
                 </a>
                 <ThemeToggle />
                 <Menu>

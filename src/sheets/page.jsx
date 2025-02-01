@@ -37,7 +37,7 @@ function page() {
         }
 
         const fetchData = async () => {
-            const url = `/Sheets/${projectName}/data.json`; // Chemin relatif correct
+            const url = `./Sheets/${projectName}/data.json`; // Chemin relatif correct
             console.log(url);
 
             try {
