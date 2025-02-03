@@ -1,0 +1,174 @@
+{
+    "success": true,
+    "data": [
+        {
+			"id": 7,
+			"status": "active",
+			"project_title": "fract-ol",
+			"introduction": [
+				"- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
+				"- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
+				"- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
+			],
+			"guidelines": [
+				"- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
+				"- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
+				"- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
+				"- If applicable, review any **scripts** used for testing or automation together with the student.",
+				"- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
+				"- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
+				"- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
+				"- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
+				"- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
+				"- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
+			],
+			"attachments": [
+				"subject_en.pdf,https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/fract-ol/en.subject.pdf",
+            	"subject_fr.pdf,https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/fract-ol/fr.subject.pdf",
+				"checker_Mac,https://cdn.intra.42.fr/document/document/23302/checker_Mac",
+				"checker_linux,https://cdn.intra.42.fr/document/document/23303/checker_linux"
+			],
+			"optional_bonus_sections": null,
+			"cursus_id": "1",
+			"updated_at": "2023-08-01T16:57:46.050Z",
+			"students" : 1,
+			"eval_points" : 3,
+			"time" : 30,
+			"mandatorySections" : [
+				{
+					"id": "679e55678c78a1cea9234f9b",
+					"title": "Minimal requirements",
+					"subtitle": "Search for Julia and Mandelbrot sets on Wikipedia, or watch the e-learning videos, to have an idea of what the rendering must look like.",
+					"description": "**Does the assignment meet the minimal requirements?**\n--The repository isn't empty.\n--Norminette shows no errors.\n--No cheating.\n--No forbidden function/library.\n--There is no global variable.\n--The code compiles with the required options.\n--The executable is named as expected.\n--During execution, there is no brutal or unmanaged crash (segfault, bus error, and so forth).\n--No memory leaks.",
+					"conclusion": "",
+					"yes_no": true,
+					"sheetId": "679e55678c78a1cea9234f9a",
+					"created_at": "2025-02-01T17:09:59.615Z",
+					"updated_at": "2025-02-01T17:09:59.615Z"
+				},
+				{
+					"id": "679e55678c78a1cea9234f9c",
+					"title": "Graphic management",
+					"subtitle": "Is the graphic management functional?",
+					"description": "--When the program runs, there is at least a graphic window open.\n--Pressing the key ESC exits the program properly (no leaks).\n--There is a visual change when using the mouse wheel (even if wrong, this part is about checking the event management only).",
+					"conclusion": "",
+					"yes_no": true,
+					"sheetId": "679e55678c78a1cea9234f9a",
+					"created_at": "2025-02-01T17:09:59.615Z",
+					"updated_at": "2025-02-01T17:09:59.615Z"
+				},
+				{
+					"id": "679e55678c78a1cea9234f9d",
+					"title": "Julia",
+					"subtitle": "How does the Julia set behave?",
+					"description": "--Does it looks like it should? Search for the Julia fractal set on the internet if you're not sure.\n--Is it possible to zoom in and out and the basic pattern repeats?\n--Search for some different Julia sets. You should be able to recreate them by passing different parameters to the program.\n--Are there colors to represent the depth of the fractal?",
+					"conclusion": "",
+					"yes_no": true,
+					"sheetId": "679e55678c78a1cea9234f9a",
+					"created_at": "2025-02-01T17:09:59.615Z",
+					"updated_at": "2025-02-01T17:09:59.615Z"
+				},
+				{
+					"id": "679e55678c78a1cea9234f9e",
+					"title": "Mandelbrot",
+					"subtitle": "How does the Mandelbrot set behave?",
+					"description": "--Does it looks like it should?\n--Is it possible to zoom in and out and the basic pattern repeats?\n--Compare the result with some reference pictures: they all look alike, you can't miss them.\n--Are there colors to represent the depth of the fractal?",
+					"conclusion": "",
+					"yes_no": true,
+					"sheetId": "679e55678c78a1cea9234f9a",
+					"created_at": "2025-02-01T17:09:59.615Z",
+					"updated_at": "2025-02-01T17:09:59.615Z"
+				},
+				{
+					"id": "679e55678c78a1cea9234f9f",
+					"title": "Parameters management",
+					"subtitle": "",
+					"description": "Is the parameter's management implemented according to the subject?\nAre wrong parameters correctly handled?\n(Some optional parameters could be handled, for example for the bonus part.)",
+					"conclusion": "",
+					"yes_no": true,
+					"sheetId": "679e55678c78a1cea9234f9a",
+					"created_at": "2025-02-01T17:09:59.615Z",
+					"updated_at": "2025-02-01T17:09:59.615Z"
+				},
+				{
+					"id": "679e55678c78a1cea9234fa0",
+					"title": "MiniLibX images",
+					"subtitle": "",
+					"description": "Take a look at the code and check whether the student uses the images from\nthe MLX to draw the image instead of putting pixels one by one. ;)",
+					"conclusion": "",
+					"yes_no": true,
+					"sheetId": "679e55678c78a1cea9234f9a",
+					"created_at": "2025-02-01T17:09:59.615Z",
+					"updated_at": "2025-02-01T17:09:59.615Z"
+				}
+			],
+			"bonusSections" : [
+				{
+					"id": "679e55678c78a1cea9234fa2",
+					"title": "Zoom follows the mouse",
+					"subtitle": "",
+					"description": "The zoom works where the mouse is and not only at the center of the image.",
+					"conclusion": "",
+					"yes_no": true,
+					"sheetId": "679e55678c78a1cea9234f9a",
+					"created_at": "2025-02-01T17:09:59.708Z",
+					"updated_at": "2025-02-01T17:09:59.708Z"
+				},
+				{
+					"id": "679e55678c78a1cea9234fa3",
+					"title": "Arrows",
+					"subtitle": "",
+					"description": "It must be possible to move the view using the arrow keys. It should also work with the zoom: if an arrow is pressed, the view should move if the user didn't zoom in or out, but also if they did.",
+					"conclusion": "",
+					"yes_no": true,
+					"sheetId": "679e55678c78a1cea9234f9a",
+					"created_at": "2025-02-01T17:09:59.708Z",
+					"updated_at": "2025-02-01T17:09:59.708Z"
+				},
+				{
+					"id": "679e55678c78a1cea9234fa4",
+					"title": "Colors",
+					"subtitle": "The color palette is awesome.",
+					"description": "--Either you say Ouhaaa because it's very beautiful.\n--Either you say Ouhaaa because it's insanely psychedelic.\n--Either you say Ouhaaa because the colors change.",
+					"conclusion": "",
+					"yes_no": true,
+					"sheetId": "679e55678c78a1cea9234f9a",
+					"created_at": "2025-02-01T17:09:59.708Z",
+					"updated_at": "2025-02-01T17:09:59.708Z"
+				},
+				{
+					"id": "679e55678c78a1cea9234fa5",
+					"title": "A third fractal",
+					"subtitle": "",
+					"description": "There is at least one more fractal!! Working, nice, and that is actually a fractal different than the two mandatory ones.",
+					"conclusion": "",
+					"yes_no": true,
+					"sheetId": "679e55678c78a1cea9234f9a",
+					"created_at": "2025-02-01T17:09:59.708Z",
+					"updated_at": "2025-02-01T17:09:59.708Z"
+				}
+			],
+			"gradingOptions" :[
+				{
+					"id": "679e45788c78a1cea9234f62",
+					"ok": true,
+					"outstanding": true,
+					"empty_work": true,
+					"incomplete_work": true,
+					"invalid_compilation": true,
+					"norme": true,
+					"cheat": true,
+					"crash": true,
+					"concerning_situations": true,
+					"leaks": true,
+					"forbidden_functions": true,
+					"cannot_support": true,
+					"sheetId": "679e45778c78a1cea9234f5f",
+					"created_at": "2025-02-01T16:02:00.638Z",
+					"updated_at": "2025-02-01T16:05:07.468Z"
+				}
+			]
+        }
+    ],
+    "message": "Sheets found successfully"
+}
