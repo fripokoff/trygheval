@@ -1,0 +1,100 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 12,
+      "status": "active",
+      "project_title": "philosophers",
+      "introduction": [
+        "- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
+        "- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
+        "- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
+      ],
+      "guidelines": [
+        "- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
+        "- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
+        "- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
+        "- If applicable, review any **scripts** used for testing or automation together with the student.",
+        "- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
+        "- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
+        "- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
+        "- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
+        "- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
+        "- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
+      ],
+      "attachments": [
+        " subject_en.pdf,https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/philosophers/en.subject.pdf",
+        ",",
+        ",",
+        ","
+      ],
+      "optional_bonus_sections": null,
+      "cursus_id": "1",
+      "updated_at": "2023-07-31T22:00:00.000Z",
+      "students": 1,
+      "eval_points": 3,
+      "time": 30,
+      "mandatorySections": [
+        {
+          "title": "Error Handling",
+          "subtitle": "",
+          "description": "This project is to be coded in C, following the Norm.\nAny crash, undefined behavior, memory leak, or norm error means 0 to the project.\nOn some slow hardware, the project might not work properly. If some tests don't work on your machine try to discuss it honestly before counting it as false.",
+          "conclusion": "",
+          "yes_no": true
+        },
+        {
+          "title": "Global variables",
+          "subtitle": "",
+          "description": "Check if there is any global variable which is used to manage the shared resources among the philosophers.\nIf you find such a nasty thing, the evaluation stops here. You can go on and check the code, but do not grade the exercises.",
+          "conclusion": "",
+          "yes_no": true
+        },
+        {
+          "title": "philo code",
+          "subtitle": "",
+          "description": "--Ensure the code of philo complies with the following requirements and ask for explanations.\n--Check there is one thread per philosopher.\n--Check there is only one fork per philosopher.\n--Check if there is a mutex per fork and that it's used to check the fork value and/or change it.\n--Check the outputs are never mixed up.\n--Check how the death of a philosopher is verified and if there is a mutex to prevent a philosopher from dying and starting eating at the same time.",
+          "conclusion": "",
+          "yes_no": true
+        },
+        {
+          "title": "philo testing",
+          "subtitle": "",
+          "description": "--Do not test with more than 200 philosophers.\n--Do not test with time_to_die or time_to_eat or time_to_sleep set to values lower than 60 ms.\n--Test 1 800 200 200. The philosopher should not eat and should die.\n--Test 5 800 200 200. No philosopher should die.\n--Test 5 800 200 200 7. No philosopher should die and the simulation should stop when every philosopher has eaten at least 7 times.\n--Test 4 410 200 200. No philosopher should die.\n--Test 4 310 200 100. One philosopher should die.\n--Test with 2 philosophers and check the different times: a death delayed by more than 10 ms is unacceptable.\n--Test with any values of your choice to verify all the requirements. Ensure philosophers die at the right time, that they don't steal forks, and so forth.",
+          "conclusion": "",
+          "yes_no": true
+        }
+      ],
+      "bonusSections": [
+        {
+          "title": "philo_bonus code",
+          "subtitle": "",
+          "description": "--Ensure the code of philo_bonus complies with the following requirements and ask for explanations.\n--Check that there is one process per philosopher and that the main process is not a philosopher.\n--Check that there are no orphan processes at the end of the execution of this program.\n--Check if there is a single semaphore that represents the number of forks.\n--Check the output is protected against multiple access. To avoid a scrambled display.\n--Check how the death of a philosopher is verified and if there is a semaphore to prevent a philosopher from dying and starting eating at the same time.",
+          "conclusion": "",
+          "yes_no": true
+        },
+        {
+          "title": "philo_bonus testing",
+          "subtitle": "",
+          "description": "--Do not test with more than 200 philosophers.\n--Do not test with time_to_die or time_to_eat or time_to_sleep set to values lower than 60 ms.\n--Test 5 800 200 200. No philosopher should die.\n--Test 5 800 200 200 7. No philosopher should die and the simulation should stop when every philosopher has eaten at least 7 times.\n--Test 4 410 200 200. No philosopher should die.\n--Test 4 310 200 100. One philosopher should die.\n--Test with 2 philosophers and check the different times: a death delayed by more than 10 ms is unacceptable.\n--Test with any values of your choice to verify all the requirements. Ensure philosophers die at the right time, that they don't steal forks, and so forth.",
+          "conclusion": "",
+          "yes_no": true
+        }
+      ],
+      "gradingOptions": [{
+        "ok": true,
+        "outstanding": true,
+        "empty_work": true,
+        "incomplete_work": true,
+        "invalid_compilation": true,
+        "norme": true,
+        "cheat": true,
+        "crash": true,
+        "concerning_situations": true,
+        "leaks": true,
+        "forbidden_functions": true,
+        "cannot_support": false
+      }]
+    }
+  ],
+  "message": "Sheets edited successfully"
+}
