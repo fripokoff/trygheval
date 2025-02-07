@@ -23,10 +23,18 @@
         "- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
       ],
       "attachments": [
-        " subject_en.pdf,https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/NetPractice/en.subject.pdf",
-        "subject_fr.pdf,https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/NetPractice/fr.subject.pdf",
-        "net_practice.1.4.tgz,https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/NetPractice/Extras/net_practice.1.4.tgz",
-        ","
+          {
+              "title": "subject_en.pdf",
+              "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/NetPractice/en.subject.pdf"
+          },
+          {
+              "title": "subject_fr.pdf",
+              "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/NetPractice/fr.subject.pdf"
+          },
+          {
+              "title": "net_practice.1.4.tgz",
+              "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/NetPractice/Extras/net_practice.1.4.tgz"
+          }
       ],
       "mandatorySections": [
         {
@@ -66,6 +74,7 @@
         }
       ],
       "bonusSections": null,
+      "bonusIntro" : null,
       "optional_bonus_sections": null,
       "cursus_id": "1",
       "updated_at": "2023-07-31T22:00:00.000Z",

@@ -23,10 +23,22 @@
 				"- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
 			],
 			"attachments": [
-				"subject_en.pdf,https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/push_swap/en.subject.pdf",
-				"checker_Mac,https://cdn.intra.42.fr/document/document/23302/checker_Mac",
-				"checker_linux,https://cdn.intra.42.fr/document/document/23303/checker_linux",
-				","
+				{
+					"title": "subject_en.pdf",
+					"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/push_swap/en.subject.pdf"
+				},
+				{
+					"title": "subject_fr.pdf",
+					"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/push_swap/fr.subject.pdf"
+				},
+				{
+					"title": "checker_Mac",
+					"url": "https://cdn.intra.42.fr/document/document/23302/checker_Mac"
+				},
+				{
+					"title": "checker_linux",
+					"url": "https://cdn.intra.42.fr/document/document/23303/checker_linux"
+				}
 			],
 			"optional_bonus_sections": null,
 			"cursus_id": "",
@@ -148,6 +160,7 @@
 					"updated_at": "2025-02-01T16:57:46.186Z"
 				}
 			],
+			"bonusIntro" : "Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.",
 			"gradingOptions" :[
 				{
 					"id": "679e45788c78a1cea9234f62",

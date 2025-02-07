@@ -23,10 +23,14 @@
 				"You are allowed to use any of the different tools available on the computer, such as leaks, valgrind, or e_fence. In case of memory leaks, tick the appropriate flag."
 			],
 			"attachments": [
-				"subject.pdf,https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/ft_printf/en.subject.pdf",
-				",",
-				",",
-				","
+				{
+					"title": "subject_en.pdf",
+					"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/ft_printf/en.subject.pdf"
+				},
+				{
+					"title": "subject_fr.pdf",
+					"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/ft_printf/fr.subject.pdf"
+				}
 			],
             "optional_bonus_sections": null,
 			"cursus_id": "1",
@@ -82,6 +86,7 @@
 					"updated_at": "2025-02-01T16:05:07.489Z"
 				}
 			],
+			"bonusIntro" : "Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.",
 			"gradingOptions" :[
 				{
 					"id": "679e45788c78a1cea9234f62",

@@ -23,10 +23,14 @@
 				"- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
 			],
 			"attachments": [
-				"subject_en.pdf,https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/Born2beroot/en.subject.pdf",
-				"subject_fr.pdf,https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/Born2beroot/fr.subject.pdf",
-				",",
-				","
+			{
+				"title": "subject_en.pdf",
+				"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/Born2beroot/en.subject.pdf"
+			},
+			{
+				"title": "subject_fr.pdf", 
+				"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/Born2beroot/fr.subject.pdf"
+			}
 			],
 			"students" : 1,
 			"eval_points" : 3,
@@ -154,11 +158,13 @@
 					"description": "--The implementation of partitions will be worth 2 points\n--The setup of WordPress, with only the services listed in the subject, will be worth 2 points\n--The free-choice service will be worth 1 point. Verify and test the proper functioning and implementation of each additional service. For the free-choice bonus service, the evaluated person must provide a simple explanation of the service and explain the reasons for their choice. Be aware: NGINX and Apache2 are forbidden.\n",
 					"conclusion": "",
 					"yes_no": false,
+					
 					"sheetId": "679e4de28c78a1cea9234f75",
 					"created_at": "2025-02-01T16:37:54.512Z",
 					"updated_at": "2025-02-01T16:41:12.194Z"
 				}
 			],
+			"bonusIntro" : "Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.",
 			"gradingOptions" :[
 				{
 					"id": "679e45788c78a1cea9234f62",

@@ -208,6 +208,7 @@
 					"updated_at": "2025-02-01T16:12:30.282Z"
 				}
 			],
+			"bonusIntro" : "Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.",
 			"gradingOptions" :[
 				{
 					"id": "679b8bb56679b9e6f921f76d",

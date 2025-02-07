@@ -23,10 +23,14 @@
         "- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
       ],
       "attachments": [
-        " subject_en.pdf,https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/philosophers/en.subject.pdf",
-        ",",
-        ",",
-        ","
+          {
+              "title": "subject_en.pdf",
+              "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/philosophers/en.subject.pdf"
+          },
+          {
+              "title": "subject_fr.pdf",
+              "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/philosophers/fr.subject.pdf"
+          }
       ],
       "optional_bonus_sections": null,
       "cursus_id": "1",
@@ -80,6 +84,7 @@
           "yes_no": true
         }
       ],
+      "bonusIntro" : "Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.",
       "gradingOptions": [{
         "ok": true,
         "outstanding": true,
