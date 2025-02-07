@@ -23,11 +23,15 @@
 				"- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
 			],
         "attachments": [
-            " subject_en.pdf,https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/libft/en.subject.pdf",
-            "subject_fr.pdf,https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/libft/fr.subject.pdf",
-            ",",
-            ","
-        ],
+		{
+			"title": "subject_en.pdf",
+			"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/libft/en.subject.pdf"
+		},
+		{
+			"title": "subject_fr.pdf",
+			"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/libft/fr.subject.pdf"
+		}
+		],
 		"time" : 30,
         "optional_bonus_sections": null,
         "cursus_id": "1",

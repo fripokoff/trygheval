@@ -34,6 +34,19 @@
 			"students" : 1,
 			"eval_points" : 3,
 			"time" : 30,
+			"preliminarySections" : [
+				{
+					"id": "679e56c78c78a1cea9234fa7",
+					"title": "Minimal requirements",
+					"subtitle": "Does the assignment meet the minimal requirements?",
+					"description": "--The repository isn't empty.\n--Norminette shows no errors.\n--No cheating.\n--No forbidden function/library.\n--The code compiles with the required options.\n--The executable is named as expected.\n--During execution, there is no brutal or unmanaged crash (segfault, bus error, and so forth).\n--No memory leaks.",
+					"conclusion": "",
+					"yes_no": true,
+					"sheetId": "679e56c68c78a1cea9234fa6",
+					"created_at": "2025-02-01T17:15:51.018Z",
+					"updated_at": "2025-02-01T17:15:51.018Z"
+				}
+			],
 			"mandatorySections" : [
 				{
 					"id": "679e56c78c78a1cea9234fa7",

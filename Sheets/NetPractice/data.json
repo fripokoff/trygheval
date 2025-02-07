@@ -2,12 +2,9 @@
   "success": true,
   "data": [
     {
-      "project_title": "NetPractice",
-      "students": 1,
-      "status": "active",
-      "eval_points": 3,
-      "time": 45,
       "id": 13,
+      "status": "active",
+      "project_title": "NetPractice",
       "introduction": [
         "- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
         "- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
@@ -72,6 +69,9 @@
       "optional_bonus_sections": null,
       "cursus_id": "1",
       "updated_at": "2023-07-31T22:00:00.000Z",
+      "students": 1,
+      "eval_points": 3,
+      "time": 45,
       "gradingOptions": [
         {
           "ok": true,
