@@ -1,7 +1,7 @@
 import { useGradingOptions } from "../../hooks/useGradingOptions";
-import { useGeneralContext } from "../../context/GeneralContext";
+import { useGeneralContext } from "../../contexts/GeneralContext";
 
-export default function GradingOptionsSection({}) {
+export default function EditGradingOptionsSection({}) {
   const { gradingFields } = useGradingOptions();
   const { updateGradingOption, gradingOptions } = useGeneralContext();
 

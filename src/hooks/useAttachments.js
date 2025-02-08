@@ -1,4 +1,4 @@
-import { useAttachmentContext } from '../context/AttachmentContext';
+import { useAttachmentContext } from '../contexts/AttachmentContext';
 import { v4 as uuidv4 } from 'uuid';
 
 export const useAttachments = () => {

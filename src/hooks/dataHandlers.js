@@ -123,7 +123,7 @@ export const fetchData = async (folder) => {
 	if (home.includes("&edit=true")) {
 		home = home.replace("&edit=true", "");
 	}
-	const url = home.replace(/\/sheet\?project=([a-zA-Z0-9\-_]+)/,`/Sheets/${project}/data.json`);
+	const url = home.replace(/\/sheet\?project=([a-zA-Z0-9\-_]+)/,`/sheets/${project}/data.json`);
 	try {
 		const response = await fetch(url);
 		if (!response.ok) {

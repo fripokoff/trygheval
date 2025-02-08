@@ -1,4 +1,4 @@
-import { useGradingContext } from '../context/GradingContext';
+import { useGradingContext } from '../contexts/GradingContext';
 
 export const useGradingOptions = () => {
   const { gradingOptionsDataFromServer } = useGradingContext();

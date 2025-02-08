@@ -1,6 +1,6 @@
 import React from 'react';
 
-function BonusSections({ 
+function ViewBonusSections({ 
     sheetData, 
     handleYesColorBonus, 
     yesColorBonus, 
@@ -100,4 +100,4 @@ function BonusSections({
     );
 }
 
-export default BonusSections;
+export default ViewBonusSections;

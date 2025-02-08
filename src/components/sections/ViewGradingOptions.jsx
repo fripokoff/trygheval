@@ -1,6 +1,6 @@
 import React from 'react';
 
-function GradingOptions({
+function ViewGradingOptions({
     sheetData,
     handleOkColor,
     okColor,
@@ -173,4 +173,4 @@ function GradingOptions({
     );
 }
 
-export default GradingOptions;
+export default ViewGradingOptions;

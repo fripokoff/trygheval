@@ -1,31 +1,35 @@
-import { SectionProvider } from "../context/SectionContext";
-import { GeneralProvider } from "../context/GeneralContext";
-import { SubmitProvider } from "../context/SubmitContext";
-import { useSubmit } from "../context/SubmitContext";
-import SheetForm from "../components/SheetForm";
-import { AttachmentProvider } from "../context/AttachmentContext";
-import { GradingProvider } from "../context/GradingContext";
-import LoadingSheet from "../components/LoadingSheet";
-import SheetHeader from "../components/SheetHeader";
+import { SectionProvider } from "../contexts/SectionContext";
+import { GeneralProvider } from "../contexts/GeneralContext";
+import { SubmitProvider } from "../contexts/SubmitContext";
+import { useSubmit } from "../contexts/SubmitContext";
+import { AttachmentProvider } from "../contexts/AttachmentContext";
+import { GradingProvider } from "../contexts/GradingContext";
+import LoadingSheet from "./loading/LoadingSheet";
+import navSheet from "./navigation/navSheet";
 import { useState, useEffect } from "react";
 import useColorHandlers from "../hooks/useColorHandlers";
 import useAddContentEffects from "../hooks/useAddContentEffects";
-import GeneralInfo from "../components/sheet/GeneralInfo";
-import IntroductionSection from "../components/sheet/IntroductionSection";
-import GuidelinesSection from "../components/sheet/GuidelinesSection";
-import AttachmentsSection from "../components/sheet/AttachmentsSection";
-import ViewMandatorySections from "../components/sheet//ViewMandatorySections";
-import BonusSections from "../components/sheet/BonusSections";
-import GradingOptions from "../components/sheet/GradingOptions";
-import InfoModal from "../components/InfoModal";
+import ViewGeneralInfo from "./sections/ViewGeneralInfo";
+import ViewIntroductionSection from "./sections/ViewIntroductionSection";
+import ViewGuidelinesSection from "./sections/ViewGuidelinesSection";
+import ViewAttachmentsSection from "./sections/ViewAttachmentsSection";
+import ViewMandatorySections from "./sections/ViewMandatorySections";
+import ViewBonusSections from "./sections/ViewBonusSections";
+import ViewGradingOptions from "./sections/ViewGradingOptions";
+import InfoModal from "./InfoModal";
 import { formatText } from "../utils";
 import { initialYesColor, initialNoColor, greenColor, redColor } from '../constants/colors';
-import FloatingElementsViewSheet from "../components/FloatingElementsViewSheet";
-import FloatingElementsEditSheet from "../components/FloatingElementsEditSheet";
-import {getCurrentFormData, fetchData} from "../dataHandlers";
+import FloatingElementsViewSheet from "./floating/FloatingElementsViewSheet";
+import FloatingElementsEditSheet from "./floating/FloatingElementsEditSheet";
+import {getCurrentFormData, fetchData} from "../hooks/dataHandlers";
 import { useLocation } from "react-router-dom";
+import EditGeneralSection from "./sections/EditGeneralSection";
+import EditAttachmentSection from "./sections/EditAttachmentSection";
+import EditMandatorySection from "./sections/EditMandatorySection";
+import EditBonusSection from "./sections/EditBonusSection";
+import EditGradingOptionsSection from "./sections/EditGradingOptionsSection";
 
-function AddContent({selectedDate, setSelectedDate}) {
+function editViewSheet({selectedDate, setSelectedDate}) {
 
     const scrollToTop = () => {
         window.scrollTo(0, 0);
@@ -137,7 +141,7 @@ if (editMode) {
 
     return (
     <div className="bg-base-300 text-base-content">
-        <SheetHeader handleEdit={handleEdit} addMode={addMode} sheetData={sheetData} handleImportData={handleImportData} handleDownload={handleDownload}/>
+        <navSheet handleEdit={handleEdit} addMode={addMode} sheetData={sheetData} handleImportData={handleImportData} handleDownload={handleDownload}/>
         <div className="max-w-7xl mx-auto pb-20 px-3 2xl:px-0">
         <div>
             <SectionProvider sheetData={sheetData}>
@@ -149,16 +153,22 @@ if (editMode) {
                 >
                 <SubmitProvider setSheetData={setSheetData} sheetData={sheetData}>
                     <GradingProvider>
-                    <SheetForm
-                        sheetData={sheetData}
-                        options={options}
-                        show={show}
-                        handleClose={handleClose}
-                        handleChange={handleChange}
-                        selectedDate={selectedDate}
-                        openModal={ () => setIsOpen(true)}
-                        editMode={editMode}
-                    />
+                        <div className="mt-4">
+                            <div className="bg-base-100 rounded-xl md:p-5 lg:p-5">
+                            <EditGeneralSection
+                                options={options}
+                                show={show}
+                                handleClose={handleClose}
+                                handleChange={handleChange}
+                                openModal={() => setIsOpen(true)}
+                                selectedDate={selectedDate}
+                                />
+                                <EditAttachmentSection/>
+                                <EditMandatorySection sheetData={sheetData} openModal={() => setIsOpen(true)} editMode={editMode}/>
+                                <EditBonusSection sheetData={sheetData} openModal={() => setIsOpen(true)}/>
+                                <EditGradingOptionsSection/>
+                            </div>
+                            </div>
                     </GradingProvider>
                 </SubmitProvider>
                 </GeneralProvider>
@@ -221,10 +231,10 @@ return (
         </div>
 
     <div className="max-w-7xl mx-auto pb-20 pt-4 px-5 2xl:px-0">
-        <GeneralInfo sheetData={sheetData} />
-        <IntroductionSection sheetData={sheetData} formatText={formatText} />
-        <GuidelinesSection sheetData={sheetData} formatText={formatText} />
-        <AttachmentsSection sheetData={sheetData} />
+        <ViewGeneralInfo sheetData={sheetData} />
+        <ViewIntroductionSection sheetData={sheetData} formatText={formatText} />
+        <ViewGuidelinesSection sheetData={sheetData} formatText={formatText} />
+        <ViewAttachmentsSection sheetData={sheetData} />
 
         {/* MANDATORY SECTIONS */}
         <ViewMandatorySections
@@ -241,7 +251,7 @@ return (
         />
 
         {/* BONUS SECTIONS */}
-        <BonusSections
+        <ViewBonusSections
             sheetData={sheetData}
             handleYesColorBonus={handleYesColorBonus}
             yesColorBonus={yesColorBonus}
@@ -253,7 +263,7 @@ return (
             />
 
         {/* GRADING OPTIONS */}
-        <GradingOptions
+        <ViewGradingOptions
             sheetData={sheetData}
             handleOkColor={handleOkColor}
             okColor={okColor}
@@ -308,4 +318,4 @@ return (
 );
 }
 
-export default AddContent;
+export default editViewSheet;

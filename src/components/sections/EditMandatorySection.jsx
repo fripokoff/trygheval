@@ -1,5 +1,5 @@
 import { use } from 'react';
-import { useSectionContext } from '../../context/SectionContext';
+import { useSectionContext } from '../../contexts/SectionContext';
 import { useMandatorySections } from '../../hooks/useMandatorySections';
 import { useState, useEffect } from 'react';
 import { useLocation } from "react-router-dom";

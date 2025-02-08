@@ -1,7 +1,7 @@
-import { useAttachmentContext } from '../../context/AttachmentContext';
+import { useAttachmentContext } from '../../contexts/AttachmentContext';
 import { useAttachments } from '../../hooks/useAttachments';
 
-export default function AttachmentSection() {
+export default function EditAttachmentSection() {
   const { attachments } = useAttachmentContext();
   const { addAttachment, removeAttachment, updateAttachment } = useAttachments();
 

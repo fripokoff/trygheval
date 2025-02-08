@@ -1,6 +1,6 @@
 import React from 'react';
 
-function GuidelinesSection({ sheetData, formatText }) {
+function ViewGuidelinesSection({ sheetData, formatText }) {
   return (
     <div className='mt-10 bg-base-100 p-5 lg:p-10 rounded-lg'>
       <h2 className='text-2xl font-bold'>
@@ -21,4 +21,4 @@ function GuidelinesSection({ sheetData, formatText }) {
   );
 }
 
-export default GuidelinesSection;
+export default ViewGuidelinesSection;

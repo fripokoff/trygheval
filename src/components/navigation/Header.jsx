@@ -1,6 +1,6 @@
 'use client';
 
-import ThemeToggle from './ThemeToggle'
+import ThemeToggle from '../theme/ThemeToggle'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 
 export default function Header() {
@@ -9,7 +9,7 @@ export default function Header() {
             <div className='max-w-7xl mx-auto grid grid-cols-3 items-center py-3 px-5 2xl:px-0'>
                 <div className="flex justify-start">
                     <a href='./' className="flex items-center">
-                        <img src='./42_cor.png' alt='Logo' className='h-[36px]' />
+                        <img src='./img/42_cor.png' alt='Logo' className='h-[36px]' />
                     </a>
                 </div>
                 <div className="flex justify-center items-center">

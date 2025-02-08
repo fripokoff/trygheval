@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { useGeneralContext } from '../../context/GeneralContext';
+import { useGeneralContext } from '../../contexts/GeneralContext';
 import Datepicker from "tailwind-datepicker-react"
 
-export default function GeneralSection({ options, show, handleClose, handleChange, selectedDate, openModal }) {
+export default function EditGeneralSection({ options, show, handleClose, handleChange, selectedDate, openModal }) {
   const {
     introductionData,
     setIntroductionData,

@@ -1,32 +1,31 @@
-import { useSectionContext } from '../../context/SectionContext';
-import { usePreliminarySections } from '../../hooks/usePreliminarySections';
-import { useEffect } from "react";
+import { useSectionContext } from '../../contexts/SectionContext';
+import { useBonusSections } from '../../hooks/useBonusSections';
 
-export default function PreliminarySection({ sheetData, openModal }) {
+export default function EditBonusSection({  sheetData, openModal }) {
   const {
-    preliminarySections,
-    preliminarySectionsDataFromServer,
-    numberOfPreliminarySections,
-    updatePreliminarySection,
-    updatePreliminaryIntro
+    bonusSections,
+    bonusSectionsDataFromServer,
+    numberOfBonusSections,
+    updateBonusSection,
+    updateBonusIntroduction
   } = useSectionContext();
   
-  const { addPreliminarySection, removePreliminarySection } = usePreliminarySections();
-  
-  const handlePreliminaryIntroduction = (e) => {
-    updatePreliminaryIntro(e);
+  const { addBonusSection, removeBonusSection } = useBonusSections();
+
+  const handleBonusIntroduction = (e) => {
+    updateBonusIntroduction(e);
   };
 
   return (
-    <div className="flex flex-col p-4 lg:p-5 rounded-xl gap-5 mt-10 bg-base-200 prelimary-section">
+    <div className="flex flex-col p-4 lg:p-5 rounded-xl gap-5 mt-10 bg-base-200">
       <div className="flex justify-between items-center">
         <h1 className='text-2xl font-medium text-base-content font-bold'>
-          Preliminary Part
+          Bonus Part
         </h1>
-        {numberOfPreliminarySections === 0 && (
+        {numberOfBonusSections === 0 && (
           <button 
             type='button' 
-            onClick={addPreliminarySection} 
+            onClick={addBonusSection} 
             className='bg-base-300 text-base-content py-3 px-5 rounded-md transition duration-200'
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -35,31 +34,31 @@ export default function PreliminarySection({ sheetData, openModal }) {
           </button>
         )}
       </div>
-      
-      
-      {/* Preliminary introduction */}
-      <div className='mb-2 mt-4'>
-            <label htmlFor='preliminary_intro' className='block text-sm text-base-content font-bold'>
+
+       {/* Bonus introduction */}
+       <div className='mb-2 mt-4'>
+            <label htmlFor='bonus_intro' className='block text-sm text-base-content font-bold'>
                 Introduction:
             </label>
             <input
-                defaultValue={sheetData?.preliminaryIntro || ''}
-                placeholder='Enter a preliminary introduction (optional)'
+                defaultValue={sheetData?.bonusIntro || ''}
+                placeholder='Enter a bonus introduction (optional)'
                 type='text'
-                id={`preliminary_intro`}
+                id={`bonus_intro`}
                 className='block w-full px-3 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 sm:text-sm'
-                onChange={(e) => handlePreliminaryIntroduction(e)}
+                onChange={(e) => handleBonusIntroduction(e)}
             />
           </div>
-      {preliminarySections.map((section, index) => (
-        <div key={section.id} className='mt-5 bg-base-300 p-6 rounded-xl'>
+
+      {bonusSections.map((section, index) => (
+        <div key={section.id} className='mt-5 bg-base-300 p-6 rounded-xl bonus-section'>
           {/* Contenu de la section */}
           <div className='mt-3 mb-7 flex justify-between items-center'>
             <h1 className='text-xl font-medium text-base-content'>
-              Preliminary Section {section.index + 1}
+              Bonus Section {section.index + 1}
             </h1>
             <button 
-              onClick={() => removePreliminarySection(section.index)}
+              onClick={() => removeBonusSection(section.index)}
               className='text-red-500 hover:text-red-700 transition-colors'
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -70,38 +69,38 @@ export default function PreliminarySection({ sheetData, openModal }) {
 
           {/* Title */}
           <div className='mb-2 mt-4'>
-            <label htmlFor='preliminary_title' className='block text-sm text-base-content font-bold'>
+            <label htmlFor='bonus_title' className='block text-sm text-base-content font-bold'>
               Title of the evaluation criteria:
             </label>
             <input
-              defaultValue={preliminarySectionsDataFromServer[section.index]?.title || ''}
+              defaultValue={bonusSectionsDataFromServer[section.index]?.title || ''}
               placeholder='Enter a title'
               type='text'
-              id={`preliminary_title_${section.index}`}
+              id={`bonus_title_${section.index}`}
               className='block w-full px-3 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 sm:text-sm'
-              onChange={(e) => updatePreliminarySection(index, { title: e.target.value })}
+              onChange={(e) => updateBonusSection(index, { title: e.target.value })}
             />
           </div>
 
           {/* Subtitle */}
-           <div className='mb-2 mt-4'>
-            <label htmlFor='preliminary_subtitle' className='block text-sm text-base-content font-bold'>
+          <div className='mb-2 mt-4'>
+            <label htmlFor='bonus_subtitle' className='block text-sm text-base-content font-bold'>
                 Subtitle:
             </label>
             <input
-                defaultValue={preliminarySectionsDataFromServer[index]?.subtitle || ''}
+                defaultValue={bonusSectionsDataFromServer[index]?.subtitle || ''}
                 placeholder='Enter a subtitle (optional)'
                 type='text'
-                id={`preliminary_subtitle_${section.index}`}
+                id={`bonus_subtitle_${section.index}`}
                 className='block w-full px-3 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 sm:text-sm'
-                onChange={(e) => updatePreliminarySection(index, { subtitle: e.target.value })}
+                onChange={(e) => updateBonusSection(index, { subtitle: e.target.value })}
             />
           </div>
 
           {/* Description */}
           <div className='mb-2 mt-4'>
             <div className="flex justify-between items-center font-bold">
-                <label htmlFor='preliminary_description' className='block text-sm text-base-content'>
+                <label htmlFor='bonus_description' className='block text-sm text-base-content'>
                     Detailed description:
                 </label>
                 <button
@@ -116,40 +115,41 @@ export default function PreliminarySection({ sheetData, openModal }) {
             </div>
 
             <textarea
-                defaultValue={preliminarySectionsDataFromServer[index]?.description || ''}
+                defaultValue={bonusSectionsDataFromServer[index]?.description || ''}
                 rows={5}
                 placeholder='Enter detailed description separated by a new line'
-                id={`preliminary_description_${section.index}`}
+                id={`bonus_description_${section.index}`}
                 className='block w-full px-3 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 sm:text-sm'
-                onChange={(e) => updatePreliminarySection(index, { description: e.target.value })}
+                onChange={(e) => updateBonusSection(index, { description: e.target.value })}
             />
             <p className='mt-2 text-sm text-red-700'>NOTE: Please separate each description with a new line</p>
           </div>
+
         {/* Conclusion */}
-          <div className='mb-2 mt-4'>
-            <label htmlFor='preliminary_conclusion' className='block text-sm text-base-content font-bold'>
+        <div className='mb-2 mt-4'>
+            <label htmlFor='bonus_conclusion' className='block text-sm text-base-content font-bold'>
               Conclusion:
             </label>
             <input
-                defaultValue={preliminarySectionsDataFromServer[index]?.conclusion || ''}
+                defaultValue={bonusSectionsDataFromServer[index]?.conclusion || ''}
                 placeholder='Enter a conclusion (optional)'
                 type='text'
-                id={`preliminary_conclusion_${section.index}`}
+                id={`bonus_conclusion_${section.index}`}
                 className='block w-full px-3 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 sm:text-sm'
-                onChange={(e) => updatePreliminarySection(index, { conclusion: e.target.value })}
+                onChange={(e) => updateBonusSection(index, { conclusion: e.target.value })}
             />
           </div>
 
           {/* Yes/No Selection */}
           <div className='mb-2 mt-4 font-bold text-base-content'>
-            <label htmlFor='preliminary_yes_no' className='block text-sm'>
+            <label htmlFor='bonus_yes_no' className='block text-sm'>
                 Yes/No button or slider:
             </label>
             <select
-                defaultValue={!preliminarySectionsDataFromServer[index] ? 'true' : preliminarySectionsDataFromServer[index]?.yes_no === true ? 'true' : 'false'}
-                id={`preliminary_yes_no_${section.index}`}
+                defaultValue={!bonusSectionsDataFromServer[index] ? 'true' : bonusSectionsDataFromServer[index]?.yes_no === true ? 'true' : 'false'}
+                id={`bonus_yes_no_${section.index}`}
                 className='block w-full px-3 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none bg-base-300 focus:border-blue-500 sm:text-sm'
-                onChange={(e) => updatePreliminarySection(index, { yes_no: e.target.value === 'true' })}
+                onChange={(e) => updateBonusSection(index, { yes_no: e.target.value === 'true' })}
             >
                 <option value={null}>Select one</option>
                 <option value={true}>Yes/No button</option>
@@ -159,13 +159,13 @@ export default function PreliminarySection({ sheetData, openModal }) {
         </div>
       ))}
 
-      {numberOfPreliminarySections > 0 && (
+      {numberOfBonusSections > 0 && (
         <div className="flex justify-center w-full p-4 bg-base-300 text-base-content rounded-md mb-2 border border-green-500 cursor-pointer"
-        onClick={addPreliminarySection} >
+        onClick={addBonusSection} >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
             </svg>
-          <span className='ml-2'>Add Preliminary section</span>
+          <span className='ml-2'>Add Bonus section</span>
         </div>
       )}
     </div>

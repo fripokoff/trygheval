@@ -1,6 +1,6 @@
 import React from 'react';
 
-function GeneralInfo({ sheetData }) {
+function ViewGeneralInfo({ sheetData }) {
   return (
   <div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center text-center my-4 bg-base-100 rounded-lg p-6">
@@ -31,4 +31,4 @@ function GeneralInfo({ sheetData }) {
   );
 }
 
-export default GeneralInfo;
+export default ViewGeneralInfo;

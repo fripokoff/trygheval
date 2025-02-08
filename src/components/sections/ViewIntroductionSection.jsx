@@ -1,6 +1,6 @@
 import React from 'react';
 
-function IntroductionSection({ sheetData, formatText }) {
+function ViewIntroductionSection({ sheetData, formatText }) {
   return (
     <div className='mt-10 bg-base-100 p-5 lg:p-10 rounded-lg'>
       <h2 className='text-2xl font-bold'>
@@ -21,4 +21,4 @@ function IntroductionSection({ sheetData, formatText }) {
   );
 }
 
-export default IntroductionSection;
+export default ViewIntroductionSection;

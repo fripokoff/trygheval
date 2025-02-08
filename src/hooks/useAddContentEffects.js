@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useContext } from 'react';
-import { ToastContext } from '../context/ToastContext';
+import { ToastContext } from '../contexts/ToastContext';
 import { initialYesColor, initialNoColor, clickedYesColor, clickedNoColor } from '../constants/colors';
 
 function useAddContentEffects(

@@ -1,4 +1,4 @@
-import { useSectionContext } from '../context/SectionContext';
+import { useSectionContext } from '../contexts/SectionContext';
 import { v4 as uuidv4 } from 'uuid';
 
 export const useMandatorySections = () => {

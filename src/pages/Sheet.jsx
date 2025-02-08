@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import AddContent from '../components/AddContent';
-import { AttachmentProvider } from '../context/AttachmentContext';
-import { GeneralProvider } from '../context/GeneralContext';
-import { SectionProvider } from '../context/SectionContext';
-import { GradingProvider } from '../context/GradingContext';
-import { SubmitProvider } from '../context/SubmitContext';
+import editViewSheet from '../components/editViewSheet';
+import { AttachmentProvider } from '../contexts/AttachmentContext';
+import { GeneralProvider } from '../contexts/GeneralContext';
+import { SectionProvider } from '../contexts/SectionContext';
+import { GradingProvider } from '../contexts/GradingContext';
+import { SubmitProvider } from '../contexts/SubmitContext';
 
 function Sheet() {
   const [sheetData, setSheetData] = useState({});
@@ -17,7 +17,7 @@ function Sheet() {
         <SectionProvider sheetData={sheetData}>
           <GradingProvider>
             <SubmitProvider setSheetData={setSheetData}>
-              <AddContent selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
+              <editViewSheet selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
             </SubmitProvider>
           </GradingProvider>
         </SectionProvider>

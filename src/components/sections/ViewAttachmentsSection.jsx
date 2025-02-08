@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AttachmentsSection({ sheetData }) {
+function ViewAttachmentsSection({ sheetData }) {
   return (
     <div className='mt-10 bg-base-100 p-5 lg:p-10 rounded-lg'>
       <h2 className='text-2xl font-bold'>
@@ -42,4 +42,4 @@ function AttachmentsSection({ sheetData }) {
   );
 }
 
-export default AttachmentsSection;
+export default ViewAttachmentsSection;

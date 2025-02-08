@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 import './toast.css';
 import { FaCheckCircle, FaInfoCircle, FaExclamationTriangle, FaTimesCircle, FaThumbsUp } from 'react-icons/fa';
-import { ToastContext } from '../../context/ToastContext';
+import { ToastContext } from '../../contexts/ToastContext';
 
 const Toast = ({ id, type = 'success', message = '', duration = 3000, position = 'top-right', dismissable = true, animationIn = 'slide-in-left', animationOut = 'slide-out-right', animationSpeed = 0.5 }) => {
   const [isVisible, setIsVisible] = useState(true);
