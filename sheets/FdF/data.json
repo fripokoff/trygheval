@@ -1,0 +1,184 @@
+{
+    "success": true,
+    "data": [
+        {
+			"id": 8,
+			"status": "active",
+			"project_title": "FdF",
+			"introduction": [
+				"- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
+				"- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
+				"- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
+			],
+			"guidelines": [
+				"- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
+				"- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
+				"- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
+				"- If applicable, review any **scripts** used for testing or automation together with the student.",
+				"- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
+				"- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
+				"- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
+				"- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
+				"- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
+				"- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
+			],
+			"attachments": [
+				{
+					"title": "subject_en.pdf",
+					"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/FdF/en.subject.pdf"
+				},
+				{
+					"title": "subject_fr.pdf",
+					"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/FdF/fr.subject.pdf"
+				},
+				{
+					"url": "https://github.com/ARuzgar/42-Subjects/tree/main/Cursus/FdF/Extras"
+				}
+			],
+			"cursus_id": "1",
+			"updated_at": "2023-08-01T17:15:50.925Z",
+			"students" : 1,
+			"eval_points" : 3,
+			"time" : 30,
+			"preliminarySections" : [
+				{
+					"id": "679e56c78c78a1cea9234fa7",
+					"description": "--The repository isn't empty.\n--Norminette shows no errors.\n--No cheating.\n--No forbidden function/library.\n--The code compiles with the required options.\n--The executable is named as expected.\n--During execution, there is no brutal or unmanaged crash (segfault, bus error, and so forth).\n--No memory leaks.",
+					"yes_no": true,
+					"sheetId": "679e56c68c78a1cea9234fa6",
+					"created_at": "2025-02-01T17:15:51.018Z",
+					"updated_at": "2025-02-01T17:15:51.018Z"
+				}
+			],
+			"mandatorySections" : [
+				{
+					"id": "679e56c78c78a1cea9234fa7",
+					"description": "--The repository isn't empty.\n--Norminette shows no errors.\n--No cheating.\n--No forbidden function/library.\n--The code compiles with the required options.\n--The executable is named as expected.\n--During execution, there is no brutal or unmanaged crash (segfault, bus error, and so forth).\n--No memory leaks.",
+					"yes_no": true,
+					"sheetId": "679e56c68c78a1cea9234fa6",
+					"created_at": "2025-02-01T17:15:51.018Z",
+					"updated_at": "2025-02-01T17:15:51.018Z"
+				},
+				{
+					"id": "679e56c78c78a1cea9234fa8",
+					"description": "Test fdf without parameters, with too many parameters, a non-existing\nfile or on which you have no rights. If those tests are passed, then it's\nall good. This is the only error management that is required. For now on,\nthe maps inside the input files have to be formatted properly.",
+					"yes_no": true,
+					"sheetId": "679e56c68c78a1cea9234fa6",
+					"created_at": "2025-02-01T17:15:51.018Z",
+					"updated_at": "2025-02-01T17:15:51.018Z"
+				},
+				{
+					"id": "679e56c78c78a1cea9234fa9",
+					"description": "--A window opens\n--Something is drawn in the window\n--You can see a isometric projection of the 42 map\n--Pressing 'ESC' closes the window and exits the program in a clean way (no leaks).\n--Clicking on the cross on the window's frame closes the window and exits the program in a clean way (no leaks).",
+					"yes_no": true,
+					"sheetId": "679e56c68c78a1cea9234fa6",
+					"created_at": "2025-02-01T17:15:51.018Z",
+					"updated_at": "2025-02-01T17:15:51.018Z"
+				},
+				{
+					"id": "679e56c78c78a1cea9234faa",
+					"description": "--Use a flat map with nothing but 0, sized 4x4. We have a flat wireframe grid with a projection that is used to give a 3D concept.\n--Same map, with 1 point at a different altitude. Check that the result corresponds and that the 3D effect is rendered.",
+					"yes_no": true,
+					"sheetId": "679e56c68c78a1cea9234fa6",
+					"created_at": "2025-02-01T17:15:51.018Z",
+					"updated_at": "2025-02-01T17:15:51.018Z"
+				},
+				{
+					"id": "679e56c78c78a1cea9234fab",
+					"description": "Check whether the program handles a bigger map and an aleatory 16x16 map.",
+					"yes_no": true,
+					"sheetId": "679e56c68c78a1cea9234fa6",
+					"created_at": "2025-02-01T17:15:51.018Z",
+					"updated_at": "2025-02-01T17:15:51.018Z"
+				},
+				{
+					"id": "679e56c78c78a1cea9234fac",
+					"description": "Test with bigger, heavier maps. Either those provided in the intranet, the\nevaluated student, or your owns. Be logical and keep in mind the\nrequirements of the subject regarding what could contain your maps (colors\nfor example).",
+					"yes_no": true,
+					"sheetId": "679e56c68c78a1cea9234fa6",
+					"created_at": "2025-02-01T17:15:51.018Z",
+					"updated_at": "2025-02-01T17:15:51.018Z"
+				},
+				{
+					"id": "679e56c78c78a1cea9234fad",
+					"description": "If the graphical representation stayed fluid and pleasant in the last test\nwith heavy maps, then it's cool.\n\n",
+					"yes_no": true,
+					"sheetId": "679e56c68c78a1cea9234fa6",
+					"created_at": "2025-02-01T17:15:51.018Z",
+					"updated_at": "2025-02-01T17:15:51.018Z"
+				},
+				{
+					"id": "679e56c78c78a1cea9234fae",
+					"description": "Take a look at the code and check whether the student uses the images from\nthe MLX to draw the image instead of putting pixels one by one. ;)",
+					"yes_no": true,
+					"sheetId": "679e56c68c78a1cea9234fa6",
+					"created_at": "2025-02-01T17:15:51.018Z",
+					"updated_at": "2025-02-01T17:15:51.018Z"
+				}
+			],
+			"bonusSections" : [
+				{
+					"id": "679e56c78c78a1cea9234fb0",
+					"description": "Can the map be represented using another projection (such as parallel or conic)?",
+					"yes_no": true,
+					"sheetId": "679e56c68c78a1cea9234fa6",
+					"created_at": "2025-02-01T17:15:51.093Z",
+					"updated_at": "2025-02-01T17:15:51.093Z"
+				},
+				{
+					"id": "679e56c78c78a1cea9234fb1",
+					"description": "Is there a way to zoom in and out using the keyboard or mouse?",
+					"yes_no": true,
+					"sheetId": "679e56c68c78a1cea9234fa6",
+					"created_at": "2025-02-01T17:15:51.093Z",
+					"updated_at": "2025-02-01T17:15:51.093Z"
+				},
+				{
+					"id": "679e56c78c78a1cea9234fb2",
+					"description": "Is there a way to translate the projection using the keyboard or mouse?",
+					"yes_no": true,
+					"sheetId": "679e56c68c78a1cea9234fa6",
+					"created_at": "2025-02-01T17:15:51.093Z",
+					"updated_at": "2025-02-01T17:15:51.093Z"
+				},
+				{
+					"id": "679e56c78c78a1cea9234fb3",
+					"description": "Is there a way to rotate the projection using the keyboard or mouse?",
+					"yes_no": true,
+					"sheetId": "679e56c68c78a1cea9234fa6",
+					"created_at": "2025-02-01T17:15:51.093Z",
+					"updated_at": "2025-02-01T17:15:51.093Z"
+				},
+				{
+					"id": "679e56c78c78a1cea9234fb4",
+					"description": "Give one more point if there is any additional bonus you consider is fine.\nCreativity is an important point in your education and in the digital world.",
+					"yes_no": true,
+					"sheetId": "679e56c68c78a1cea9234fa6",
+					"created_at": "2025-02-01T17:15:51.093Z",
+					"updated_at": "2025-02-01T17:15:51.093Z"
+				}
+			],
+			"gradingOptions" :[
+				{
+					"id": "679e45788c78a1cea9234f62",
+					"ok": true,
+					"outstanding": true,
+					"empty_work": true,
+					"incomplete_work": true,
+					"invalid_compilation": true,
+					"norme": true,
+					"cheat": true,
+					"crash": true,
+					"concerning_situations": true,
+					"leaks": true,
+					"forbidden_functions": true,
+					"cannot_support": true,
+					"sheetId": "679e45778c78a1cea9234f5f",
+					"created_at": "2025-02-01T16:02:00.638Z",
+					"updated_at": "2025-02-01T16:05:07.468Z"
+				}
+			]
+        }
+    ],
+    "message": "Sheets found successfully"
+}

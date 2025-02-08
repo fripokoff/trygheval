@@ -1,0 +1,115 @@
+{
+    "success": true,
+    "data": [
+        {
+			"id": 3,
+			"status": "active",
+			"project_title": "get_next_line",
+			"introduction": [
+				"- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
+				"- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
+				"- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
+			],
+			"guidelines": [
+				"- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
+				"- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
+				"- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
+				"- If applicable, review any **scripts** used for testing or automation together with the student.",
+				"- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
+				"- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
+				"- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
+				"- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
+				"- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
+				"- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
+			],
+			"attachments": [
+				{
+					"title": "subject_en.pdf",
+					"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/get_next_line/en.subject.pdf"
+				},
+				{
+					"title": "subject_fr.pdf",
+					"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/get_next_line/fr.subject.pdf"
+				}
+			],
+			"cursus_id": "1",
+			"updated_at": "2023-12-18T16:28:15.940Z",
+			"students" : 1,
+			"eval_points" : 3,
+			"time" : 30,
+			"mandatorySections" : [
+				{
+					"id": "679e4b5e8c78a1cea9234f6e",
+					"description": "Exécutez la Norminette. En cas d'erreur, l'évaluation s'arrête ici.\nVous pouvez continuer et discuter de l'implémentation du code, mais cela\nne sera pas noté.",
+					"yes_no": true,
+					"sheetId": "679e4b5e8c78a1cea9234f6d",
+					"created_at": "2025-02-01T16:27:10.867Z",
+					"updated_at": "2025-02-01T16:28:16.022Z"
+				},
+				{
+					"id": "679e4b5e8c78a1cea9234f6f",
+					"description": "Il devrait être possible de compiler le projet avec les flags habituels\net le flag -D BUFFER_SIZE. Il doit être possible de compiler ce projet avec et sans\nce dernier en plus des flags : -Wall -Wextra -Werror. S'il y a une erreur,\nl'évaluation s'arrête ici. Vous pouvez continuer et discuter de la mise en\nœuvre du code, mais la soutenance ne sera pas noté.",
+					"yes_no": true,
+					"sheetId": "679e4b5e8c78a1cea9234f6d",
+					"created_at": "2025-02-01T16:27:10.867Z",
+					"updated_at": "2025-02-01T16:28:16.022Z"
+				},
+				{
+					"id": "679e4b5e8c78a1cea9234f70",
+					"description": "--Passez un fd arbitraire a la fonction get_next_line, sur lequel il n'est pas possible de lire (par ex. 42) La fonction doit renvoyer NULL.\n--Vérifiez les retours d'erreur de malloc, read et open. Si la partie \"gestion d'erreur\" est fausse, merci de ne pas noter la partie suivante, la correction s'arrête ici. Vous pouvez continuer et discuter de l'implémentation du code, mais cela ne sera pas noté.",
+					"yes_no": true,
+					"sheetId": "679e4b5e8c78a1cea9234f6d",
+					"created_at": "2025-02-01T16:27:10.867Z",
+					"updated_at": "2025-02-01T16:28:16.022Z"
+				},
+				{
+					"id": "679e4b5e8c78a1cea9234f71",
+					"description": "**En temps qu'évaluateur(ice), vous devez écrire ou apporter un main qui vérifie :**\n\n--La valeur de retour de la fonction get_next_line est NULL en cas d'erreur.\n--Sinon, la fonction renvoie la ligne lue, toujours avec un \\n à la fin.\n\n**Testez toutes les combinaisons des règles suivantes :**\n\n--Gros BUFFER_SIZE (> 1024)\n--Petit BUFFER_SIZE (< 8, et 1)\n--BUFFER_SIZE de la taille de la ligne à lire\n--1 de décalage (+/-) entre le BUFFER_SIZE et la ligne\n--Lecture depuis stdin\n--Lecture depuis un fichier\n--(Multiple/Simple) ligne longue (2k+ caractères)\n--(Multiple/Simple) ligne courte (<4 caractères, et 1)\n--(Multiple/Simple) Ligne vide",
+					"yes_no": true,
+					"sheetId": "679e4b5e8c78a1cea9234f6d",
+					"created_at": "2025-02-01T16:27:10.867Z",
+					"updated_at": "2025-02-01T16:28:16.022Z"
+				}
+			],
+			"bonusSections" : [
+				{
+					"id": "679e4b5e8c78a1cea9234f73",
+					"description": "Répétez les tests effectués précédemment mais, cette fois, en lançant\nplusieurs instances de get_next_line, chacune utilisant un descripteur\nde fichier différent.\nAssurez-vous que chaque get_next_line renvoie la bonne ligne.\nAjoutez un descripteur de fichier invalide pour tester la gestion\nd'erreurs.",
+					"yes_no": true,
+					"sheetId": "679e4b5e8c78a1cea9234f6d",
+					"created_at": "2025-02-01T16:27:10.938Z",
+					"updated_at": "2025-02-01T16:28:16.004Z"
+				},
+				{
+					"id": "679e4b5e8c78a1cea9234f74",
+					"description": "Lisez le code et vérifiez qu'il n'y a bien qu'une seule variable statique.\nAttribuez les points bonus si c'est le cas.",
+					"yes_no": true,
+					"sheetId": "679e4b5e8c78a1cea9234f6d",
+					"created_at": "2025-02-01T16:27:10.938Z",
+					"updated_at": "2025-02-01T16:28:16.004Z"
+				}
+			],
+			"gradingOptions" :[
+				{
+					"id": "679e45788c78a1cea9234f62",
+					"ok": true,
+					"outstanding": true,
+					"empty_work": true,
+					"incomplete_work": true,
+					"invalid_compilation": true,
+					"norme": true,
+					"cheat": true,
+					"crash": true,
+					"concerning_situations": true,
+					"leaks": true,
+					"forbidden_functions": true,
+					"cannot_support": true,
+					"sheetId": "679e45778c78a1cea9234f5f",
+					"created_at": "2025-02-01T16:02:00.638Z",
+					"updated_at": "2025-02-01T16:05:07.468Z"
+				}
+			]
+        }
+    ],
+    "message": "Sheets found successfully"
+}

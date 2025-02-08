@@ -1,0 +1,136 @@
+{
+  "success": true,
+  "data": [
+    {
+      "project_title": "CPP00",
+      "students": 1,
+      "status": "active",
+      "eval_points": 3,
+      "time": 30,
+      "id": 14,
+      "introduction": [
+        "- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
+        "- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
+        "- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
+      ],
+      "guidelines": [
+        "- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
+        "- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
+        "- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
+        "- If applicable, review any **scripts** used for testing or automation together with the student.",
+        "- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
+        "- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
+        "- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
+        "- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
+        "- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
+        "- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
+      ],
+      "attachments": [
+          {
+              "title": "subject_en.pdf",
+              "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/CPP_Modules/CPP00/en.subject.pdf"
+          },
+          {
+              "title": "subject_fr.pdf",
+              "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/CPP_Modules/CPP00/fr.subject.pdf"
+          },
+          {
+              "title": "extras",
+              "url": "https://github.com/ARuzgar/42-Subjects/tree/main/Cursus/CPP_Modules/CPP00/Extras"
+          }
+      ],
+      "mandatorySections": [
+        {
+          "title": "Prérequis",
+          "subtitle": "Le code doit compiler avec c++ et les flags -Wall -Wextra -Werror Pour rappel, ce projet doit suivre le standard C++98. Par conséquent, des fonctions C++11 (ou autre standard) et les containers ne sont PAS attendus.",
+          "description": "**Ne notez pas l'exercice si vous trouvez :**\n--Une fonction implémentée dans un fichier d'en-tête (sauf pour les fonctions templates).\n--Un Makefile compilant sans les flags demandés et/ou avec autre chose que c++.\n\n**Sélectionnez le flag \"Fonction interdite\" (Forbidden function) si\nvous rencontrez :**\n--L'utilisation d'une fonction \"C\" (*alloc, *printf, free).\n--L'utilisation d'une fonction interdite dans le projet.\n--L'utilisation de \"using namespace <ns_name>\" ou du mot-clé \"friend\".\n--L'utilisation d'une bibliothèque externe, ou de fonctionnalités propres aux versions postérieures à C++98.",
+          "conclusion": "",
+          "yes_no": true
+        },
+        {
+          "title": "Exercice 00 : Megaphone",
+          "subtitle": "Cet exercice est un échauffement pour découvrir les I/O en C++.",
+          "description": "**Fonctionnement**\nLe but de cet exercice est de développer un to_upper ayant un comportement spécifique si lancé sans paramètre.\nIl doit être résolu avec une approche C++ (string/upper).",
+          "conclusion": "",
+          "yes_no": true
+        },
+        {
+          "title": "Exercice 01 : My Awesome Phonebook",
+          "subtitle": "Cet exercice est une première approche pour écrire une classe simple et l'utiliser dans un programme interactif. Si l'exercice ne fonctionne pas parfaitement, notez ce qui peut l'être.",
+          "description": "**Gestion d'erreur**\nIl y a un peu de gestion d'erreur à faire dans ce programme mais les comportements ne sont pas précisés dans le sujet. Quitter le programme proprement ou gérer les erreurs est ok. Un segfault ne l'est pas ! :D",
+          "conclusion": "",
+          "yes_no": false
+        },
+        {
+          "title": "La commande EXIT",
+          "subtitle": "",
+          "description": "Notez la commande EXIT en vous basant sur ce qui est demandé dans le sujet.",
+          "conclusion": "",
+          "yes_no": true
+        },
+        {
+          "title": "Visibilité",
+          "subtitle": "",
+          "description": "--Les attributs de la classe Contact doivent être privés.\n--La classe doit exposer les accesseurs correspondants. Vérifiez également que tout ce qui n'est utilisé que dans une classe (et pas seulement la classe Contact) est privé et le reste public. \n--Les débutants ont tendance à tout mettre en public.\n",
+          "conclusion": "C'est ce que vous devez vérifier ici.",
+          "yes_no": false
+        },
+        {
+          "title": "La classe Contact et la classe Phonebook",
+          "subtitle": "",
+          "description": "--Le code doit inclure une classe Contact (ou autre nom).\n--La classe doit contenir les attributs demandés.\n--Le code doit contenir une classe Phonebook avec un tableau de Contacts à l'intérieur.",
+          "conclusion": "",
+          "yes_no": true
+        },
+        {
+          "title": "Boucle de Read/Eval",
+          "subtitle": "",
+          "description": "--Le programme doit proposer une sorte de boucle read/eval :\n--Lecture puis traitement d'entrée, ensuite attente de nouvelle entrée jusqu'à recevoir une commande EXIT.\n--La boucle devrait être faite de manière C++ (std::cin) !",
+          "conclusion": "",
+          "yes_no": true
+        },
+        {
+          "title": "La commande ADD",
+          "subtitle": "",
+          "description": "Notez la commande ADD en vous basant sur ce qui est demandé dans le sujet.",
+          "conclusion": "",
+          "yes_no": false
+        },
+        {
+          "title": "La commande SEARCH",
+          "subtitle": "",
+          "description": "--Notez la commande SEARCH en vous basant sur ce qui est demandé dans le sujet.\n--Une légère divergence dans le format attendu n'est pas importante. Cette partie vise à utiliser les \"iomanips\" en C++ et c'est ce sur quoi vous devez vous concentrer.",
+          "conclusion": "",
+          "yes_no": true
+        },
+        {
+          "title": "Exercice 02 : Le boulot de vos rêves",
+          "subtitle": "Le but de cet exercice est de récupérer les informations cachées au milieu du bruit et d'insérer du code dans un contexte existant.",
+          "description": "**Avez-vous sauvé le monde ?**\n--Cet exercice est plutôt simple. Soit Account.cpp marche, soit il ne marche pas.\n--Comparez la sortie du programme avec le fichier de logs fourni.\n--Toute différence (à l'exception des horodatages ou de l'ordre des destructors) signifie que l'exercice est incorrect.",
+          "conclusion": "",
+          "yes_no": true
+        }
+      ],
+      "bonusSections": null,
+      "cursus_id": "1",
+      "updated_at": "2023-12-28T00:00:00.136Z",
+      "gradingOptions": [
+        {
+          "ok": true,
+          "outstanding": true,
+          "empty_work": true,
+          "incomplete_work": true,
+          "invalid_compilation": true,
+          "norme": true,
+          "cheat": true,
+          "crash": true,
+          "concerning_situations": true,
+          "leaks": true,
+          "forbidden_functions": true,
+          "cannot_support": false
+        }
+      ]
+    }
+  ],
+  "message": "Sheets added successfully"
+}
