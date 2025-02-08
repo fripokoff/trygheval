@@ -1,7 +1,6 @@
 import GeneralSection from "./sections/GeneralSection";
 import AttachmentSection from "./sections/AttachmentSection";
-import PreliminarySection from "./sections/PreliminarySection";
-import MandatorySection from "./sections/MandatorySection";
+import EditMandatorySection from "./sections/EditMandatorySection";
 import BonusSection from "./sections/BonusSection";
 import GradingOptionsSection from "./sections/GradingOptionsSection";
 
@@ -12,12 +11,13 @@ export default function SheetForm({
   handleClose,
   handleChange,
   openModal,
-  selectedDate
+  selectedDate,
+  editMode
 }) {
 
   return (
     <div className="mt-4">
-      <div className="bg-base-100 rounded-xl p-2 lg:p-5">
+      <div className="bg-base-100 rounded-xl md:p-5 lg:p-5">
       <GeneralSection
           options={options}
           show={show}
@@ -27,8 +27,7 @@ export default function SheetForm({
           selectedDate={selectedDate}
         />
         <AttachmentSection/>
-        <PreliminarySection sheetData={sheetData} openModal={openModal}/>
-        <MandatorySection sheetData={sheetData} openModal={openModal}/>
+        <EditMandatorySection sheetData={sheetData} openModal={openModal} editMode={editMode}/>
         <BonusSection sheetData={sheetData} openModal={openModal}/>
         <GradingOptionsSection/>
       </div>

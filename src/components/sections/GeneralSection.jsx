@@ -97,6 +97,9 @@ export default function GeneralSection({ options, show, handleClose, handleChang
       </div>
 
       <div>
+      <label htmlFor='project_title' className='block text-lg text-base-content font-bold'>
+          Updated at
+        </label>
 			<Datepicker options={options} onChange={handleChange} show={show} setShow={handleClose} value={selectedDate}/>
 		</div>
 

@@ -32,7 +32,6 @@
               "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/philosophers/fr.subject.pdf"
           }
       ],
-      "optional_bonus_sections": null,
       "cursus_id": "1",
       "updated_at": "2023-07-31T22:00:00.000Z",
       "students": 1,
@@ -84,7 +83,6 @@
           "yes_no": true
         }
       ],
-      "bonusIntro" : "Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.",
       "gradingOptions": [{
         "ok": true,
         "outstanding": true,

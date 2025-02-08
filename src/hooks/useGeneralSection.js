@@ -7,8 +7,6 @@ export const useGeneralSection = (setOptions) => {
     setIntroductionData,
     setGuidelinesData,
     handleImportData,
-    preliminarySections,
-    setPreliminarySections,
     numberOfMandatorySections,
     setNumberOfMandatorySections,
     numberOfBonusSections,
@@ -28,8 +26,6 @@ export const useGeneralSection = (setOptions) => {
       const guidelinesArray = e.target.value.split('\n');
       setGuidelinesData(guidelinesArray);
     },
-    preliminarySections,
-    setPreliminarySections,
     numberOfMandatorySections,
     setNumberOfMandatorySections,
     numberOfBonusSections,

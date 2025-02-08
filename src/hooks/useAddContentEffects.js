@@ -15,11 +15,8 @@ function useAddContentEffects(
     const [showBackToTop, setShowBackToTop] = useState(false);
     const [yesColorBonus, setYesColorBonus] = useState([]);
     const [noColorBonus, setNoColorBonus] = useState([]);
-    const [preliminaryYesColor, setPreliminaryYesColor] = useState([]);
-    const [preliminaryNoColor, setPreliminaryNoColor] = useState([]);
     const [mandatoryYesColor, setMandatoryYesColor] = useState([]);
     const [mandatoryNoColor, setMandatoryNoColor] = useState([]);
-    const [preliminarySliderValues, setPreliminarySliderValues] = useState([]);
     const [mandatorySliderValues, setMandatorySliderValues] = useState([]);
     const [bonusSliderValues, setBonusSliderValues] = useState([]);
     const [pointsState, setPointsState] = useState(0);
@@ -198,10 +195,9 @@ function useAddContentEffects(
 
 
     useEffect(() => {
-        if (sheetData.mandatorySections && sheetData.bonusSections && sheetData.preliminarySections) {
+        if (sheetData.mandatorySections && sheetData.bonusSections) {
             let temp = []
             let temp2 = []
-            let temp3 = []
 
             const mandatorySectionsWithSliders = sheetData.mandatorySections.filter((section) => {
                 if (section.yes_no === false) {
@@ -230,27 +226,12 @@ function useAddContentEffects(
             }
 
             setBonusSliderValues(temp2)
-
-            const preliminarySectionsWithSliders = sheetData.preliminarySections.filter((section) => {
-                if (section.yes_no === false) {
-                    return true
-                } else {
-                    return false
-                }
-            })
-
-            for (let i = 0; i < preliminarySectionsWithSliders.length; i++) {
-                temp3.push(0)
-            }
-
-            setPreliminarySliderValues(temp3)
         }
-    }, [sheetData.mandatorySections, sheetData.bonusSections, sheetData.preliminarySections])
+    }, [sheetData.mandatorySections, sheetData.bonusSections])
 
 
     const calculatePoints = useCallback(() => {
         let mandatoryPoints = 0;
-        let preliminaryPoints = 0;
         let bonusPoints = 0
 
         if (sheetData.mandatorySections && sheetData.mandatorySections.length > 0) {
@@ -262,20 +243,6 @@ function useAddContentEffects(
                 } else {
                     mandatoryPoints += (parseFloat(mandatorySliderValues[index]) / 100) * (100 / sheetData.mandatorySections.length);
                     mandatoryPoints = isNaN(mandatoryPoints) ? 0 : mandatoryPoints
-
-                }
-            });
-        }
-
-        if (sheetData.preliminarySections && sheetData.preliminarySections.length > 0) {
-            sheetData.preliminarySections.forEach((section, index) => {
-                if (section.yes_no) {
-                    if (preliminaryYesColor[index] === clickedYesColor) {
-                        preliminaryPoints += 100 / sheetData.preliminarySections.length;
-                    }
-                } else {
-                    preliminaryPoints += (parseFloat(preliminarySliderValues[index]) / 100) * (100 / sheetData.preliminarySections.length);
-                    preliminaryPoints = isNaN(preliminaryPoints) ? 0 : preliminaryPoints
                 }
             });
         }
@@ -292,18 +259,14 @@ function useAddContentEffects(
                 }
             });
         }
-
         const totalMandatorySections = sheetData.mandatorySections ? sheetData.mandatorySections.length : 0;
-        const totalPreliminarySections = sheetData.preliminarySections ? sheetData.preliminarySections.length : 0;
-        const totalSections = totalMandatorySections + totalPreliminarySections;
 
-        if (totalSections > 0) {
-            mandatoryPoints = (mandatoryPoints / totalSections) * totalMandatorySections;
-            preliminaryPoints = (preliminaryPoints / totalSections) * totalPreliminarySections;
+        if (totalMandatorySections > 0) {
+            mandatoryPoints = (mandatoryPoints / totalMandatorySections) * totalMandatorySections;
         }
-
-
-        setPointsState(mandatoryPoints + preliminaryPoints);
+        mandatoryPoints = Math.trunc(mandatoryPoints);
+        bonusPoints = Math.trunc(bonusPoints);
+        setPointsState(mandatoryPoints );
 
         if (bonusPoints % 1 !== 0) {
             setBonusPointsState(bonusPoints.toFixed(1))
@@ -311,11 +274,11 @@ function useAddContentEffects(
             setBonusPointsState(bonusPoints)
         }
 
-    }, [sheetData, mandatoryYesColor, mandatorySliderValues, preliminaryYesColor, preliminarySliderValues, yesColorBonus, bonusSliderValues]);
+    }, [sheetData, mandatoryYesColor, mandatorySliderValues, yesColorBonus, bonusSliderValues]);
 
     useEffect(() => {
         calculatePoints()
-    }, [colorHandlers.okColor, colorHandlers.outstandingColor, colorHandlers.emptyWorkColor, colorHandlers.incompleteWorkColor, colorHandlers.invalidCompilationColor, colorHandlers.normeColor, colorHandlers.cheatColor, colorHandlers.crashColor, colorHandlers.concerningSituationsColor, colorHandlers.leaksColor, colorHandlers.forbiddenFunctionsColor, colorHandlers.cannotSupportColor, preliminaryYesColor, preliminaryNoColor, mandatoryYesColor, mandatoryNoColor, preliminarySliderValues, mandatorySliderValues, bonusSliderValues, yesColorBonus, noColorBonus, sheetData.mandatorySections, sheetData.preliminarySections, sheetData.bonusSections, calculatePoints]);
+    }, [colorHandlers.okColor, colorHandlers.outstandingColor, colorHandlers.emptyWorkColor, colorHandlers.incompleteWorkColor, colorHandlers.invalidCompilationColor, colorHandlers.normeColor, colorHandlers.cheatColor, colorHandlers.crashColor, colorHandlers.concerningSituationsColor, colorHandlers.leaksColor, colorHandlers.forbiddenFunctionsColor, colorHandlers.cannotSupportColor, mandatoryYesColor, mandatoryNoColor, mandatorySliderValues, bonusSliderValues, yesColorBonus, noColorBonus, sheetData.mandatorySections, sheetData.bonusSections, calculatePoints]);
 
     const handleYesColor = useCallback((index, sectionType = "mandatory") => {
         if (sectionType === "mandatory") {
@@ -329,19 +292,8 @@ function useAddContentEffects(
                 newColors[index] = initialNoColor;
                 return newColors;
             });
-        } else if (sectionType === "preliminary") {
-            setPreliminaryYesColor((prevColors) => {
-                const newColors = [...prevColors];
-                newColors[index] = clickedYesColor;
-                return newColors;
-            });
-            setPreliminaryNoColor((prevColors) => {
-                const newColors = [...prevColors];
-                newColors[index] = initialNoColor;
-                return newColors;
-            });
         }
-    }, [setMandatoryYesColor, setMandatoryNoColor, setPreliminaryYesColor, setPreliminaryNoColor]);
+    }, [setMandatoryYesColor, setMandatoryNoColor]);
 
     const handleNoColor = useCallback((index, sectionType = "mandatory") => {
         if (sectionType === "mandatory") {
@@ -355,19 +307,8 @@ function useAddContentEffects(
                 newColors[index] = initialYesColor;
                 return newColors;
             });
-        } else if (sectionType === "preliminary") {
-            setPreliminaryNoColor((prevColors) => {
-                const newColors = [...prevColors];
-                newColors[index] = clickedNoColor;
-                return newColors;
-            });
-            setPreliminaryYesColor((prevColors) => {
-                const newColors = [...prevColors];
-                newColors[index] = initialYesColor;
-                return newColors;
-            });
         }
-    }, [setMandatoryNoColor, setMandatoryYesColor, setPreliminaryNoColor, setPreliminaryYesColor]);
+    }, [setMandatoryNoColor, setMandatoryYesColor]);
 
     const handleYesColorBonus = useCallback((index) => {
         setYesColorBonus((prevColors) => {
@@ -402,15 +343,9 @@ function useAddContentEffects(
                 newValues[index] = value;
                 return newValues;
             });
-        } else if (sectionType === "preliminary") {
-            setPreliminarySliderValues((prevValues) => {
-                const newValues = [...prevValues];
-                newValues[index] = value;
-                return newValues;
-            });
         }
         calculatePoints();
-    }, [setMandatorySliderValues, setPreliminarySliderValues, calculatePoints]);
+    }, [setMandatorySliderValues, calculatePoints]);
 
     const handleBonusSliderValues = useCallback((index, value) => {
         setBonusSliderValues((prevValues) => {
@@ -433,8 +368,6 @@ function useAddContentEffects(
         showBackToTop,
         yesColorBonus,
         noColorBonus,
-        preliminaryYesColor,
-        preliminaryNoColor,
         mandatoryYesColor,
         mandatoryNoColor,
         points: pointsState,

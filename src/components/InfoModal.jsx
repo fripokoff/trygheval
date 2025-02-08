@@ -1,9 +1,175 @@
 'use client'
 
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import { Fragment } from 'react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import { XMarkIcon } from '@heroicons/react/20/solid'
 
 function InfoModal({ isOpen, closeModal }) {
+    const markdownExample = `
+# Markdown Formatting Guide
+
+This guide provides examples of common Markdown syntax for formatting your text.
+
+## Basic Formatting
+
+-   **Bold Text**: Wrap text in double asterisks \`**bold text**\`.
+    *Example:* \`**This is bold text**\`
+    *Output:* **This is bold text**
+
+-   *Italic Text*: Wrap text in single asterisks \`*italic text*\`.
+    *Example:* \`*This is italic text*\`
+    *Output:* *This is italic text*
+
+-   ~~Strikethrough Text~~: Wrap text in double tildes \`~~strikethrough text~~\`.
+    *Example:* \`~~This is strikethrough text~~\`
+    *Output:* ~~This is strikethrough text~~
+
+-   __Underline Text__: Wrap text in double underscores \`__underline text__\`.
+    *Example:* \`__This is underline text__\`
+    *Output:* __This is underline text__
+
+## Lists
+
+### Unordered Lists
+
+Use hyphens, asterisks, or plus signs to create unordered lists.
+
+\`\`\`markdown
+- Item 1
+- Item 2
+- Item 3
+\`\`\`
+
+*Output:*
+
+-   Item 1
+-   Item 2
+-   Item 3
+
+### Ordered Lists
+
+Use numbers followed by periods to create ordered lists.
+
+\`\`\`markdown
+1. First item
+2. Second item
+3. Third item
+\`\`\`
+
+*Output:*
+
+1.  First item
+2.  Second item
+3.  Third item
+
+## Links
+
+Create links using the following syntax: \`[Link text](URL)\`.
+
+*Example:* \`[Google](https://www.google.com)\`
+*Output:* [Google](https://www.google.com)
+
+## Images
+
+Display images using the following syntax: \`![Alt text](image URL)\`.
+
+*Example:* \`![Example Image](https://via.placeholder.com/150)\`
+*Output:*
+
+![Example Image](https://via.placeholder.com/150)
+
+## Code
+
+### Inline Code
+
+Wrap inline code in single backticks \`code\`.
+
+*Example:* \`Use the \`console.log()\` function.\`
+*Output:* Use the \`console.log()\` function.
+
+### Code Blocks
+
+Use triple backticks to create code blocks. Specify the language for syntax highlighting.
+
+\`\`\`javascript
+function helloWorld() {
+    console.log("Hello, world!");
+}
+\`\`\`
+
+*Output:*
+
+\`\`\`javascript
+function helloWorld() {
+    console.log("Hello, world!");
+}
+\`\`\`
+
+## Blockquotes
+
+Use the \`>\` symbol to create blockquotes.
+
+\`\`\`markdown
+> This is a blockquote.
+> It can span multiple lines.
+\`\`\`
+
+*Output:*
+
+> This is a blockquote.
+> It can span multiple lines.
+
+## Horizontal Rule
+
+Use three or more hyphens, asterisks, or underscores to create a horizontal rule.
+
+\`\`\`markdown
+---
+\`\`\`
+
+*Output:*
+
+---
+
+## Tables
+
+\`\`\`markdown
+| Header 1 | Header 2 |
+| -------- | -------- |
+| Cell 1   | Cell 2   |
+| Cell 3   | Cell 4   |
+\`\`\`
+
+*Output:*
+
+| Header 1 | Header 2 |
+| -------- | -------- |
+| Cell 1   | Cell 2   |
+| Cell 3   | Cell 4   |
+
+## Headings
+
+\`\`\`markdown
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+\`\`\`
+
+*Output:*
+
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+`
+
     return (
         <>
             <Transition appear show={isOpen} as={Fragment}>
@@ -31,98 +197,28 @@ function InfoModal({ isOpen, closeModal }) {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-full max-w-5xl transform overflow-hidden rounded-2xl bg-base-300 text-base-content border-2 border-white p-6 text-left align-middle shadow-xl transition-all">
-                                    <div className="p-5">
-                                        <h2 className="text-xl font-bold mb-4">Formatting Guide for Writing:</h2>
+                                <Dialog.Panel className="w-full max-w-5xl transform overflow-hidden rounded-2xl bg-base-300 text-base-content border-2 border-white text-left align-middle shadow-xl transition-all">
+                                    {/* Header */}
+                                    <div className="sticky top-0 bg-base-300 py-3 px-6 flex items-center justify-between border-b border-white">
+                                        <Dialog.Title as="h3" className="text-lg font-medium leading-6">
+                                            Markdown Formatting Guide
+                                        </Dialog.Title>
+                                        <button
+                                            onClick={closeModal}
+                                            className="rounded-md p-2 hover:bg-base-200 focus:outline-none focus:ring-2 focus:ring-white"
+                                        >
+                                            <span className="sr-only">Close panel</span>
+                                            <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                                        </button>
+                                    </div>
 
-                                        <p className="mb-2">
-                                            You can use the following special characters in your text to apply different formatting styles:
-                                        </p>
-
-                                        <ul className="list-disc pl-5 mb-4">
-                                            <li>
-                                                <span className="font-bold">New Paragraph/Point </span>: Start the text you want to make a new point (
-                                                <code>- </code>).
-                                                <br />
-                                                <strong>Example:</strong>
-                                                <br />
-                                                Input: <code>- This is a new paragraph/point. </code>
-                                                <br />
-                                                <span className="flex items-center gap-2">
-                                                    <span>Output:</span> <span className="flex items-center gap-2">
-                                                        <span className="text-[#0D94B6]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                                                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                                            </svg>
-                                                        </span>
-                                                        This is a new paragraph/point.
-                                                    </span>
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span className="font-bold">Bold Text</span>: Wrap the text you want to make bold in double asterisks (
-                                                <code>**</code>).
-                                                <br />
-                                                <strong>Example:</strong>
-                                                <br />
-                                                Input: <code>This is **bold** text.</code>
-                                                <br />
-                                                Output: <span className="font-bold">This is bold text.</span>
-                                            </li>
-
-                                            <li className="mt-4">
-                                                <span className="font-bold">Underlined Text</span>: Wrap the text you want to underline in double underscores (
-                                                <code>__</code>).
-                                                <br />
-                                                <strong>Example:</strong>
-                                                <br />
-                                                Input: <code>This is __underlined__ text.</code>
-                                                <br />
-                                                Output: <span className="underline">This is underlined text.</span>
-                                            </li>
-
-                                            <li className="mt-4">
-                                                <span className="font-bold">Code</span>: For inline code snippets, wrap the text in single backticks (
-                                                <code>`</code>).
-                                                <br />
-                                                <strong>Example:</strong>
-                                                <br />
-                                                Input: <code>Here is some `code`.</code>
-                                                <br />
-                                                Output: <code className="bg-gray-100 p-1 rounded">Here is some code.</code>
-                                            </li>
-
-                                            <li className="mt-4">
-                                                <span className="font-bold">Strikethrough Text</span>: To strike through text, wrap it in double tildes (
-                                                <code>~~</code>).
-                                                <br />
-                                                <strong>Example:</strong>
-                                                <br />
-                                                Input: <code>This is ~~strikethrough~~ text.</code>
-                                                <br />
-                                                Output: <span className="line-through">This is strikethrough text.</span>
-                                            </li>
-                                        </ul>
-
-                                        <p className="font-bold">Important Notes:</p>
-                                        <ul className="list-disc pl-5">
-                                            <li>
-                                                Ensure you use the correct characters, especially if you are copying from external sources. Use straight
-                                                quotation marks (<code>"</code>) instead of curly ones (<code>“ ”</code>), and avoid non-breaking spaces between
-                                                special characters.
-                                            </li>
-                                            <li>
-                                                The formatting symbols will not appear in the final output but will instead apply the desired style to the text
-                                                they enclose.
-                                            </li>
-                                        </ul>
-                                        <div className="flex justify-end mt-5">
-                                            <button
-                                                onClick={closeModal}
-                                                className="bg-[#0d94b6] hover:bg-[#0d829c] text-white py-2 px-5 rounded-full transition duration-200">
-                                                Close
-                                            </button>
-                                        </div>
+                                    {/* Content */}
+                                    <div className="p-6 overflow-y-auto max-h-[70vh]">
+                                        <ReactMarkdown
+                                            className="prose prose-stone w-full max-w-none"
+                                            children={markdownExample}
+                                            remarkPlugins={[remarkGfm]}
+                                        />
                                     </div>
                                 </Dialog.Panel>
                             </Transition.Child>

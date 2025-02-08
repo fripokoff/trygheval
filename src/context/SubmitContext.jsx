@@ -34,7 +34,6 @@ export function SubmitProvider({ children, setSheetData, sheetData }) {
     time
   } = useGeneralContext();
   const { 
-    preliminarySections,
     mandatorySections,
     bonusSections
   } = useSectionContext();
@@ -43,18 +42,8 @@ export function SubmitProvider({ children, setSheetData, sheetData }) {
   const handleSubmit = (download, formData = null) => {
     const project_title = formData?.project_title || projectTitle;
     try {
-      const formattedPreliminarySections = preliminarySections?.map((section) => ({
-        title: section.title || '',
-        subtitle: section.subtitle || '',
-        description: section.description || '',
-        conclusion: section.conclusion || '',
-        yes_no: section.yes_no || false,
-        type: "preliminary"
-      })) || [];
   
       const formattedMandatorySections = mandatorySections?.map((section) => ({
-        title: section.title || '',
-        subtitle: section.subtitle || '',
         description: section.description || '',
         conclusion: section.conclusion || '',
         yes_no: section.yes_no || false,
@@ -83,8 +72,6 @@ export function SubmitProvider({ children, setSheetData, sheetData }) {
         time: formData?.time || time,
         introduction : formData?.introduction || introductionData || [],
         guidelines : formData?.guidelines || guidelinesData || [],
-        preliminarySections: formData?.preliminarySections || formattedPreliminarySections || [],
-        preliminaryIntro: formData?.preliminaryIntro || '',
         mandatorySections: formData?.mandatorySections || formattedMandatorySections || [],
         mandatoryIntro: formData?.mandatoryIntro || '',
         bonusSections: formData?.bonusSections || formattedBonusSections || [],

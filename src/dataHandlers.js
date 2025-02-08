@@ -35,47 +35,21 @@ export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
 			attachment.querySelector('input[placeholder="Enter attachment URL"]')
 				?.value || "",
 	})).filter(attachment => attachment.title && attachment.url);
-	const preliminarySections = Array.from(
-		document.querySelectorAll(".prelimary-section")
-	).map((section, index) => {
-		const description =
-			section.querySelector(`#preliminary_description_${index}`)?.value || "";
-		const descriptionArray = description
-			.split("\n")
-			.filter((line) => line.trim() !== "")
-			.map((line) => line.trim());
-
-		return {
-			title:
-				section.querySelector(`#preliminary_title_${index}`)?.value || "",
-			subtitle:
-				section.querySelector(`#preliminary_subtitle_${index}`)?.value || "",
-			description: descriptionArray.join("\n"),
-			conclusion:section.querySelector(`#preliminary_conclusion_${index}`)?.value || "",
-			yes_no:
-				section.querySelector(`#preliminary_yes_no_${index}`)?.value ===
-				"true",
-			type: "preliminary",
-		};
-	});
+	
 	const mandatorySections = Array.from(
 		document.querySelectorAll(".mandatory-section")
 	).map((section, index) => {
 		const description =
 			section.querySelector(`#mandatory_description_${index}`)?.value || "";
-		const descriptionArray = description
-			.split("\n")
-			.filter((line) => line.trim() !== "")
-			.map((line) => line.trim());
-
+		// const descriptionArray = description
+		// 	.split("\n")
+		// 	.filter((line) => line.trim() !== "")
+		// 	.map((line) => line.trim());
+	
 		return {
-			title: section.querySelector(`#mandatory_title_${index}`)?.value || "",
-			subtitle:
-				section.querySelector(`#mandatory_subtitle_${index}`)?.value || "",
-			description: descriptionArray.join("\n"),
-			conclusion:section.querySelector(`#mandatory_conclusion_${index}`)?.value || "",
-			yes_no:
-				section.querySelector(`#mandatory_yes_no_${index}`)?.value === "true",
+			description: description,
+			yes_no: section.querySelector(`#mandatory_yes_no_${index}`).checked ? true : false,
+			separator:section.querySelector(`#mandatory_separator_${index}`).checked ? true : false,
 			type: "mandatory",
 		};
 	});
@@ -120,16 +94,17 @@ export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
 		students: parseInt(document.querySelector("#students")?.value) || 0,
 		eval_points: parseInt(document.querySelector("#eval_points")?.value) || 0,
 		time: parseInt(document.querySelector("#time")?.value) || 0,
-		bonusIntro: document.querySelector("#bonus_intro")?.value || "",
 		introduction: introArray || "",
 		guidelines: guidelinesArray || "",
 		attachments: attachments || [],
-		preliminarySections: preliminarySections || [],
 		mandatorySections: mandatorySections || [],
+		mandatoryIntro : document.querySelector("#mandatory_intro")?.value || "",
 		bonusSections: bonusSections,
+		bonusIntro: document.querySelector("#bonus_intro")?.value || "",
 		gradingOptions: [getGradingOptions()] || [],
 		updated_at: dateFormat,
 	};
+	console.log(formData);
 	handleSubmit(false, formData);
 	setSheetData(formData);
 	return formData;
@@ -139,23 +114,16 @@ let cppID = 0;
 
 export const fetchData = async (folder) => {
 	let project = folder;
-	if (folder.includes("CPP")) {
-		if (project === "CPP") {
-			project = "CPP/CPP0" + cppID;
-			cppID++;
-		} else {
-			project = "CPP/" + folder;
-		}
+	if (project.includes("CPP")) {
+		project = "CPP/CPP0" + cppID;
+		cppID++;
 	}
 	let home = window.location;
 	home += "";
 	if (home.includes("&edit=true")) {
 		home = home.replace("&edit=true", "");
 	}
-	const url = home.replace(
-		/\/sheet\?project=([a-zA-Z0-9\-_]+)/,
-		"/Sheets/$1/data.json"
-	);
+	const url = home.replace(/\/sheet\?project=([a-zA-Z0-9\-_]+)/,`/Sheets/${project}/data.json`);
 	try {
 		const response = await fetch(url);
 		if (!response.ok) {

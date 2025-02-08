@@ -17,7 +17,7 @@ export default function BonusSection({  sheetData, openModal }) {
   };
 
   return (
-    <div className="flex flex-col p-4 lg:p-5 rounded-xl gap-5 mt-10 bg-base-200 bonus-section">
+    <div className="flex flex-col p-4 lg:p-5 rounded-xl gap-5 mt-10 bg-base-200">
       <div className="flex justify-between items-center">
         <h1 className='text-2xl font-medium text-base-content font-bold'>
           Bonus Part
@@ -51,7 +51,7 @@ export default function BonusSection({  sheetData, openModal }) {
           </div>
 
       {bonusSections.map((section, index) => (
-        <div key={section.id} className='mt-5 bg-base-300 p-6 rounded-xl'>
+        <div key={section.id} className='mt-5 bg-base-300 p-6 rounded-xl bonus-section'>
           {/* Contenu de la section */}
           <div className='mt-3 mb-7 flex justify-between items-center'>
             <h1 className='text-xl font-medium text-base-content'>

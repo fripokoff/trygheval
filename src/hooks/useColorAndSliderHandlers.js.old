@@ -8,11 +8,8 @@ const useColorAndSliderHandlers = (
 ) => {
     const [yesColorBonus, setYesColorBonus] = useState([]);
     const [noColorBonus, setNoColorBonus] = useState([]);
-    const [preliminaryYesColor, setPreliminaryYesColor] = useState([]);
-    const [preliminaryNoColor, setPreliminaryNoColor] = useState([]);
     const [mandatoryYesColor, setMandatoryYesColor] = useState([]);
     const [mandatoryNoColor, setMandatoryNoColor] = useState([]);
-    const [preliminarySliderValues, setPreliminarySliderValues] = useState([]);
     const [mandatorySliderValues, setMandatorySliderValues] = useState([]);
     const [bonusSliderValues, setBonusSliderValues] = useState([]);
 
@@ -24,17 +21,6 @@ const useColorAndSliderHandlers = (
                 return newColors;
             });
             setMandatoryNoColor(prevColors => {
-                const newColors = [...prevColors];
-                newColors[index] = initialNoColor;
-                return newColors;
-            });
-        } else if (sectionType === 'preliminary') {
-            setPreliminaryYesColor(prevColors => {
-                const newColors = [...prevColors];
-                newColors[index] = clickedYesColor;
-                return newColors;
-            });
-            setPreliminaryNoColor(prevColors => {
                 const newColors = [...prevColors];
                 newColors[index] = initialNoColor;
                 return newColors;
@@ -54,18 +40,7 @@ const useColorAndSliderHandlers = (
                 newColors[index] = initialYesColor;
                 return newColors;
             });
-        } else if (sectionType === 'preliminary') {
-            setPreliminaryNoColor(prevColors => {
-                const newColors = [...prevColors];
-                newColors[index] = clickedNoColor;
-                return newColors;
-            });
-            setPreliminaryYesColor(prevColors => {
-                const newColors = [...prevColors];
-                newColors[index] = initialYesColor;
-                return newColors;
-            });
-        }
+        } 
     };
 
     const handleYesColorBonus = (index) => {
@@ -103,12 +78,6 @@ const useColorAndSliderHandlers = (
                 newValues[index] = value;
                 return newValues;
             });
-        } else if (sectionType === 'preliminary') {
-            setPreliminarySliderValues(prevValues => {
-                const newValues = [...prevValues];
-                newValues[index] = value;
-                return newValues;
-            });
         }
     };
 
@@ -125,16 +94,10 @@ const useColorAndSliderHandlers = (
         setYesColorBonus,
         noColorBonus,
         setNoColorBonus,
-        preliminaryYesColor,
-        setPreliminaryYesColor,
-        preliminaryNoColor,
-        setPreliminaryNoColor,
         mandatoryYesColor,
         setMandatoryYesColor,
         mandatoryNoColor,
         setMandatoryNoColor,
-        preliminarySliderValues,
-        setPreliminarySliderValues,
         mandatorySliderValues,
         setMandatorySliderValues,
         bonusSliderValues,

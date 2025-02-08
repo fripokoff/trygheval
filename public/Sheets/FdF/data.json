@@ -32,11 +32,9 @@
 					"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/FdF/fr.subject.pdf"
 				},
 				{
-					"title": "extras",
 					"url": "https://github.com/ARuzgar/42-Subjects/tree/main/Cursus/FdF/Extras"
 				}
 			],
-			"optional_bonus_sections": null,
 			"cursus_id": "1",
 			"updated_at": "2023-08-01T17:15:50.925Z",
 			"students" : 1,
@@ -45,10 +43,7 @@
 			"preliminarySections" : [
 				{
 					"id": "679e56c78c78a1cea9234fa7",
-					"title": "Minimal requirements",
-					"subtitle": "Does the assignment meet the minimal requirements?",
 					"description": "--The repository isn't empty.\n--Norminette shows no errors.\n--No cheating.\n--No forbidden function/library.\n--The code compiles with the required options.\n--The executable is named as expected.\n--During execution, there is no brutal or unmanaged crash (segfault, bus error, and so forth).\n--No memory leaks.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e56c68c78a1cea9234fa6",
 					"created_at": "2025-02-01T17:15:51.018Z",
@@ -58,10 +53,7 @@
 			"mandatorySections" : [
 				{
 					"id": "679e56c78c78a1cea9234fa7",
-					"title": "Minimal requirements",
-					"subtitle": "Does the assignment meet the minimal requirements?",
 					"description": "--The repository isn't empty.\n--Norminette shows no errors.\n--No cheating.\n--No forbidden function/library.\n--The code compiles with the required options.\n--The executable is named as expected.\n--During execution, there is no brutal or unmanaged crash (segfault, bus error, and so forth).\n--No memory leaks.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e56c68c78a1cea9234fa6",
 					"created_at": "2025-02-01T17:15:51.018Z",
@@ -69,10 +61,7 @@
 				},
 				{
 					"id": "679e56c78c78a1cea9234fa8",
-					"title": "Error management",
-					"subtitle": "",
 					"description": "Test fdf without parameters, with too many parameters, a non-existing\nfile or on which you have no rights. If those tests are passed, then it's\nall good. This is the only error management that is required. For now on,\nthe maps inside the input files have to be formatted properly.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e56c68c78a1cea9234fa6",
 					"created_at": "2025-02-01T17:15:51.018Z",
@@ -80,10 +69,7 @@
 				},
 				{
 					"id": "679e56c78c78a1cea9234fa9",
-					"title": "Graphic management",
-					"subtitle": "Run the program with the 42 map provided from the project page and verify that:",
 					"description": "--A window opens\n--Something is drawn in the window\n--You can see a isometric projection of the 42 map\n--Pressing 'ESC' closes the window and exits the program in a clean way (no leaks).\n--Clicking on the cross on the window's frame closes the window and exits the program in a clean way (no leaks).",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e56c68c78a1cea9234fa6",
 					"created_at": "2025-02-01T17:15:51.018Z",
@@ -91,10 +77,7 @@
 				},
 				{
 					"id": "679e56c78c78a1cea9234faa",
-					"title": "Line tracing",
-					"subtitle": "",
 					"description": "--Use a flat map with nothing but 0, sized 4x4. We have a flat wireframe grid with a projection that is used to give a 3D concept.\n--Same map, with 1 point at a different altitude. Check that the result corresponds and that the 3D effect is rendered.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e56c68c78a1cea9234fa6",
 					"created_at": "2025-02-01T17:15:51.018Z",
@@ -102,10 +85,7 @@
 				},
 				{
 					"id": "679e56c78c78a1cea9234fab",
-					"title": "Heavy map",
-					"subtitle": "",
 					"description": "Check whether the program handles a bigger map and an aleatory 16x16 map.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e56c68c78a1cea9234fa6",
 					"created_at": "2025-02-01T17:15:51.018Z",
@@ -113,10 +93,7 @@
 				},
 				{
 					"id": "679e56c78c78a1cea9234fac",
-					"title": "Heavier map",
-					"subtitle": "",
 					"description": "Test with bigger, heavier maps. Either those provided in the intranet, the\nevaluated student, or your owns. Be logical and keep in mind the\nrequirements of the subject regarding what could contain your maps (colors\nfor example).",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e56c68c78a1cea9234fa6",
 					"created_at": "2025-02-01T17:15:51.018Z",
@@ -124,10 +101,7 @@
 				},
 				{
 					"id": "679e56c78c78a1cea9234fad",
-					"title": "Graphic responsive",
-					"subtitle": "",
 					"description": "If the graphical representation stayed fluid and pleasant in the last test\nwith heavy maps, then it's cool.\n\n",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e56c68c78a1cea9234fa6",
 					"created_at": "2025-02-01T17:15:51.018Z",
@@ -135,10 +109,7 @@
 				},
 				{
 					"id": "679e56c78c78a1cea9234fae",
-					"title": "MiniLibX images",
-					"subtitle": "",
 					"description": "Take a look at the code and check whether the student uses the images from\nthe MLX to draw the image instead of putting pixels one by one. ;)",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e56c68c78a1cea9234fa6",
 					"created_at": "2025-02-01T17:15:51.018Z",
@@ -148,10 +119,7 @@
 			"bonusSections" : [
 				{
 					"id": "679e56c78c78a1cea9234fb0",
-					"title": "Extra projection",
-					"subtitle": "",
 					"description": "Can the map be represented using another projection (such as parallel or conic)?",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e56c68c78a1cea9234fa6",
 					"created_at": "2025-02-01T17:15:51.093Z",
@@ -159,10 +127,7 @@
 				},
 				{
 					"id": "679e56c78c78a1cea9234fb1",
-					"title": "Zoooooooom",
-					"subtitle": "",
 					"description": "Is there a way to zoom in and out using the keyboard or mouse?",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e56c68c78a1cea9234fa6",
 					"created_at": "2025-02-01T17:15:51.093Z",
@@ -170,10 +135,7 @@
 				},
 				{
 					"id": "679e56c78c78a1cea9234fb2",
-					"title": "Translate",
-					"subtitle": "",
 					"description": "Is there a way to translate the projection using the keyboard or mouse?",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e56c68c78a1cea9234fa6",
 					"created_at": "2025-02-01T17:15:51.093Z",
@@ -181,10 +143,7 @@
 				},
 				{
 					"id": "679e56c78c78a1cea9234fb3",
-					"title": "Rotation",
-					"subtitle": "",
 					"description": "Is there a way to rotate the projection using the keyboard or mouse?",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e56c68c78a1cea9234fa6",
 					"created_at": "2025-02-01T17:15:51.093Z",
@@ -192,17 +151,13 @@
 				},
 				{
 					"id": "679e56c78c78a1cea9234fb4",
-					"title": "Be crazy",
-					"subtitle": "",
 					"description": "Give one more point if there is any additional bonus you consider is fine.\nCreativity is an important point in your education and in the digital world.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e56c68c78a1cea9234fa6",
 					"created_at": "2025-02-01T17:15:51.093Z",
 					"updated_at": "2025-02-01T17:15:51.093Z"
 				}
 			],
-			"bonusIntro" : "A lot of nice extras.",
 			"gradingOptions" :[
 				{
 					"id": "679e45788c78a1cea9234f62",

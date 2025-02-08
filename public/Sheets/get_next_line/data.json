@@ -32,7 +32,6 @@
 					"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/get_next_line/fr.subject.pdf"
 				}
 			],
-			"optional_bonus_sections": null,
 			"cursus_id": "1",
 			"updated_at": "2023-12-18T16:28:15.940Z",
 			"students" : 1,
@@ -41,10 +40,7 @@
 			"mandatorySections" : [
 				{
 					"id": "679e4b5e8c78a1cea9234f6e",
-					"title": "Norminette",
-					"subtitle": "",
 					"description": "Exécutez la Norminette. En cas d'erreur, l'évaluation s'arrête ici.\nVous pouvez continuer et discuter de l'implémentation du code, mais cela\nne sera pas noté.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e4b5e8c78a1cea9234f6d",
 					"created_at": "2025-02-01T16:27:10.867Z",
@@ -52,10 +48,7 @@
 				},
 				{
 					"id": "679e4b5e8c78a1cea9234f6f",
-					"title": "Compilation",
-					"subtitle": "",
 					"description": "Il devrait être possible de compiler le projet avec les flags habituels\net le flag -D BUFFER_SIZE. Il doit être possible de compiler ce projet avec et sans\nce dernier en plus des flags : -Wall -Wextra -Werror. S'il y a une erreur,\nl'évaluation s'arrête ici. Vous pouvez continuer et discuter de la mise en\nœuvre du code, mais la soutenance ne sera pas noté.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e4b5e8c78a1cea9234f6d",
 					"created_at": "2025-02-01T16:27:10.867Z",
@@ -63,10 +56,7 @@
 				},
 				{
 					"id": "679e4b5e8c78a1cea9234f70",
-					"title": "Gestion d'erreur",
-					"subtitle": "Effectuez au minimum les tests d'erreur suivants afin de vérifier la gestion d'erreur du programmme.",
 					"description": "--Passez un fd arbitraire a la fonction get_next_line, sur lequel il n'est pas possible de lire (par ex. 42) La fonction doit renvoyer NULL.\n--Vérifiez les retours d'erreur de malloc, read et open. Si la partie \"gestion d'erreur\" est fausse, merci de ne pas noter la partie suivante, la correction s'arrête ici. Vous pouvez continuer et discuter de l'implémentation du code, mais cela ne sera pas noté.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e4b5e8c78a1cea9234f6d",
 					"created_at": "2025-02-01T16:27:10.867Z",
@@ -74,10 +64,7 @@
 				},
 				{
 					"id": "679e4b5e8c78a1cea9234f71",
-					"title": "Tests",
-					"subtitle": "",
 					"description": "**En temps qu'évaluateur(ice), vous devez écrire ou apporter un main qui vérifie :**\n\n--La valeur de retour de la fonction get_next_line est NULL en cas d'erreur.\n--Sinon, la fonction renvoie la ligne lue, toujours avec un \\n à la fin.\n\n**Testez toutes les combinaisons des règles suivantes :**\n\n--Gros BUFFER_SIZE (> 1024)\n--Petit BUFFER_SIZE (< 8, et 1)\n--BUFFER_SIZE de la taille de la ligne à lire\n--1 de décalage (+/-) entre le BUFFER_SIZE et la ligne\n--Lecture depuis stdin\n--Lecture depuis un fichier\n--(Multiple/Simple) ligne longue (2k+ caractères)\n--(Multiple/Simple) ligne courte (<4 caractères, et 1)\n--(Multiple/Simple) Ligne vide",
-					"conclusion": "**Ces tests devraient vous permettre de vérifier la validité du projet de l'étudiant(e). En cas d'erreur, l'évaluation s'arrête ici.**",
 					"yes_no": true,
 					"sheetId": "679e4b5e8c78a1cea9234f6d",
 					"created_at": "2025-02-01T16:27:10.867Z",
@@ -87,10 +74,7 @@
 			"bonusSections" : [
 				{
 					"id": "679e4b5e8c78a1cea9234f73",
-					"title": "Lecture sur multiples fd",
-					"subtitle": "",
 					"description": "Répétez les tests effectués précédemment mais, cette fois, en lançant\nplusieurs instances de get_next_line, chacune utilisant un descripteur\nde fichier différent.\nAssurez-vous que chaque get_next_line renvoie la bonne ligne.\nAjoutez un descripteur de fichier invalide pour tester la gestion\nd'erreurs.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e4b5e8c78a1cea9234f6d",
 					"created_at": "2025-02-01T16:27:10.938Z",
@@ -98,17 +82,13 @@
 				},
 				{
 					"id": "679e4b5e8c78a1cea9234f74",
-					"title": "Une seule variable statique",
-					"subtitle": "",
 					"description": "Lisez le code et vérifiez qu'il n'y a bien qu'une seule variable statique.\nAttribuez les points bonus si c'est le cas.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e4b5e8c78a1cea9234f6d",
 					"created_at": "2025-02-01T16:27:10.938Z",
 					"updated_at": "2025-02-01T16:28:16.004Z"
 				}
 			],
-			"bonusIntro" : "Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.",
 			"gradingOptions" :[
 				{
 					"id": "679e45788c78a1cea9234f62",

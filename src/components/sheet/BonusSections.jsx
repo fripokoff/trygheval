@@ -2,7 +2,6 @@ import React from 'react';
 
 function BonusSections({ 
     sheetData, 
-    formatText, 
     handleYesColorBonus, 
     yesColorBonus, 
     noColorBonus, 
@@ -40,14 +39,14 @@ function BonusSections({
                                             {
                                                 section.description.split('\n').map((line, index) => (
                                                     <p key={index} className='pb-5'>
-                                                        {formatText(line)}
+                                                        {line}
                                                     </p>
                                                 ))
                                             }
                                         </div>
 
                                         {section.conclusion ? (<p className='pt-3 pb-5'>
-                                            {section.conclusion ? formatText(section.conclusion) : ''}
+                                            {section.conclusion ? section.conclusion : ''}
                                         </p>) : null}
                                         {
                                             section.yes_no ? (

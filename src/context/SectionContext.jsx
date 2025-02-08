@@ -1,12 +1,10 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import { set } from 'react-hook-form';
 import { v4 as uuidv4 } from 'uuid';
 
 const SectionContext = createContext();
 
 export function SectionProvider({ children , sheetData}) {
-  const [preliminarySections, setPreliminarySections] = useState([]);
-  const [preliminarySectionsDataFromServer, setPreliminarySectionsDataFromServer] = useState([]);
-  const [numberOfPreliminarySections, setNumberOfPreliminarySections] = useState(0);
   const [mandatorySections, setMandatorySections] = useState([]);
   const [mandatoryOptionsDataFromServer, setMandatoryOptionsDataFromServer] = useState([]);
   const [numberOfMandatorySections, setNumberOfMandatorySections] = useState(0);
@@ -14,20 +12,7 @@ export function SectionProvider({ children , sheetData}) {
   const [bonusSectionsDataFromServer, setBonusSectionsDataFromServer] = useState([]);
   const [numberOfBonusSections, setNumberOfBonusSections] = useState(0);
   const [bonusIntroduction, setBonusIntroduction] = useState('');
-  
-  const updatePreliminarySection = (index, updatedSection) => {
-    setPreliminarySections(prevSections => {
-      const newSections = [...prevSections];
-      newSections[index] = { ...newSections[index], ...updatedSection };
-      return newSections;
-    });
-  };
-
-
-
-  const updatePreliminaryIntro = (e) => {
-    setPreliminaryIntroduction(e.target.value);
-  };
+  const [mandatoryIntroduction, setMandatoryIntroduction] = useState('');
 
   const updateMandatoryIntroduction = (e) => {
     setMandatoryIntroduction(e.target.value);
@@ -38,6 +23,7 @@ export function SectionProvider({ children , sheetData}) {
   };
 
   const updateMandatorySection = (index, updatedSection) => {
+    console.log(updatedSection)
     setMandatorySections(prevSections => {
       const newSections = [...prevSections];
       newSections[index] = { ...newSections[index], ...updatedSection };
@@ -56,17 +42,6 @@ export function SectionProvider({ children , sheetData}) {
 
   useEffect(() => {
     if (!sheetData) return;
-
-    if (sheetData.preliminarySections) {
-      const preliminaryWithIds = sheetData.preliminarySections.map((section, index) => ({
-        ...section,
-        id: section.id || uuidv4(),
-        index
-      }));
-      setPreliminarySections(preliminaryWithIds);
-      setPreliminarySectionsDataFromServer(sheetData.preliminarySections);
-      setNumberOfPreliminarySections(sheetData.preliminarySections.length);
-    }
 
     if (sheetData.mandatorySections) {
       const mandatoryWithIds = sheetData.mandatorySections.map((section, index) => ({
@@ -92,14 +67,6 @@ export function SectionProvider({ children , sheetData}) {
   }, [sheetData]);
   
   const value = {
-    // Preliminary sections
-    preliminarySections,
-    setPreliminarySections,
-    preliminarySectionsDataFromServer,
-    setPreliminarySectionsDataFromServer,
-    numberOfPreliminarySections,
-    setNumberOfPreliminarySections,
-    updatePreliminarySection,
     // Mandatory sections
     mandatorySections,
     setMandatorySections,
@@ -119,8 +86,9 @@ export function SectionProvider({ children , sheetData}) {
     bonusIntroduction,
     setBonusIntroduction,
     updateBonusIntroduction,
-    updatePreliminaryIntro,
-    updateMandatoryIntroduction
+    mandatoryIntroduction,
+    setMandatoryIntroduction,
+    updateMandatoryIntroduction,
   };
 
   return (

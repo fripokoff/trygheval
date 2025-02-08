@@ -40,8 +40,7 @@
 				"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/so_long/Extras/minilibx_opengl.tgz"
 			}
 		],
-        "optional_bonus_sections": null,
-        "cursus_id": "1",
+          "cursus_id": "1",
         "updated_at": "2023-08-01T17:03:33.436Z",
 		"students" : 1,
 		"eval_points" : 3,
@@ -49,10 +48,7 @@
 			"mandatorySections" : [
 				{
 					"id": "679e53e58c78a1cea9234f8f",
-					"title": "Executable name",
-					"subtitle": "",
 					"description": "Execute the `make` command. The project should compile as expected (the Makefile should not re-link). Verify that the executable name is `so_long`. Otherwise, use the \"invalid compilation\" flag at the end of the scale.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e53e58c78a1cea9234f8e",
 					"created_at": "2025-02-01T17:03:33.600Z",
@@ -60,10 +56,7 @@
 				},
 				{
 					"id": "679e53e58c78a1cea9234f90",
-					"title": "Parsing",
-					"subtitle": "",
 					"description": "--Test different maps.\n--Test different sizes.\n--Test different line sizes.",
-					"conclusion": "Also, check that the program returns an error and exits properly when the configuration file is misconfigured (e.g., an unknown character, duplicates, an invalid file path, and so forth).  Otherwise, the defense is over. Use the appropriate flag: incomplete work, crash...",
 					"yes_no": true,
 					"sheetId": "679e53e58c78a1cea9234f8e",
 					"created_at": "2025-02-01T17:03:33.600Z",
@@ -71,10 +64,7 @@
 				},
 				{
 					"id": "679e53e58c78a1cea9234f91",
-					"title": "Technical elements of the display",
-					"subtitle": "Time to evaluate the technical elements of the display. Check that the level is an accurate representation of the map used as parameter.",
 					"description": "--A window must open at the launch of the program. It must remain open during the whole execution.\n--Hide all or parts of the window either by using window or by using the screen's borders. Then, minimize the window and maximize it back. In all cases, the content of the window must remain consistent.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e53e58c78a1cea9234f8e",
 					"created_at": "2025-02-01T17:03:33.600Z",
@@ -82,10 +72,7 @@
 				},
 				{
 					"id": "679e53e58c78a1cea9234f92",
-					"title": "Basic user events",
-					"subtitle": "In this section, let's evaluate the program's user events. Execute the 3 following tests. If at least one of them fails, this means that no points must be awarded for this section and you have to move to the next one.",
 					"description": "--Click the cross at the top of the window. The window must close and the program must exit cleanly.\n--Press the ESC key. The window must close and the program must exit cleanly. In the case of this test, you can accept that another key exits the program, for example, Q.\n--Press the four arrow keys (it is acceptable to use the WASD or ZQSD keys instead) in the order of your choice. Each key press must render a visible result on the window (player's movement).",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e53e58c78a1cea9234f8e",
 					"created_at": "2025-02-01T17:03:33.600Z",
@@ -93,10 +80,7 @@
 				},
 				{
 					"id": "679e53e58c78a1cea9234f93",
-					"title": "Movements",
-					"subtitle": "In this section, let's evaluate the implementation of the player's movement. Execute the 5 following tests. If at least one of them fails, this means that no points must be awarded for this section and you have to move to the next one.",
 					"description": "--The player's spawning position must be in accordance with the map file.\n--Press the arrows keys (it is acceptable to use the WASD or ZQSD keys instead) to move in every direction on the map.\n--Is the game \"playable\"?",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e53e58c78a1cea9234f8e",
 					"created_at": "2025-02-01T17:03:33.600Z",
@@ -104,10 +88,7 @@
 				},
 				{
 					"id": "679e53e58c78a1cea9234f94",
-					"title": "Walls & Sprites",
-					"subtitle": "In this section, let's evaluate the map representation. Execute the following tests. If at least one of them fails, this means that no points must be awarded for this section and you have to move to the next one.",
 					"description": "--The wall's texture is correctly placed and the player cannot go through it.\n--The collectible's texture is correctly placed and the player can pick it by walking on it.\n--The Exit texture is correctly placed and the player can finish the game by walking on it but only after picking every collectible.\n--The player texture is correctly placed and can move in every direction except into the walls.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e53e58c78a1cea9234f8e",
 					"created_at": "2025-02-01T17:03:33.600Z",
@@ -115,10 +96,7 @@
 				},
 				{
 					"id": "679e53e58c78a1cea9234f95",
-					"title": "Counter",
-					"subtitle": "In this section, let's evaluate the gameplay elements. Execute the following tests. If at least one of them fails, this means that no points must be awarded for this section and you have to move to the next one.",
 					"description": "--There's a small counter displayed on the shell that counts how many movements the player does.\n--The counter can be displayed directly on the game screen (see Bonus part).",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e53e58c78a1cea9234f8e",
 					"created_at": "2025-02-01T17:03:33.600Z",
@@ -126,10 +104,7 @@
 				},
 				{
 					"id": "679e53e58c78a1cea9234f96",
-					"title": "MiniLibX images",
-					"subtitle": "",
 					"description": "Take a look at the code and check whether the student uses the images from the MLX to draw the image instead of putting pixels one by one. ;)",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e53e58c78a1cea9234f8e",
 					"created_at": "2025-02-01T17:03:33.600Z",
@@ -139,10 +114,7 @@
 			"bonusSections" : [
 				{
 					"id": "679e53e58c78a1cea9234f97",
-					"title": "Enemies",
-					"subtitle": "",
 					"description": "The enemy patrols cause the player to lose if they touch them.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e53e58c78a1cea9234f8e",
 					"created_at": "2025-02-01T17:03:33.682Z",
@@ -150,17 +122,13 @@
 				},
 				{
 					"id": "679e53e58c78a1cea9234f98",
-					"title": "Sprite animation",
-					"subtitle": "",
 					"description": "There's some sprite animation. The evaluated student has to explain what it is and how they did it.",
-					"conclusion": "",
 					"yes_no": false,
 					"sheetId": "679e53e58c78a1cea9234f8e",
 					"created_at": "2025-02-01T17:03:33.682Z",
 					"updated_at": "2025-02-01T17:03:33.682Z"
 				}
 			],
-			"bonusIntro" : "Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.",
 			"gradingOptions" :[
 				{
 					"id": "679e45788c78a1cea9234f62",

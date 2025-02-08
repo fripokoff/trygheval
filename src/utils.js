@@ -20,13 +20,7 @@ export const formatText = (text) => {
                 </span>
             );
         }
-        if (part === '--') {
-            return (
-                <span key={index} className="inline-flex items-center">
-                    <span className="text-[#0D94B6] mr-2">•</span>
-                </span>
-            );
-        }
+
 
         if (part.startsWith('__') && part.endsWith('__')) {
             return (

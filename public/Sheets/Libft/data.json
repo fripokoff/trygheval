@@ -33,8 +33,7 @@
 		}
 		],
 		"time" : 30,
-        "optional_bonus_sections": null,
-        "cursus_id": "1",
+          "cursus_id": "1",
         "updated_at": "2023-12-26T16:28:09.265Z",
 		"student_number" : 1,
 		"students" : 1,
@@ -42,10 +41,7 @@
 			"mandatorySections" : [
 				{
 					"id": "679b8bb46679b9e6f921f767",
-					"title": "Fonctions de la libC #1",
-					"subtitle": "Testez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :",
 					"description": "--ft_strlen\n--ft_memcpy\n--ft_memset\n--ft_bzero\n--ft_memmove\n--ft_memcmp\n--ft_memchr",
-					"conclusion": "**Ca fonctionne ?**",
 					"yes_no": true,
 					"sheetId": "679b8bb46679b9e6f921f766",
 					"created_at": "2025-01-30T14:24:52.691Z",
@@ -53,10 +49,7 @@
 				},
 				{
 					"id": "679b8bb46679b9e6f921f768",
-					"title": "Fonctions de la libC #2",
-					"subtitle": "Testez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :",
 					"description": "--ft_isalpha\n--ft_isdigit\n--ft_isalnum\n--ft_isascii\n--ft_isprint",
-					"conclusion": "**Ca fonctionne ?**",
 					"yes_no": true,
 					"sheetId": "679b8bb46679b9e6f921f766",
 					"created_at": "2025-01-30T14:24:52.691Z",
@@ -64,10 +57,7 @@
 				},
 				{
 					"id": "679b8bb46679b9e6f921f769",
-					"title": "Fonctions de la libC #3",
-					"subtitle": "Testez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :",
 					"description": "--ft_toupper\n--ft_tolower\n--ft_strchr\n--ft_strrchr",
-					"conclusion": "**Ca fonctionne ?**",
 					"yes_no": true,
 					"sheetId": "679b8bb46679b9e6f921f766",
 					"created_at": "2025-01-30T14:24:52.691Z",
@@ -75,10 +65,7 @@
 				},
 				{
 					"id": "679b8bb46679b9e6f921f76a",
-					"title": "Fonctions de la libC #4",
-					"subtitle": "Testez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :",
 					"description": "--ft_strlcat\n--ft_strlcpy\n--ft_atoi\n--ft_strnstr\n--ft_strncmp\n--ft_calloc\n--ft_strdup",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679b8bb46679b9e6f921f766",
 					"created_at": "2025-01-30T14:24:52.691Z",
@@ -86,10 +73,7 @@
 				},
 				{
 					"id": "679b8bb46679b9e6f921f76b",
-					"title": "Fonctions supplémentaires #1",
-					"subtitle": "Testez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :",
 					"description": "--ft_substr\n--ft_strjoin\n--ft_putchar_fd\n--ft_putstr_fd\n--ft_putendl_fd\n--ft_putnbr_fd",
-					"conclusion": "**Ca fonctionne ?**",
 					"yes_no": true,
 					"sheetId": "679b8bb46679b9e6f921f766",
 					"created_at": "2025-01-30T14:24:52.691Z",
@@ -97,24 +81,17 @@
 				},
 				{
 					"id": "679b8bb46679b9e6f921f76c",
-					"title": "Fonctions supplémentaires #2",
-					"subtitle": "Testez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :",
 					"description": "--ft_strmapi\n--ft_striteri\n--ft_strtrim\n--ft_split\n--ft_itoa",
-					"conclusion": "**Ca fonctionne ?**",
 					"yes_no": true,
 					"sheetId": "679b8bb46679b9e6f921f766",
 					"created_at": "2025-01-30T14:24:52.691Z",
 					"updated_at": "2025-01-30T16:03:00.587Z"
 				}
 			],
-			"mandatoryIntro" : "Vous devez tester les fonctions présentes dans la libft, soit avec votre jeu de tests, soit avec celui de la personne évaluée.",
 			"bonusSections" : [
 				{
 					"id": "679b8bb56679b9e6f921f76e",
-					"title": "ft_lstnew",
-					"subtitle": "",
 					"description": " ",
-					"conclusion": " **Ca fonctionne ?**",
 					"yes_no": true,
 					"sheetId": "679b8bb46679b9e6f921f766",
 					"created_at": "2025-01-30T14:24:53.279Z",
@@ -122,10 +99,7 @@
 				},
 				{
 					"id": "679e47ee8c78a1cea9234f65",
-					"title": "ft_lstdelone",
-					"subtitle": "",
 					"description": " ",
-					"conclusion": " **Ca fonctionne ?**",
 					"yes_no": true,
 					"sheetId": "679b8bb46679b9e6f921f766",
 					"created_at": "2025-02-01T16:12:30.282Z",
@@ -133,10 +107,7 @@
 				},
 				{
 					"id": "679e47ee8c78a1cea9234f66",
-					"title": "ft_lstclear",
-					"subtitle": "",
 					"description": " ",
-					"conclusion": " **Ca fonctionne ?**",
 					"yes_no": true,
 					"sheetId": "679b8bb46679b9e6f921f766",
 					"created_at": "2025-02-01T16:12:30.282Z",
@@ -144,10 +115,7 @@
 				},
 				{
 					"id": "679e47ee8c78a1cea9234f67",
-					"title": "ft_lstadd_front",
-					"subtitle": "",
 					"description": " ",
-					"conclusion": " **Ca fonctionne ?**",
 					"yes_no": true,
 					"sheetId": "679b8bb46679b9e6f921f766",
 					"created_at": "2025-02-01T16:12:30.282Z",
@@ -155,10 +123,7 @@
 				},
 				{
 					"id": "679e47ee8c78a1cea9234f68",
-					"title": "ft_lstadd_back",
-					"subtitle": "",
 					"description": " ",
-					"conclusion": " **Ca fonctionne ?**",
 					"yes_no": true,
 					"sheetId": "679b8bb46679b9e6f921f766",
 					"created_at": "2025-02-01T16:12:30.282Z",
@@ -166,10 +131,7 @@
 				},
 				{
 					"id": "679e47ee8c78a1cea9234f69",
-					"title": "ft_lstsize",
-					"subtitle": "",
 					"description": " ",
-					"conclusion": " **Ca fonctionne ?**",
 					"yes_no": true,
 					"sheetId": "679b8bb46679b9e6f921f766",
 					"created_at": "2025-02-01T16:12:30.282Z",
@@ -177,10 +139,7 @@
 				},
 				{
 					"id": "679e47ee8c78a1cea9234f6a",
-					"title": "ft_lstlast",
-					"subtitle": "",
 					"description": " ",
-					"conclusion": " **Ca fonctionne ?**",
 					"yes_no": true,
 					"sheetId": "679b8bb46679b9e6f921f766",
 					"created_at": "2025-02-01T16:12:30.282Z",
@@ -188,10 +147,7 @@
 				},
 				{
 					"id": "679e47ee8c78a1cea9234f6b",
-					"title": "ft_lstiter",
-					"subtitle": "",
 					"description": " ",
-					"conclusion": " **Ca fonctionne ?**",
 					"yes_no": true,
 					"sheetId": "679b8bb46679b9e6f921f766",
 					"created_at": "2025-02-01T16:12:30.282Z",
@@ -199,17 +155,13 @@
 				},
 				{
 					"id": "679e47ee8c78a1cea9234f6c",
-					"title": "ft_lstmap",
-					"subtitle": "",
 					"description": " ",
-					"conclusion": " **Ca fonctionne ?**",
 					"yes_no": true,
 					"sheetId": "679b8bb46679b9e6f921f766",
 					"created_at": "2025-02-01T16:12:30.282Z",
 					"updated_at": "2025-02-01T16:12:30.282Z"
 				}
 			],
-			"bonusIntro" : "Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.",
 			"gradingOptions" :[
 				{
 					"id": "679b8bb56679b9e6f921f76d",

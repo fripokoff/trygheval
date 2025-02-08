@@ -1,4 +1,3 @@
-"use client";
 import { SectionProvider } from "../context/SectionContext";
 import { GeneralProvider } from "../context/GeneralContext";
 import { SubmitProvider } from "../context/SubmitContext";
@@ -8,15 +7,14 @@ import { AttachmentProvider } from "../context/AttachmentContext";
 import { GradingProvider } from "../context/GradingContext";
 import LoadingSheet from "../components/LoadingSheet";
 import SheetHeader from "../components/SheetHeader";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useColorHandlers from "../hooks/useColorHandlers";
 import useAddContentEffects from "../hooks/useAddContentEffects";
 import GeneralInfo from "../components/sheet/GeneralInfo";
 import IntroductionSection from "../components/sheet/IntroductionSection";
 import GuidelinesSection from "../components/sheet/GuidelinesSection";
 import AttachmentsSection from "../components/sheet/AttachmentsSection";
-import PreliminarySections from "../components/sheet/PreliminarySections";
-import MandatorySections from "../components/sheet//MandatorySections";
+import ViewMandatorySections from "../components/sheet//ViewMandatorySections";
 import BonusSections from "../components/sheet/BonusSections";
 import GradingOptions from "../components/sheet/GradingOptions";
 import InfoModal from "../components/InfoModal";
@@ -25,34 +23,59 @@ import { initialYesColor, initialNoColor, greenColor, redColor } from '../consta
 import FloatingElementsViewSheet from "../components/FloatingElementsViewSheet";
 import FloatingElementsEditSheet from "../components/FloatingElementsEditSheet";
 import {getCurrentFormData, fetchData} from "../dataHandlers";
+import { useLocation } from "react-router-dom";
 
 function AddContent({selectedDate, setSelectedDate}) {
 
-
-
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
 
     let [isOpen, setIsOpen] = useState(false);
+    const { hash } = useLocation();
+    const [lastMandatorySection, setLastMandatorySection] = useState(null);
     const { handleSubmit } = useSubmit();
     const [editMode, setEditMode] = useState(false);
     const [sheetData, setSheetData] = useState({});
     const [loadingSheet, setLoadingSheet] = useState(true);
     const { okColor, outstandingColor, emptyWorkColor, incompleteWorkColor, invalidCompilationColor, normeColor, cheatColor, crashColor, concerningSituationsColor, leaksColor, forbiddenFunctionsColor, cannotSupportColor, handleOkColor, handleOutstandingColor, handleEmptyWorkColor, handleIncompleteWorkColor, handleInvalidCompilationColor, handleNormeColor, handleCheatColor, handleCrashColor, handleConcerningSituationsColor, handleLeaksColor, handleForbiddenFunctionsColor, handleCannotSupportColor } = useColorHandlers(greenColor, redColor);
-	const { hasLoaded, setHasLoaded, options, setOptions, show, setShow, showBackToTop, yesColorBonus, noColorBonus, preliminaryYesColor, preliminaryNoColor, mandatoryYesColor, mandatoryNoColor, points, bonusPoints, handleImportData, handleYesColor, handleNoColor, handleYesColorBonus, handleNoColorBonus, handleMandatorySliderValues, handleBonusSliderValues } = useAddContentEffects({ okColor, outstandingColor, emptyWorkColor, incompleteWorkColor, invalidCompilationColor, normeColor, cheatColor, crashColor, concerningSituationsColor, leaksColor, forbiddenFunctionsColor, cannotSupportColor }, sheetData, setSheetData, selectedDate, setSelectedDate);
+    const { hasLoaded, setHasLoaded, options, setOptions, show, setShow, showBackToTop, yesColorBonus, noColorBonus, mandatoryYesColor, mandatoryNoColor, points, bonusPoints, handleImportData, handleYesColor, handleNoColor, handleYesColorBonus, handleNoColorBonus, handleMandatorySliderValues, handleBonusSliderValues } = useAddContentEffects({ okColor, outstandingColor, emptyWorkColor, incompleteWorkColor, invalidCompilationColor, normeColor, cheatColor, crashColor, concerningSituationsColor, leaksColor, forbiddenFunctionsColor, cannotSupportColor }, sheetData, setSheetData, selectedDate, setSelectedDate);
     const handleEdit = () => {
-        if (editMode) {
-            getCurrentFormData(sheetData, setSheetData, handleSubmit);
-            window.history.pushState({}, "", window.location.pathname + "?project=" + sheetData.project_title);
+        // Get current hash
+        const currentHash = window.location.hash;
+        const newEditMode = !editMode;
+        let newUrl;
+    
+        // Construire l'URL en préservant le hash
+        if (newEditMode) {
+            newUrl = `${window.location.pathname}?project=${sheetData.project_title}&edit=true${currentHash}`;
+        } else {
+            newUrl = `${window.location.pathname}?project=${sheetData.project_title}${currentHash}`;
         }
-        else
-        {
-            window.history.pushState({}, "", window.location.pathname + "?project=" + sheetData.project_title + "&edit=true");
-        }
-        setEditMode(!editMode);
+    
+        // Mettre à jour l'URL sans recharger la page
+        window.history.pushState({}, "", newUrl);
+
+        setEditMode(newEditMode);
     };
 
     const handleDownload = () => {
         handleSubmit(true, getCurrentFormData(sheetData, setSheetData, handleSubmit));
     };
+
+    useEffect(() => {
+        // Check if there's an active section in localStorage
+        const activeSection = localStorage.getItem('activeSection');
+        if (activeSection) {
+          // Scroll to the active section
+          const element = document.getElementById(activeSection);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+          // Remove the active section from localStorage
+          localStorage.removeItem('activeSection');
+        }
+      }, [hash]);
 
     useState(() => {
         if (!hasLoaded) {
@@ -94,12 +117,7 @@ function AddContent({selectedDate, setSelectedDate}) {
         setLoadingSheet,
         hasLoaded,
     ]);
-
-    const scrollToTop = () => {
-        window.scrollTo(0, 0);
-    };
-
-
+    
     if (loadingSheet) {
         return <LoadingSheet />;
     }
@@ -111,7 +129,7 @@ if (editMode) {
     const handleChange = (date) => {
 
     setSelectedDate(date);
-	setSheetData({ ...sheetData, updated_at: date.toISOString() });
+    setSheetData({ ...sheetData, updated_at: date.toISOString() });
     };
     const handleClose = (state) => {
     setShow(state);
@@ -120,14 +138,14 @@ if (editMode) {
     return (
     <div className="bg-base-300 text-base-content">
         <SheetHeader handleEdit={handleEdit} addMode={addMode} sheetData={sheetData} handleImportData={handleImportData} handleDownload={handleDownload}/>
-        <div className="max-w-7xl mx-auto pb-20 px-5 2xl:px-0">
+        <div className="max-w-7xl mx-auto pb-20 px-3 2xl:px-0">
         <div>
             <SectionProvider sheetData={sheetData}>
             <AttachmentProvider sheetData={sheetData}>
                 <GeneralProvider
                 sheetData={sheetData}
-				setSelectedDate={setSelectedDate}
-				selectedDate={selectedDate}
+                setSelectedDate={setSelectedDate}
+                selectedDate={selectedDate}
                 >
                 <SubmitProvider setSheetData={setSheetData} sheetData={sheetData}>
                     <GradingProvider>
@@ -139,6 +157,7 @@ if (editMode) {
                         handleChange={handleChange}
                         selectedDate={selectedDate}
                         openModal={ () => setIsOpen(true)}
+                        editMode={editMode}
                     />
                     </GradingProvider>
                 </SubmitProvider>
@@ -207,23 +226,9 @@ return (
         <GuidelinesSection sheetData={sheetData} formatText={formatText} />
         <AttachmentsSection sheetData={sheetData} />
 
-        {/* PRELIMINARY SECTIONS */}
-        <PreliminarySections
-            sheetData={sheetData}
-            formatText={formatText}
-            handleYesColor={handleYesColor}
-            handleNoColor={handleNoColor}
-            preliminaryYesColor={preliminaryYesColor}
-            preliminaryNoColor={preliminaryNoColor}
-            initialYesColor={initialYesColor}
-            initialNoColor={initialNoColor}
-            handleMandatorySliderValues={handleMandatorySliderValues}
-        />
-
         {/* MANDATORY SECTIONS */}
-        <MandatorySections
+        <ViewMandatorySections
             sheetData={sheetData}
-            formatText={formatText}
             handleYesColor={handleYesColor}
             handleNoColor={handleNoColor}
             mandatoryYesColor={mandatoryYesColor}
@@ -231,12 +236,13 @@ return (
             initialYesColor={initialYesColor}
             initialNoColor={initialNoColor}
             handleMandatorySliderValues={handleMandatorySliderValues}
+            setLastMandatorySection={setLastMandatorySection}
+
         />
 
         {/* BONUS SECTIONS */}
         <BonusSections
             sheetData={sheetData}
-            formatText={formatText}
             handleYesColorBonus={handleYesColorBonus}
             yesColorBonus={yesColorBonus}
             noColorBonus={noColorBonus}
@@ -246,59 +252,59 @@ return (
             initialNoColor={initialNoColor}
             />
 
-		{/* GRADING OPTIONS */}
-		<GradingOptions
-			sheetData={sheetData}
-			handleOkColor={handleOkColor}
-			okColor={okColor}
-			handleOutstandingColor={handleOutstandingColor}
-			outstandingColor={outstandingColor}
-			handleEmptyWorkColor={handleEmptyWorkColor}
-			emptyWorkColor={emptyWorkColor}
-			handleIncompleteWorkColor={handleIncompleteWorkColor}
-			incompleteWorkColor={incompleteWorkColor}
-			handleInvalidCompilationColor={handleInvalidCompilationColor}
-			invalidCompilationColor={invalidCompilationColor}
-			handleNormeColor={handleNormeColor}
-			normeColor={normeColor}
-			handleCheatColor={handleCheatColor}
-			cheatColor={cheatColor}
-			handleCrashColor={handleCrashColor}
-			crashColor={crashColor}
-			handleConcerningSituationsColor={handleConcerningSituationsColor}
-			concerningSituationsColor={concerningSituationsColor}
-			handleLeaksColor={handleLeaksColor}
-			leaksColor={leaksColor}
-			handleForbiddenFunctionsColor={handleForbiddenFunctionsColor}
-			forbiddenFunctionsColor={forbiddenFunctionsColor}
-			handleCannotSupportColor={handleCannotSupportColor}
-			cannotSupportColor={cannotSupportColor}
-		/>
-		<FloatingElementsViewSheet 
-			showBackToTop={showBackToTop}
-			scrollToTop={scrollToTop}
-			handleEdit={handleEdit}
-			sheetData={sheetData}
-			/>
-			<div className="fixed bottom-0 left-0 p-4">
-			<div
-			  style={{ zIndex: "99"}}
-			  className=" bg-base-100 p-4 rounded-lg shadow-lg border border-base"
-			>
-			  <div className="text-lg font-bold text-sky-500">
-				<span className="text-base-content">Points : </span>
-				{points >= 100 ? (
-				  <span className="text-green-500">
-					{parseFloat(points) + parseFloat(bonusPoints)}
-				  </span>
-				) : (
-				  <span className="text-red-500">{parseFloat(points)}</span>
-				)}
-			  </div>
-			</div>
-		  </div>
-	</div>
-	</div>
+        {/* GRADING OPTIONS */}
+        <GradingOptions
+            sheetData={sheetData}
+            handleOkColor={handleOkColor}
+            okColor={okColor}
+            handleOutstandingColor={handleOutstandingColor}
+            outstandingColor={outstandingColor}
+            handleEmptyWorkColor={handleEmptyWorkColor}
+            emptyWorkColor={emptyWorkColor}
+            handleIncompleteWorkColor={handleIncompleteWorkColor}
+            incompleteWorkColor={incompleteWorkColor}
+            handleInvalidCompilationColor={handleInvalidCompilationColor}
+            invalidCompilationColor={invalidCompilationColor}
+            handleNormeColor={handleNormeColor}
+            normeColor={normeColor}
+            handleCheatColor={handleCheatColor}
+            cheatColor={cheatColor}
+            handleCrashColor={handleCrashColor}
+            crashColor={crashColor}
+            handleConcerningSituationsColor={handleConcerningSituationsColor}
+            concerningSituationsColor={concerningSituationsColor}
+            handleLeaksColor={handleLeaksColor}
+            leaksColor={leaksColor}
+            handleForbiddenFunctionsColor={handleForbiddenFunctionsColor}
+            forbiddenFunctionsColor={forbiddenFunctionsColor}
+            handleCannotSupportColor={handleCannotSupportColor}
+            cannotSupportColor={cannotSupportColor}
+        />
+        <FloatingElementsViewSheet 
+            showBackToTop={showBackToTop}
+            scrollToTop={scrollToTop}
+            handleEdit={handleEdit}
+            sheetData={sheetData}
+            />
+            <div className="fixed bottom-0 left-0 p-4">
+            <div
+              style={{ zIndex: "99"}}
+              className=" bg-base-100 p-4 rounded-lg shadow-lg border border-base"
+            >
+              <div className="text-lg font-bold text-sky-500">
+                <span className="text-base-content">Points : </span> 
+                {points >= 100 ? (
+                  <span className="text-green-500">
+                    {parseFloat(points) + parseFloat(bonusPoints)}
+                  </span>
+                ) : (
+                  <span className="text-red-500">{parseFloat(points)}</span>
+                )}
+              </div>
+            </div>
+          </div>
+    </div>
+    </div>
 );
 }
 

@@ -32,15 +32,12 @@
 					"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/push_swap/fr.subject.pdf"
 				},
 				{
-					"title": "checker_Mac",
 					"url": "https://cdn.intra.42.fr/document/document/23302/checker_Mac"
 				},
 				{
-					"title": "checker_linux",
 					"url": "https://cdn.intra.42.fr/document/document/23303/checker_linux"
 				}
 			],
-			"optional_bonus_sections": null,
 			"cursus_id": "",
 			"updated_at": "2024-10-01T16:57:46.050Z",
 			"students" : 1,
@@ -49,10 +46,7 @@
 			"mandatorySections" : [
 				{
 					"id": "679e515b8c78a1cea9234f83",
-					"title": "Memory leaks",
-					"subtitle": "",
 					"description": "Throughout the defence, pay attention to the amount of memory\nused by push_swap (using the command top for example) in order\nto detect any anomalies and ensure that allocated memory is\nproperly freed. If there is one memory leak (or more), the final\ngrade is 0.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e515b8c78a1cea9234f82",
 					"created_at": "2025-02-01T16:52:43.899Z",
@@ -60,10 +54,7 @@
 				},
 				{
 					"id": "679e515b8c78a1cea9234f84",
-					"title": "Error management",
-					"subtitle": "In this section, we'll evaluate the push_swap's error management. If at least one fails, no points will be awarded for this section. Move to the next one.",
 					"description": "--Run push_swap with non numeric parameters. The program must display \"Error\".\n--Run push_swap with a duplicate numeric parameter. The program must display \"Error\".\n--Run push_swap with only numeric parameters including one greater than MAXINT. The program must display \"Error\".\n--Run push_swap without any parameters. The program must not display anything and give the prompt back.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e515b8c78a1cea9234f82",
 					"created_at": "2025-02-01T16:52:43.899Z",
@@ -71,10 +62,7 @@
 				},
 				{
 					"id": "679e515b8c78a1cea9234f85",
-					"title": "Push_swap - Identity test",
-					"subtitle": "In this section, we'll evaluate push_swap's behavior when given a list, which has already been sorted. Execute the following 3 tests. If at least one fails, no points will be awarded for this section. Move to the next one.",
 					"description": "--Run the following command \"$>./push_swap 42\". The program should display nothing (0 instruction).\n--Run the following command \"$>./push_swap 2 3\". The program should display nothing (0 instruction).\n--Run the following command \"$>./push_swap 0 1 2 3\". The program should display nothing (0 instruction).\n--Run the following command \"$>./push_swap 0 1 2 3 4 5 6 7 8 9\". The program should display nothing (0 instruction).\n--Run the following command \"$>./push_swap 'Between 0 and 9 randomly sorted values chosen>'. The program should display nothing (0 instruction).",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e515b8c78a1cea9234f82",
 					"created_at": "2025-02-01T16:52:43.899Z",
@@ -82,10 +70,7 @@
 				},
 				{
 					"id": "679e515b8c78a1cea9234f86",
-					"title": "Push_swap - Simple version",
-					"subtitle": "If the following tests fails, no points will be awarded for this section. Move to the next one. Use the checker binary given on the attachments.",
 					"description": "--Run \"$>ARG=\"2 1 0\"; ./push_swap $ARG | ./checker_OS $ARG\". Check that the checker program displays \"OK\" and that the size of the list of instructions from push_swap is 2 OR 3. Otherwise the test fails.\n--Run \"$>ARG=\"'Between 0 and 3 randomly values chosen'\"; ./push_swap $ARG | ./checker_OS $ARG\". Check that the checker program displays \"OK\" and that the size of the list of instructions from push_swap is between 0 AND 3. Otherwise the test fails.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e515b8c78a1cea9234f82",
 					"created_at": "2025-02-01T16:52:43.899Z",
@@ -93,10 +78,7 @@
 				},
 				{
 					"id": "679e515b8c78a1cea9234f87",
-					"title": "Another simple version",
-					"subtitle": "Execute the following 2 tests. If at least one fails, no points will be awarded for this section. Move to the next one. Use the checker binary given on the attachments.",
 					"description": "--Run \"$>ARG=\"1 5 2 4 3\"; ./push_swap $ARG | ./checker_OS $ARG\". Check that the checker program displays \"OK\" and that the size of the list of instructions from push_swap isn't more than 12. Kudos if the size of the list of instructions is 8.\n--Run \"$>ARG=\"<5 random values>\"; ./push_swap $ARG | ./checker_OS $ARG\" and replace the placeholder by 5 random valid values. Check that the checker program displays \"OK\" and that the size of the list of instructions from push_swap isn't more than 12. Otherwise this test fails. You'll have to specifically check that the program wasn't developed to only answer correctly on the test included in this scale. You should repeat this test couple of times with several permutations before you validate it.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e515b8c78a1cea9234f82",
 					"created_at": "2025-02-01T16:52:43.899Z",
@@ -104,10 +86,7 @@
 				},
 				{
 					"id": "679e515b8c78a1cea9234f88",
-					"title": "Push_swap - Middle version",
-					"subtitle": "If the following test fails, no points will be awarded for this section. Move to the next one. Move to the next one. Use the checker binary given on the attachments.",
 					"description": "--Run \"$>ARG=\"<100 random values>\"; ./push_swap $ARG | ./checker_OS $ARG\" and replace the placeholder by 100 random valid values. Check that the checker program displays \"OK\" and that the size of the list of instructions. Give points in accordance:\nless than 700: 5\nless than 900: 4\nless than 1100: 3\nless than 1300: 2\nless than 1500: 1",
-					"conclusion": "You'll have to specifically check that the program wasn't developed to only answer correctly on the test included in this scale. You should repeat this test couple of times with several permutations before you validate it.",
 					"yes_no": false,
 					"sheetId": "679e515b8c78a1cea9234f82",
 					"created_at": "2025-02-01T16:52:43.899Z",
@@ -115,24 +94,17 @@
 				},
 				{
 					"id": "679e515b8c78a1cea9234f89",
-					"title": "Push_swap - Advanced version",
-					"subtitle": "If the following test fails, no points will be awarded for this section. Move to the next one. Move to the next one. Use the checker binary given on the attachments.",
 					"description": "--Run \"$>ARG=\"<500 random values>\"; ./push_swap $ARG | ./checker_OS $ARG\" and replace the placeholder by 500 random valid values (One is not called John/Jane Script for nothing). Check that the checker program displays \"OK\" and that the size of the list of instructions\nless than 5500: 5\nless than 7000: 4\nless than 8500: 3\nless than 10000: 2\nless than 11500: 1",
-					"conclusion": "You'll have to specifically check that the program wasn't developed to only answer correctly on the test included in this scale. You should repeat this test couple of times with several permutations before you validate it.",
 					"yes_no": false,
 					"sheetId": "679e515b8c78a1cea9234f82",
 					"created_at": "2025-02-01T16:52:43.899Z",
 					"updated_at": "2025-02-01T16:57:46.138Z"
 				}
 			],
-			"mandatoryIntro" : "Reminder : Remember that for the duration of the defence, no segfault, nor other unexpected, premature, uncontrolled or unexpected termination of the program, else the final grade is 0. Use the appropriate flag. This rule is active thoughout the whole defence.",
 			"bonusSections" : [
 				{
 					"id": "679e515c8c78a1cea9234f8b",
-					"title": "Checker program - Error management",
-					"subtitle": "In this section, we'll evaluate the checker's error management. If at least one fails, no points will be awarded for this section. Move to the next one.",
 					"description": "--Run checker with non numeric parameters. The program must display \"Error\".\n--Run checker with a duplicate numeric parameter. The program must display \"Error\".\n--Run checker with only numeric parameters including one greater than MAXINT. The program must display \"Error\".\n--Run checker without any parameters. The program must not display anything and give the prompt back.\n--Run checker with valid parameters, and write an action that doesn't exist during the instruction phase. The program must display \"Error\".\n--Run checker with valid parameters, and write an action with one or several spaces before and/or after the action during the instruction phase. The program must display \"Error\".",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e515b8c78a1cea9234f82",
 					"created_at": "2025-02-01T16:52:44.174Z",
@@ -140,10 +112,7 @@
 				},
 				{
 					"id": "679e515c8c78a1cea9234f8c",
-					"title": "Checker program - False tests",
-					"subtitle": "In this section, we'll evaluate the checker's ability to manage a list of instructions that doesn't sort the list. Execute the following 2 tests. If at least one fails, no points will be awarded for this section. Move to the next one.",
 					"description": "**Don't forget to press CTRL+D to stop reading during theintruction phase.**\n\n--Run checker with the following command \"$>./checker 0 9 1 8 2 7 3 6 4 5\" then write the following valid action list \"[sa, pb, rrr]\". Checker should display \"KO\".\n--Run checker with a valid list as parameter of your choice then write a valid instruction list that doesn't order the integers. Checker should display \"KO\". You'll have to specifically check that the program wasn't developed to only answer correctly on the test included in this scale. You should repeat this test couple of times with several permutations before you validate it.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e515b8c78a1cea9234f82",
 					"created_at": "2025-02-01T16:52:44.174Z",
@@ -151,17 +120,13 @@
 				},
 				{
 					"id": "679e515c8c78a1cea9234f8d",
-					"title": "Checker program - Right tests",
-					"subtitle": "In this section, we'll evaluate the checker's ability to manage a list of instructions that sort the list. Execute the following 2 tests. If at least one fails, no points will be awarded for this section. Move to the next one.",
 					"description": "**Don't forget to press CTRL+D to stop reading during the instruction phase.**\n\n--Run checker with the following command \"$>./checker 0 1 2\" then press CTRL+D without writing any instruction. The program should display \"OK\".\n--Run checker with the following command \"$>./checker 0 9 1 8 2\" then write the following valid action list \n [pb, ra, pb, ra, sa, ra, pa, pa]\". The program should display \"OK\".\n--Run checker with a valid list as parameter of your choice then write a valid instruction list that order the integers. Checker must display \"OK\". You'll have to specifically check that the program wasn't developed to only answer correctly on the test included in this scale. You should repeat this test couple of times with several permutations before you validate it.",
-					"conclusion": "",
 					"yes_no": true,
 					"sheetId": "679e515b8c78a1cea9234f82",
 					"created_at": "2025-02-01T16:52:44.174Z",
 					"updated_at": "2025-02-01T16:57:46.186Z"
 				}
 			],
-			"bonusIntro" : "Reminder : Remember that for the duration of the defence, no segfault, nor other unexpected, premature, uncontrolled or unexpected termination of the program, else the final grade is 0. Use the appropriate flag. This rule is active throughout the whole defence. We will look at your bonuses if and only if your mandatory part is EXCELLENT. This means that you must complete the mandatory part, beginning to end, and your error management needs to be flawless, even in cases of twisted or bad usage. So if the mandatory part didn't score all the point during this defence bonuses will be totally IGNORED.",
 			"gradingOptions" :[
 				{
 					"id": "679e45788c78a1cea9234f62",
