@@ -1,0 +1,145 @@
+.MToast-container {
+    position: fixed;
+    z-index: 1000;
+    
+    &.top-right {
+      top: 80px;
+      right: 10px;
+    }
+    
+    &.top-left {
+      top: 80px;
+      left: 10px;
+    }
+    
+    &.bottom-right {
+      bottom: 10px;
+      right: 10px;
+    }
+    
+    &.bottom-left {
+      bottom: 10px;
+      left: 10px;
+    }
+    
+    &.top-center {
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    &.bottom-center {
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    &.middle-center {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  .MToast {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding:0px!important;
+	opacity: 1;
+	transition: opacity var(--animation-speed, 0.5s) ease-in-out;
+	animation-fill-mode: forwards;
+    
+    &.success {
+      border-left: 5px solid #28a745;
+    }
+    
+    &.info {
+      border-left: 5px solid #17a2b8;
+    }
+    
+    &.warning {
+      border-left: 5px solid #ffc107;
+    }
+    
+    &.danger {
+      border-left: 5px solid #dc3545;
+    }
+    
+    &.primary {
+      border-left: 5px solid #007bff;
+    }
+  }
+  
+  .MToast-body {
+    padding: 10px 15px;
+    flex-grow: 1;
+  }
+  
+  .MToast-icon {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  .MToast-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 10px;
+    font-size: 16px;
+    color: #666;
+    
+    &:hover {
+      color: #333;
+    }
+  }
+
+  .slide-in-left {
+	animation: slideInLeft var(--animation-duration) ease-in-out forwards;
+  }
+  
+  .slide-out-right {
+	animation: slideOutRight var(--animation-duration) ease-in-out forwards;
+  }
+  
+  .slide-in-right {
+	animation: slideInRight var(--animation-duration) ease-in-out forwards;
+  }
+  
+  .slide-out-left {
+	animation: slideOutLeft var(--animation-duration) ease-in-out forwards;
+  }
+  
+  @keyframes slideInLeft {
+	from { transform: translateX(-100%); opacity: 0; }
+	to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes slideOutLeft {
+	from { transform: translateX(0); opacity: 1; }
+	to { transform: translateX(-100%); opacity: 0; }
+  }
+  
+  @keyframes slideInRight {
+	from { transform: translateX(100%); opacity: 0; }
+	to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes slideOutRight {
+	from { transform: translateX(0); opacity: 1; }
+	to { transform: translateX(100%); opacity: 0; }
+  }

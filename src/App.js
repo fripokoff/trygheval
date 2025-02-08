@@ -1,17 +1,20 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Page from './sheets/page';
+import Sheet from './pages/Sheet';
 import RootLayout from './layout';
+import { ToastProvider } from './context/ToastContext';
 
 function App() {
   return (
-    <RootLayout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/sheets" element={<Page />} />
-      </Routes>
-    </RootLayout>
+    <ToastProvider>
+      <RootLayout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sheet" element={<Sheet />} />
+        </Routes>
+      </RootLayout>
+    </ToastProvider>
   );
 }
 

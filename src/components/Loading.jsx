@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useLoading } from '../context/LoadingContext';
 
 function Loading() {
-  const { loading } = useLoading();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -34,7 +32,7 @@ function Loading() {
         }
       `}</style>
       <div className="loader text-7xl font-mono font-bold text-base-content opacity-80">
-        <span>{'{Eva'}</span><span>{'l}42'}</span>
+        <span>{'{42'}</span><span>{'COR}'}</span>
       </div>
     </div>
   );
