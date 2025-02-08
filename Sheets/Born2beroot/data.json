@@ -38,7 +38,7 @@
 			"optional_bonus_sections": null,
 			"cursus_id": "1",
 			"updated_at": "2023-08-01T16:41:12.034Z",
-			"mandatorySections" : [
+			"preliminarySections" :[
 				{
 					"id": "679e4de28c78a1cea9234f76",
 					"title": "Preliminary Tests",
@@ -49,7 +49,10 @@
 					"sheetId": "679e4de28c78a1cea9234f75",
 					"created_at": "2025-02-01T16:37:54.423Z",
 					"updated_at": "2025-02-01T16:41:12.148Z"
-				},
+				}
+			],
+			"preliminaryIntro" : "If a case of cheating is suspected, grading and evaluation end immediately. To report it, select the \"Cheat\" flag. Be careful to use it calmly, cautiously, and judiciously.",
+			"mandatorySections" : [
 				{
 					"id": "679e4de28c78a1cea9234f77",
 					"title": "General Instructions",
@@ -150,6 +153,8 @@
 					"updated_at": "2025-02-01T16:41:12.149Z"
 				}
 			],
+
+			
 			"bonusSections" : [
 				{
 					"id": "679e4de28c78a1cea9234f81",
@@ -164,7 +169,7 @@
 					"updated_at": "2025-02-01T16:41:12.194Z"
 				}
 			],
-			"bonusIntro" : "Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.",
+			"bonusIntro" : "Bonuses will only be examined if the mandatory part is excellent. This means that the mandatory part must have been completed from start to finish, with perfect error management even in cases of unexpected use. If all mandatory points have not been awarded during this defense, no bonus points will be counted.",
 			"gradingOptions" :[
 				{
 					"id": "679e45788c78a1cea9234f62",

@@ -46,7 +46,7 @@
 			"students" : 1,
 			"eval_points" : 3,
 			"time" : 30,
-			"mandatorySections" : [
+			"preliminarySections" : [
 				{
 					"id": "679e55678c78a1cea9234f9b",
 					"title": "Minimal requirements",
@@ -57,7 +57,10 @@
 					"sheetId": "679e55678c78a1cea9234f9a",
 					"created_at": "2025-02-01T17:09:59.615Z",
 					"updated_at": "2025-02-01T17:09:59.615Z"
-				},
+				}
+			],
+			"preliminaryIntro" : "Search for Julia and Mandelbrot sets on Wikipedia, or watch the e-learning videos, to have an idea of what the rendering must look like.",
+			"mandatorySections" : [
 				{
 					"id": "679e55678c78a1cea9234f9c",
 					"title": "Graphic management",
@@ -114,6 +117,7 @@
 					"updated_at": "2025-02-01T17:09:59.615Z"
 				}
 			],
+			"mandatoryIntro" : "Evaluate the following points.",
 			"bonusSections" : [
 				{
 					"id": "679e55678c78a1cea9234fa2",
@@ -160,7 +164,7 @@
 					"updated_at": "2025-02-01T17:09:59.708Z"
 				}
 			],
-			"bonusIntro" : "Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.",
+			"bonusIntro" : "A lot of nice extras.",
 			"gradingOptions" :[
 				{
 					"id": "679e45788c78a1cea9234f62",

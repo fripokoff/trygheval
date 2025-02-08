@@ -125,6 +125,7 @@
 					"updated_at": "2025-02-01T16:57:46.138Z"
 				}
 			],
+			"mandatoryIntro" : "Reminder : Remember that for the duration of the defence, no segfault, nor other unexpected, premature, uncontrolled or unexpected termination of the program, else the final grade is 0. Use the appropriate flag. This rule is active thoughout the whole defence.",
 			"bonusSections" : [
 				{
 					"id": "679e515c8c78a1cea9234f8b",
@@ -160,7 +161,7 @@
 					"updated_at": "2025-02-01T16:57:46.186Z"
 				}
 			],
-			"bonusIntro" : "Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.",
+			"bonusIntro" : "Reminder : Remember that for the duration of the defence, no segfault, nor other unexpected, premature, uncontrolled or unexpected termination of the program, else the final grade is 0. Use the appropriate flag. This rule is active throughout the whole defence. We will look at your bonuses if and only if your mandatory part is EXCELLENT. This means that you must complete the mandatory part, beginning to end, and your error management needs to be flawless, even in cases of twisted or bad usage. So if the mandatory part didn't score all the point during this defence bonuses will be totally IGNORED.",
 			"gradingOptions" :[
 				{
 					"id": "679e45788c78a1cea9234f62",

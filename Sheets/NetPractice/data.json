@@ -36,7 +36,7 @@
               "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/NetPractice/Extras/net_practice.1.4.tgz"
           }
       ],
-      "mandatorySections": [
+      "preliminarySections" : [
         {
           "title": "Simple preliminaries",
           "subtitle": "If cheating is suspected, the evaluation stops here. Use the \"Cheat\" flag of the scale. Please do this calmly, wisely and use this button with caution.",
@@ -50,7 +50,10 @@
           "description": "--Ensure that 10 files (1 per level) are present at the root of the repository. Ensure that they are not empty.",
           "conclusion": "",
           "yes_no": true
-        },
+        }
+      ],
+      "preliminaryIntro" : "If cheating is suspected, the evaluation stops here. Use the \"Cheat\" flag of the scale. Please do this calmly, wisely and use this button with caution.",
+      "mandatorySections": [
         {
           "title": "Level 1",
           "subtitle": "- This project is about configuring small-scale networks that have issues to make them run. You have to download the file attached to the project's page (the evaluated student can show you where it is). Then, run the index.html file. A page will open in your web browser. Leave the login field empty to start the 'correction' mode. The evaluated student must solve correctly all of the levels in 15 minutes maximum. Using internet or any external resource to find answers is, of course, forbidden. The use of a simple calculator such as \"bc\" is tolerated but it will be the limit. You can ask questions about the different levels to the evaluated student.",
@@ -73,6 +76,7 @@
           "yes_no": true
         }
       ],
+      "mandatoryIntro" : "- This project is about configuring small-scale networks that have issues to make them run. You have to download the file attached to the project's page (the evaluated student can show you where it is). Then, run the index.html file. A page will open in your web browser. Leave the login field empty to start the 'correction' mode. The evaluated student must solve correctly all of the levels in 15 minutes maximum. Using internet or any external resource to find answers is, of course, forbidden. The use of a simple calculator such as \"bc\" is tolerated but it will be the limit. You can ask questions about the different levels to the evaluated student.",
       "bonusSections": null,
       "bonusIntro" : null,
       "optional_bonus_sections": null,

@@ -38,7 +38,7 @@
 			"students" : 1,
 			"eval_points" : 3,
 			"time" : 30,
-			"mandatorySections" : [
+			"preliminarySections" : [
 				{
 					"id": "679e57db8c78a1cea9234fb6",
 					"title": "Tests préliminaires",
@@ -60,11 +60,14 @@
 					"sheetId": "679e57db8c78a1cea9234fb5",
 					"created_at": "2025-02-01T17:20:27.147Z",
 					"updated_at": "2025-02-01T17:20:27.147Z"
-				},
+				}
+			],
+			"prelinimaryIntro" : "Si un cas de triche est suspecté, la notation et l'évaluation prennent fin immédiatement. Pour le signaler, sélectionnez le flag \"Cheat\". Faites attention à l'utiliser avec calme, précaution et discernement.",
+			"mandatorySections" : [
 				{
 					"id": "679e57db8c78a1cea9234fb8",
 					"title": "Gestion des erreurs et des arguments",
-					"subtitle": "La commande \"./pipex file1 cmd1 cmd2 file2\" doit se comporter comme cette commande : \"< file1 cmd1 | cmd2 > fichier2\"",
+					"subtitle": "",
 					"description": "**Gestion des erreurs et des arguments**\n--Le programme prend 4 arguments, ni plus, ni moins (sauf pour la partie bonus) et uniquement dans le bon ordre.\n--La gestion des erreurs est correcte : fichiers (in)existants, droits des fichiers, binaire de commande (in)existants, etc.",
 					"conclusion": "Si ces points sont respectés, cochez \"Oui\" et poursuivez l'évaluation. Dans le cas contraire, l'évaluation s'arrête ici. Utilisez 'Incomplete work' (rendu incomplet) ou tout autre flag approprié.",
 					"yes_no": true,
@@ -84,6 +87,7 @@
 					"updated_at": "2025-02-01T17:20:27.147Z"
 				}
 			],
+			"mandatoryIntro" : "La commande \"./pipex file1 cmd1 cmd2 file2\" doit se comporter comme cette commande : \"< file1 cmd1 | cmd2 > fichier2\"",
 			"bonusSections" : [
 				{
 					"id": "679e57db8c78a1cea9234fbb",
@@ -108,7 +112,7 @@
 					"updated_at": "2025-02-01T17:20:27.231Z"
 				}
 			],
-			"bonusIntro" : "Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.",
+			"bonusIntro" : "Les bonus ne seront examinés que si la partie obligatoire est excellente. Cela signifie que la partie obligatoire doit avoir été réalisée du début à la fin, avec une gestion d'erreur parfaite même en cas d'usage inattendu. Si tous les points obligatoires n'ont pas été attribués pendant cette soutenance, aucun point bonus ne sera comptabilisé.",
 			"gradingOptions" :[
 				{
 					"id": "679e45788c78a1cea9234f62",

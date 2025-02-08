@@ -38,7 +38,8 @@
 			"students" : 1,
 			"eval_points" : 3,
 			"time" : 30,
-			"mandatorySections" : [
+			
+			"preliminarySections" : [
 				{
 					"id": "679e597c8c78a1cea9234fbe",
 					"title": "Prerequisites",
@@ -60,7 +61,10 @@
 					"sheetId": "679e597c8c78a1cea9234fbd",
 					"created_at": "2025-02-01T17:27:24.804Z",
 					"updated_at": "2025-02-01T17:27:24.804Z"
-				},
+				}
+			],
+			"preliminaryIntro" : "If cheating is suspected, the evaluation stops here. Use the \"Cheat\" flag to report it. Take this decision calmly, wisely, and please, use this button with caution.",
+			"mandatorySections" : [
 				{
 					"id": "679e597c8c78a1cea9234fc0",
 					"title": "Message transmission",
@@ -84,6 +88,7 @@
 					"updated_at": "2025-02-01T17:27:24.804Z"
 				}
 			],
+			"mandatoryIntro" : "This project is an introduction to signals. Check the code and ensure the signals are used only for the communication between the server and the client.",
 			"bonusSections" : [
 				{
 					"id": "679e597c8c78a1cea9234fc3",

@@ -107,6 +107,7 @@
 					"updated_at": "2025-01-30T16:03:00.587Z"
 				}
 			],
+			"mandatoryIntro" : "Vous devez tester les fonctions présentes dans la libft, soit avec votre jeu de tests, soit avec celui de la personne évaluée.",
 			"bonusSections" : [
 				{
 					"id": "679b8bb56679b9e6f921f76e",
