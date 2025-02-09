@@ -25,11 +25,11 @@
 			"attachments": [
 				{
 					"title": "subject_en.pdf",
-					"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/get_next_line/en.subject.pdf"
+					"url": "en.subject.pdf"
 				},
 				{
 					"title": "subject_fr.pdf",
-					"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/get_next_line/fr.subject.pdf"
+					"url": "fr.subject.pdf"
 				}
 			],
 			"cursus_id": "1",

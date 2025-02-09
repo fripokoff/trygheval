@@ -25,11 +25,11 @@
         "attachments": [
 		{
 			"title": "subject_en.pdf",
-			"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/libft/en.subject.pdf"
+			"url": "en.subject.pdf"
 		},
 		{
 			"title": "subject_fr.pdf",
-			"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/libft/fr.subject.pdf"
+			"url": "fr.subject.pdf"
 		}
 		],
 		"time" : 30,
@@ -38,8 +38,6 @@
 		"student_number" : 1,
 		"students" : 1,
 		"eval_points" : 3,
-		"languages" : ["US", "FR"],
-		"defaultLanguage" : "US",
 		"mandatorySections" : [
 			{
 				"id": "679b8bb46679b9e6f921f767",
