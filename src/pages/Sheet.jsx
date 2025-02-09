@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import editViewSheet from '../components/editViewSheet';
+import EditViewSheet from '../components/EditViewSheet';
 import { AttachmentProvider } from '../contexts/AttachmentContext';
 import { GeneralProvider } from '../contexts/GeneralContext';
 import { SectionProvider } from '../contexts/SectionContext';
@@ -17,7 +17,7 @@ function Sheet() {
         <SectionProvider sheetData={sheetData}>
           <GradingProvider>
             <SubmitProvider setSheetData={setSheetData}>
-              <editViewSheet selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
+              <EditViewSheet selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
             </SubmitProvider>
           </GradingProvider>
         </SectionProvider>

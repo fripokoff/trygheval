@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function navSheet({ handleEdit, addMode, sheetData, handleImportData, handleDownload }) {
+export default function NavSheet({ handleEdit, addMode, sheetData, handleImportData, handleDownload }) {
   const [isImportModalOpen, setIsImportModalOpen] = useState(false);
   const [jsonInput, setJsonInput] = useState('');
 

@@ -5,7 +5,7 @@ import { useSubmit } from "../contexts/SubmitContext";
 import { AttachmentProvider } from "../contexts/AttachmentContext";
 import { GradingProvider } from "../contexts/GradingContext";
 import LoadingSheet from "./loading/LoadingSheet";
-import navSheet from "./navigation/navSheet";
+import NavSheet from "./navigation/NavSheet";
 import { useState, useEffect } from "react";
 import useColorHandlers from "../hooks/useColorHandlers";
 import useAddContentEffects from "../hooks/useAddContentEffects";
@@ -29,7 +29,7 @@ import EditMandatorySection from "./sections/EditMandatorySection";
 import EditBonusSection from "./sections/EditBonusSection";
 import EditGradingOptionsSection from "./sections/EditGradingOptionsSection";
 
-function editViewSheet({selectedDate, setSelectedDate}) {
+function EditViewSheet({selectedDate, setSelectedDate}) {
 
     const scrollToTop = () => {
         window.scrollTo(0, 0);
@@ -141,7 +141,7 @@ if (editMode) {
 
     return (
     <div className="bg-base-300 text-base-content">
-        <navSheet handleEdit={handleEdit} addMode={addMode} sheetData={sheetData} handleImportData={handleImportData} handleDownload={handleDownload}/>
+        <NavSheet handleEdit={handleEdit} addMode={addMode} sheetData={sheetData} handleImportData={handleImportData} handleDownload={handleDownload}/>
         <div className="max-w-7xl mx-auto pb-20 px-3 2xl:px-0">
         <div>
             <SectionProvider sheetData={sheetData}>
@@ -318,4 +318,4 @@ return (
 );
 }
 
-export default editViewSheet;
+export default EditViewSheet;
