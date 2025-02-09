@@ -15,24 +15,11 @@ export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
 		"cannot_support",
 	];
 	const introText = document.querySelector("#introduction")?.value || "";
-	const introArray = introText
-		.split("\n")
-		.filter((line) => line.trim() !== "")
-		.map((line) => line.trim());
 	const guidelinesText = document.querySelector("#guidelines")?.value || "";
-	const guidelinesArray = guidelinesText
-		.split("\n")
-		.filter((line) => line.trim() !== "")
-		.map((line) => line.trim());
-		const attachments = Array.from(
-		document.querySelectorAll(".bg-base-300.text-base-content.mb-4")
+	const attachments = Array.from(document.querySelectorAll(".bg-base-300.text-base-content.mb-4")
 	).map((attachment) => ({
-		title: 
-			attachment.querySelector('input[placeholder="Enter attachment title"]')
-				?.value || "",
-		url: 
-			attachment.querySelector('input[placeholder="Enter attachment URL"]')
-				?.value || "",
+		title: attachment.querySelector('input[placeholder="Enter attachment title"]')?.value || "",
+		url: attachment.querySelector('input[placeholder="Enter attachment URL"]')?.value || "",
 	})).filter(attachment => attachment.title && attachment.url);
 	
 	const mandatorySections = Array.from(
@@ -82,8 +69,8 @@ export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
 		students: parseInt(document.querySelector("#students")?.value) || 0,
 		eval_points: parseInt(document.querySelector("#eval_points")?.value) || 0,
 		time: parseInt(document.querySelector("#time")?.value) || 0,
-		introduction: introArray || "",
-		guidelines: guidelinesArray || "",
+		introduction: introText || "",
+		guidelines: guidelinesText || "",
 		attachments: attachments || [],
 		mandatorySections: mandatorySections || [],
 		bonusSections: bonusSections,

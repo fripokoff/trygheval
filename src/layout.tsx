@@ -8,7 +8,7 @@ import ToastContainer from './components/toast/ToastContainer';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="dark">
+    <div>
       <ThemeProvider>
         <LoadingProvider>
           <Loading />

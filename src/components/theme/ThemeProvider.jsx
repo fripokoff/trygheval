@@ -11,13 +11,13 @@ export default function ThemeProvider({ children }) {
     const savedTheme = localStorage.getItem('theme') || 'dark'
     setTheme(savedTheme)
     document.querySelector('html')?.setAttribute('data-theme', savedTheme)
-  }, [])
+  }, [theme])
 
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark'
     setTheme(newTheme)
     localStorage.setItem('theme', newTheme)
-    document.querySelector('html')?.setAttribute('data-theme', newTheme)
+    document.querySelector('html')?.setAttribute('data-theme', newTheme);
   }
 
   return (

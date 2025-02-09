@@ -43,10 +43,34 @@
 }
 
 .data-buttons {
-  z-index:99999;
+  z-index:1;
 }
 
 .prose :where(hr):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   margin-top: 2px;
   margin-bottom: 5px;
+}
+
+
+.glowing-border {
+  animation: glowing 3s ease-in-out forwards;
+  box-shadow: 0 0 10px red;
+}
+
+@keyframes glowing {
+  0% {
+
+    box-shadow: 0 0 20px red;
+  }
+  25% {
+
+    box-shadow: 0 0 20px #000;
+  }
+  50% {
+    box-shadow: 0 0 20px red;
+    
+  }
+  100% {
+    box-shadow: 0 0 20px #000;
+  }
 }

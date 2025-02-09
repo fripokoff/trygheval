@@ -118,9 +118,9 @@ export default function NavSheet({ handleEdit, addMode, sheetData, handleImportD
           <div className="flex justify-end">
             <button
               onClick={handleEdit}
-              className="w-16 sm:w-20 bg-blue-700 hover:bg-blue-800 text-white py-2 sm:py-3 px-3 sm:px-6 rounded-md transition text-sm sm:text-base"
+              className="w-16 sm:w-20 bg-blue-600 font-bold hover:bg-blue-800 text-white py-2 sm:py-3 px-3 sm:px-6 rounded-md transition text-sm sm:text-base"
             >
-              View
+              VIEW
             </button>
           </div>
         </div>
@@ -130,7 +130,7 @@ export default function NavSheet({ handleEdit, addMode, sheetData, handleImportD
           <button
             type="button"
             onClick={openDownloadModal}
-            className="w-[150px] bg-base-100 border border-base hover:bg-base-300 text-base-content py-3 px-10 rounded transition duration-200"
+            className="w-[150px] bg-base-100 border border-base hover:bg-base-300 text-base-content py-3 px-10 rounded"
           >
             Download
           </button>
@@ -188,9 +188,9 @@ export default function NavSheet({ handleEdit, addMode, sheetData, handleImportD
             <div className="mt-6 flex justify-end">
               <button
                 onClick={closeImportModal}
-                className="btn btn-sm"
+                className="p-4 font-bold border border-base-content rounded-md bg-base-300 text-base-content"
               >
-                Close
+                CLOSE
               </button>
             </div>
           </div>
@@ -220,9 +220,9 @@ export default function NavSheet({ handleEdit, addMode, sheetData, handleImportD
             <div className="mt-6 flex justify-end">
               <button
                 onClick={closeDownloadModal}
-                className="btn btn-sm"
+                className="p-4 font-bold border border-base-content rounded-md bg-base-300 text-base-content"
               >
-                Close
+                CLOSE
               </button>
             </div>
           </div>

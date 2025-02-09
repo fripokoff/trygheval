@@ -6,7 +6,13 @@ const ThemeToggle = () => {
     const [theme, setTheme] = useState('dark')
 
     useEffect(() => {
-        const savedTheme = localStorage.getItem('theme') || 'dark'
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        const html = document.querySelector('html')
+        if (savedTheme === 'dark') {
+            html.classList.add('dark');
+          } else {
+            html.classList.remove('dark');
+          }
         setTheme(savedTheme)
     }, [])
 
@@ -16,6 +22,11 @@ const ThemeToggle = () => {
         const html = document.querySelector('html')
         html.setAttribute('data-theme', newTheme)
         localStorage.setItem('theme', newTheme)
+        if (newTheme === 'dark') {
+            html.classList.add('dark');
+          } else {
+            html.classList.remove('dark');
+          }
     }
 
     return (

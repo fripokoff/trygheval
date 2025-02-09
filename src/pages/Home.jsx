@@ -84,6 +84,9 @@ const MilestoneHeader = ({ milestone, hours }) => (
 );
 
 useEffect(() => {
+    const activeSection = localStorage.getItem('ActiveSection');
+    if (activeSection)
+        localStorage.removeItem('ActiveSection');
     const fetchData = async (folder) => {
     const home = window.location;
     const url = home + `/sheets/${folder}/data.json`;
@@ -242,9 +245,9 @@ return (
                 />
                       <button
                 onClick={startAnimation}
-                className="w-32 h-12 px-4 py-2 bg-base-300 text-base-content rounded-md"
+                className="w-32 h-12 px-4 py-2 bg-base-300 text-base-content text-lg font-bold border border-base-content rounded-md"
                 >
-                {isAnimating ? "Pause" : "Play"}
+                {isAnimating ? "PAUSE" : "PLAY"}
                 </button>
           </div>
           <span
@@ -270,9 +273,9 @@ return (
                 onClick={() => navigateTo("/sheet")}
                 >
             <button
-            className="w-32 h-12 px-4 py-2 bg-blue-500 text-white rounded"
+            className="w-32 h-12 px-4 py-2 bg-blue-500 text-white text-lg border border-base-content rounded"
             >
-            Create
+            CREATE
             </button>
               </div>
         </div>

@@ -9,7 +9,10 @@ export default function FloatingElementsViewSheet({
 		<div>
 			<div className="fixed bottom-0 right-0 p-4">
 				<button
-				onClick={scrollToTop}
+				onClick={() =>{
+					scrollToTop();
+					localStorage.removeItem('ActiveSection');
+				}}
 				className="bg-base-100 text-base-content font-bold py-2 px-4 rounded-md border border-base"
 				>
 				<span>
@@ -30,7 +33,7 @@ export default function FloatingElementsViewSheet({
 				</span>
 				</button>
 			</div>
-			<div className="fixed top-0 left-0 p-4 bg-base-100 w-full min-h-[4rem]">
+			<div className="fixed top-0 left-0 p-4 bg-base-300 w-full min-h-[4rem]">
 				<div className="grid grid-cols-[auto_1fr_auto] sm:grid-cols-3 gap-2 sm:gap-4 items-center w-full">
 					<div className="flex justify-start">
 					<a href="./">
@@ -58,9 +61,9 @@ export default function FloatingElementsViewSheet({
 					<div className="flex justify-end">
 						<button
 							onClick={handleEdit}
-							className="w-16 sm:w-20 bg-blue-700 hover:bg-blue-800 text-white py-2 sm:py-3 px-3 sm:px-6 rounded-md transition text-sm sm:text-base"
+							className="w-16 sm:w-20 bg-orange-600 font-bold hover:bg-orange-800 text-white py-2 sm:py-3 px-3 sm:px-6 rounded-md transition text-sm sm:text-base"
 						>
-							Edit
+							EDIT
 						</button>
 					</div>
 				</div>

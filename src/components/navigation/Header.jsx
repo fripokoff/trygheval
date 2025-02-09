@@ -39,7 +39,7 @@ export default function Header() {
                             transition
                             anchor='bottom end'
                             style={{ zIndex: 1000 }}
-                            className='w-52 origin-top-right rounded-xl border border-blue-500 border-opacity-20 bg-gray-700 bg-opacity-800 p-2 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0'
+                            className='w-52 origin-top-right rounded-xl border border-base-content border-opacity-20 bg-base-300 bg-opacity-800 p-2 text-sm/6 base-text-content transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0'
                         >
                             <MenuItem>
                                 <a
