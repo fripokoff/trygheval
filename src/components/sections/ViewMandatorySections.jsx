@@ -1,25 +1,12 @@
-import React, { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { useLocation } from 'react-router-dom';
 
-function ViewMandatorySections({ sheetData, handleYesColor, handleNoColor, mandatoryYesColor, mandatoryNoColor, initialYesColor, initialNoColor, handleMandatorySliderValues, editMode, setLastMandatorySection }) {
+function ViewMandatorySections({ sheetData, handleYesColor, handleNoColor, mandatoryYesColor, mandatoryNoColor, initialYesColor, initialNoColor, handleMandatorySliderValues }) {
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
 
   return (
-    <div className='mt-10 bg-base-100 p-5 lg:p-10 rounded-lg'>
-      <h2 className='text-2xl font-bold'>
-        Mandatory Part
-      </h2>
-      {sheetData.mandatoryIntro && (
-        <p className='pt-3 pb-3 italic'>
-          {sheetData.mandatoryIntro}
-        </p>
-      )}
-      <div className='pt-5'>
+    <div className='mt-10 bg-base-100 p-5 lg:p-5 rounded-lg'>
         {
           sheetData.mandatorySections && sheetData.mandatorySections.length > 0 ? (
             sheetData.mandatorySections.map((section, index) => (
@@ -29,7 +16,7 @@ function ViewMandatorySections({ sheetData, handleYesColor, handleNoColor, manda
                 key={index}
               >
                 <div className='w-full'>
-                  <div className='pt-2 w-full'>
+                  <div className='w-full'>
                     <ReactMarkdown
                       className="prose prose-stone w-full max-w-none"
                       children={section.description.replace(/\n/g, '  \n')}
@@ -80,7 +67,6 @@ function ViewMandatorySections({ sheetData, handleYesColor, handleNoColor, manda
             ))
           ) : null
         }
-      </div>
     </div>
   );
 }

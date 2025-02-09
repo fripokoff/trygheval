@@ -13,11 +13,8 @@ export const useBonusSections = () => {
       return [...prevSections, {
         id: uuidv4(),
         index: newIndex,
-        title: '',
-        subtitle: '',
         description: '',
         yes_no: true,
-        conclusion: ''
       }];
     });
     setNumberOfBonusSections(prev => prev + 1);

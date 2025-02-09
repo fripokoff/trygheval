@@ -1,14 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useLoading } from '../../contexts/LoadingContext';
 
 function Loading() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
+  const { isLoading } = useLoading();
 
   if (!isLoading) return null;
 
@@ -19,11 +12,9 @@ function Loading() {
           display: inline-block;
           animation: pulse 0.4s alternate infinite ease-in-out;
         }
-
         .loader span:nth-child(odd) {
           animation-delay: 0.4s;
         }
-
         @keyframes pulse {
           to {
             transform: scale(0.8);

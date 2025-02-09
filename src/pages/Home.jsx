@@ -3,14 +3,23 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import getProjects from "../hooks/getProjects";
+import { useLoading } from '../contexts/LoadingContext'; 
+import ReactCountryFlag from "react-country-flag"
 
 function Home() {
+const { isLoading, setIsLoading } = useLoading();
 const [projectInfo, setProjectInfo] = useState([]);
 const [showCPPChildren, setShowCPPChildren] = useState({});
 const [isAnimating, setIsAnimating] = useState(false);
 const navigate = useNavigate();
 const imgRef = useRef(null);
 const audioRef = useRef(null);
+
+const navigateTo = (page) => {
+    setIsLoading(true);
+    window.scrollTo(0,0);
+    navigate(page);
+};
 
 const projectHours = {
     "Libft": 70,
@@ -122,6 +131,9 @@ useEffect(() => {
     };
 
     fetchAllData();
+    setTimeout(() => {
+        setIsLoading(false);
+    }, 1000);
 }, []);
 
 const toggleCPPModules = (projectTitle) => {
@@ -184,7 +196,7 @@ return (
         <div className="max-w-6xl mx-auto py-6 px-5 2xl:px-14">
             <div
             className="flex gap-2 items-center"
-            onClick={() => navigate("/sheet")}
+            onClick={() => navigateTo("/sheet")}
             >
             </div>
             <div className="px-5 2xl:px-0">
@@ -244,11 +256,7 @@ return (
           </a>
           </div>
                 <div className="flex gap-2 justify-end transition"
-                onClick={() =>
-                    navigate(
-                        `/sheet?}`
-                    )
-                }
+                onClick={() => navigateTo("/sheet")}
                 >
             <button
             className="w-32 h-12 px-4 py-2 bg-blue-500 text-white rounded"
@@ -306,12 +314,7 @@ return (
                                         <td className="py-3 px-5 text-base-content cursor-pointer">
                                             <div
                                                 className="flex justify-center items-center gap-2 text-xl text-[#0D94B6]"
-                                                onClick={() =>
-                                                    navigate(
-                                                        `/sheet?project=${project && project.project_title
-                                                        }`
-                                                    )
-                                                }
+                                                onClick={() => navigateTo(`/sheet?project=${project.project_title}`)}
                                             >
                                                 {project && project.project_title}
                                             </div>
@@ -325,6 +328,23 @@ return (
                                                     }
                                                 )}
                                             </span>
+                                            {project?.languages && (
+                                            <div className="flex justify-center">
+                                                {project.languages.map((lang) => (
+                                                    <div key={lang}>
+                                                    <ReactCountryFlag
+                                                    className="emojiFlag"
+                                                    countryCode={lang.toUpperCase()}
+                                                    style={{
+                                                        fontSize: '2em',
+                                                        lineHeight: '1em',
+                                                    }}
+                                                />
+                                                    </div>
+                                                ))}
+                                                </div>
+                                            )}
+                                            
                                         </td>
                                         <td className="py-3 px-5 w-1/12">
                                             <span className="text-base-content font-bold text-xl">
@@ -344,11 +364,7 @@ return (
                                         <td className="py-3 px-5 w-1/12">
                                             <div
                                                 className="flex justify-center items-center gap-2 text-sm text-blue-500 cursor-pointer"
-                                                onClick={() =>
-                                                    navigate(
-                                                        `/sheet?project=${project.project_title}&edit=true`
-                                                    )
-                                                }
+                                                onClick={() => navigateTo(`/sheet?project=${project.project_title}&edit=true`)}
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -469,11 +485,7 @@ return (
                                                     <td className="py-3 px-5 text-base-content cursor-pointer">
                                                         <div
                                                             className="flex justify-center items-center gap-2 text-xl text-[#0D94B6]"
-                                                            onClick={() =>
-                                                                navigate(
-                                                                    `/sheet?project=${cppProject.project_title}`
-                                                                )
-                                                            }
+                                                            onClick={() => navigateTo(`/sheet?project=${cppProject.project_title}`)}
                                                         >
                                                             {cppProject.project_title}
                                                         </div>
@@ -505,11 +517,7 @@ return (
                                                     <td className="py-3 px-5 w-1/12">
                                                         <div
                                                             className="flex justify-center items-center gap-2 text-sm text-blue-500 cursor-pointer"
-                                                            onClick={() =>
-                                                                navigate(
-                                                                    `/sheet?project=${cppProject.project_title}&edit=true`
-                                                                )
-                                                            }
+                                                            onClick={() => navigateTo(`/sheet?project=${cppProject.project_title}&edit=true`)}
                                                         >
                                                             <svg
                                                                 xmlns="http://www.w3.org/2000/svg"

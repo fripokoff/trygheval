@@ -15,7 +15,6 @@ export const useMandatorySections = () => {
         index: newIndex,
         description: '',
         yes_no: true,
-        conclusion: ''
       }];
     });
     setNumberOfMandatorySections(prev => prev + 1);

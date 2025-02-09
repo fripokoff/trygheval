@@ -43,16 +43,25 @@ const Toast = ({ id, type = 'success', message = '', duration = 3000, position =
     primary: FaThumbsUp,
   };
 
+  const colorMap = {
+    success: 'text-green-500',
+    info: 'text-blue-500',
+    warning: 'text-yellow-500',
+    danger: 'text-red-500',
+    primary: 'text-indigo-500',
+  };
+
   const Icon = iconMap[type] || iconMap.success;
+  const colorClasses = colorMap[type] || colorMap.success;
 
   return isVisible ? (
     <div className={`MToast-container ${position}`}>
       <div className={toastClasses} role="alert" onAnimationEnd={handleAnimationEnd}>
-        <div className="flex items-center justify-center bg-base-100 text-base-content shadow-2xl text-md font-bold">
+        <div className={"flex items-center justify-center bg-white  shadow-2xl text-md font-bold " + colorClasses}>
           <div className="MToast-icon">
-            <Icon />
+            <Icon style={{colorClasses}}/>
           </div>
-          <div className="MToast-body">
+          <div className="MToast-body text-black">
             {message}
           </div>
 

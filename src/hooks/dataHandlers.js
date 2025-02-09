@@ -1,6 +1,5 @@
 export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
 
-
 	const GRADING_OPTIONS = [
 		"ok",
 		"outstanding",
@@ -104,7 +103,6 @@ export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
 		gradingOptions: [getGradingOptions()] || [],
 		updated_at: dateFormat,
 	};
-	console.log(formData);
 	handleSubmit(false, formData);
 	setSheetData(formData);
 	return formData;

@@ -13,7 +13,7 @@ function ViewGeneralInfo({ sheetData }) {
 
           <span className="text-2xl md:text-3xl lg:text-2xl font-bold">
           {new Date(sheetData.updated_at).toLocaleDateString(
-								"en-GB",
+								"en-US",
 								{
 								day: "numeric",
 								month: "numeric",

@@ -4,7 +4,6 @@ import { SubmitProvider } from "../contexts/SubmitContext";
 import { useSubmit } from "../contexts/SubmitContext";
 import { AttachmentProvider } from "../contexts/AttachmentContext";
 import { GradingProvider } from "../contexts/GradingContext";
-import LoadingSheet from "./loading/LoadingSheet";
 import NavSheet from "./navigation/NavSheet";
 import { useState, useEffect } from "react";
 import useColorHandlers from "../hooks/useColorHandlers";
@@ -22,64 +21,48 @@ import { initialYesColor, initialNoColor, greenColor, redColor } from '../consta
 import FloatingElementsViewSheet from "./floating/FloatingElementsViewSheet";
 import FloatingElementsEditSheet from "./floating/FloatingElementsEditSheet";
 import {getCurrentFormData, fetchData} from "../hooks/dataHandlers";
-import { useLocation } from "react-router-dom";
 import EditGeneralSection from "./sections/EditGeneralSection";
 import EditAttachmentSection from "./sections/EditAttachmentSection";
 import EditMandatorySection from "./sections/EditMandatorySection";
 import EditBonusSection from "./sections/EditBonusSection";
 import EditGradingOptionsSection from "./sections/EditGradingOptionsSection";
+import { useLoading } from '../contexts/LoadingContext'; 
 
 function EditViewSheet({selectedDate, setSelectedDate}) {
 
     const scrollToTop = () => {
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     let [isOpen, setIsOpen] = useState(false);
-    const { hash } = useLocation();
-    const [lastMandatorySection, setLastMandatorySection] = useState(null);
     const { handleSubmit } = useSubmit();
     const [editMode, setEditMode] = useState(false);
     const [sheetData, setSheetData] = useState({});
-    const [loadingSheet, setLoadingSheet] = useState(true);
+    const { isLoading, setIsLoading } = useLoading();
     const { okColor, outstandingColor, emptyWorkColor, incompleteWorkColor, invalidCompilationColor, normeColor, cheatColor, crashColor, concerningSituationsColor, leaksColor, forbiddenFunctionsColor, cannotSupportColor, handleOkColor, handleOutstandingColor, handleEmptyWorkColor, handleIncompleteWorkColor, handleInvalidCompilationColor, handleNormeColor, handleCheatColor, handleCrashColor, handleConcerningSituationsColor, handleLeaksColor, handleForbiddenFunctionsColor, handleCannotSupportColor } = useColorHandlers(greenColor, redColor);
     const { hasLoaded, setHasLoaded, options, setOptions, show, setShow, showBackToTop, yesColorBonus, noColorBonus, mandatoryYesColor, mandatoryNoColor, points, bonusPoints, handleImportData, handleYesColor, handleNoColor, handleYesColorBonus, handleNoColorBonus, handleMandatorySliderValues, handleBonusSliderValues } = useAddContentEffects({ okColor, outstandingColor, emptyWorkColor, incompleteWorkColor, invalidCompilationColor, normeColor, cheatColor, crashColor, concerningSituationsColor, leaksColor, forbiddenFunctionsColor, cannotSupportColor }, sheetData, setSheetData, selectedDate, setSelectedDate);
+    
     const handleEdit = () => {
-        // Get current hash
-        const currentHash = window.location.hash;
         const newEditMode = !editMode;
         let newUrl;
-    
-        // Construire l'URL en préservant le hash
+        setIsLoading(true);
         if (newEditMode) {
-            newUrl = `${window.location.pathname}?project=${sheetData.project_title}&edit=true${currentHash}`;
+            
+            newUrl = `${window.location.pathname}?project=${sheetData.project_title}&edit=true`;
         } else {
-            newUrl = `${window.location.pathname}?project=${sheetData.project_title}${currentHash}`;
+            getCurrentFormData(sheetData, setSheetData, handleSubmit)
+            newUrl = `${window.location.pathname}?project=${sheetData.project_title}`;
         }
-    
-        // Mettre à jour l'URL sans recharger la page
         window.history.pushState({}, "", newUrl);
-
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 200);
         setEditMode(newEditMode);
     };
 
     const handleDownload = () => {
         handleSubmit(true, getCurrentFormData(sheetData, setSheetData, handleSubmit));
     };
-
-    useEffect(() => {
-        // Check if there's an active section in localStorage
-        const activeSection = localStorage.getItem('activeSection');
-        if (activeSection) {
-          // Scroll to the active section
-          const element = document.getElementById(activeSection);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-          // Remove the active section from localStorage
-          localStorage.removeItem('activeSection');
-        }
-      }, [hash]);
 
     useState(() => {
         if (!hasLoaded) {
@@ -107,8 +90,9 @@ function EditViewSheet({selectedDate, setSelectedDate}) {
                 } else {
                     setEditMode(true);
                 }
-
-                setLoadingSheet(false);
+                setTimeout(() => {
+                    setIsLoading(false);
+                }, 1000);
             };
             fetchAllData();
             setHasLoaded(true);
@@ -118,13 +102,9 @@ function EditViewSheet({selectedDate, setSelectedDate}) {
         fetchData,
         setSheetData,
         setEditMode,
-        setLoadingSheet,
+        setIsLoading,
         hasLoaded,
     ]);
-    
-    if (loadingSheet) {
-        return <LoadingSheet />;
-    }
 
 if (editMode) {
     
@@ -164,8 +144,8 @@ if (editMode) {
                                 selectedDate={selectedDate}
                                 />
                                 <EditAttachmentSection/>
-                                <EditMandatorySection sheetData={sheetData} openModal={() => setIsOpen(true)} editMode={editMode}/>
-                                <EditBonusSection sheetData={sheetData} openModal={() => setIsOpen(true)}/>
+                                <EditMandatorySection  openModal={() => setIsOpen(true)}/>
+                                <EditBonusSection openModal={() => setIsOpen(true)}/>
                                 <EditGradingOptionsSection/>
                             </div>
                             </div>
@@ -246,8 +226,6 @@ return (
             initialYesColor={initialYesColor}
             initialNoColor={initialNoColor}
             handleMandatorySliderValues={handleMandatorySliderValues}
-            setLastMandatorySection={setLastMandatorySection}
-
         />
 
         {/* BONUS SECTIONS */}

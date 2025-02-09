@@ -11,19 +11,9 @@ export function SectionProvider({ children , sheetData}) {
   const [bonusSections, setBonusSections] = useState([]);
   const [bonusSectionsDataFromServer, setBonusSectionsDataFromServer] = useState([]);
   const [numberOfBonusSections, setNumberOfBonusSections] = useState(0);
-  const [bonusIntroduction, setBonusIntroduction] = useState('');
-  const [mandatoryIntroduction, setMandatoryIntroduction] = useState('');
 
-  const updateMandatoryIntroduction = (e) => {
-    setMandatoryIntroduction(e.target.value);
-  };
-
-  const updateBonusIntroduction = (e) => {
-    setBonusIntroduction(e.target.value);
-  };
 
   const updateMandatorySection = (index, updatedSection) => {
-    console.log(updatedSection)
     setMandatorySections(prevSections => {
       const newSections = [...prevSections];
       newSections[index] = { ...newSections[index], ...updatedSection };
@@ -83,12 +73,6 @@ export function SectionProvider({ children , sheetData}) {
     numberOfBonusSections,
     setNumberOfBonusSections,
     updateBonusSection,
-    bonusIntroduction,
-    setBonusIntroduction,
-    updateBonusIntroduction,
-    mandatoryIntroduction,
-    setMandatoryIntroduction,
-    updateMandatoryIntroduction,
   };
 
   return (
