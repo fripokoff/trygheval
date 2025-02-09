@@ -38,151 +38,153 @@
 		"student_number" : 1,
 		"students" : 1,
 		"eval_points" : 3,
-			"mandatorySections" : [
-				{
-					"id": "679b8bb46679b9e6f921f767",
-					"description": "--ft_strlen\n--ft_memcpy\n--ft_memset\n--ft_bzero\n--ft_memmove\n--ft_memcmp\n--ft_memchr",
-					"yes_no": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-01-30T14:24:52.691Z",
-					"updated_at": "2025-01-30T16:03:00.587Z"
-				},
-				{
-					"id": "679b8bb46679b9e6f921f768",
-					"description": "--ft_isalpha\n--ft_isdigit\n--ft_isalnum\n--ft_isascii\n--ft_isprint",
-					"yes_no": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-01-30T14:24:52.691Z",
-					"updated_at": "2025-01-30T16:03:00.587Z"
-				},
-				{
-					"id": "679b8bb46679b9e6f921f769",
-					"description": "--ft_toupper\n--ft_tolower\n--ft_strchr\n--ft_strrchr",
-					"yes_no": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-01-30T14:24:52.691Z",
-					"updated_at": "2025-01-30T16:03:00.587Z"
-				},
-				{
-					"id": "679b8bb46679b9e6f921f76a",
-					"description": "--ft_strlcat\n--ft_strlcpy\n--ft_atoi\n--ft_strnstr\n--ft_strncmp\n--ft_calloc\n--ft_strdup",
-					"yes_no": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-01-30T14:24:52.691Z",
-					"updated_at": "2025-01-30T16:03:00.587Z"
-				},
-				{
-					"id": "679b8bb46679b9e6f921f76b",
-					"description": "--ft_substr\n--ft_strjoin\n--ft_putchar_fd\n--ft_putstr_fd\n--ft_putendl_fd\n--ft_putnbr_fd",
-					"yes_no": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-01-30T14:24:52.691Z",
-					"updated_at": "2025-01-30T16:03:00.587Z"
-				},
-				{
-					"id": "679b8bb46679b9e6f921f76c",
-					"description": "--ft_strmapi\n--ft_striteri\n--ft_strtrim\n--ft_split\n--ft_itoa",
-					"yes_no": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-01-30T14:24:52.691Z",
-					"updated_at": "2025-01-30T16:03:00.587Z"
-				}
-			],
-			"bonusSections" : [
-				{
-					"id": "679b8bb56679b9e6f921f76e",
-					"description": " ",
-					"yes_no": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-01-30T14:24:53.279Z",
-					"updated_at": "2025-02-01T16:12:30.283Z"
-				},
-				{
-					"id": "679e47ee8c78a1cea9234f65",
-					"description": " ",
-					"yes_no": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-02-01T16:12:30.282Z",
-					"updated_at": "2025-02-01T16:12:30.282Z"
-				},
-				{
-					"id": "679e47ee8c78a1cea9234f66",
-					"description": " ",
-					"yes_no": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-02-01T16:12:30.282Z",
-					"updated_at": "2025-02-01T16:12:30.282Z"
-				},
-				{
-					"id": "679e47ee8c78a1cea9234f67",
-					"description": " ",
-					"yes_no": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-02-01T16:12:30.282Z",
-					"updated_at": "2025-02-01T16:12:30.282Z"
-				},
-				{
-					"id": "679e47ee8c78a1cea9234f68",
-					"description": " ",
-					"yes_no": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-02-01T16:12:30.282Z",
-					"updated_at": "2025-02-01T16:12:30.282Z"
-				},
-				{
-					"id": "679e47ee8c78a1cea9234f69",
-					"description": " ",
-					"yes_no": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-02-01T16:12:30.282Z",
-					"updated_at": "2025-02-01T16:12:30.282Z"
-				},
-				{
-					"id": "679e47ee8c78a1cea9234f6a",
-					"description": " ",
-					"yes_no": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-02-01T16:12:30.282Z",
-					"updated_at": "2025-02-01T16:12:30.282Z"
-				},
-				{
-					"id": "679e47ee8c78a1cea9234f6b",
-					"description": " ",
-					"yes_no": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-02-01T16:12:30.282Z",
-					"updated_at": "2025-02-01T16:12:30.282Z"
-				},
-				{
-					"id": "679e47ee8c78a1cea9234f6c",
-					"description": " ",
-					"yes_no": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-02-01T16:12:30.282Z",
-					"updated_at": "2025-02-01T16:12:30.282Z"
-				}
-			],
-			"gradingOptions" :[
-				{
-					"id": "679b8bb56679b9e6f921f76d",
-					"ok": true,
-					"outstanding": true,
-					"empty_work": true,
-					"incomplete_work": true,
-					"invalid_compilation": true,
-					"norme": true,
-					"cheat": true,
-					"crash": true,
-					"concerning_situations": true,
-					"leaks": true,
-					"forbidden_functions": true,
-					"cannot_support": true,
-					"sheetId": "679b8bb46679b9e6f921f766",
-					"created_at": "2025-01-30T14:24:53.173Z",
-					"updated_at": "2025-01-30T16:03:00.620Z"
-				}
-			]
-        }
+		"languages" : ["US", "FR"],
+		"defaultLanguage" : "US",
+		"mandatorySections" : [
+			{
+				"id": "679b8bb46679b9e6f921f767",
+				"description": "--ft_strlen\n--ft_memcpy\n--ft_memset\n--ft_bzero\n--ft_memmove\n--ft_memcmp\n--ft_memchr",
+				"yes_no": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-01-30T14:24:52.691Z",
+				"updated_at": "2025-01-30T16:03:00.587Z"
+			},
+			{
+				"id": "679b8bb46679b9e6f921f768",
+				"description": "--ft_isalpha\n--ft_isdigit\n--ft_isalnum\n--ft_isascii\n--ft_isprint",
+				"yes_no": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-01-30T14:24:52.691Z",
+				"updated_at": "2025-01-30T16:03:00.587Z"
+			},
+			{
+				"id": "679b8bb46679b9e6f921f769",
+				"description": "--ft_toupper\n--ft_tolower\n--ft_strchr\n--ft_strrchr",
+				"yes_no": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-01-30T14:24:52.691Z",
+				"updated_at": "2025-01-30T16:03:00.587Z"
+			},
+			{
+				"id": "679b8bb46679b9e6f921f76a",
+				"description": "--ft_strlcat\n--ft_strlcpy\n--ft_atoi\n--ft_strnstr\n--ft_strncmp\n--ft_calloc\n--ft_strdup",
+				"yes_no": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-01-30T14:24:52.691Z",
+				"updated_at": "2025-01-30T16:03:00.587Z"
+			},
+			{
+				"id": "679b8bb46679b9e6f921f76b",
+				"description": "--ft_substr\n--ft_strjoin\n--ft_putchar_fd\n--ft_putstr_fd\n--ft_putendl_fd\n--ft_putnbr_fd",
+				"yes_no": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-01-30T14:24:52.691Z",
+				"updated_at": "2025-01-30T16:03:00.587Z"
+			},
+			{
+				"id": "679b8bb46679b9e6f921f76c",
+				"description": "--ft_strmapi\n--ft_striteri\n--ft_strtrim\n--ft_split\n--ft_itoa",
+				"yes_no": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-01-30T14:24:52.691Z",
+				"updated_at": "2025-01-30T16:03:00.587Z"
+			}
+		],
+		"bonusSections" : [
+			{
+				"id": "679b8bb56679b9e6f921f76e",
+				"description": " ",
+				"yes_no": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-01-30T14:24:53.279Z",
+				"updated_at": "2025-02-01T16:12:30.283Z"
+			},
+			{
+				"id": "679e47ee8c78a1cea9234f65",
+				"description": " ",
+				"yes_no": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-02-01T16:12:30.282Z",
+				"updated_at": "2025-02-01T16:12:30.282Z"
+			},
+			{
+				"id": "679e47ee8c78a1cea9234f66",
+				"description": " ",
+				"yes_no": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-02-01T16:12:30.282Z",
+				"updated_at": "2025-02-01T16:12:30.282Z"
+			},
+			{
+				"id": "679e47ee8c78a1cea9234f67",
+				"description": " ",
+				"yes_no": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-02-01T16:12:30.282Z",
+				"updated_at": "2025-02-01T16:12:30.282Z"
+			},
+			{
+				"id": "679e47ee8c78a1cea9234f68",
+				"description": " ",
+				"yes_no": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-02-01T16:12:30.282Z",
+				"updated_at": "2025-02-01T16:12:30.282Z"
+			},
+			{
+				"id": "679e47ee8c78a1cea9234f69",
+				"description": " ",
+				"yes_no": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-02-01T16:12:30.282Z",
+				"updated_at": "2025-02-01T16:12:30.282Z"
+			},
+			{
+				"id": "679e47ee8c78a1cea9234f6a",
+				"description": " ",
+				"yes_no": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-02-01T16:12:30.282Z",
+				"updated_at": "2025-02-01T16:12:30.282Z"
+			},
+			{
+				"id": "679e47ee8c78a1cea9234f6b",
+				"description": " ",
+				"yes_no": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-02-01T16:12:30.282Z",
+				"updated_at": "2025-02-01T16:12:30.282Z"
+			},
+			{
+				"id": "679e47ee8c78a1cea9234f6c",
+				"description": " ",
+				"yes_no": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-02-01T16:12:30.282Z",
+				"updated_at": "2025-02-01T16:12:30.282Z"
+			}
+		],
+		"gradingOptions" :[
+			{
+				"id": "679b8bb56679b9e6f921f76d",
+				"ok": true,
+				"outstanding": true,
+				"empty_work": true,
+				"incomplete_work": true,
+				"invalid_compilation": true,
+				"norme": true,
+				"cheat": true,
+				"crash": true,
+				"concerning_situations": true,
+				"leaks": true,
+				"forbidden_functions": true,
+				"cannot_support": true,
+				"sheetId": "679b8bb46679b9e6f921f766",
+				"created_at": "2025-01-30T14:24:53.173Z",
+				"updated_at": "2025-01-30T16:03:00.620Z"
+			}
+		]
+		}
     ],
     "message": "Sheets found successfully"
 }
