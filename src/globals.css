@@ -45,3 +45,8 @@
 .data-buttons {
   z-index:99999;
 }
+
+.prose :where(hr):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  margin-top: 2px;
+  margin-bottom: 5px;
+}

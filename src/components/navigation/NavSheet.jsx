@@ -1,8 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useContext } from 'react';
+import { ToastContext } from '../../contexts/ToastContext';
+
 
 export default function NavSheet({ handleEdit, addMode, sheetData, handleImportData, handleDownload }) {
   const [isImportModalOpen, setIsImportModalOpen] = useState(false);
   const [jsonInput, setJsonInput] = useState('');
+  const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
+  const { addToast } = useContext(ToastContext);
+
+  const handleAddToast = ({type, msg, position}) => {
+    addToast({
+      type: type,
+      message: msg,
+      duration: 5000,
+      position: position,
+      dismissable: true,
+      animationIn: 'slide-in-right',
+      animationOut: 'slide-out-left',
+      animationSpeed: 0.5,
+    });
+  };
 
   const handleFileImport = (event) => {
     const file = event.target.files[0];
@@ -11,11 +28,10 @@ export default function NavSheet({ handleEdit, addMode, sheetData, handleImportD
       reader.onload = (e) => {
         try {
           const jsonData = JSON.parse(e.target.result);
-          handleImportData(jsonData); // Assurez-vous que handleImportData peut gérer un objet JSON directement
+          handleImportData(JSON.stringify(jsonData));
           closeImportModal();
         } catch (error) {
-          console.error("Erreur lors de l'analyse du fichier JSON :", error);
-          // Gérer l'erreur (afficher un message à l'utilisateur)
+          console.error("Error parsing JSON:", error);
         }
       };
       reader.readAsText(file);
@@ -25,11 +41,10 @@ export default function NavSheet({ handleEdit, addMode, sheetData, handleImportD
   const handleJsonImport = () => {
     try {
       const jsonData = JSON.parse(jsonInput);
-      handleImportData(jsonData); // Assurez-vous que handleImportData peut gérer un objet JSON directement
+      handleImportData(JSON.stringify(jsonData));
       closeImportModal();
     } catch (error) {
-      console.error("Erreur lors de l'analyse du JSON :", error);
-      // Gérer l'erreur (afficher un message à l'utilisateur)
+      console.error("Error parsing JSON:", error);
     }
   };
 
@@ -39,8 +54,37 @@ export default function NavSheet({ handleEdit, addMode, sheetData, handleImportD
 
   const closeImportModal = () => {
     setIsImportModalOpen(false);
-    setJsonInput(''); // Réinitialiser l'input JSON
+    setJsonInput('');
   };
+
+  const openDownloadModal = () => {
+    setIsDownloadModalOpen(true);
+  };
+
+  const closeDownloadModal = () => {
+    setIsDownloadModalOpen(false);
+  };
+
+  const handleCopyToClipboard = useCallback(() => {
+    const data = {
+      "success": true,
+      "data": [sheetData],
+      "message": "Sheet created successfully"
+    };
+    
+    navigator.clipboard.writeText(JSON.stringify(data, null, 2))
+      .then(() => {
+        handleAddToast({
+          type: 'success',
+          msg: 'Data copied to clipboard!',
+          position: 'bottom-right'
+        })
+        closeDownloadModal();
+      })
+      .catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+  }, [sheetData]);
 
   return (
     <>
@@ -85,7 +129,7 @@ export default function NavSheet({ handleEdit, addMode, sheetData, handleImportD
         <div>
           <button
             type="button"
-            onClick={handleDownload}
+            onClick={openDownloadModal}
             className="w-[150px] bg-base-100 border border-base hover:bg-base-300 text-base-content py-3 px-10 rounded transition duration-200"
           >
             Download
@@ -144,6 +188,38 @@ export default function NavSheet({ handleEdit, addMode, sheetData, handleImportD
             <div className="mt-6 flex justify-end">
               <button
                 onClick={closeImportModal}
+                className="btn btn-sm"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Download Modal */}
+      {isDownloadModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 rounded-md">
+          <div className="bg-base-200 p-6 rounded-md">
+            <h2 className="text-xl font-semibold mb-4">Download sheet</h2>
+
+            <button
+              onClick={handleDownload}
+              className="btn btn-base-100 border border-base-content p-4 mt-2 w-full"
+            >
+              Download as JSON
+            </button>
+
+            <button
+              onClick={handleCopyToClipboard}
+              className="btn btn-base-100 border border-base-content p-4 mt-2 w-full"
+            >
+              Copy to Clipboard
+            </button>
+
+            <div className="mt-6 flex justify-end">
+              <button
+                onClick={closeDownloadModal}
                 className="btn btn-sm"
               >
                 Close

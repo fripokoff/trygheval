@@ -2,10 +2,10 @@
     "success": true,
     "data": [
         {
-			"id" : 1,
-			"status": "active",
-			"project_title": "Libft",
-            "guidelines": [
+		"id" : 1,
+		"status": "active",
+		"project_title": "Libft",
+        "guidelines": [
             "- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
             "- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
             "- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
@@ -33,7 +33,7 @@
 		}
 		],
 		"time" : 30,
-          "cursus_id": "1",
+        "cursus_id": "1",
         "updated_at": "2023-12-26T16:28:09.265Z",
 		"student_number" : 1,
 		"students" : 1,
@@ -178,10 +178,7 @@
 				"concerning_situations": true,
 				"leaks": true,
 				"forbidden_functions": true,
-				"cannot_support": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-01-30T14:24:53.173Z",
-				"updated_at": "2025-01-30T16:03:00.620Z"
+				"cannot_support": true
 			}
 		]
 		}

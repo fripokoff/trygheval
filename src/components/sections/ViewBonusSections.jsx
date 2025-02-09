@@ -72,7 +72,7 @@ function ViewBonusSections({
 
                                         )}
                                         </div>
-                                        {section?.separator && (<hr className='mt-4 mb-4' />)}
+                                        {section?.separator && (<hr className={`mt-4 mb-4 ${section.separator}`}  />)}
                                     </div>
                                 ))
                             }

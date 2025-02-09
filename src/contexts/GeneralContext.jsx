@@ -18,12 +18,6 @@ export function GeneralProvider({ children, sheetData, setSelectedDate, selected
   const [status, setStatus] = useState("active");
   const [evalPoints, setEvalPoints] = useState(0);
   const [time, setTime] = useState(0);
-  const updateGradingOption = useCallback((id, value) => {
-    setGradingOptions(prev => ({
-      ...prev,
-      [id]: value,
-    }));
-  }, []);
 
   const [gradingOptions, setGradingOptions] = useState({
     ok: true,
@@ -39,6 +33,13 @@ export function GeneralProvider({ children, sheetData, setSelectedDate, selected
     forbidden_functions: true,
     cannot_support: true
   });
+
+  const updateGradingOption = useCallback((id, value) => {
+    setGradingOptions(prev => ({
+      ...prev,
+      [id]: value,
+    }));
+  }, []);
 
   const handleAttachments = useCallback((attachmentsData) => {
     if (!attachmentsData) return;

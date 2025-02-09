@@ -38,17 +38,13 @@ export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
 	const mandatorySections = Array.from(
 		document.querySelectorAll(".mandatory-section")
 	).map((section, index) => {
-		const description =
-			section.querySelector(`#mandatory_description_${index}`)?.value || "";
-		// const descriptionArray = description
-		// 	.split("\n")
-		// 	.filter((line) => line.trim() !== "")
-		// 	.map((line) => line.trim());
-	
+		const description = section.querySelector(`#mandatory_description_${index}`)?.value || "";
+		const sepSize = section.querySelector(`#mandatory_separator_size_${index}`)?.value || false;
+		const separator = section.querySelector(`#mandatory_separator_${index}`)?.checked ? sepSize : false;
 		return {
 			description: description,
 			yes_no: section.querySelector(`#mandatory_yes_no_${index}`).checked ? true : false,
-			separator:section.querySelector(`#mandatory_separator_${index}`).checked ? true : false,
+			separator:separator,
 			type: "mandatory",
 		};
 	});
@@ -56,27 +52,20 @@ export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
 	const bonusSections = Array.from(
 		document.querySelectorAll(".bonus-section")
 	).map((section, index) => {
+		const sepSize = section.querySelector(`#bonus_separator_size_${index}`)?.value || false;
 		const description =
 			section.querySelector(`#bonus_description_${index}`)?.value || "";
-		const descriptionArray = description
-			.split("\n")
-			.filter((line) => line.trim() !== "")
-			.map((line) => line.trim());
-
+		const separator = section.querySelector(`#bonus_separator_${index}`)?.checked ? sepSize : false;
 		return {
-			title: section.querySelector(`#bonus_title_${index}`)?.value || "",
-			subtitle:
-				section.querySelector(`#bonus_subtitle_${index}`)?.value || "",
-			description: descriptionArray.join("\n"),
-			conclusion:section.querySelector(`#bonus_conclusion_${index}`)?.value || "",
-			yes_no:
-				section.querySelector(`#bonus_yes_no_${index}`)?.value === "true",
+			description: description,
+			separator : separator,
+			yes_no:section.querySelector(`#bonus_yes_no_${index}`)?.checked ? true : false,
 			type: "bonus",
 		};
 	});
 	const getGradingOptions = () => {
-		return GRADING_OPTIONS.reduce((acc, option) => {
-			acc[option] = document.querySelector(`#${option}`)?.value === "true";
+		return GRADING_OPTIONS.reduce((acc, id) => {
+			acc[id] = document.querySelector(`#grading_${id}`)?.checked ? true : false;
 			return acc;
 		}, {});
 	};
@@ -97,9 +86,7 @@ export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
 		guidelines: guidelinesArray || "",
 		attachments: attachments || [],
 		mandatorySections: mandatorySections || [],
-		mandatoryIntro : document.querySelector("#mandatory_intro")?.value || "",
 		bonusSections: bonusSections,
-		bonusIntro: document.querySelector("#bonus_intro")?.value || "",
 		gradingOptions: [getGradingOptions()] || [],
 		updated_at: dateFormat,
 	};

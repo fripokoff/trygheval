@@ -5,7 +5,6 @@ import { useState } from "react";
 export default function EditMandatorySection({
   openModal,
 }) {
-  const [hrEnabled, setHrEnabled] = useState({});
   const {
     mandatorySections,
     mandatoryOptionsDataFromServer,
@@ -19,16 +18,18 @@ export default function EditMandatorySection({
 
   const { addMandatorySection, removeMandatorySection } =
     useMandatorySections();
-  const [yesNo, setYesNo] = useState({});
 
   const handleHrChange = (index, value) => {
-    setHrEnabled({ ...hrEnabled, [index]: value });
     updateMandatorySection(index, { separator: value });
   };
 
   const handleYesNoChange = (index, value) => {
-    setYesNo({ ...yesNo, [index]: value });
     updateMandatorySection(index, { yes_no: value });
+  };
+
+  const handleSeparatorSizeChange = (event, index) => {
+    const sepSize = event.target.value;
+    updateMandatorySection(index, { separator: sepSize });
   };
 
   return (
@@ -62,14 +63,9 @@ export default function EditMandatorySection({
         </div>
       )}
       {mandatorySections.map((section, index) => {
-        const isYesNo =
-          yesNo[index] !== undefined
-            ? yesNo[index]
-            : !mandatoryOptionsDataFromServer[index]
-            ? true
-            : mandatoryOptionsDataFromServer[index]?.yes_no === true;
-        const isHrEnabled =
-          hrEnabled[index] !== undefined ? hrEnabled[index] : false;
+        const isYesNo = section.yes_no ? section.yes_no : false;
+        const isHrEnabled = section.separator ? true : false; // Vérifie si separator existe
+        const separatorSize = section.separator ? section.separator : 'border-t-2';
         return (
           <div
             key={section.id}
@@ -209,25 +205,48 @@ export default function EditMandatorySection({
                 </div>
               </div>
             </div>
-            {isHrEnabled &&
-              numberOfMandatorySections > 0 &&
-              index < numberOfMandatorySections - 1 && (
-                <hr className="mt-8 mb-4" />
+            {numberOfMandatorySections > 0 &&
+              index < numberOfMandatorySections - 1 &&
+              section.separator && (
+                <hr className={`mt-8 mb-4 ${section.separator}`} />
               )}
-            <div className="flex items-center mb-2 mt-4 font-bold text-base-content">
-              <label className="relative inline-flex items-center cursor-pointer mr-4">
-                <input
-                  type="checkbox"
-                  value=""
-                  id={"mandatory_separator_" + section.index}
-                  className="sr-only peer"
-                  checked={isHrEnabled}
-                  onChange={() => handleHrChange(index, !isHrEnabled)}
-                />
-                <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-              </label>
-              <span>Add separator before next section</span>
-            </div>
+            {index < numberOfMandatorySections - 1 && (
+              <div>
+                <div className="flex items-center mb-2 mt-4 font-bold text-base-content">
+                  <label className="relative inline-flex items-center cursor-pointer mr-4">
+                    <input
+                      type="checkbox"
+                      id={"mandatory_separator_" + section.index}
+                      className="sr-only peer"
+                      checked={isHrEnabled}
+                      onChange={(e) => {
+                        const newValue = isHrEnabled ? null : "border-t-2";
+                        handleHrChange(index, newValue);
+                      }}
+                    />
+                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                  </label>
+                  <span>Add separator before next section</span>
+                </div>
+                {section.separator && (
+                  <div className="flex items-center font-bold text-base-content">
+                    Separator size
+                    <select
+                      className="ml-4 p-2 rounded-md border border-gray-300"
+                      value={section.separator}
+                      id={"mandatory_separator_size_" + section.index}
+                      onChange={(e) => handleSeparatorSizeChange(e, index)}
+                    >
+                      <option value="border-t-[0.5px]">Small</option>
+                      <option value="border-t-1">Thin</option>
+                      <option value="border-t-2">Medium</option>
+                      <option value="border-t-4">Thick</option>
+                      <option value="border-t-8">Extra Thick</option>
+                    </select>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         );
       })}

@@ -4,7 +4,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import { XMarkIcon } from '@heroicons/react/20/solid'
+import {FaTimes} from 'react-icons/fa'
 
 function InfoModal({ isOpen, closeModal }) {
     const markdownExample = `
@@ -208,7 +208,7 @@ Use three or more hyphens, asterisks, or underscores to create a horizontal rule
                                             className="rounded-md p-2 hover:bg-base-200 focus:outline-none focus:ring-2 focus:ring-white"
                                         >
                                             <span className="sr-only">Close panel</span>
-                                            <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                                            <FaTimes className="h-6 w-6" aria-hidden="true" />
                                         </button>
                                     </div>
 

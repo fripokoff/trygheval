@@ -102,36 +102,24 @@ function useAddContentEffects(
         });
     }, []);
 
-    const handleImportData = async (event) => {
-        const file = event.target.files[0];
-        if (!file) return;
+    const handleImportData = async (json) => {
 
-        const reader = new FileReader();
-        reader.onload = async (e) => {
-            try {
-                const importedData = JSON.parse(e.target.result);
-                if (!importedData?.data?.[0]) {
-                    throw new Error("Format de données invalide");
-                }
-
-                const data = importedData.data[0];
-                setSheetData(data);
-                handleAddToast({
-                    type: 'success',
-                    msg: 'Sheet imported successfully',
-                    position: 'top-right'
-                  })
-            } catch (error) {
-                console.error("Erreur lors de l'import:", error);
-                handleAddToast({
-                    type: 'error',
-                    msg: 'Error importing sheet',
-                    position: 'top-right'
-                  })
+        try {
+            const data = JSON.parse(json);
+            setSheetData(data.data[0]);
+            handleAddToast({
+                type: 'success',
+                msg: 'Sheet imported successfully',
+                position: 'top-right'
+              })
+        } catch (e) {
+            console.error("Erreur lors de l'import:", e);
+            handleAddToast({
+                type: 'error',
+                msg: 'Error importing sheet',
+                position: 'bottom-right'
+                })
             }
-        };
-
-        reader.readAsText(file);
     };
 
     useEffect(() => {

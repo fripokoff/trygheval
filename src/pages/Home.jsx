@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import getProjects from "../hooks/getProjects";
 import { useLoading } from '../contexts/LoadingContext'; 
 import ReactCountryFlag from "react-country-flag"
+import { FaCheck } from 'react-icons/fa';
 
 function Home() {
 const { isLoading, setIsLoading } = useLoading();
@@ -36,6 +37,16 @@ const projectHours = {
     "minishell": 210,
     "NetPractice": 50,
     "CPP00": 12,
+    "CPP01": 12,
+    "CPP02": 12,
+    "CPP03": 12,
+    "CPP04": 12,
+    "CPP05": 12,
+    "CPP06": 12,
+    "CPP07": 12,
+    "CPP08": 12,
+    "CPP09": 12,
+    
 };
 
 const milestones = {
@@ -316,7 +327,8 @@ return (
                                                 className="flex justify-center items-center gap-2 text-xl text-[#0D94B6]"
                                                 onClick={() => navigateTo(`/sheet?project=${project.project_title}`)}
                                             >
-                                                {project && project.project_title}
+                                               {project?.finish && (<FaCheck />)}
+                                             {project && project.project_title}
                                             </div>
                                             <span className="text-lg text-base-content text-bold">
                                                 {new Date(project.updated_at).toLocaleDateString(
@@ -344,7 +356,6 @@ return (
                                                 ))}
                                                 </div>
                                             )}
-                                            
                                         </td>
                                         <td className="py-3 px-5 w-1/12">
                                             <span className="text-base-content font-bold text-xl">
