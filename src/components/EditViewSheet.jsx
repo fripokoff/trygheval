@@ -28,7 +28,8 @@ import EditGradingOptionsSection from "./sections/Edit/EditGradingOptionsSection
 import { useLoading } from '../contexts/LoadingContext'; 
 
 function EditViewSheet({selectedDate, setSelectedDate}) {
-
+    const url = new URL(window.location.href);
+    let lang = url.searchParams.get("lang");
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
@@ -77,12 +78,14 @@ function EditViewSheet({selectedDate, setSelectedDate}) {
         setIsLoading(true);
         setIsScrolling(true);
         window.scrollTo(0, 0);
-        
+        if(!lang)
+            sheetData?.language ? lang = sheetData.language : lang = 'EN';
         if (newEditMode) {
-            newUrl = `${window.location.pathname}?project=${sheetData.project_title}&edit=true`;
+            newUrl = `${window.location.pathname}?project=${sheetData.project_title}&edit=true&lang=${lang}`;
         } else {
+            console.log(sheetData)
             getCurrentFormData(sheetData, setSheetData, handleSubmit)
-            newUrl = `${window.location.pathname}?project=${sheetData.project_title}`;
+            newUrl = `${window.location.pathname}?project=${sheetData.project_title}&lang=${lang}`;
         }
         window.history.pushState({}, "", newUrl);
         
@@ -195,10 +198,16 @@ if (editMode) {
                                 handleChange={handleChange}
                                 openModal={() => setIsOpen(true)}
                                 selectedDate={selectedDate}
+                                sheetData={sheetData}
                                 />
                                 <EditAttachmentSection/>
-                                <EditMandatorySection  openModal={() => setIsOpen(true)}/>
-                                <EditBonusSection openModal={() => setIsOpen(true)}/>
+                                <EditMandatorySection 
+                                openModal={() => setIsOpen(true)}
+                                sheetData={sheetData}
+                                />
+                                <EditBonusSection
+                                openModal={() => setIsOpen(true)}
+                                sheetData={sheetData}/>
                                 <EditGradingOptionsSection/>
                             </div>
                             </div>

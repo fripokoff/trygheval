@@ -12,6 +12,10 @@ function ViewBonusSections({
     initialYesColor,
     initialNoColor 
   }) {
+    const url = new URL(window.location.href);
+    let lang = url.searchParams.get("lang");
+    if(!lang)
+        sheetData?.language ? lang = sheetData.language : lang = 'EN';
     return (
         <>
             {
@@ -28,7 +32,7 @@ function ViewBonusSections({
                                     <div className='w-full'>
                                         <ReactMarkdown
                                         className="prose prose-stone w-full max-w-none"
-                                        children={section.description.replace(/\n/g, '  \n')}
+                                        children={section.description?.[lang]?.replace(/\n/g, '  \n')}
                                         remarkPlugins={[remarkGfm]}
                                         />
                                     </div>

@@ -2,13 +2,17 @@ import { useSectionContext } from "../../../contexts/SectionContext";
 import { useBonusSections } from "../../../hooks/sections/useBonusSections";
 import { useState, useEffect } from "react";
 
-export default function EditBonusSection({ openModal }) {
+export default function EditBonusSection({ openModal, sheetData }) {
   const {
     bonusSections,
     bonusSectionsDataFromServer,
     numberOfBonusSections,
     updateBonusSection,
   } = useSectionContext();
+  const url = new URL(window.location.href);
+  let lang = url.searchParams.get("lang");
+  if(!lang)
+      sheetData?.language ? lang = sheetData.language : lang = 'EN';
   const { addBonusSection, removeBonusSection } = useBonusSections();
 
   useEffect(() => {
@@ -123,7 +127,7 @@ export default function EditBonusSection({ openModal }) {
               </div>
               <textarea
                 defaultValue={
-                  bonusSectionsDataFromServer[index]?.description || ""
+                  bonusSectionsDataFromServer[index]?.description?.[lang] || ""
                 }
                 rows={20}
                 placeholder="Enter detailed description separated by a new line"

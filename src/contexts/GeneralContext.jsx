@@ -69,7 +69,8 @@ export function GeneralProvider({ children, sheetData, setSelectedDate, selected
         students: sheetData.students || 0,
         status: sheetData.status || "active",
         evalPoints: sheetData.eval_points || 0,
-        time: sheetData.time || 0
+        time: sheetData.time || 0,
+        language: sheetData.language || "EN"
       },
       content: {
         introduction: sheetData.introduction || [],
@@ -82,7 +83,7 @@ export function GeneralProvider({ children, sheetData, setSelectedDate, selected
     setStatus(prev => prev !== updates.basic.status ? updates.basic.status : prev);
     setEvalPoints(prev => prev !== updates.basic.evalPoints ? updates.basic.evalPoints : prev);
     setTime(prev => prev !== updates.basic.time ? updates.basic.time : prev);
-  
+
     setIntroductionData(prev => 
       JSON.stringify(prev) !== JSON.stringify(updates.content.introduction) 
         ? updates.content.introduction 
@@ -147,7 +148,7 @@ export function GeneralProvider({ children, sheetData, setSelectedDate, selected
     evalPoints,
     setEvalPoints,
     time,
-    setTime
+    setTime,
   };
 
   return (

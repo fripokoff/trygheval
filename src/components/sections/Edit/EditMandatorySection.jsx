@@ -2,8 +2,12 @@ import { useSectionContext } from "../../../contexts/SectionContext";
 import { useMandatorySections } from "../../../hooks/sections/useMandatorySections";
 
 export default function EditMandatorySection({
-  openModal,
+  openModal,sheetData
 }) {
+  const url = new URL(window.location.href);
+  let lang = url.searchParams.get("lang");
+  if(!lang)
+      sheetData?.language ? lang = sheetData.language : lang = 'EN';
   const {
     mandatorySections,
     mandatoryOptionsDataFromServer,
@@ -129,7 +133,7 @@ export default function EditMandatorySection({
 
               <textarea
                 defaultValue={
-                  mandatoryOptionsDataFromServer[index]?.description || ""
+                  mandatoryOptionsDataFromServer[index]?.description?.[lang] || ""
                 }
                 rows={20}
                 placeholder="Enter detailed description separated by a new line"

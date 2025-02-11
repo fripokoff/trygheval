@@ -2,7 +2,11 @@ import React, { useEffect } from 'react';
 import { useGeneralContext } from '../../../contexts/GeneralContext';
 import Datepicker from "tailwind-datepicker-react"
 
-export default function EditGeneralSection({ options, show, handleClose, handleChange, selectedDate, openModal }) {
+export default function EditGeneralSection({ options, show, handleClose, handleChange, selectedDate, openModal, sheetData }) {
+  const url = new URL(window.location.href);
+  let lang = url.searchParams.get("lang");
+  if(!lang)
+      sheetData?.language ? lang = sheetData.language : lang = 'EN';
   const {
     introductionData,
     setIntroductionData,
@@ -43,13 +47,21 @@ export default function EditGeneralSection({ options, show, handleClose, handleC
     setGuidelinesData(e.target.value);
 
   };
-  const introduction= "- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.,\n- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.\n- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously.";
-	const guidelines = "- Only grade the work submitted to the **Git repository** of the evaluated student or group.\n- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.\n- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.\n- If applicable, review any **scripts** used for testing or automation together with the student.\n- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.,\n- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.\n- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.\n You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.\n- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.\n- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag.";
 
-  useEffect(() => {
-    setIntroductionData(introduction);
-    setGuidelinesData(guidelines);
-  }, [setIntroductionData, setGuidelinesData]);
+  const handleLanguage = (e) => {
+    const newLang = e.target.value;
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', newLang);
+    window.history.pushState({}, '', url.toString());
+    window.location.reload();
+  }
+  // const introduction= "- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.,\n- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.\n- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously.";
+	// const guidelines = "- Only grade the work submitted to the **Git repository** of the evaluated student or group.\n- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.\n- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.\n- If applicable, review any **scripts** used for testing or automation together with the student.\n- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.,\n- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.\n- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.\n You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.\n- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.\n- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag.";
+
+  // useEffect(() => {
+  //   setIntroductionData(introduction);
+  //   setGuidelinesData(guidelines);
+  // }, [setIntroductionData, setGuidelinesData]);
 
   
   return (
@@ -123,22 +135,25 @@ export default function EditGeneralSection({ options, show, handleClose, handleC
           className='mt-1 block w-full px-3 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 sm:text-sm'
         />
       </div>
-      {/* {project?.languages && (
-        <div>
-        <label htmlFor='language' className='block text-lg text-base-content font-bold'>
-        Language
-        </label>
-        <select
-          className={`mt-1 block w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 sm:text-sm bg-white dark:bg-[#121212] text-gray-700 dark:text-gray-200`}
-          value={1}
-          id={1}
-          onChange={(e) => handleTime(e)}
-        >
-          <option value="border-t-[0.5px]">US</option>
-          <option value="border-t-1">FR</option>
-        </select>
-      </div>
-      )} */}
+      {sheetData?.languages && (
+          <div>
+              <label htmlFor='language' className='block text-lg text-base-content font-bold'>
+                  Language
+              </label>
+              <select
+                  className={`mt-1 block w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 sm:text-sm bg-white dark:bg-[#121212] text-gray-700 dark:text-gray-200`}
+                  value={lang}
+                  id="language"
+                  onChange={(e) => handleLanguage(e)}
+              >
+                  {sheetData.languages.map((language) => (
+                      <option key={language} value={language}>
+                          {language}
+                      </option>
+                  ))}
+              </select>
+          </div>
+      )}
 
       {/* Introduction section */}
       <div className='sm:col-span-2'
@@ -159,7 +174,7 @@ export default function EditGeneralSection({ options, show, handleClose, handleC
 
         </div>
         <textarea
-          defaultValue={introductionData}
+          defaultValue={introductionData?.[lang]}
           rows={10}
           placeholder='Enter introduction text separated by a new line'
           onChange={(e) => handleIntroduction(e)}
@@ -188,7 +203,7 @@ export default function EditGeneralSection({ options, show, handleClose, handleC
 
         </div>
         <textarea
-          defaultValue={guidelinesData}
+          defaultValue={guidelinesData?.[lang]}
           rows={10}
           placeholder='Enter guidelines text separated by a new line'
           onChange={(e) => handleGuidelines(e)}

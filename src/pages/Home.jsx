@@ -6,6 +6,7 @@ import getProjects from "../hooks/getProjects";
 import { useLoading } from '../contexts/LoadingContext'; 
 import ReactCountryFlag from "react-country-flag"
 import { FaCheck } from 'react-icons/fa';
+import {fetchData} from "../hooks/dataHandlers";
 
 function Home() {
 const { isLoading, setIsLoading } = useLoading();
@@ -87,64 +88,15 @@ useEffect(() => {
     const activeSection = localStorage.getItem('ActiveSection');
     if (activeSection)
         localStorage.removeItem('ActiveSection');
-    const fetchData = async (folder) => {
-    const home = window.location;
-    const url = home + `/sheets/${folder}/data.json`;
-
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+    const fetchProjects = async () => {
+        try {
+            const projects = await fetchData(getProjects);
+            setProjectInfo(projects);
+        } catch (error) {
+            console.error("Error:", error);
         }
-        const data = await response.json();
-        return data.data[0];
-    } catch (error) {
-        console.error(`Error fetching data for folder: ${folder}`, error);
-        return null;
-    }
     };
-
-    function padNumber(number) {
-    return number.toString().padStart(2, "0");
-    }
-
-    const fetchCPPData = async (folder) => {
-    const home = window.location;
-    let urls = [];
-    for (let i = 0; i < 1; i++) {
-        urls.push(`${home}/sheets/${folder}/CPP${padNumber(i)}/data.json`);
-    }
-    try {
-        const responses = await Promise.all(urls.map((url) => fetch(url)));
-        const data = await Promise.all(
-        responses.map((response) => response.json())
-        );
-        return data.map((d) => d.data[0]);
-    } catch (error) {
-        console.error(`Error fetching data for folder: ${folder}`, error);
-        return null;
-    }
-    };
-
-    const fetchAllData = async () => {
-    const allData = await Promise.all(
-      getProjects.map((folder) => {
-        if (folder.includes("CPP")) {
-            return fetchCPPData(folder);
-        } else {
-            return fetchData(folder);
-        }
-        })
-    );
-    const flattenedData = allData.flat();
-    const filteredData = flattenedData.filter(
-        (data) => data && data.project_title && data.project_title !== "empty"
-    );
-    const sortedData = filteredData.sort((a, b) => a.id - b.id);
-    setProjectInfo(sortedData);
-    };
-
-    fetchAllData();
+    fetchProjects();
     setTimeout(() => {
         setIsLoading(false);
     }, 1000);
@@ -316,8 +268,7 @@ return (
         {Object.entries(milestones).map(([milestone, data]) => (
             <React.Fragment key={milestone}>
                 <MilestoneHeader milestone={milestone} hours={data.hours} />
-                {projectInfo
-                    .filter((project) => data.projects.includes(project.project_title))
+                {projectInfo?.filter((project) => data.projects.includes(project.project_title))
                     .map((project, index) => (
                         <React.Fragment key={index}>
                             {project.status === "active" &&
@@ -344,19 +295,53 @@ return (
                                                 )}
                                             </span>
                                             {project?.languages && (
-                                            <div className="flex justify-center">
-                                                {project.languages.map((lang) => (
-                                                    <div key={lang}>
-                                                    <ReactCountryFlag
-                                                    className="emojiFlag"
-                                                    countryCode={lang.toUpperCase()}
-                                                    style={{
-                                                        fontSize: '2em',
-                                                        lineHeight: '1em',
-                                                    }}
-                                                />
+                                                <div className="flex flex-col justify-center items-center">
+                                                    <div className="flex items-center mt-2 mb-2">
+                                                        Projects:
+                                                        {project.languages.map((lang) => {
+                                                            const language = lang === "EN" ? "US" : lang;
+                                                            return (
+                                                            <div className="ml-2"
+                                                            key={`projects_${lang}`}
+                                                            onClick={() => navigateTo(`/sheet?project=${project.project_title}&lang=${lang}`)}
+                                                            >
+                                                            <ReactCountryFlag
+                                                            className="emojiFlag"
+                                                            countryCode={language.toUpperCase()}
+                                                            style={{
+                                                                fontSize: '2em',
+                                                                lineHeight: '1em',
+                                                            }}
+                                                        />
+                                                            </div>
+                                                            )
+                                                        })}
                                                     </div>
-                                                ))}
+                                                    <div className="flex items-center">
+                                                        Subjects:
+                                                        {project?.attachments.map((subjects) => {
+                                                            const subUS = subjects.url.includes('en') ? subjects.url.replace('en', 'us') : subjects.url;
+                                                            const countryCode = subUS.match(/^([a-z]{2})\.subject\.pdf$/i)?.[1]?.toUpperCase();
+                                                            
+                                                            return (
+                                                                <div className="ml-2"
+                                                                key={`subjects_${countryCode}`}
+                                                                onClick={() => navigateTo(`/sheets/${project.project_title}/${subjects.url}`)}
+                                                                >
+                                                                    {countryCode && (
+                                                                        <ReactCountryFlag
+                                                                            className="emojiFlag"
+                                                                            countryCode={countryCode}
+                                                                            style={{
+                                                                                fontSize: '2em',
+                                                                                lineHeight: '1em',
+                                                                            }}
+                                                                        />
+                                                                    )}
+                                                                </div>
+                                                            );
+                                                        })}
+                                                    </div>
                                                 </div>
                                             )}
                                         </td>
@@ -489,8 +474,7 @@ return (
                                         </td>
                                     </tr>
                                     {showCPPChildren[project.project_title] &&
-                                        projectInfo
-                                            .filter((p) => p.project_title.includes("CPP"))
+                                        projectInfo?.filter((p) => p.project_title.includes("CPP"))
                                             .map((cppProject, cppIndex) => (
                                                 <tr
                                                     key={cppIndex}

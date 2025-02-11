@@ -2,7 +2,10 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 function ViewMandatorySections({ sheetData, handleYesColor, handleNoColor, mandatoryYesColor, mandatoryNoColor, initialYesColor, initialNoColor, handleMandatorySliderValues }) {
-
+  const url = new URL(window.location.href);
+  let lang = url.searchParams.get("lang");
+  if(!lang)
+    sheetData?.language ? lang = sheetData.language : lang = 'EN';
 
   return (
     <div className='mt-10 bg-base-100 p-5 lg:p-5 rounded-lg'>
@@ -17,7 +20,7 @@ function ViewMandatorySections({ sheetData, handleYesColor, handleNoColor, manda
                 <div className='w-full'>
                     <ReactMarkdown
                       className="prose prose-stone w-full max-w-none"
-                      children={section.description.replace(/\n/g, '  \n')}
+                      children={section.description?.[lang]?.replace(/\n/g, '  \n')}
                       remarkPlugins={[remarkGfm]}
                     />
                 </div>

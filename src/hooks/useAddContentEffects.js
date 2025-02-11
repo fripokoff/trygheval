@@ -35,32 +35,6 @@ function useAddContentEffects(
         animationSpeed: 0.5,
     });
     };
-    const fetchAllData = useCallback(async () => {
-        const getQueryParams = () => {
-            const params = {};
-            const queryString = window.location.search.substring(1);
-            const queryArray = queryString.split('&');
-            queryArray.forEach(param => {
-                const [key, value] = param.split('=');
-                params[key] = decodeURIComponent(value);
-            });
-            return params;
-        }
-
-        const queryParams = getQueryParams();
-        const projectName = queryParams.project;
-        return projectName;
-    }, []);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            if (!hasLoaded) {
-                const projectName = await fetchAllData();
-                setHasLoaded(true);
-            }
-        };
-        fetchData();
-    }, [hasLoaded, fetchAllData]);
 
     useEffect(() => {
         setOptions({

@@ -1,3 +1,5 @@
+import ReactCountryFlag from "react-country-flag"
+
 export default function FloatingElementsEditSheet({
 	showBackToTop,
 	scrollToTop,
@@ -5,11 +7,32 @@ export default function FloatingElementsEditSheet({
 	sheetData,
 	handleImportData
   }) {
-	if (!showBackToTop) return null;
-  
+	const url = new URL(window.location.href);
+	let lang = url.searchParams.get("lang");
+	if(!lang)
+		sheetData?.language ? lang = sheetData.language : lang = 'EN';
+	lang === 'EN' ? lang = 'US' : lang = lang;
+	const returnFlag = () => {
+		return (
+			<div className="fixed bottom-0 right-0 p-4 py-3 px-3">
+			<div className="p-2 bg-base-300 rounded-md border border-base-content">
+		  <ReactCountryFlag
+			className="emojiFlag"
+			countryCode={lang.toUpperCase()}
+			style={{
+				fontSize: '2em',
+				lineHeight: '1em',
+			}}
+		/>
+		</div>
+		</div>
+		)
+	}
+	
+	if (!showBackToTop) return returnFlag();
 	return (
 	  <div>
-		<div className="fixed bottom-0 right-0 p-4">
+		<div className="fixed bottom-14 right-0 p-4 py-3 px-3">
 		  <button
 			onClick={() =>{
 				scrollToTop();
@@ -34,8 +57,8 @@ export default function FloatingElementsEditSheet({
 			  </svg>
 			</span>
 		  </button>
-		</div>
-		
+		</div>	
+		{returnFlag()}
 		<div className="fixed top-0 left-0 p-4 bg-base-300 w-full min-h-[4rem]">
 			<div className="grid grid-cols-[auto_1fr_auto] sm:grid-cols-3 gap-2 sm:gap-4 items-center w-full">
 
