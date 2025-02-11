@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/trygheval/static/css/main.4bfa1808.css",
-    "main.js": "/trygheval/static/js/main.124ac584.js",
+    "main.css": "/trygheval/static/css/main.0f6170df.css",
+    "main.js": "/trygheval/static/js/main.6bad8ed4.js",
     "static/media/fr.subject.pdf": "/trygheval/static/media/fr.subject.ce65893180cd8b447cb5.pdf",
     "static/media/en.subject.pdf": "/trygheval/static/media/en.subject.c6f7eb169af67197dc19.pdf",
     "static/media/tester": "/trygheval/static/media/tester.7f356c8ce35f5952ed95",
@@ -27,11 +27,11 @@
     "static/media/Account.hpp": "/trygheval/static/media/Account.c91afdfc42646ca4e5aa.hpp",
     "static/media/main.cpp": "/trygheval/static/media/main.b94d59aeabaec6d39605.cpp",
     "index.html": "/trygheval/index.html",
-    "main.4bfa1808.css.map": "/trygheval/static/css/main.4bfa1808.css.map",
-    "main.124ac584.js.map": "/trygheval/static/js/main.124ac584.js.map"
+    "main.0f6170df.css.map": "/trygheval/static/css/main.0f6170df.css.map",
+    "main.6bad8ed4.js.map": "/trygheval/static/js/main.6bad8ed4.js.map"
   },
   "entrypoints": [
-    "static/css/main.4bfa1808.css",
-    "static/js/main.124ac584.js"
+    "static/css/main.0f6170df.css",
+    "static/js/main.6bad8ed4.js"
   ]
 }

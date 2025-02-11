@@ -1,185 +1,193 @@
 {
-    "success": true,
-    "data": [
-        {
-		"id" : 1,
+	"success": true,
+	"data": [
+	  {
+		"id": 1,
+		"finish": true,
 		"status": "active",
 		"project_title": "Libft",
-        "guidelines": [
-            "- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
-            "- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
-            "- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
-            "- If applicable, review any **scripts** used for testing or automation together with the student.",
-            "- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
-            "- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
-            "- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
-            "- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
-            "- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
-            "- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
-        ],
-		"introduction": [
-				"- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
-				"- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
-				"- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
-			],
-        "attachments": [
-		{
-			"title": "subject_en.pdf",
-			"url": "en.subject.pdf"
+		"guidelines": {
+			"EN" : "# Guidelines\n **Please follow the guidelines below:**\n- Only grade the work submitted to the **Git repository** of the evaluated student or group.\n- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.\n- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.\n- If applicable, review any **scripts** used for testing or automation together with the student.\n- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.,\n- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.\n- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.\n You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.\n- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.\n- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag.",
+			"FR": "# Directives\n**Veuillez suivre les directives ci-dessous :**\n- Ne notez que ce qui est contenu dans le dépôt Git cloné de l'étudiant(e) ou du groupe.\n\n- Vérifiez que le dépôt Git appartient bien à l'étudiant(e) ou au groupe, que le projet est bien celui attendu, et que \"git clone\" est utilisé dans un dossier vide.\n\n- Vérifiez scrupuleusement qu'aucun alias n'a été utilisé pour vous tromper et assurez-vous que vous évaluez bien le rendu officiel.\n\n- Afin d'éviter toute surprise, vérifiez avec l'étudiant(e) ou le groupe les potentiels scripts utilisés pour faciliter l'évaluation (par exemple, des scripts de tests ou d'automatisation).\n\n- N'ayez pas une confiance aveugle dans les programmes de test ! Ces derniers pourraient être faux.\n\n- Vérifiez le Makefile : pas de wildcard, ne re-link pas. Auquel cas, la note est de 0.\n\n- Utilisez make, puis make --debug pour vous en assurer.\n\n- Si vous n'avez pas fait le projet que vous allez évaluer, vous devez lire le sujet en entier avant de commencer l'évaluation.\n\n- Utilisez les flags disponibles pour signaler un rendu vide, un programme ne fonctionnant pas, une erreur de Norme, de la triche... Dans ces situations, l'évaluation est terminée et la note est 0, ou -42 en cas de triche. Cependant, à l'exception des cas de triche, vous êtes encouragé(e)s à continuer la discussion sur le travail rendu, même si ce dernier est incomplet. Ceci afin d'identifier les erreurs à ne pas reproduire dans le futur.\n\n- Pendant toute la durée de l'évaluation, aucun segfault ou autre arrêt inattendu, prémature ou incontrôlé ne sera toléré. Auquel cas, la note finale sera de 0. Utilisez le flag approprié.\nVous ne devriez jamais avoir à éditer un fichier hormis un fichier de configuration si existant. Dans le cas ou vous souhaitez modifier un fichier, vous devez expliciter clairement les raisons de l'édition et être en accord avec l'étudiant(e) évalué(e) avant de faire quoi que ce soit.\n\n- Vous devez aussi vérifier l'absence de fuites mémoire. Toute mémoire allouée sur le tas doit être libérée proprement avant la fin de l'exécution du programme.\nVous avez le droit d'utiliser tout outil disponible sur la machine tel que leaks, valgrind ou e_fence. En cas de fuites mémoire, cochez le flag approprié."
 		},
-		{
+		"introduction": {
+			"EN": "# Introduction\n **Please follow the rules below:**\n- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.\n- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.\n- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously.",
+			"FR" : "# Introduction\n **Merci de respecter les règles suivantes :**\n- Restez polis, courtois, respectueux et constructifs pendant le processus d'évaluation. Le bien-être de la communauté repose là-dessus.\n- Identifiez avec la personne évaluée ou le groupe évalué les éventuels dysfonctionnements de son travail. Prenez le temps d'en discuter et débattez des problèmes identifiés.\n- Vous devez prendre en compte qu'il peut y avoir de légères différences d'interprétation entre les instructions du projet, son scope et ses fonctionnalités. Gardez un esprit ouvert et notez de la manière la plus honnête possible. La pédagogie n'est valide que si la peer-évaluation est faite sérieusement."
+		},
+		"attachments": [
+			{
 			"title": "subject_fr.pdf",
 			"url": "fr.subject.pdf"
-		}
+			},
+		  {
+			"title": "subject_en.pdf",
+			"url": "en.subject.pdf"
+		  }
 		],
-		"time" : 30,
-        "cursus_id": "1",
-        "updated_at": "2023-12-26T16:28:09.265Z",
-		"student_number" : 1,
-		"students" : 1,
-		"eval_points" : 3,
-		"mandatorySections" : [
+		"time": 30,
+		"cursus_id": "1",
+		"updated_at": "2023-12-25T23:00:00.000Z",
+		"student_number": 1,
+		"students": 1,
+		"eval_points": 3,
+		"languages" : ["FR", "EN"],
+		"language" : "FR",
+		"mandatorySections": [
+    {
+      "description": {
+        "FR": "# Partie obligatoire\n*Vous devez tester les fonctions présentes dans la libft, soit avec votre jeu de tests, soit avec celui de la personne évaluée.*\n\n---\n\n**Fonctions de la libC #1**\nTestez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :\n- ft_strlen\n- ft_memcpy\n- ft_memset\n- ft_bzero\n- ft_memmove\n- ft_memcmp\n-ft_memchr",
+        "EN": "# Mandatory part\n*You must test the functions present in the libft, either with your test set or with that of the person being evaluated.*\n\n---\n\n**libC functions #1**\nTest that ALL these functions fulfill their role exactly as they should:\n- ft_strlen\n- ft_memcpy\n- ft_memset\n- ft_bzero\n- ft_memmove\n- ft_memcmp\n-ft_memchr"
+      },
+      "yes_no": true,
+      "separator": "border-t-[0.5px]",
+      "type": "mandatory"
+    },
+    {
+      "description": {
+        "FR": "**Fonctions de la libC #2**\nTestez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :\n- ft_isalpha\n- ft_isdigit\n- ft_isalnum\n- ft_isascii\n- ft_isprint",
+        "EN": "**libC functions #2**\nTest that ALL these functions fulfill their role exactly as they should:\n- ft_isalpha\n- ft_isdigit\n- ft_isalnum\n- ft_isascii\n- ft_isprint"
+      },
+      "yes_no": true,
+      "separator": "border-t-[0.5px]",
+      "type": "mandatory"
+    },
+    {
+      "description": {
+        "FR": "**Fonctions de la libC #3**\nTestez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :\n- ft_toupper\n- ft_tolower\n- ft_strchr\n- ft_strrchr",
+        "EN": "**libC functions #3**\nTest that ALL these functions fulfill their role exactly as they should:\n- ft_toupper\n- ft_tolower\n- ft_strchr\n- ft_strrchr"
+      },
+      "yes_no": true,
+      "separator": "border-t-[0.5px]",
+      "type": "mandatory"
+    },
+    {
+      "description": {
+        "FR": "**Fonctions de la libC #4**\nTestez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :\n- ft_strlcat\n- ft_strlcpy\n- ft_atoi\n- ft_strnstr\n- ft_strncmp\n- ft_calloc\n- ft_strdup",
+        "EN": "**libC functions #4**\nTest that ALL these functions fulfill their role exactly as they should:\n- ft_strlcat\n- ft_strlcpy\n- ft_atoi\n- ft_strnstr\n- ft_strncmp\n- ft_calloc\n- ft_strdup"
+      },
+      "yes_no": true,
+      "separator": "border-t-[0.5px]",
+      "type": "mandatory"
+    },
+    {
+      "description": {
+        "FR": "**Fonctions supplémentaires #1**\nTestez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :\n- ft_substr\n- ft_strjoin\n- ft_putchar_fd\n- ft_putstr_fd\n- ft_putendl_fd\n- ft_putnbr_fd",
+        "EN": "**Additional functions #1**\nTest that ALL these functions fulfill their role exactly as they should:\n- ft_substr\n- ft_strjoin\n- ft_putchar_fd\n- ft_putstr_fd\n- ft_putendl_fd\n- ft_putnbr_fd"
+      },
+      "yes_no": true,
+      "separator": "border-t-[0.5px]",
+      "type": "mandatory"
+    },
+    {
+      "description": {
+        "FR": "**Fonctions supplémentaires #2**\nTestez que TOUTES ces fonctions remplissent leur rôle exactement comme elles le devraient :\n- ft_strmapi\n- ft_striteri\n- ft_strtrim\n- ft_split\n- ft_itoa",
+        "EN": "**Additional functions #2**\nTest that ALL these functions fulfill their role exactly as they should:\n- ft_strmapi\n- ft_striteri\n- ft_strtrim\n- ft_split\n- ft_itoa"
+      },
+      "yes_no": true,
+      "separator": false,
+      "type": "mandatory"
+    }
+		],
+		"bonusSections": [
 			{
-				"id": "679b8bb46679b9e6f921f767",
-				"description": "--ft_strlen\n--ft_memcpy\n--ft_memset\n--ft_bzero\n--ft_memmove\n--ft_memcmp\n--ft_memchr",
-				"yes_no": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-01-30T14:24:52.691Z",
-				"updated_at": "2025-01-30T16:03:00.587Z"
+			"description": {
+				"FR": "# Partie bonus\n*Les bonus ne seront examinés que si la partie obligatoire est excellente.\nCela signifie que la partie obligatoire doit avoir été réalisée du début à la fin, avec une gestion d'erreur parfaite même en cas d'usage inattendu.\nSi tous les points obligatoires n'ont pas été attribués pendant cette soutenance, aucun point bonus ne sera comptabilisé.*\n\n---\n**ft_lstnew**\nÇa fonctionne ?",
+				"EN": "# Bonus part\n*Bonuses will only be examined if the mandatory part is excellent.\nThis means that the mandatory part must have been carried out from beginning to end, with perfect error management even in the event of unexpected use.\nIf all the mandatory points have not been awarded during this defense, no bonus points will be counted.*\n\n---\n**ft_lstnew**\nDoes it work?"
+			},
+			"separator": "border-t-[0.5px]",
+			"yes_no": true,
+			"type": "bonus"
 			},
 			{
-				"id": "679b8bb46679b9e6f921f768",
-				"description": "--ft_isalpha\n--ft_isdigit\n--ft_isalnum\n--ft_isascii\n--ft_isprint",
-				"yes_no": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-01-30T14:24:52.691Z",
-				"updated_at": "2025-01-30T16:03:00.587Z"
+			"description": {
+				"FR": "**ft_lstdelone**\nÇa fonctionne ?",
+				"EN": "**ft_lstdelone**\nDoes it work?"
+			},
+			"separator": "border-t-[0.5px]",
+			"yes_no": true,
+			"type": "bonus"
 			},
 			{
-				"id": "679b8bb46679b9e6f921f769",
-				"description": "--ft_toupper\n--ft_tolower\n--ft_strchr\n--ft_strrchr",
-				"yes_no": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-01-30T14:24:52.691Z",
-				"updated_at": "2025-01-30T16:03:00.587Z"
+			"description": {
+				"FR": " **ft_lstclear**\nÇa fonctionne ?",
+				"EN": " **ft_lstclear**\nDoes it work?"
+			},
+			"separator": "border-t-[0.5px]",
+			"yes_no": true,
+			"type": "bonus"
 			},
 			{
-				"id": "679b8bb46679b9e6f921f76a",
-				"description": "--ft_strlcat\n--ft_strlcpy\n--ft_atoi\n--ft_strnstr\n--ft_strncmp\n--ft_calloc\n--ft_strdup",
-				"yes_no": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-01-30T14:24:52.691Z",
-				"updated_at": "2025-01-30T16:03:00.587Z"
+			"description": {
+				"FR": " **ft_lstadd_front**\nÇa fonctionne ?",
+				"EN": " **ft_lstadd_front**\nDoes it work?"
+			},
+			"separator": false,
+			"yes_no": true,
+			"type": "bonus"
 			},
 			{
-				"id": "679b8bb46679b9e6f921f76b",
-				"description": "--ft_substr\n--ft_strjoin\n--ft_putchar_fd\n--ft_putstr_fd\n--ft_putendl_fd\n--ft_putnbr_fd",
-				"yes_no": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-01-30T14:24:52.691Z",
-				"updated_at": "2025-01-30T16:03:00.587Z"
+			"description": {
+				"FR": " **ft_lstadd_back**\nÇa fonctionne ?",
+				"EN": " **ft_lstadd_back**\nDoes it work?"
+			},
+			"separator": "border-t-[0.5px]",
+			"yes_no": true,
+			"type": "bonus"
 			},
 			{
-				"id": "679b8bb46679b9e6f921f76c",
-				"description": "--ft_strmapi\n--ft_striteri\n--ft_strtrim\n--ft_split\n--ft_itoa",
-				"yes_no": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-01-30T14:24:52.691Z",
-				"updated_at": "2025-01-30T16:03:00.587Z"
+			"description": {
+				"FR": " **ft_lstsize**\nÇa fonctionne ?",
+				"EN": " **ft_lstsize**\nDoes it work?"
+			},
+			"separator": "border-t-[0.5px]",
+			"yes_no": true,
+			"type": "bonus"
+			},
+			{
+			"description": {
+				"FR": " **ft_lstlast**\nÇa fonctionne ?",
+				"EN": " **ft_lstlast**\nDoes it work?"
+			},
+			"separator": "border-t-[0.5px]",
+			"yes_no": true,
+			"type": "bonus"
+			},
+			{
+			"description": {
+				"FR": " **ft_lstiter**\nÇa fonctionne ?",
+				"EN": " **ft_lstiter**\nDoes it work?"
+			},
+			"separator": "border-t-[0.5px]",
+			"yes_no": true,
+			"type": "bonus"
+			},
+			{
+			"description": {
+				"FR": " **ft_lstmap**\nÇa fonctionne ?",
+				"EN": " **ft_lstmap**\nDoes it work?"
+			},
+			"separator": false,
+			"yes_no": true,
+			"type": "bonus"
 			}
 		],
-		"bonusSections" : [
-			{
-				"id": "679b8bb56679b9e6f921f76e",
-				"description": " ",
-				"yes_no": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-01-30T14:24:53.279Z",
-				"updated_at": "2025-02-01T16:12:30.283Z"
-			},
-			{
-				"id": "679e47ee8c78a1cea9234f65",
-				"description": " ",
-				"yes_no": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-02-01T16:12:30.282Z",
-				"updated_at": "2025-02-01T16:12:30.282Z"
-			},
-			{
-				"id": "679e47ee8c78a1cea9234f66",
-				"description": " ",
-				"yes_no": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-02-01T16:12:30.282Z",
-				"updated_at": "2025-02-01T16:12:30.282Z"
-			},
-			{
-				"id": "679e47ee8c78a1cea9234f67",
-				"description": " ",
-				"yes_no": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-02-01T16:12:30.282Z",
-				"updated_at": "2025-02-01T16:12:30.282Z"
-			},
-			{
-				"id": "679e47ee8c78a1cea9234f68",
-				"description": " ",
-				"yes_no": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-02-01T16:12:30.282Z",
-				"updated_at": "2025-02-01T16:12:30.282Z"
-			},
-			{
-				"id": "679e47ee8c78a1cea9234f69",
-				"description": " ",
-				"yes_no": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-02-01T16:12:30.282Z",
-				"updated_at": "2025-02-01T16:12:30.282Z"
-			},
-			{
-				"id": "679e47ee8c78a1cea9234f6a",
-				"description": " ",
-				"yes_no": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-02-01T16:12:30.282Z",
-				"updated_at": "2025-02-01T16:12:30.282Z"
-			},
-			{
-				"id": "679e47ee8c78a1cea9234f6b",
-				"description": " ",
-				"yes_no": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-02-01T16:12:30.282Z",
-				"updated_at": "2025-02-01T16:12:30.282Z"
-			},
-			{
-				"id": "679e47ee8c78a1cea9234f6c",
-				"description": " ",
-				"yes_no": true,
-				"sheetId": "679b8bb46679b9e6f921f766",
-				"created_at": "2025-02-01T16:12:30.282Z",
-				"updated_at": "2025-02-01T16:12:30.282Z"
-			}
-		],
-		"gradingOptions" :[
-			{
-				"id": "679b8bb56679b9e6f921f76d",
-				"ok": true,
-				"outstanding": true,
-				"empty_work": true,
-				"incomplete_work": true,
-				"invalid_compilation": true,
-				"norme": true,
-				"cheat": true,
-				"crash": true,
-				"concerning_situations": true,
-				"leaks": true,
-				"forbidden_functions": true,
-				"cannot_support": true
-			}
+		"gradingOptions": [
+		  {
+			"ok": true,
+			"outstanding": true,
+			"empty_work": true,
+			"incomplete_work": true,
+			"invalid_compilation": true,
+			"norme": true,
+			"cheat": true,
+			"crash": true,
+			"concerning_situations": true,
+			"leaks": true,
+			"forbidden_functions": true,
+			"cannot_support": true
+		  }
 		]
-		}
-    ],
-    "message": "Sheets found successfully"
-}
+	  }
+	],
+	"message": "Sheet created successfully"
+  }
