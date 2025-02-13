@@ -1,118 +1,132 @@
 {
     "success": true,
     "data": [
-        {
-			"id": 10,
-			"status": "active",
-			"project_title": "minitalk",
-			"introduction": [
-				"- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
-				"- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
-				"- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
-			],
-			"guidelines": [
-				"- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
-				"- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
-				"- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
-				"- If applicable, review any **scripts** used for testing or automation together with the student.",
-				"- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
-				"- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
-				"- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
-				"- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
-				"- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
-				"- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
-			],
-			"attachments": [
-				{
-					"title": "subject_en.pdf",
-					"url": "en.subject.pdf"
-				},
-				{
-					"title": "subject_fr.pdf",
-					"url": "fr.subject.pdf"
-				}
-			],
-			"cursus_id": "1",
-			"updated_at": "2023-08-01T16:28:15.940Z",
-			"students" : 1,
-			"eval_points" : 3,
-			"time" : 30,
-			
-			"preliminarySections" : [
-				{
-					"id": "679e597c8c78a1cea9234fbe",
-					"description": "--Defense can only happen if the evaluated student or group is present. This way everybody learns by sharing knowledge.\n--If no work has been submitted (or wrong files, wrong directory, or wrong filenames), the grade is 0, and the evaluation process ends.\n--No empty repository (= nothing in Git repository).\n--No Norm error.\n--Cheating (= -42).\n--No compilation error. Also, the Makefile must not re-link.",
-					"yes_no": true,
-					"sheetId": "679e597c8c78a1cea9234fbd",
-					"created_at": "2025-02-01T17:27:24.804Z",
-					"updated_at": "2025-02-01T17:27:24.804Z"
-				},
-				{
-					"id": "679e597c8c78a1cea9234fbf",
-					"description": "--The Makefile compiles both executables -> 1 point\n--The server name is 'server' and it prints his PID at launch -> 2 points\n--The client name is 'client' and is run as follows: '../../client PID_SERVER STRING_TO_PASS' -> 2 points",
-					"yes_no": false,
-					"sheetId": "679e597c8c78a1cea9234fbd",
-					"created_at": "2025-02-01T17:27:24.804Z",
-					"updated_at": "2025-02-01T17:27:24.804Z"
-				}
-			],
-			"mandatorySections" : [
-				{
-					"id": "679e597c8c78a1cea9234fc0",
-					"description": "It's possible to pass on a message of any size.\nReceived messages must be displayed by the server, and must be obviously\ncorrects!\nThe server should never get stuck or print wrong characters.",
-					"yes_no": true,
-					"sheetId": "679e597c8c78a1cea9234fbd",
-					"created_at": "2025-02-01T17:27:24.804Z",
-					"updated_at": "2025-02-01T17:27:24.804Z"
-				},
-				{
-					"id": "679e597c8c78a1cea9234fc1",
-					"description": "--The server can receive multiple strings without needing to be restarted. -> 1 point\n--Only one global variable per program is allowed, or no global. Ask for explanations. -> 1 point\n--The communication is done only using the signals SIGUSR1 and SIGUSR2. -> 3 points",
-					"yes_no": false,
-					"sheetId": "679e597c8c78a1cea9234fbd",
-					"created_at": "2025-02-01T17:27:24.804Z",
-					"updated_at": "2025-02-01T17:27:24.804Z"
-				}
-			],
-			"bonusSections" : [
-				{
-					"id": "679e597c8c78a1cea9234fc3",
-					"description": "Unicode characters are supported both by the client and the server.",
-					"yes_no": true,
-					"sheetId": "679e597c8c78a1cea9234fbd",
-					"created_at": "2025-02-01T17:27:24.874Z",
-					"updated_at": "2025-02-01T17:27:24.874Z"
-				},
-				{
-					"id": "679e597c8c78a1cea9234fc4",
-					"description": "The server acknowledges every message received by sending back a signal\nto the client.",
-					"yes_no": true,
-					"sheetId": "679e597c8c78a1cea9234fbd",
-					"created_at": "2025-02-01T17:27:24.874Z",
-					"updated_at": "2025-02-01T17:27:24.874Z"
-				}
-			],
-			"gradingOptions" :[
-				{
-					"id": "679e45788c78a1cea9234f62",
-					"ok": true,
-					"outstanding": true,
-					"empty_work": true,
-					"incomplete_work": true,
-					"invalid_compilation": true,
-					"norme": true,
-					"cheat": true,
-					"crash": true,
-					"concerning_situations": true,
-					"leaks": true,
-					"forbidden_functions": true,
-					"cannot_support": true,
-					"sheetId": "679e45778c78a1cea9234f5f",
-					"created_at": "2025-02-01T16:02:00.638Z",
-					"updated_at": "2025-02-01T16:05:07.468Z"
-				}
-			]
-        }
+      {
+        "id": 10,
+        "status": "active",
+		"finished": true,
+        "project_title": "minitalk",
+        "introduction": {
+          "EN": "# Introduction\n- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.  \n- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.  \n- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously.",
+          "FR": "# Introduction\n- Restez poli, courtois, respectueux et constructif tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Travaillez avec l'étudiant ou le groupe évalué pour identifier les problèmes potentiels dans leur projet. Prenez le temps de discuter et de débattre des problèmes identifiés.\n- Comprenez qu'il peut y avoir des différences dans la façon dont les pairs interprètent les instructions et la portée du projet. Gardez toujours l'esprit ouvert et évaluez aussi honnêtement que possible. La pédagogie n'est efficace que lorsque les évaluations par les pairs sont prises au sérieux."
+        },
+        "guidelines": {
+          "EN": "# Guidelines\n- Only grade the work submitted to the **Git repository** of the evaluated student or group.  \n- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.  \n- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.  \n- If applicable, review any **scripts** used for testing or automation together with the student.  \n- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.  \n- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.  \n- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.  \n- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.  \n- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.  \n- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag.",
+          "FR": "# Directives\n- N'évaluez que le travail soumis au **dépôt Git** de l'étudiant ou du groupe évalué.\n- Vérifiez que le **dépôt Git** appartient bien à l'étudiant(s) et que le projet est bien celui attendu. Assurez-vous que **git clone** est utilisé dans un dossier vide.\n- Vérifiez attentivement qu'aucun alias malveillant n'est utilisé pour tromper l'évaluateur en lui faisant évaluer un contenu non officiel.\n- Le cas échéant, examinez tous les **scripts** utilisés pour les tests ou l'automatisation avec l'étudiant.\n- Si vous n'avez pas terminé le devoir que vous évaluez, lisez l'intégralité du sujet avant de commencer l'évaluation.\n- Utilisez les drapeaux disponibles pour signaler un dépôt vide, un programme non fonctionnel, une erreur de **Norme** ou une tricherie. Le processus d'évaluation se termine par une note finale de 0 (ou -42 en cas de tricherie). Toutefois, sauf en cas de tricherie, les étudiants sont encouragés à revoir le travail ensemble afin d'identifier les erreurs à éviter à l'avenir.\n- N'oubliez pas qu'aucun **segfault** ou autre interruption inattendue du programme ne sera toléré pendant l'évaluation. Si cela se produit, la note finale est de 0. Utilisez le drapeau approprié.\n- Vous ne devriez pas avoir besoin de modifier des fichiers autres que le fichier de configuration, s'il existe. Si la modification d'un fichier est nécessaire, expliquez les raisons à l'étudiant évalué et assurez-vous d'un accord mutuel.\n- Vérifiez l'absence de **fuites de mémoire**. Toute la mémoire allouée sur le tas doit être correctement libérée avant la fin du programme.\n- Vous pouvez utiliser des outils tels que leaks, **valgrind** ou **e_fence** pour vérifier les fuites de mémoire. Si des fuites de mémoire sont détectées, cochez le drapeau approprié."
+        },
+        "attachments": [
+          {
+            "title": "subject_en.pdf",
+            "url": "en.subject.pdf"
+          },
+          {
+            "title": "subject_fr.pdf",
+            "url": "fr.subject.pdf"
+          }
+        ],
+        "cursus_id": "1",
+        "updated_at": "2023-07-31T22:00:00.000Z",
+        "students": 1,
+        "eval_points": 3,
+        "time": 30,
+        "preliminarySections": [
+          {
+            "id": "679e597c8c78a1cea9234fbe",
+            "description": "--Defense can only happen if the evaluated student or group is present. This way everybody learns by sharing knowledge.\n--If no work has been submitted (or wrong files, wrong directory, or wrong filenames), the grade is 0, and the evaluation process ends.\n--No empty repository (= nothing in Git repository).\n--No Norm error.\n--Cheating (= -42).\n--No compilation error. Also, the Makefile must not re-link.",
+            "yes_no": true,
+            "sheetId": "679e597c8c78a1cea9234fbd",
+            "created_at": "2025-02-01T17:27:24.804Z",
+            "updated_at": "2025-02-01T17:27:24.804Z"
+          },
+          {
+            "id": "679e597c8c78a1cea9234fbf",
+            "description": "--The Makefile compiles both executables -> 1 point\n--The server name is 'server' and it prints his PID at launch -> 2 points\n--The client name is 'client' and is run as follows: '../../client PID_SERVER STRING_TO_PASS' -> 2 points",
+            "yes_no": false,
+            "sheetId": "679e597c8c78a1cea9234fbd",
+            "created_at": "2025-02-01T17:27:24.804Z",
+            "updated_at": "2025-02-01T17:27:24.804Z"
+          }
+        ],
+        "mandatorySections": [
+          {
+            "description": {
+              "EN": "# Preliminary tests\n*If cheating is suspected, the evaluation stops here. Use the \"Cheat\" flag to report it. Take this decision calmly, wisely, and please, use this button with caution.*\n\n---\n\n**Prerequisites**\n- Defense can only happen if the evaluated student or group is present. This way everybody learns by sharing knowledge.\n- If no work has been submitted (or wrong files, wrong directory, or - wrong filenames), the grade is 0, and the evaluation process ends.\n- No empty repository (= nothing in Git repository).\n- No Norm error.\n- Cheating (= -42).\n- No compilation error. Also, the Makefile must not re-link.",
+              "FR": "# Tests préliminaires\n*Si une tricherie est suspectée, l'évaluation s'arrête ici. Utilisez le drapeau \"Triche\" pour le signaler. Prenez cette décision calmement, sagement, et s'il vous plaît, utilisez ce bouton avec prudence.*\n\n---\n\n**Prérequis**\n- La défense ne peut avoir lieu que si l'étudiant ou le groupe évalué est présent. De cette façon, tout le monde apprend en partageant ses connaissances.\n- Si aucun travail n'a été soumis (ou mauvais fichiers, mauvais répertoire ou - mauvais noms de fichiers), la note est de 0 et le processus d'évaluation se termine.\n- Pas de dépôt vide (= rien dans le dépôt Git).\n- Pas d'erreur de Norme.\n- Tricherie (= -42).\n- Pas d'erreur de compilation. De plus, le Makefile ne doit pas re-linker."
+            },
+            "yes_no": true,
+            "separator": "border-t-4",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "# General instructions\n\n---\n\n**General instructions**\n- The Makefile compiles both executables -> 1 point\n- The server name is 'server' and it prints his PID at launch -> 2 points\n- The client name is 'client' and is run as follows: '../../client PID_SERVER STRING_TO_PASS' -> 2 points\n",
+              "FR": "# Instructions générales\n\n---\n\n**Instructions générales**\n- Le Makefile compile les deux exécutables -> 1 point\n- Le nom du serveur est 'server' et il affiche son PID au lancement -> 2 points\n- Le nom du client est 'client' et il est exécuté comme suit : '../../client PID_SERVER STRING_TO_PASS' -> 2 points"
+            },
+            "yes_no": false,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "# Mandatory part\n*This project is an introduction to signals. Check the code and ensure the signals are used only for the communication between the server and the client.*\n\n---\n\n**Message transmission**\nIt's possible to pass on a message of any size. Received messages must be displayed by the server, and must be obviously corrects!\nThe server should never get stuck or print wrong characters.",
+              "FR": "# Partie obligatoire\n*Ce projet est une introduction aux signaux. Vérifiez le code et assurez-vous que les signaux sont utilisés uniquement pour la communication entre le serveur et le client.*\n\n---\n\n**Transmission de messages**\nIl est possible de transmettre un message de n'importe quelle taille. Les messages reçus doivent être affichés par le serveur, et doivent être évidemment corrects !\nLe serveur ne doit jamais se bloquer ou afficher des caractères erronés."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Simple setup**\n- The server can receive multiple strings without needing to be restarted. -> 1 point\n- Only one global variable per program is allowed, or no global. Ask for explanations. -> 1 point\n- The communication is done only using the signals SIGUSR1 and SIGUSR2. -> 3 points\n\nReceived messages must be displayed by the server, and must be obviously corrects!",
+              "FR": "**Configuration simple**\n- Le serveur peut recevoir plusieurs chaînes de caractères sans avoir besoin d'être redémarré. -> 1 point\n- Une seule variable globale par programme est autorisée, ou aucune variable globale. Demandez des explications. -> 1 point\n- La communication se fait uniquement en utilisant les signaux SIGUSR1 et SIGUSR2. -> 3 points\n\nLes messages reçus doivent être affichés par le serveur, et doivent être évidemment corrects !"
+            },
+            "yes_no": false,
+            "separator": false,
+            "type": "mandatory"
+          }
+        ],
+        "bonusSections": [
+          {
+            "description": {
+              "EN": "# Bonus part\n*Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be ignored.*\nUnicode characters are supported both by the client and the server.\n\n---\n\n**Unicode characters support**\nUnicode characters are supported both by the client and the server.",
+              "FR": "# Partie bonus\n*Évaluez la partie bonus si, et seulement si, la partie obligatoire a été entièrement et parfaitement réalisée, et que la gestion des erreurs gère les utilisations inattendues ou incorrectes. Si tous les points obligatoires n'ont pas été validés lors de la défense, les points bonus doivent être ignorés.*\nLes caractères Unicode sont pris en charge à la fois par le client et par le serveur.\n\n---\n\n**Prise en charge des caractères Unicode**\nLes caractères Unicode sont pris en charge à la fois par le client et par le serveur."
+            },
+            "separator": "border-t-[0.5px]",
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "EN": "**Acknowledgement**\nThe server acknowledges every message received by sending back a signal\nto the client.",
+              "FR": "**Accusé de réception**\nLe serveur accuse réception de chaque message reçu en renvoyant un signal\nau client."
+            },
+            "separator": false,
+            "yes_no": true,
+            "type": "bonus"
+          }
+        ],
+        "gradingOptions": [
+          {
+            "ok": true,
+            "outstanding": true,
+            "empty_work": true,
+            "incomplete_work": true,
+            "invalid_compilation": true,
+            "norme": true,
+            "cheat": true,
+            "crash": true,
+            "concerning_situations": true,
+            "leaks": true,
+            "forbidden_functions": true,
+            "cannot_support": true
+          }
+        ],
+        "languages": [
+          "EN",
+          "FR"
+        ],
+        "language": "EN"
+      }
     ],
-    "message": "Sheets found successfully"
-}
+    "message": "Sheet created successfully"
+  }

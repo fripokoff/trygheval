@@ -1,115 +1,114 @@
 {
     "success": true,
     "data": [
-        {
-			"id": 3,
-			"status": "active",
-			"project_title": "get_next_line",
-			"introduction": [
-				"- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
-				"- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
-				"- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
-			],
-			"guidelines": [
-				"- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
-				"- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
-				"- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
-				"- If applicable, review any **scripts** used for testing or automation together with the student.",
-				"- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
-				"- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
-				"- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
-				"- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
-				"- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
-				"- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
-			],
-			"attachments": [
-				{
-					"title": "subject_en.pdf",
-					"url": "en.subject.pdf"
-				},
-				{
-					"title": "subject_fr.pdf",
-					"url": "fr.subject.pdf"
-				}
-			],
-			"cursus_id": "1",
-			"updated_at": "2023-12-18T16:28:15.940Z",
-			"students" : 1,
-			"eval_points" : 3,
-			"time" : 30,
-			"mandatorySections" : [
-				{
-					"id": "679e4b5e8c78a1cea9234f6e",
-					"description": "Exécutez la Norminette. En cas d'erreur, l'évaluation s'arrête ici.\nVous pouvez continuer et discuter de l'implémentation du code, mais cela\nne sera pas noté.",
-					"yes_no": true,
-					"sheetId": "679e4b5e8c78a1cea9234f6d",
-					"created_at": "2025-02-01T16:27:10.867Z",
-					"updated_at": "2025-02-01T16:28:16.022Z"
-				},
-				{
-					"id": "679e4b5e8c78a1cea9234f6f",
-					"description": "Il devrait être possible de compiler le projet avec les flags habituels\net le flag -D BUFFER_SIZE. Il doit être possible de compiler ce projet avec et sans\nce dernier en plus des flags : -Wall -Wextra -Werror. S'il y a une erreur,\nl'évaluation s'arrête ici. Vous pouvez continuer et discuter de la mise en\nœuvre du code, mais la soutenance ne sera pas noté.",
-					"yes_no": true,
-					"sheetId": "679e4b5e8c78a1cea9234f6d",
-					"created_at": "2025-02-01T16:27:10.867Z",
-					"updated_at": "2025-02-01T16:28:16.022Z"
-				},
-				{
-					"id": "679e4b5e8c78a1cea9234f70",
-					"description": "--Passez un fd arbitraire a la fonction get_next_line, sur lequel il n'est pas possible de lire (par ex. 42) La fonction doit renvoyer NULL.\n--Vérifiez les retours d'erreur de malloc, read et open. Si la partie \"gestion d'erreur\" est fausse, merci de ne pas noter la partie suivante, la correction s'arrête ici. Vous pouvez continuer et discuter de l'implémentation du code, mais cela ne sera pas noté.",
-					"yes_no": true,
-					"sheetId": "679e4b5e8c78a1cea9234f6d",
-					"created_at": "2025-02-01T16:27:10.867Z",
-					"updated_at": "2025-02-01T16:28:16.022Z"
-				},
-				{
-					"id": "679e4b5e8c78a1cea9234f71",
-					"description": "**En temps qu'évaluateur(ice), vous devez écrire ou apporter un main qui vérifie :**\n\n--La valeur de retour de la fonction get_next_line est NULL en cas d'erreur.\n--Sinon, la fonction renvoie la ligne lue, toujours avec un \\n à la fin.\n\n**Testez toutes les combinaisons des règles suivantes :**\n\n--Gros BUFFER_SIZE (> 1024)\n--Petit BUFFER_SIZE (< 8, et 1)\n--BUFFER_SIZE de la taille de la ligne à lire\n--1 de décalage (+/-) entre le BUFFER_SIZE et la ligne\n--Lecture depuis stdin\n--Lecture depuis un fichier\n--(Multiple/Simple) ligne longue (2k+ caractères)\n--(Multiple/Simple) ligne courte (<4 caractères, et 1)\n--(Multiple/Simple) Ligne vide",
-					"yes_no": true,
-					"sheetId": "679e4b5e8c78a1cea9234f6d",
-					"created_at": "2025-02-01T16:27:10.867Z",
-					"updated_at": "2025-02-01T16:28:16.022Z"
-				}
-			],
-			"bonusSections" : [
-				{
-					"id": "679e4b5e8c78a1cea9234f73",
-					"description": "Répétez les tests effectués précédemment mais, cette fois, en lançant\nplusieurs instances de get_next_line, chacune utilisant un descripteur\nde fichier différent.\nAssurez-vous que chaque get_next_line renvoie la bonne ligne.\nAjoutez un descripteur de fichier invalide pour tester la gestion\nd'erreurs.",
-					"yes_no": true,
-					"sheetId": "679e4b5e8c78a1cea9234f6d",
-					"created_at": "2025-02-01T16:27:10.938Z",
-					"updated_at": "2025-02-01T16:28:16.004Z"
-				},
-				{
-					"id": "679e4b5e8c78a1cea9234f74",
-					"description": "Lisez le code et vérifiez qu'il n'y a bien qu'une seule variable statique.\nAttribuez les points bonus si c'est le cas.",
-					"yes_no": true,
-					"sheetId": "679e4b5e8c78a1cea9234f6d",
-					"created_at": "2025-02-01T16:27:10.938Z",
-					"updated_at": "2025-02-01T16:28:16.004Z"
-				}
-			],
-			"gradingOptions" :[
-				{
-					"id": "679e45788c78a1cea9234f62",
-					"ok": true,
-					"outstanding": true,
-					"empty_work": true,
-					"incomplete_work": true,
-					"invalid_compilation": true,
-					"norme": true,
-					"cheat": true,
-					"crash": true,
-					"concerning_situations": true,
-					"leaks": true,
-					"forbidden_functions": true,
-					"cannot_support": true,
-					"sheetId": "679e45778c78a1cea9234f5f",
-					"created_at": "2025-02-01T16:02:00.638Z",
-					"updated_at": "2025-02-01T16:05:07.468Z"
-				}
-			]
-        }
+      {
+        "id": 3,
+        "status": "active",
+		"finish" : true,
+        "project_title": "get_next_line",
+        "introduction": {
+          "FR": "# Introduction\nMerci de respecter les règles suivantes:\n\n- Restez polis, courtois, respectueux et constructifs pendant le processus d'évaluation. Le bien-être de la communauté repose là-dessus.\n\n- Identifiez avec la personne évaluée ou le groupe évalué les éventuels dysfonctionnements de son travail. Prenez le temps d'en discuter et débattez des problèmes identifiés.\n\n- Vous devez prendre en compte qu'il peut y avoir de légères différences d'interprétation entre les instructions du projet, son scope et ses fonctionnalités. Gardez un esprit ouvert et notez de la manière la plushonnête possible. La pédagogie n'est valide que si la peer-évaluation est faite sérieusement.",
+          "EN": "# Introduction\nPlease respect the following rules:\n\n- Be polite, courteous, respectful and constructive during the evaluation process. The well-being of the community depends on it.\n\n- Identify with the person being evaluated or the group being evaluated any malfunctions in their work. Take time to discuss and debate the problems identified.\n\n- You must take into account that there may be slight differences in interpretation between the project instructions, its scope and its functionalities. Keep an open mind and grade as honestly as possible. Pedagogy is only valid if peer-evaluation is done seriously."
+        },
+        "guidelines": {
+          "FR": "# Guidelines\n- Ne notez que ce qui est contenu dans le dépôt Git cloné de l'étudiant(e) ou du groupe.\n\n- Vérifiez que le dépôt Git appartient bien à l'étudiant(e) ou au groupe, que le projet est bien celui attendu, et que \"git clone\" est utilisé dans un dossier vide.\n\n- Vérifiez scrupuleusement qu'aucun alias n'a été utilisé pour vous tromper et assurez-vous que vous évaluez bien le rendu officiel.\n\n- Afin d'éviter toute surprise, vérifiez avec l'étudiant(e) ou le groupe lespotentiels scripts utilisés pour faciliter l'évaluation (par exemple, des scripts de tests ou d'automatisation).\n\n- Si vous n'avez pas fait le projet que vous allez évaluer, vous devez lire le sujet en entier avant de commencer l'évaluation.\n\n- Utilisez les flags disponibles pour signaler un rendu vide, un programme ne fonctionnant pas, une erreur de Norme, de la triche... Dans ces situations, l'évaluation est terminée et la note est 0, ou -42 en cas de triche. Cependant, à l'exception des cas de triche, vous êtes encouragé(e)s à continuer la discussion sur le travail rendu, même si ce dernier est incomplet. Ceci afin d'identifier les erreurs à ne pas reproduire dans le futur.\n\n- Pendant toute la durée de l'évaluation, aucun segfault ou autre arrêt inattendu, prémature ou incontrôlé ne sera toléré. Auquel cas, la note finale sera de 0. Utilisez le flag approprié. Vous ne devriez jamais avoir à éditer un fichier hormis un fichier de configuration si existant. Dans le cas ou vous souhaitez modifier un fichier, vous devez expliciter clairement les raisons de l'édition et être en accord avec l'étudiant(e) évalué(e) avant de faire quoi que ce soit.\n\n- Vous devez aussi vérifier l'absence de fuites mémoire. Toute mémoireallouée sur le tas doit être libérée proprement avant la fin de l'exécutiondu programme. Vous avez le droit d'utiliser tout outil disponible sur la machine tel que leaks, valgrind ou e_fence. En cas de fuites mémoire, cochez le flag approprié.",
+          "EN": "# Guidelines\n- Only grade what is contained in the cloned Git repository of the student or group.\n\n- Verify that the Git repository belongs to the student or group, that the project is the one expected, and that \"git clone\" is used in an empty folder.\n\n- Scrupulously check that no alias has been used to deceive you and make sure that you are evaluating the official submission.\n\n- In order to avoid any surprises, check with the student or group the potential scripts used to facilitate the evaluation (for example, test or automation scripts).\n\n- If you have not done the project you are going to evaluate, you must read the subject in its entirety before starting the evaluation.\n\n- Use the available flags to report an empty submission, a non-functioning program, a Norm error, cheating... In these situations, the evaluation is terminated and the grade is 0, or -42 in case of cheating. However, with the exception of cases of cheating, you are encouraged to continue the discussion on the work submitted, even if the latter is incomplete. This is in order to identify errors not to be reproduced in the future.\n\n- Throughout the duration of the evaluation, no segfault or other unexpected, premature or uncontrolled stop will be tolerated. In which case, the final grade will be 0. Use the appropriate flag. You should never have to edit a file except for a configuration file if it exists. In the event that you wish to modify a file, you must clearly explain the reasons for the modification and be in agreement with the student being evaluated before doing anything.\n\n- You must also check for the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of the program's execution. You have the right to use any tool available on the machine such as leaks, valgrind or e_fence. In case of memory leaks, check the appropriate flag."
+        },
+        "attachments": [
+          {
+            "title": "subject_en.pdf",
+            "url": "en.subject.pdf"
+          },
+          {
+            "title": "subject_fr.pdf",
+            "url": "fr.subject.pdf"
+          }
+        ],
+        "cursus_id": "1",
+        "updated_at": "2023-12-17T23:00:00.000Z",
+        "students": 1,
+        "eval_points": 3,
+        "time": 30,
+        "mandatorySections": [
+          {
+            "description": {
+              "FR": "# Partie obligatoire\n\n---\n\n**Norminette**\nExécutez la Norminette. En cas d'erreur, l'évaluation s'arrête ici.\nVous pouvez continuer et discuter de l'implémentation du code, mais cela ne sera pas noté.",
+              "EN": "# Mandatory Part\n\n---\n\n**Norminette**\nRun Norminette. In case of error, the evaluation stops here.\nYou can continue and discuss the implementation of the code, but it will not be graded."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "FR": "**Compilation**\n- Il devrait être possible de compiler le projet avec les flags habituels et le flag -D BUFFER_SIZE.\n- Il doit être possible de compiler ce projet avec et sans ce dernier en plus des flags : -Wall -Wextra -Werror.\n\n**S'il y a une erreur, l'évaluation s'arrête ici.**\n**Vous pouvez continuer et discuter de la mise en œuvre du code, mais la soutenance ne sera pas noté.**",
+              "EN": "**Compilation**\n- It should be possible to compile the project with the usual flags and the -D BUFFER_SIZE flag.\n- It must be possible to compile this project with and without the latter in addition to the flags: -Wall -Wextra -Werror.\n\n**If there is an error, the evaluation stops here.**\n**You can continue and discuss the implementation of the code, but the defense will not be graded.**"
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "FR": "**Gestion d'erreur**\n- Passez un fd arbitraire a la fonction get_next_line, sur lequel il n'est pas possible de lire (par ex. 42) La fonction doit renvoyer NULL.\n- Vérifiez les retours d'erreur de malloc, read et open. Si la partie \"gestion d'erreur\" est fausse, merci de ne pas noter la partie suivante, la correction s'arrête ici.\n**Vous pouvez continuer et discuter de l'implémentation du code, mais cela ne sera pas noté.**",
+              "EN": "**Error Management**\n- Pass an arbitrary fd to the get_next_line function, on which it is not possible to read (e.g. 42). The function must return NULL.\n- Check the error returns from malloc, read and open. If the \"error management\" part is false, please do not grade the following part, the correction stops here.\n**You can continue and discuss the implementation of the code, but it will not be graded.**"
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "FR": "**Tests**\nEn temps qu'évaluateur(ice), vous devez écrire ou apporter un main qui vérifie :\n- La valeur de retour de la fonction get_next_line est NULL en cas d'erreur.\n- Sinon, la fonction renvoie la ligne lue, toujours avec un \\n à la fin.\n\nTestez toutes les combinaisons des règles suivantes :\n\n- Gros BUFFER_SIZE (> 1024)\n- Petit BUFFER_SIZE (< 8, et 1)\n- BUFFER_SIZE de la taille de la ligne à lire\n- 1 de décalage (+/-) entre le BUFFER_SIZE et la ligne\n- Lecture depuis stdin\n- Lecture depuis un fichier\n- (Multiple/Simple) ligne longue (2k+ caractères)\n- (Multiple/Simple) ligne courte (<4 caractères, et 1)\n- (Multiple/Simple) Ligne vide",
+              "EN": "**Tests**\nAs an evaluator, you must write or bring a main that checks:\n- The return value of the get_next_line function is NULL in case of error.\n- Otherwise, the function returns the line read, always with a \\n at the end.\n\nTest all combinations of the following rules:\n\n- Large BUFFER_SIZE (> 1024)\n- Small BUFFER_SIZE (< 8, and 1)\n- BUFFER_SIZE of the size of the line to be read\n- 1 offset (+/-) between the BUFFER_SIZE and the line\n- Reading from stdin\n- Reading from a file\n- (Multiple/Simple) long line (2k+ characters)\n- (Multiple/Simple) short line (<4 characters, and 1)\n- (Multiple/Simple) Empty line"
+            },
+            "yes_no": true,
+            "separator": false,
+            "type": "mandatory"
+          }
+        ],
+        "bonusSections": [
+          {
+            "description": {
+              "FR": "# Partie bonus\n*Les bonus ne seront examinés que si la partie obligatoire est excellente. Cela signifie que la partie obligatoire doit avoir été réalisée du début à la fin, avec une gestion d'erreur parfaite même en cas d'usage inattendu. Si tous les points obligatoires n'ont pas été attribués pendant cette soutenance, aucun point bonus ne sera comptabilisé.*\n\n---\n\n**Lecture sur multiples fd**\nRépétez les tests effectués précédemment mais, cette fois, en lançant plusieurs instances de get_next_line, chacune utilisant un descripteur de fichier différent.\nAssurez-vous que chaque get_next_line renvoie la bonne ligne.\nAjoutez un descripteur de fichier invalide pour tester la gestion d'erreurs.",
+              "EN": "# Bonus Part\n*Bonuses will only be examined if the mandatory part is excellent. This means that the mandatory part must have been carried out from start to finish, with perfect error management even in the event of unexpected use. If all the mandatory points have not been awarded during this defense, no bonus points will be counted.*\n\n---\n\n**Reading on multiple fds**\nRepeat the tests performed previously but, this time, by launching several instances of get_next_line, each using a different file descriptor.\nMake sure each get_next_line returns the correct line.\nAdd an invalid file descriptor to test error handling."
+            },
+            "separator": "border-t-[0.5px]",
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "FR": "**Une seule variable statique**\nLisez le code et vérifiez qu'il n'y a bien qu'une seule variable statique.\nAttribuez les points bonus si c'est le cas.",
+              "EN": "**Only one static variable**\nRead the code and verify that there is indeed only one static variable.\nAward bonus points if this is the case."
+            },
+            "separator": false,
+            "yes_no": true,
+            "type": "bonus"
+          }
+        ],
+        "gradingOptions": [
+          {
+            "ok": true,
+            "outstanding": true,
+            "empty_work": true,
+            "incomplete_work": true,
+            "invalid_compilation": true,
+            "norme": true,
+            "cheat": true,
+            "crash": true,
+            "concerning_situations": true,
+            "leaks": true,
+            "forbidden_functions": true,
+            "cannot_support": true
+          }
+        ],
+        "languages": [
+          "EN",
+          "FR"
+        ],
+		"language" : "EN"
+      }
     ],
-    "message": "Sheets found successfully"
-}
+    "message": "Sheet created successfully"
+  }

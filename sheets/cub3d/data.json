@@ -1,0 +1,136 @@
+{
+	"success": true,
+	"data": [
+	  {
+		"project_title": "cub3d",
+		"students": 2,
+		"status": "active",
+		"finish" : true,
+		"eval_points": 6,
+		"time": 60,
+		"id": 15,
+		"introduction": {
+          "FR": "# Introduction\n- Restez poli, courtois, respectueux et constructif tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Identifiez avec la personne (ou le groupe) évaluée les éventuels dysfonctionnements du travail. Prenez le temps de discuter et de débattre des problèmes qui ont pu être identifiés.\n- Vous devez tenir compte du fait qu'il peut y avoir une certaine différence dans la façon dont vos pairs ont compris les instructions du projet et la portée de ses fonctionnalités. Gardez toujours l'esprit ouvert et évaluez-les aussi honnêtement que possible. La pédagogie n'est valable que si l'évaluation par les pairs est faite sérieusement.",
+          "EN": "# Introduction\n- Remain polite, courteous, respectful and constructive throughout the evaluation process. The well-being of the community depends on it.\n- Identify with the person (or the group) evaluated the eventual dysfunctions of the work. Take the time to discuss and debate the problems that may have been identified.\n- You must consider that there might be some difference in how your peers might have understood the project's instructions and the scope of its functionalities. Always keep an open mind and grade them as honestly as possible. The pedagogy is valid only and only if the peer evaluation is done seriously."
+        },
+        "guidelines": {
+          "FR": "# Directives\n- Ne notez que le travail qui se trouve dans le dépôt Git de l'étudiant ou du groupe.\n- Vérifiez que le dépôt Git appartient bien à l'étudiant ou au groupe. Assurez-vous que le travail concerne le projet en question et vérifiez également que \"git clone\" est utilisé dans un dossier vide.\n- Vérifiez attentivement qu'aucun alias malveillant n'a été utilisé pour vous tromper et vous faire évaluer quelque chose qui n'est pas le contenu du dépôt officiel.\n- Pour éviter toute surprise, vérifiez attentivement que les étudiants évaluateurs et évalués ont examiné les scripts possibles utilisés pour faciliter la notation.\n- Si l'étudiant évaluateur n'a pas encore terminé ce projet, il est obligatoire pour cet étudiant de lire l'intégralité du sujet avant de commencer la défense.\n- Utilisez les drapeaux disponibles sur cette échelle pour signaler un dépôt vide, un programme non fonctionnel, une erreur de norme, une tricherie, etc. Dans ces cas, la notation est terminée et la note finale est de 0 (ou -42 en cas de tricherie). Cependant, à l'exception de la tricherie, nous vous encourageons à continuer à discuter de votre travail (même si vous ne l'avez pas terminé) afin d'identifier les problèmes qui ont pu causer cet échec et d'éviter de répéter la même erreur à l'avenir.\n- N'oubliez pas que pendant toute la durée de la défense, aucun segfault, ni autre arrêt inattendu, prématuré, incontrôlé ou inattendu du programme n'est toléré, sinon la note finale est de 0. Utilisez le drapeau approprié.\n- Vous ne devriez jamais avoir à modifier un fichier, sauf le fichier de configuration s'il existe. Si vous voulez modifier un fichier, prenez le temps d'expliquer les raisons à l'étudiant évalué et assurez-vous que vous êtes tous les deux d'accord.\n- Vous devez également vérifier l'absence de fuites de mémoire. Toute la mémoire allouée sur le tas doit être correctement libérée avant la fin de l'exécution. Vous êtes autorisé à utiliser tous les outils disponibles sur l'ordinateur, tels que leaks, valgrind ou e_fence. En cas de fuites de mémoire, cochez le drapeau approprié.",
+          "EN": "# Guidelines\n- Only grade the work that is in the student or group's Git repository.\n- Double-check that the Git repository belongs to the student or the group. Ensure that the work is for the relevant project and also check that \"git clone\" is used in an empty folder.\n- Check carefully that no malicious aliases was used to fool you and make you evaluate something that is not the content of the official repository.\n- To avoid any surprises, carefully check that both the evaluating and the evaluated students have reviewed the possible scripts used to facilitate the grading.\n- If the evaluating student has not completed that particular project yet, it is mandatory for this student to read the entire subject before starting the defense.\n- Use the flags available on this scale to signal an empty repository, non-functioning program, norm error, cheating etc. In these cases, the grading is over and the final grade is 0 (or -42 in case cheating). However, except for cheating, you are encouraged to continue to discuss your work (even if you have not finished it) to identify any issues that may have caused this failure and avoid repeating the same mistake in the future.\n- Remember that for the duration of the defense, no segfault, no other unexpected, premature, uncontrolled or unexpected termination of the program, else the final grade is O. Use the appropriate flag.\n- You should never have to edit any file except the configuration file if it exists. If you want to edit a file, take the time to explicit the reasons with the evaluated student and make sure both of you are okay with this.\n- You must also verify the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of execution. You are allowed to use any of the different tools available on the computer, such as leaks, valgrind, or e_fence. In case of memory leaks, tick the appropriate flag."
+        },
+		"attachments": [
+		  {
+			"title": "subject_en.pdf",
+			"url": "en.subject.pdf"
+		  },
+		  {
+			"title": "subject_fr.pdf",
+			"url": "fr.subject.pdf"
+		  },
+		  {
+			"title": "extras",
+			"url": "Extras"
+		  }
+		],
+		"mandatorySections": [
+		  {
+			"description": {
+			  "FR": "**Ne notez pas l'exercice si vous trouvez :**\n--Une fonction implémentée dans un fichier d'en-tête (sauf pour les fonctions templates).\n--Un Makefile compilant sans les flags demandés et/ou avec autre chose que c++.\n\n**Sélectionnez le flag \"Fonction interdite\" (Forbidden function) si vous rencontrez :**\n--L'utilisation d'une fonction \"C\" (*alloc, *printf, free).\n--L'utilisation d'une fonction interdite dans le projet.\n--L'utilisation de \"using namespace <ns_name>\" ou du mot-clé \"friend\".\n--L'utilisation d'une bibliothèque externe, ou de fonctionnalités propres aux versions postérieures à C++98.",
+			  "EN": "# Mandatory Part\n\n---\n\n**Executable name**\nCheck that the project compiles well (without re-link) when you execute the **make** command and that the executable name is **cub3D**. If not, use the invalid compilation flag at the end of the scale."
+			},
+			"yes_no": true,
+			"separator": "border-t-[0.5px]",
+			"type": "mandatory"
+		  },
+		  {
+			"description": {
+			  "FR": "**Fichier de configuration**\nVérifiez que vous pouvez configurer TOUS les éléments suivants dans le fichier de configuration. Le format doit être celui décrit dans le sujet.\n- chemin de la texture nord - NO\n- chemin de la texture nord - NO\n- chemin de la texture est - EA\n- chemin de la texture sud - SO\n- chemin de la texture ouest - WE\n- couleur du sol - F\n- couleur du plafond - C\n- la carte (voir le sujet pour les détails de la configuration de la carte)\n\nVérifiez également que le programme renvoie une erreur et quitte correctement lorsque le fichier de configuration est mal configuré (par exemple, une clé inconnue, des clés doubles, un chemin invalide...) ou si le nom de fichier ne se termine pas par l'extension **.cub**. Si ce n'est pas le cas, la défense est terminée et utilisez le drapeau approprié : travail incomplet, crash....",
+			  "EN": "**Configuration file**\nCheck that you can configure ALL the following elements in the configuration file. The formating has to be as described in the subject.\n- north texture path - NO\n- north texture path - NO\n- east texture path - EA\n- south texture path - SO\n- west texture path - WE\n- floor color - F\n- ceiling color - C\n- the map (see subject for the map configuration details)\n\nAlso, check that the program returns an error and exits properly when the configuration file is misconfigured (for example an unknown key, double keys, an invalid path..) or if the filename doesn't end with the **.cub** extension. If not, the defense is over and use the appropriate flag incomplete work, crash...."
+			},
+			"yes_no": true,
+			"separator": "border-t-[0.5px]",
+			"type": "mandatory"
+		  },
+		  {
+			"description": {
+			  "FR": "**Éléments techniques de l'affichage**\nNous allons évaluer les éléments techniques de l'affichage. Exécutez le programme et effectuez les tests suivants. Si au moins un test échoue, aucun point ne sera attribué pour cette section. Passez à la section suivante.\n- Une fenêtre doit s'ouvrir au lancement du programme.\n- Une image représentant l'intérieur d'un labyrinthe doit être affichée à l'intérieur de la fenêtre.\n- Cachez tout ou partie de la fenêtre en utilisant une autre fenêtre ou en utilisant les bordures de l'écran, puis réduisez les fenêtres et agrandissez-les à nouveau. Dans tous les cas, le contenu de la fenêtre doit rester cohérent.",
+			  "EN": "**Technical elements of the display**\nWe're going to evaluate the technical elements of the display. Run the program and execute the following tests. If at least one fails, no points will be awarded for this section. Move to the next one.\n- A window must open at the launch of the program. A window must open at the launch of the program.\n- An image representing the inside of a maze must be displayed inside the window.\n- Hide all or part of the window either by using another window or by using the screen's borders, then minimize the windows and maximize it back. In all cases, the content of the window must remain consistent."
+			},
+			"yes_no": false,
+			"separator": "border-t-[0.5px]",
+			"type": "mandatory"
+		  },
+		  {
+			"description": {
+			  "FR": "Dans cette section, nous allons évaluer les événements générés par l'utilisateur du programme. Exécutez les 3 tests suivants. Si au moins un test échoue, cela signifie qu'aucun point ne sera attribué pour cette section. Passez à la section suivante.\n- Cliquez sur la croix rouge en haut à gauche de la fenêtre. La fenêtre doit se fermer et le programme doit se terminer proprement.\n- Appuyez sur la touche ESC. La fenêtre doit se fermer et le programme doit se terminer proprement. Dans le cas de ce test, nous accepterons qu'une autre touche quitte le programme, par exemple, Q.\n- Appuyez sur les quatre touches de mouvement (nous accepterons les touches WASD ou ZQSD) dans l'ordre de votre choix. Chaque pression sur une touche doit rendre un résultat visible sur la fenêtre, tel qu'un mouvement/rotation du joueur.",
+			  "EN": "**User basic events**\nIn this section, we're going to evaluate the program's user generated events. Execute the 3 following tests. If at least one fails, this means that no points will be awarded for this section. Move to the next one.\n- Click the red cross at the top left of the window. The window must close and the program must exit cleanly.\n- Press the ESC key. The window must close and the program must exit cleanly. In the case of this test, we will accept that another key exits the program, for example, Q.\n- Press the four movement keys (we'll accept WASD or ZQSD keys) in the order of your liking. Each key press must render a visible result on the window, such as a player's movement/rotation."
+			},
+			"yes_no": true,
+			"separator": "border-t-[0.5px]",
+			"type": "mandatory"
+		  },
+		  {
+			"description": {
+			  "FR": "Dans cette section, nous allons évaluer l'implémentation du mouvement/orientation du joueur à l'intérieur du labyrinthe. Exécutez les 5 tests suivants. Si au moins un test échoue, cela signifie qu'aucun point ne sera attribué pour cette section.\n- L'orientation d'apparition du joueur sur la première image doit être conforme au fichier de configuration, testez pour chaque orientation cardinale (N, S, E, W).\n- Appuyez sur la flèche gauche puis sur la flèche droite. La vue du joueur doit pivoter vers la gauche puis vers la droite comme si la tête du joueur bougeait.\n- Appuyez sur W (ou Z) puis sur S. La vue du joueur doit aller vers l'avant puis vers l'arrière en ligne droite.\n- Appuyez sur A (ou Q) puis sur D.\n- La vue du joueur doit aller vers la gauche puis vers la droite en ligne droite.\n- Pendant ces quatre mouvements, l'affichage était-il fluide ? Par fluide, nous entendons que le jeu est \"jouable\" ou est-il lent.",
+			  "EN": "**Movements**\nIn this section, we'll evaluate the implementation of the player's movement/orientation inside the maze. Execute the 5 following tests. If at least one fails, this means that no points will be awarded for this section.\n- The player's spawning orientation on the first image must be in accordance with the configuration file, test for each cardinal orientation (N, S, E, W).\n- Press the left arrow then the right arrow. The player's view must rotate to the left then to the right as if the player's head was moving.\n- Press W (or Z) then S. The player's view must go forward and then backward in a straight line.\n- Press A (or Q) then D.\n- The player's view must go to the left and then to the right in a straight line.\n- During those four movements, was the display smooth? By smooth we mean is the game \"playable\" or is it slow."
+			},
+			"yes_no": false,
+			"separator": "border-t-[0.5px]",
+			"type": "mandatory"
+		  },
+		  {
+			"description": {
+			  "FR": "Dans cette section, nous allons évaluer les murs du labyrinthe. Exécutez les 4 tests suivants. Si au moins un test échoue, cela signifie qu'aucun point ne sera attribué pour cette section.\n- La texture des murs varie en fonction du point cardinal auquel le mur fait face (nord, sud, est, ouest). Vérifiez que les textures sur les murs et la perspective sont visibles et correctes.\n- Vérifiez que si vous modifiez le chemin d'une texture de mur dans le fichier de configuration, cela modifie la texture rendue lorsque le programme est réexécuté. Vérifiez également que si vous définissez un chemin inexistant, cela génère une erreur.\n- Vérifiez que les couleurs du sol et du plafond sont bien gérées lorsque vous les modifiez dans le fichier de configuration.",
+			  "EN": "**Walls**\nIn this section, we'll evaluate the walls in the maze. Execute the 4 following tests. If at least one fails, this means that no points will be awarded for this section.\n- The wall's texture vary depending on which compass point the wall is facing (north, south, east, west). Check that the textures on the walls and perspective are visible and correct.\n- Check that if you modify the path of a wall texture in the configuration file, it modifies the rendered texture when the program is re-executed. Also check that if you set a non-existent path it raises an error.\n- Check that the floor and ceiling colors are well handled when you modify them in the configuration file."
+			},
+			"yes_no": true,
+			"separator": "border-t-[0.5px]",
+			"type": "mandatory"
+		  },
+		  {
+			"description": {
+			  "FR": "Dans cette section, nous allons évaluer la gestion des erreurs et la fiabilité du programme. Exécutez les 4 tests suivants. Si au moins un test échoue, cela signifie qu'aucun point ne sera attribué pour cette section. Passez à la section suivante.\n- Exécutez le programme en utilisant de nombreux arguments et des valeurs aléatoires. Même si le programme ne nécessite aucun argument, il est essentiel que ces arguments n'alternent pas ou ne créent pas d'erreurs non gérées.\n- Vérifiez qu'il n'y a pas de fuites de mémoire. Vous pouvez utiliser la commande top ou leaks dans un autre shell pour surveiller que l'utilisation de la mémoire est stable. La mémoire utilisée ne doit pas augmenter à chaque action effectuée.\n- Faites rouler votre bras ou votre visage sur le clavier. Le programme ne doit pas présenter de comportements étranges et il doit rester fonctionnel.\n- Modifiez la carte. Le programme ne doit pas présenter de comportements étranges et il doit rester fonctionnel si la carte est bien configurée, sinon il doit générer une erreur.",
+			  "EN": "**Error management**\nIn this section, we'll evaluate the program's error management and reliability. Execute the 4 following tests. If at least one fails, this means that no points will be awarded for this section. Move to the next one.\n- Run the program using numerous arguments and random values. Even if the program doesn't require any arguments, it is critical that those arguments don't alternate or create unhandled errors.\n- Check that there are no memory leaks. You can use the top or leaks command in another shell to monitor that the memory use is stable. The memory used must not increase each time an action is made.\n- Roll either your arm or your face on the keyboard. The program must not show any strange behaviors and it must stay functional.\n- Modify the map. The program must not show any strange behaviors and it must stay functional if the map is well configured, if not it must raise an error."
+			},
+			"yes_no": true,
+			"separator": false,
+			"type": "mandatory"
+		  }
+		],
+		"bonusSections": [
+		  {
+			"description": {
+			  "EN": "# Bonus\n*We will look at your bonuses if and only if your mandatory part is excellent. This means that you must complete the mandatory part, beginning to end, and your error management must be flawless, even in cases of twisted or bad usage. So if the mandatory part didn't score all the points during this defense bonuses will be totally ignored.*\n\n---\n\n**When I'll be older I'll be John Carmack**\nLook at the subject bonus part and add one point for each bonus implemented and fully functional.",
+			  "FR": "# Bonus\n*Nous examinerons vos bonus uniquement si votre partie obligatoire est excellente. Cela signifie que vous devez terminer la partie obligatoire, du début à la fin, et que votre gestion des erreurs doit être impeccable, même en cas d'utilisation abusive ou tordue. Donc, si la partie obligatoire n'a pas obtenu tous les points pendant cette défense, les bonus seront totalement ignorés.*\n\n---\n\n**Quand je serai plus âgé, je serai John Carmack**\nConsultez la partie bonus du sujet et ajoutez un point pour chaque bonus mis en œuvre et pleinement fonctionnel."
+			},
+			"separator": false,
+			"yes_no": false,
+			"type": "bonus"
+		  }
+		],
+		"cursus_id": "1",
+		"updated_at": "2023-12-27T23:00:00.000Z",
+		"gradingOptions": [
+		  {
+			"ok": true,
+			"outstanding": true,
+			"empty_work": true,
+			"incomplete_work": true,
+			"invalid_compilation": true,
+			"norme": true,
+			"cheat": true,
+			"crash": true,
+			"concerning_situations": true,
+			"leaks": true,
+			"forbidden_functions": true,
+			"cannot_support": false
+		  }
+		],
+		"languages": [
+		  "EN",
+		  "FR"
+		],
+		"language": "EN"
+	  }
+	],
+	"message": "Sheet created successfully"
+  }

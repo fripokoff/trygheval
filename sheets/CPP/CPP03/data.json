@@ -1,0 +1,171 @@
+{
+  "success": true,
+  "data": [
+    {
+      "project_title": "CPP03",
+      "students": 1,
+      "status": "active",
+      "finish" : true,
+      "eval_points": 3,
+      "time": 30,
+      "id": 14,
+      "introduction": {
+        "FR": "# Introduction\n- Restez poli, courtois, respectueux et constructifs tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Identifiez avec l'étudiant ou le groupe dont le travail est évalué les dysfonctionnements possibles de leur projet. Prenez le temps de discuter et de débattre des problèmes qui ont pu être identifiés.\n- Vous devez tenir compte du fait qu'il peut y avoir des différences dans la façon dont vos pairs ont compris les instructions du projet et l'étendue de ses fonctionnalités. Gardez toujours l'esprit ouvert et évaluez-les aussi honnêtement que possible. La pédagogie n'est utile que si l'évaluation par les pairs est faite sérieusement.",
+        "EN": "# Introduction\n- Remain polite, courteous, respectful and constructive throughout the evaluation process. The well-being of the community depends on it.\n- Identify with the student or group whose work is evaluated the possible dysfunctions in their project. Take the time to discuss and debate the problems that may have been identified.\n- You must consider that there might be some differences in how your peers might have understood the project's instructions and the scope of its functionalities. Always keep an open mind and grade them as honestly as possible. The pedagogy is useful only and only if the peer-evaluation is done seriously."
+      },
+      "guidelines": {
+        "FR": "# Directives\n- Ne notez que le travail qui a été remis dans le dépôt Git de l'étudiant ou du groupe évalué.\n- Vérifiez que le dépôt Git appartient bien à l'étudiant(s). Assurez-vous que le projet est bien celui attendu. Vérifiez également que 'git clone' est utilisé dans un dossier vide.\n- Vérifiez attentivement qu'aucun alias malveillant n'a été utilisé pour vous tromper et vous faire évaluer quelque chose qui n'est pas le contenu du dépôt officiel.\n- Pour éviter toute surprise et, le cas échéant, examinez ensemble tous les scripts utilisés pour faciliter la notation (scripts de test ou d'automatisation).\n- Si vous n'avez pas terminé le devoir que vous allez évaluer, vous devez lire l'intégralité du sujet avant de commencer le processus d'évaluation.\n- Utilisez les drapeaux disponibles pour signaler un dépôt vide, un programme non fonctionnel, une erreur de Norme, une tricherie, etc. Dans ces cas, le processus d'évaluation se termine et la note finale est de 0, ou -42 en cas de tricherie. Toutefois, à l'exception de la tricherie, les étudiants sont fortement encouragés à examiner ensemble le travail qui a été remis, afin d'identifier les erreurs qui ne devraient pas être répétées à l'avenir.\n- Vous ne devriez jamais avoir à modifier un fichier, sauf le fichier de configuration s'il existe. Si vous voulez modifier un fichier, prenez le temps d'expliquer les raisons à l'étudiant évalué et assurez-vous que vous êtes tous d'accord.\n- Vous devez également vérifier l'absence de fuites de mémoire. Toute mémoire allouée sur le tas doit être correctement libérée avant la fin de l'exécution. Vous êtes autorisé à utiliser tous les outils disponibles sur l'ordinateur, tels que leaks, valgrind ou e_fence. En cas de fuites de mémoire, cochez le drapeau approprié.",
+        "EN": "# Guidelines\n- Only grade the work that was turned in the Git repository of the evaluated student or group.\n- Double-check that the Git repository belongs to the student(s). Ensure that the project is the one expected. Also, check that 'git clone' is used in an empty folder.\n- Check carefully that no malicious aliases was used to fool you and make you evaluate something that is not the content of the official repository.\n- To avoid any surprises and if applicable, review together any scripts used to facilitate the grading (scripts for testing or automation).\n- If you have not completed the assignment you are going to evaluate, you have to read the entire subject prior to starting the evaluation process.\n- Use the available flags to report an empty repository, a non-functioning program, a Norm error, cheating, and so forth. In these cases, the evaluation process ends and the final grade is 0, or -42 in case of cheating. However, except for cheating, student are strongly encouraged to review together the work that was turned in, in order to identify any mistakes that shouldn't be repeated in the future.\n- You should never have to edit any file except the configuration file if it exists. If you want to edit a file, take the time to explicit the reasons with the evaluated student and make sure both of you are okay with this.\n- You must also verify the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of execution. You are allowed to use any of the different tools available on the computer, such as leaks, valgrind, or e_fence. In case of memory leaks, tick the appropriate flag."
+      },
+      "attachments": [
+        {
+          "title": "subject_en.pdf",
+          "url": "en.subject.pdf"
+        },
+        {
+          "title": "subject_fr.pdf",
+          "url": "fr.subject.pdf"
+        },
+        {
+          "title": "extras",
+          "url": "/Extras"
+        }
+      ],
+      "mandatorySections": [
+        {
+          "description": {
+            "FR": "# Tests préliminaires\n*Si un cas de triche est suspecté, la notation et l'évaluation prennent fin immédiatement. Pour le signaler, sélectionnez le flag \"Cheat\". Faites attention à l'utiliser avec calme, précaution et discernement.*\n\n---\n\n**Prérequis**\nLe code doit compiler avec c++ et les flags -Wall -Wextra -Werror.\nPour rappel, ce projet doit suivre le standard C++98. Par conséquent, des fonctions C++11 (ou d'un autre standard) et les conteneurs ne sont PAS attendus.\n\nNe notez pas l'exercice si vous trouvez :\n- Une fonction implémentée dans un fichier d'en-tête (sauf pour les fonctions templates).\n- Un Makefile compilant sans les flags demandés et/ou avec autre chose que c++.\n\nSélectionnez le flag \"Fonction interdite\" (Forbidden Function) si vous rencontrez :\n- L'utilisation d'une fonction \"C\" (*alloc, *printf, free).\n- L'utilisation d'une fonction interdite dans le projet.\n- L'utilisation de \"using namespace <ns_name>\" ou le mot-clé \"friend\".\n- L'utilisation d'une bibliothèque externe, ou des fonctionnalités propres aux versions postérieures à C++98.",
+            "EN": "# Preliminary tests\n*If a cheating case is suspected, the grading and evaluation end immediately. To report it, select the \"Cheat\" flag. Be careful to use it calmly, carefully, and with discernment.*\n\n---\n\n**Prerequisites**\nThe code must compile with c++ and the flags -Wall -Wextra -Werror.\nAs a reminder, this project must follow the C++98 standard. Therefore, C++11 functions (or other standards) and containers are NOT expected.\n\nDo not grade the exercise if you find:\n- A function implemented in a header file (except for template functions).\n- A Makefile compiling without the requested flags and/or with something other than c++.\n\nSelect the \"Forbidden Function\" flag if you encounter:\n- The use of a \"C\" function (*alloc, *printf, free).\n- The use of a forbidden function in the project.\n- The use of \"using namespace <ns_name>\" or the keyword \"friend\".\n- The use of an external library, or features specific to versions later than C++98."
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "# Exercice 00 : Annnnnnd… ACTION !\n*Comme d'habitude, il devrait y avoir suffisamment de tests pour prouver que le programme fonctionne comme demandé. S'il n'y en a pas, ne notez pas cet exercice.*\n\n---\n\n**Classe et attributs**\nIl existe une classe ClapTrap. Il possède tous les attributs privés suivants :\n- Nom\n- Points de vie\n- Points d'énergie\n- Dégâts d'attaque\n\nCes attributs sont initialisés aux valeurs demandées.",
+            "EN": "# Exercise 00: Annnnnnd... ACTION!\n*As usual, there should be enough tests to prove that the program works as requested. If there are none, do not grade this exercise.*\n\n---\n\n **Class and Attributes**\nThere is a ClapTrap class. It has all the following private attributes:\n- name\n- hit points\n- energy points\n- attack damage\n\nThese attributes are initialized to the requested values."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Fonctions membres**\nLes fonctions membres suivantes sont présentes et fonctionnent comme spécifié :\n- attaque()\n- takeDamage()\n- beRepaired()",
+            "EN": "**Member Functions**\nThe following member functions are present and function as specified:\n- attack()\n- takeDamage()\n- beRepaired()"
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "# Exercice 01 : Serena, mon amour !\n*Comme d'habitude, il devrait y avoir suffisamment de tests pour prouver que le programme fonctionne comme demandé. S'il n'y en a pas, ne notez pas cet exercice.*\n\n---\n\n**Classe et attributs**\nIl existe une classe ScavTrap. ScavTrap hérite publiquement de la classe Claptrap. Il ne redéclare pas les attributs.\nLes attributs de la classe ClapTrap sont désormais protégés au lieu d'être privés.\nLes attributs sont initialisés aux valeurs demandées.",
+            "EN": "# Exercise 01: Serena, My Love!\n*As usual, there should be enough tests to prove that the program works as requested. If there are none, do not grade this exercise.*\n\n---\n\n**Class and Attributes**\nThere is a ScavTrap class. ScavTrap publicly inherits from the Claptrap class. It does not redeclare the attributes.\nThe attributes of the ClapTrap class are now protected instead of private.\nThe attributes are initialized to the requested values."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Fonctions membres**\nLes fonctions membres suivantes sont présentes et fonctionnelles :\n- attaque()\n- takeDamage() (hérité)\n- beRepaired() (hérité)\n\nLes messages du constructeur, du destructeur et de la fonction attack() doivent être différents de ceux du ClapTrap.",
+            "EN": "**Member Functions**\nThe following member functions are present and functional:\n- attack()\n- takeDamage() (inherited)\n- beRepaired() (inherited)\n\nThe messages from the constructor, destructor, and attack() function must be different from those of the ClapTrap."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Construction et destruction**\nScavTrap doit avoir un constructeur et un destructeur avec des messages spécifiques.\nLeur bonne mise en œuvre doit être démontrée par une séquence d'appels dans l'ordre attendu : si vous créez un ScavTrap, le message du constructeur ClapTrap doit être affiché en premier, suivi de celui du ScavTrap.\nInversement, si vous supprimez un ScavTrap, le message du destructeur ScavTrap doit être affiché en premier, suivi de celui du ClapTrap.",
+            "EN": "**Construction and Destruction**\nScavTrap must have a constructor and destructor with specific messages.\nTheir proper implementation must be demonstrated by a sequence of calls in the expected order: if you create a ScavTrap, the message from the ClapTrap constructor should be displayed first, followed by that of the ScavTrap.\nConversely, if you delete a ScavTrap, the message from the ScavTrap destructor should be displayed first, followed by that of the ClapTrap."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Fonctionnalité spéciale**\nScavTrap possède une fonction guardGate() qui affiche un message sur la sortie standard.\nScavTrap possède également une fonction attack() qui affiche un message différent de celui du ClapTrap sur la sortie standard.",
+            "EN": "**Special Feature**\nScavTrap has a guardGate() function that displays a message on the standard output.\nScavTrap also has an attack() function that displays a message different from that of the ClapTrap on the standard output."
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "# Exercice 02 : Travail à la chaîne\n*Comme d'habitude, il devrait y avoir suffisamment de tests pour prouver que le programme fonctionne comme demandé. S'il n'y en a pas, ne notez pas cet exercice.*\n\n---\n\n**Classe et attributs**\nIl existe une classe FragTrap qui hérite publiquement de ClapTrap. Les attributs ne doivent pas être redéclarés sans raison.",
+            "EN": "# Exercise 02: Assembly Line Work\n*As usual, there should be enough tests to prove that the program works as requested. If there are none, do not grade this exercise.*\n\n---\n\n**Class and Attributes**\nThere is a FragTrap class that publicly inherits from ClapTrap. Attributes should not be redeclared without reason."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Construction et destruction**\nFragTrap doit avoir un constructeur et un destructeur avec des messages spécifiques.\nLeur bonne mise en œuvre doit être démontrée par une séquence d'appels dans l'ordre attendu : si vous créez un FragTrap, le message du constructeur ClapTrap doit être affiché en premier, suivi de celui du FragTrap.\nInversement, si vous supprimez un FragTrap, le message du destructeur FragTrap doit être affiché en premier, suivi de celui du ClapTrap.",
+            "EN": "**Construction and Destruction**\nFragTrap must have a constructor and destructor with specific messages.\nTheir proper implementation must be demonstrated by a sequence of calls in the expected order: if you create a FragTrap, the message from the ClapTrap constructor should be displayed first, followed by that of the FragTrap.\nConversely, if you delete a FragTrap, the message from the FragTrap destructor should be displayed first, followed by that of the ClapTrap."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Fonctionnalité spéciale**\nFragTrap possède une fonction highFivesGuys() qui affiche un message sur la sortie standard.",
+            "EN": "**Special Feature**\nFragTrap has a highFivesGuys() function that displays a message on the standard output."
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "# Exercice 03 : Ok, ça devient bizarre\n*Comme d'habitude, il devrait y avoir suffisamment de tests pour prouver que le programme fonctionne comme demandé. S'il n'y en a pas, ne notez pas cet exercice.*\n\n---\n\n**L'étrangeté ultime du C++**\nIl existe une classe DiamondTrap. Il hérite à la fois de FragTrap et de ScavTrap.\nIl définit des attributs avec les valeurs demandées.\nIl utilise l'héritage virtuel pour éviter les pièges de l'héritage en losange.",
+            "EN": "# Exercise 03: Ok, This Is Getting Weird\n*As usual, there should be enough tests to prove that the program works as requested. If there are none, do not grade this exercise.*\n\n---\n\n**The Ultimate Weirdness of C++**\nThere is a DiamondTrap class. It inherits from both FragTrap and ScavTrap.\nIt defines attributes with the requested values.\nIt uses virtual inheritance to avoid the pitfalls of diamond inheritance."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Choisissez judicieusement...**\nLa classe DiamondTrap utilise la fonction attack() de Scavtrap.\nIl possède les fonctions spéciales de ses deux parents.\nDiamondTrap a un membre privé std::string name.\nLa fonction whoAmI() a accès à la fois à name et à ClapTrap::name.",
+            "EN": "**Choose Wisely...**\nThe DiamondTrap class uses the attack() function of Scavtrap.\nIt has the special functions of both its parents.\nDiamondTrap has a private member std::string name.\nThe whoAmI() function has access to both name and ClapTrap::name."
+          },
+          "yes_no": true,
+          "separator": false,
+          "type": "mandatory"
+        }
+      ],
+      "bonusSections": [],
+      "cursus_id": "1",
+      "updated_at": "2023-12-27T23:00:00.000Z",
+      "gradingOptions": [
+        {
+          "ok": true,
+          "outstanding": true,
+          "empty_work": true,
+          "incomplete_work": true,
+          "invalid_compilation": true,
+          "norme": true,
+          "cheat": true,
+          "crash": true,
+          "concerning_situations": true,
+          "leaks": true,
+          "forbidden_functions": true,
+          "cannot_support": false
+        }
+      ],
+      "languages": [
+        "EN",
+        "FR"
+      ],
+      "language": "EN"
+    }
+  ],
+  "message": "Sheet created successfully"
+}

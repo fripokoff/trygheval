@@ -1,155 +1,158 @@
 {
     "success": true,
     "data": [
-        {
-		"id": 6,
+      {
+        "id": 6,
         "status": "active",
         "project_title": "so_long",
-        "introduction": [
-            "- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
-            "- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
-            "- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
+		"finish" : true,
+        "introduction": {
+          "EN": "# Introduction\nPlease comply with the following rules:\n- Remain polite, courteous, respectful and constructive throughout the evaluation process. The well-being of the community depends on it.\n- Identify with the student or group whose work is evaluated the possible dysfunctions in their project. Take the time to discuss and debate the problems that may have been identified.\n- You must consider that there might be some differences in how your peers might have understood the project's instructions and the scope of its functionalities. Always keep an open mind and grade them as honestly as possible. The pedagogy is useful only and only if the peer-evaluation is done seriously.",
+          "FR": "# Introduction\nVeuillez respecter les règles suivantes :\n- Restez poli, courtois, respectueux et constructif tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Identifiez avec l'étudiant ou le groupe dont le travail est évalué les dysfonctionnements possibles dans leur projet. Prenez le temps de discuter et de débattre des problèmes qui ont pu être identifiés.\n- Vous devez considérer qu'il peut y avoir des différences dans la façon dont vos pairs ont compris les instructions du projet et la portée de ses fonctionnalités. Gardez toujours l'esprit ouvert et évaluez-les aussi honnêtement que possible. La pédagogie n'est utile que si l'évaluation par les pairs est faite sérieusement."
+        },
+        "guidelines": {
+          "EN": "# Guidelines\n\n- Only grade the work that was turned in the Git repository of the evaluated student or group.\n- Double-check that the Git repository belongs to the student(s). Ensure that the project is the one expected. Also, check that 'git clone' is used in an empty folder.\n- Check carefully that no malicious aliases was used to fool you and make you evaluate something that is not the content of the official repository.\n- To avoid any surprises and if applicable, review together any scripts used to facilitate the grading (scripts for testing or automation).\n- If you have not completed the assignment you are going to evaluate, you have to read the entire subject prior to starting the evaluation process.\n- Use the available flags to report an empty repository, a non-functioning program, a Norm error, cheating, and so forth.\nIn these cases, the evaluation process ends and the final grade is 0,\nor -42 in case of cheating. However, except for cheating, student are strongly encouraged to review together the work that was turned in, in order to identify any mistakes that shouldn't be repeated in the future.\n- Remember that for the duration of the defense, no segfault, no other unexpected, premature, uncontrolled or unexpected termination of the program, else the final grade is 0. Use the appropriate flag.\nYou should never have to edit any file except the configuration file if it exists. If you want to edit a file, take the time to explicit the reasons with the evaluated student and make sure both of you are okay with this.\n- You must verify the absence of data races.\nYou are allowed to use any of the different tools available on the computer,\nsuch as valgrind with \"--tool=helgrind\" and \"--tool=drd\". In case of any data-race, the evaluation stops here.\n- You must also verify the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of execution. You are allowed to use any of the different tools available on the computer, such as leaks, valgrind, or e_fence. In case of memory leaks, tick the appropriate flag.",
+          "FR": "# Directives\n\n- N'évaluez que le travail qui a été remis dans le dépôt Git de l'étudiant ou du groupe évalué.\n- Vérifiez que le dépôt Git appartient bien à l'étudiant (aux étudiants). Assurez-vous que le projet est bien celui attendu. Vérifiez également que 'git clone' est utilisé dans un dossier vide.\n- Vérifiez attentivement qu'aucun alias malveillant n'a été utilisé pour vous tromper et vous faire évaluer quelque chose qui n'est pas le contenu du dépôt officiel.\n- Pour éviter toute surprise et le cas échéant, examinez ensemble tous les scripts utilisés pour faciliter la notation (scripts de test ou d'automatisation).\n- Si vous n'avez pas terminé le devoir que vous allez évaluer, vous devez lire l'intégralité du sujet avant de commencer le processus d'évaluation.\n- Utilisez les drapeaux disponibles pour signaler un dépôt vide, un programme non fonctionnel, une erreur de Norme, une tricherie, etc.\nDans ces cas, le processus d'évaluation se termine et la note finale est de 0, ou -42 en cas de tricherie. Cependant, à l'exception de la tricherie, les étudiants sont fortement encouragés à examiner ensemble le travail qui a été remis, afin d'identifier les erreurs qui ne devraient pas être répétées à l'avenir.\n- N'oubliez pas que pendant toute la durée de la soutenance, aucun segfault, ni autre arrêt inattendu, prématuré, incontrôlé ou inattendu du programme, sinon la note finale est de 0. Utilisez le drapeau approprié.\nVous ne devriez jamais avoir à modifier un fichier, sauf le fichier de configuration s'il existe. Si vous voulez modifier un fichier, prenez le temps d'expliquer les raisons avec l'étudiant évalué et assurez-vous que vous êtes tous les deux d'accord avec cela.\n- Vous devez vérifier l'absence de data races.\nVous êtes autorisé à utiliser tous les différents outils disponibles sur l'ordinateur, tels que valgrind avec \"--tool=helgrind\" et \"--tool=drd\". En cas de data-race, l'évaluation s'arrête ici.\n- Vous devez également vérifier l'absence de fuites de mémoire. Toute mémoire allouée sur le tas doit être correctement libérée avant la fin de l'exécution. Vous êtes autorisé à utiliser tous les différents outils disponibles sur l'ordinateur, tels que leaks, valgrind ou e_fence. En cas de fuites de mémoire, cochez le drapeau approprié."
+        },
+        "attachments": [
+          {
+            "title": "subject_en.pdf",
+            "url": "en.subject.pdf"
+          },
+          {
+            "title": "subject_fr.pdf",
+            "url": "fr.subject.pdf"
+          },
+          {
+            "title": "minilibx-linux.tgz",
+            "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/so_long/Extras/minilibx-linux.tgz"
+          },
+          {
+            "title": "minilibx_opengl.tgz",
+            "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/so_long/Extras/minilibx_opengl.tgz"
+          }
         ],
-        "guidelines": [
-            "- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
-            "- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
-            "- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
-            "- If applicable, review any **scripts** used for testing or automation together with the student.",
-            "- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
-            "- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
-            "- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
-            "- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
-            "- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
-            "- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
+        "cursus_id": "1",
+        "updated_at": "2023-07-31T22:00:00.000Z",
+        "students": 1,
+        "eval_points": 3,
+        "time": 30,
+        "mandatorySections": [
+          {
+            "description": {
+              "EN": "# Mandatory Part\n\n---\n\n**Executable name**\nExecute the `make` command. The project should compile as expected (the Makefile should not re-link). Verify that the executable name is `so_long`. Otherwise, use the \"invalid compilation\" flag at the end of the scale.",
+              "FR": "# Partie obligatoire\n\n---\n\n**Nom de l'exécutable**\nExécutez la commande `make`. Le projet doit se compiler comme prévu (le Makefile ne doit pas se re-linker). Vérifiez que le nom de l'exécutable est `so_long`. Sinon, utilisez le drapeau \"compilation invalide\" à la fin de la grille."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Parsing**\n- Test different maps.\n- Test different sizes.\n- Test different line sizes.\n\nAlso, check that the program returns an error and exits properly when the configuration file is misconfigured (e.g., an unknown character, duplicates, an invalid file path, and so forth).\n\nOtherwise, the defense is over. Use the appropriate flag: incomplete work, crash...",
+              "FR": "**Parsing**\n- Testez différentes cartes.\n- Testez différentes tailles.\n- Testez différentes tailles de lignes.\n\nVérifiez également que le programme renvoie une erreur et se ferme correctement lorsque le fichier de configuration est mal configuré (par exemple, un caractère inconnu, des doublons, un chemin de fichier invalide, etc.).\n\nSinon, la soutenance est terminée. Utilisez le drapeau approprié : travail incomplet, crash..."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Technical elements of the display**\nTime to evaluate the technical elements of the display. Check that the level is an accurate representation of the map used as parameter.\n- A window must open at the launch of the program. It must remain open during the whole execution.\n- Hide all or parts of the window either by using window or by using the screen's borders. Then, minimize the window and maximize it back. In all cases, the content of the window must remain consistent.",
+              "FR": "**Éléments techniques de l'affichage**\nIl est temps d'évaluer les éléments techniques de l'affichage. Vérifiez que le niveau est une représentation fidèle de la carte utilisée comme paramètre.\n- Une fenêtre doit s'ouvrir au lancement du programme. Elle doit rester ouverte pendant toute l'exécution.\n- Cachez tout ou partie de la fenêtre soit en utilisant la fenêtre, soit en utilisant les bordures de l'écran. Ensuite, minimisez la fenêtre et agrandissez-la à nouveau. Dans tous les cas, le contenu de la fenêtre doit rester cohérent."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Basic user events**\nIn this section, let's evaluate the program's user events. Execute the 3 following tests. If at least one of them fails, this means that no points must be awarded for this section and you have to move to the next one.\n- Click the cross at the top of the window. The window must close and the program must exit cleanly.\n- Press the ESC key. The window must close and the program must exit cleanly. In the case of this test, you can accept that another key exits the program, for example, Q.\n- Press the four arrow keys (it is acceptable to use the WASD or ZQSD keys instead) in the order of your choice. Each key press must render a visible result on the window (player's movement).",
+              "FR": "**Événements utilisateur de base**\nDans cette section, évaluons les événements utilisateur du programme. Exécutez les 3 tests suivants. Si au moins l'un d'entre eux échoue, cela signifie qu'aucun point ne doit être attribué pour cette section et vous devez passer à la suivante.\n- Cliquez sur la croix en haut de la fenêtre. La fenêtre doit se fermer et le programme doit se terminer proprement.\n- Appuyez sur la touche ESC. La fenêtre doit se fermer et le programme doit se terminer proprement. Dans le cas de ce test, vous pouvez accepter qu'une autre touche quitte le programme, par exemple, Q.\n- Appuyez sur les quatre touches fléchées (il est acceptable d'utiliser les touches WASD ou ZQSD à la place) dans l'ordre de votre choix. Chaque pression sur une touche doit rendre un résultat visible sur la fenêtre (mouvement du joueur)."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Movements**\nIn this section, let's evaluate the implementation of the player's movement. Execute the 5 following tests. If at least one of them fails, this means that no points must be awarded for this section and you have to move to the next one.\n- The player's spawning position must be in accordance with the map file.\n- Press the arrows keys (it is acceptable to use the WASD or ZQSD keys instead) to move in every direction on the map.\n- Is the game \"playable\"?",
+              "FR": "**Mouvements**\nDans cette section, évaluons l'implémentation du mouvement du joueur. Exécutez les 5 tests suivants. Si au moins l'un d'entre eux échoue, cela signifie qu'aucun point ne doit être attribué pour cette section et vous devez passer à la suivante.\n- La position d'apparition du joueur doit être conforme au fichier de carte.\n- Appuyez sur les touches fléchées (il est acceptable d'utiliser les touches WASD ou ZQSD à la place) pour vous déplacer dans toutes les directions sur la carte.\n- Le jeu est-il \"jouable\" ?"
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Walls & Sprites**\nIn this section, let's evaluate the map representation. Execute the following tests. If at least one of them fails, this means that no points must be awarded for this section and you have to move to the next one.\n- The wall's texture is correctly placed and the player cannot go through it.\n- The collectible's texture is correctly placed and the player can pick it by walking on it.\n- The Exit texture is correctly placed and the player can finish the game by walking on it but only after picking every collectible.\n- The player texture is correctly placed and can move in every direction except into the walls.",
+              "FR": "**Murs & Sprites**\nDans cette section, évaluons la représentation de la carte. Exécutez les tests suivants. Si au moins l'un d'entre eux échoue, cela signifie qu'aucun point ne doit être attribué pour cette section et vous devez passer à la suivante.\n- La texture du mur est correctement placée et le joueur ne peut pas la traverser.\n- La texture de l'objet à collectionner est correctement placée et le joueur peut le ramasser en marchant dessus.\n- La texture de la sortie est correctement placée et le joueur peut terminer le jeu en marchant dessus, mais seulement après avoir ramassé tous les objets à collectionner.\n- La texture du joueur est correctement placée et peut se déplacer dans toutes les directions, sauf dans les murs."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Counter**\nIn this section, let's evaluate the gameplay elements. Execute the following tests. If at least one of them fails, this means that no points must be awarded for this section and you have to move to the next one.\n- There's a small counter displayed on the shell that counts how many movements the player does.\n- The counter can be displayed directly on the game screen (see Bonus part).",
+              "FR": "**Compteur**\nDans cette section, évaluons les éléments de gameplay. Exécutez les tests suivants. Si au moins l'un d'entre eux échoue, cela signifie qu'aucun point ne doit être attribué pour cette section et vous devez passer à la suivante.\n- Il y a un petit compteur affiché sur le shell qui compte le nombre de mouvements effectués par le joueur.\n- Le compteur peut être affiché directement sur l'écran de jeu (voir la partie Bonus)."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**MiniLibX images**\nTake a look at the code and check whether the student uses the images from the MLX to draw the image instead of putting pixels one by one. ;)",
+              "FR": "**Images MiniLibX**\nJetez un coup d'œil au code et vérifiez si l'étudiant utilise les images de la MLX pour dessiner l'image au lieu de mettre des pixels un par un. ;)"
+            },
+            "yes_no": true,
+            "separator": false,
+            "type": "mandatory"
+          }
         ],
-		"attachments": [
-			{
-				"title": "subject_en.pdf",
-				"url": "en.subject.pdf"
-			},
-			{
-				"title": "subject_fr.pdf",
-				"url": "fr.subject.pdf"
-			},
-			{
-				"title": "minilibx-linux.tgz",
-				"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/so_long/Extras/minilibx-linux.tgz"
-			},
-			{
-				"title": "minilibx_opengl.tgz",
-				"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/so_long/Extras/minilibx_opengl.tgz"
-			}
-		],
-          "cursus_id": "1",
-        "updated_at": "2023-08-01T17:03:33.436Z",
-		"students" : 1,
-		"eval_points" : 3,
-		"time" : 30,
-			"mandatorySections" : [
-				{
-					"id": "679e53e58c78a1cea9234f8f",
-					"description": "Execute the `make` command. The project should compile as expected (the Makefile should not re-link). Verify that the executable name is `so_long`. Otherwise, use the \"invalid compilation\" flag at the end of the scale.",
-					"yes_no": true,
-					"sheetId": "679e53e58c78a1cea9234f8e",
-					"created_at": "2025-02-01T17:03:33.600Z",
-					"updated_at": "2025-02-01T17:03:33.600Z"
-				},
-				{
-					"id": "679e53e58c78a1cea9234f90",
-					"description": "--Test different maps.\n--Test different sizes.\n--Test different line sizes.",
-					"yes_no": true,
-					"sheetId": "679e53e58c78a1cea9234f8e",
-					"created_at": "2025-02-01T17:03:33.600Z",
-					"updated_at": "2025-02-01T17:03:33.600Z"
-				},
-				{
-					"id": "679e53e58c78a1cea9234f91",
-					"description": "--A window must open at the launch of the program. It must remain open during the whole execution.\n--Hide all or parts of the window either by using window or by using the screen's borders. Then, minimize the window and maximize it back. In all cases, the content of the window must remain consistent.",
-					"yes_no": true,
-					"sheetId": "679e53e58c78a1cea9234f8e",
-					"created_at": "2025-02-01T17:03:33.600Z",
-					"updated_at": "2025-02-01T17:03:33.600Z"
-				},
-				{
-					"id": "679e53e58c78a1cea9234f92",
-					"description": "--Click the cross at the top of the window. The window must close and the program must exit cleanly.\n--Press the ESC key. The window must close and the program must exit cleanly. In the case of this test, you can accept that another key exits the program, for example, Q.\n--Press the four arrow keys (it is acceptable to use the WASD or ZQSD keys instead) in the order of your choice. Each key press must render a visible result on the window (player's movement).",
-					"yes_no": true,
-					"sheetId": "679e53e58c78a1cea9234f8e",
-					"created_at": "2025-02-01T17:03:33.600Z",
-					"updated_at": "2025-02-01T17:03:33.600Z"
-				},
-				{
-					"id": "679e53e58c78a1cea9234f93",
-					"description": "--The player's spawning position must be in accordance with the map file.\n--Press the arrows keys (it is acceptable to use the WASD or ZQSD keys instead) to move in every direction on the map.\n--Is the game \"playable\"?",
-					"yes_no": true,
-					"sheetId": "679e53e58c78a1cea9234f8e",
-					"created_at": "2025-02-01T17:03:33.600Z",
-					"updated_at": "2025-02-01T17:03:33.600Z"
-				},
-				{
-					"id": "679e53e58c78a1cea9234f94",
-					"description": "--The wall's texture is correctly placed and the player cannot go through it.\n--The collectible's texture is correctly placed and the player can pick it by walking on it.\n--The Exit texture is correctly placed and the player can finish the game by walking on it but only after picking every collectible.\n--The player texture is correctly placed and can move in every direction except into the walls.",
-					"yes_no": true,
-					"sheetId": "679e53e58c78a1cea9234f8e",
-					"created_at": "2025-02-01T17:03:33.600Z",
-					"updated_at": "2025-02-01T17:03:33.600Z"
-				},
-				{
-					"id": "679e53e58c78a1cea9234f95",
-					"description": "--There's a small counter displayed on the shell that counts how many movements the player does.\n--The counter can be displayed directly on the game screen (see Bonus part).",
-					"yes_no": true,
-					"sheetId": "679e53e58c78a1cea9234f8e",
-					"created_at": "2025-02-01T17:03:33.600Z",
-					"updated_at": "2025-02-01T17:03:33.600Z"
-				},
-				{
-					"id": "679e53e58c78a1cea9234f96",
-					"description": "Take a look at the code and check whether the student uses the images from the MLX to draw the image instead of putting pixels one by one. ;)",
-					"yes_no": true,
-					"sheetId": "679e53e58c78a1cea9234f8e",
-					"created_at": "2025-02-01T17:03:33.600Z",
-					"updated_at": "2025-02-01T17:03:33.600Z"
-				}
-			],
-			"bonusSections" : [
-				{
-					"id": "679e53e58c78a1cea9234f97",
-					"description": "The enemy patrols cause the player to lose if they touch them.",
-					"yes_no": true,
-					"sheetId": "679e53e58c78a1cea9234f8e",
-					"created_at": "2025-02-01T17:03:33.682Z",
-					"updated_at": "2025-02-01T17:03:33.682Z"
-				},
-				{
-					"id": "679e53e58c78a1cea9234f98",
-					"description": "There's some sprite animation. The evaluated student has to explain what it is and how they did it.",
-					"yes_no": false,
-					"sheetId": "679e53e58c78a1cea9234f8e",
-					"created_at": "2025-02-01T17:03:33.682Z",
-					"updated_at": "2025-02-01T17:03:33.682Z"
-				}
-			],
-			"gradingOptions" :[
-				{
-					"id": "679e45788c78a1cea9234f62",
-					"ok": true,
-					"outstanding": true,
-					"empty_work": true,
-					"incomplete_work": true,
-					"invalid_compilation": true,
-					"norme": true,
-					"cheat": true,
-					"crash": true,
-					"concerning_situations": true,
-					"leaks": true,
-					"forbidden_functions": true,
-					"cannot_support": true,
-					"sheetId": "679e45778c78a1cea9234f5f",
-					"created_at": "2025-02-01T16:02:00.638Z",
-					"updated_at": "2025-02-01T16:05:07.468Z"
-				}
-			]
-        }
+        "bonusSections": [
+          {
+            "description": {
+              "EN": "# Bonus\n*Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.*\n\n---\n\n**Enemies**\nThe enemy patrols cause the player to lose if they touch them.",
+              "FR": "# Bonus\n*Évaluez la partie bonus si, et seulement si, la partie obligatoire a été entièrement et parfaitement réalisée, et que la gestion des erreurs gère les utilisations inattendues ou incorrectes. Si tous les points obligatoires n'ont pas été validés lors de la soutenance, les points bonus doivent être totalement ignorés.*\n\n---\n\n**Ennemis**\nLes patrouilles ennemies font perdre le joueur s'il les touche."
+            },
+            "separator": "border-t-[0.5px]",
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "EN": "**Sprite animation**\nThere's some sprite animation. The evaluated student has to explain what it is and how they did it.",
+              "FR": "**Animation de sprite**\nIl y a de l'animation de sprite. L'étudiant évalué doit expliquer ce que c'est et comment il l'a fait."
+            },
+            "separator": false,
+            "yes_no": false,
+            "type": "bonus"
+          }
+        ],
+        "gradingOptions": [
+          {
+            "ok": true,
+            "outstanding": true,
+            "empty_work": true,
+            "incomplete_work": true,
+            "invalid_compilation": true,
+            "norme": true,
+            "cheat": true,
+            "crash": true,
+            "concerning_situations": true,
+            "leaks": true,
+            "forbidden_functions": true,
+            "cannot_support": true
+          }
+        ],
+        "languages": [
+          "EN",
+          "FR"
+        ],
+        "language": "EN"
+      }
     ],
-    "message": "Sheets found successfully"
-}
+    "message": "Sheet created successfully"
+  }

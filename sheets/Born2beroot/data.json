@@ -1,160 +1,157 @@
 {
     "success": true,
     "data": [
-        {
-			"id": 4,
-			"status": "active",
-			"project_title": "Born2beroot",
-			"introduction": [
-				"- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
-				"- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
-				"- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
-			],
-			"guidelines": [
-				"- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
-				"- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
-				"- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
-				"- If applicable, review any **scripts** used for testing or automation together with the student.",
-				"- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
-				"- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
-				"- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
-				"- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
-				"- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
-				"- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
-			],
-			"attachments": [
-			{
-				"title": "subject_en.pdf",
-				"url": "en.subject.pdf"
-			},
-			{
-				"title": "subject_fr.pdf", 
-				"url": "fr.subject.pdf"
-			}
-			],
-			"students" : 1,
-			"eval_points" : 3,
-			"time" : 60,
-			"cursus_id": "1",
-			"updated_at": "2023-08-01T16:41:12.034Z",
-			"preliminarySections" :[
-				{
-					"id": "679e4de28c78a1cea9234f76",
-					"description": "**Verify the following points:**\n--The conditions for access to the defense are met: the evaluated person(s) is present, the submission is non-empty and truly belongs to them, etc...\n--For this project, you must clone the Git repository on the computer of the person being evaluated.\n",
-					"yes_no": true,
-					"sheetId": "679e4de28c78a1cea9234f75",
-					"created_at": "2025-02-01T16:37:54.423Z",
-					"updated_at": "2025-02-01T16:41:12.148Z"
-				}
-			],
-			"mandatorySections" : [
-				{
-					"id": "679e4de28c78a1cea9234f77",
-					"description": "--During the defense, as soon as you need help to verify a point, the evaluated person must assist you.\n--Check that the \"signature.txt\" file is present at the root of the cloned repository.\n--Ensure that the signature contained in \"signature.txt\" matches that of the \".vdi\" file of the virtual machine being evaluated. A simple diff should allow you to compare the two signatures. If needed, ask the evaluated person where their \".vdi\" file is located.\n--As a precaution, you may duplicate the original virtual machine to keep a copy.\n--Launch the virtual machine to be evaluated.\n--If something does not work as expected or the two signatures differ, the evaluation stops here.",
-					"yes_no": true,
-					"sheetId": "679e4de28c78a1cea9234f75",
-					"created_at": "2025-02-01T16:37:54.423Z",
-					"updated_at": "2025-02-01T16:41:12.149Z"
-				},
-				{
-					"id": "679e4de28c78a1cea9234f78",
-					"description": "--The evaluated person must simply explain:\n   --The basic functioning of their virtual machine\n   --Their choice of operating system\n   --The basic differences between Rocky and Debian\n   --The benefits of virtual machines\n   --If the chosen operating system is Rocky, they must explain what SELinux and DNF are.\n   --If the chosen operating system is Debian, they must explain the difference between aptitude and apt, and what APPArmor is. During the defense, a script must display information every 10 minutes. Its operation will be checked in detail later. If the explanations are not clear, the evaluation stops here.",
-					"yes_no": true,
-					"sheetId": "679e4de28c78a1cea9234f75",
-					"created_at": "2025-02-01T16:37:54.423Z",
-					"updated_at": "2025-02-01T16:41:12.148Z"
-				},
-				{
-					"id": "679e4de28c78a1cea9234f79",
-					"description": "--Verify that the machine does not have a graphical environment at startup. A password will be requested before any connection attempt on this machine. Log in with a non-root user. Verify that the chosen password respects the rules imposed in the subject. Then, with the help of the evaluator, make sure that:\n--The chosen operating system is indeed Debian or Rocky\n--The UFW service is properly launched\n--The SSH service is properly launched. If something does not work as expected or is not clearly explained, the evaluation stops here.",
-					"yes_no": true,
-					"sheetId": "679e4de28c78a1cea9234f75",
-					"created_at": "2025-02-01T16:37:54.423Z",
-					"updated_at": "2025-02-01T16:41:12.149Z"
-				},
-				{
-					"id": "679e4de28c78a1cea9234f7a",
-					"description": "Reminder: as soon as you need help to check a point, the evaluated person must be able to assist you.\n\nThe subject requires that a user with the login name of the evaluated person be present on the virtual machine. Verify that this user has been added and that they belong to the \"sudo\" and \"user42\" groups.\n\nEnsure the rules imposed in the subject concerning the password policy have been implemented by following the steps below.\nFirst, create a new user. Assign them a password of your choice, respecting the subject's rules.\nThe evaluated person must now explain how they were able to implement the requested rules on their virtual machine.\nNormally, one or two files would have been modified.\nIf there is any problem, the evaluation stops here.\n\n--Now that you have a new user, ask the evaluated person to create a group named \"evaluating\" in front of you and assign it to this user. \nFinally, check that this user indeed belongs to the \"evaluating\" group.\n\n--To finish, ask the evaluated person to explain the purpose of this password policy, as well as the advantages and disadvantages of its implementation. Of course, answering that it is because the subject requires it does not count.\nIf something does not work as expected or is not clearly explained, the evaluation stops here.",
-					"yes_no": true,
-					"sheetId": "679e4de28c78a1cea9234f75",
-					"created_at": "2025-02-01T16:37:54.423Z",
-					"updated_at": "2025-02-01T16:41:12.149Z"
-				},
-				{
-					"id": "679e4de28c78a1cea9234f7b",
-					"description": "--Verify that the hostname of the machine is formatted as follows: login42 (login of the evaluated person).\n--Change this hostname by replacing the login with yours, then restart the machine. If upon restarting, the hostname has not been updated, the evaluation stops here.\n--You can now restore the original hostname of the machine.\n--Ask the evaluated person how to display the partitions of their virtual machine.\n--Compare the output with the example given in the subject. Note: if the evaluated person has done the bonuses, you should refer to the example from the bonus part.",
-					"yes_no": true,
-					"sheetId": "679e4de28c78a1cea9234f75",
-					"created_at": "2025-02-01T16:37:54.423Z",
-					"updated_at": "2025-02-01T16:41:12.149Z"
-				},
-				{
-					"id": "679e4de28c78a1cea9234f7c",
-					"description": "--Verify that the \"sudo\" program is indeed installed on the virtual machine.\n--The evaluated person must now show how to assign your new user to the \"sudo\" group.\n--The subject imposes strict rules for sudo. The evaluated person must first explain the purpose and operation of sudo with examples of their choice. Then, they must demonstrate the implementation of the rules imposed by the subject.\n--Verify that the \"/var/log/sudo/\" directory exists and contains at least one file. Check the contents of the files in this directory; you should see a history of commands used with sudo. Finally, attempt to run a command via sudo. Check if the file(s) in the \"/var/log/sudo/\" directory have been updated. If something does not work as expected or is not clearly explained, the evaluation stops here.",
-					"yes_no": true,
-					"sheetId": "679e4de28c78a1cea9234f75",
-					"created_at": "2025-02-01T16:37:54.423Z",
-					"updated_at": "2025-02-01T16:41:12.149Z"
-				},
-				{
-					"id": "679e4de28c78a1cea9234f7d",
-					"description": "--Verify that the \"UFW\" (or \"Firewalld\" for rocky) program is indeed installed on the virtual machine.\n--Verify that it is functioning correctly.\n--The evaluated person must give you a basic explanation of what UFW (or \"Firewalld\") is and why it's important to use it.\n--List the active rules in UFW (or \"Firewalld\"). There should be a rule for port 4242.\n--Add a new rule to open port 8080. Verify that it has been added by listing the active rules.\n--Finally, with the help of the evaluated person, delete this new rule. If something does not work as expected or is not clearly explained, the evaluation stops here.",
-					"yes_no": true,
-					"sheetId": "679e4de28c78a1cea9234f75",
-					"created_at": "2025-02-01T16:37:54.423Z",
-					"updated_at": "2025-02-01T16:41:12.149Z"
-				},
-				{
-					"id": "679e4de28c78a1cea9234f7e",
-					"description": "--Verify that the SSH service is indeed installed on the virtual machine.\n--Verify that it is functioning correctly.\n--The evaluated person must give you a basic explanation of what SSH is and why it's important to use it.\n--Verify that the SSH service uses only port 4242.\n--The evaluated person must help you use SSH to connect with the new user created. For this, you can use a key or a simple password, depending on the evaluated person. Of course, you must ensure that SSH cannot be used with the \"root\" user as indicated in the subject. If something does not work as expected or is not clearly explained, the evaluation stops here.",
-					"yes_no": true,
-					"sheetId": "679e4de28c78a1cea9234f75",
-					"created_at": "2025-02-01T16:37:54.423Z",
-					"updated_at": "2025-02-01T16:41:12.149Z"
-				},
-				{
-					"id": "679e4de28c78a1cea9234f7f",
-					"description": "**The evaluated person must simply explain:**\n--The operation of their script by displaying its code\n--What \"cron\" is\n--How they have set up their script to execute every 10 minutes from server launch. Once the proper functioning of the script is verified, the evaluated person must make sure that this script executes every minute. You can launch whatever you wish to ensure that the script runs correctly with dynamic values. Finally, the evaluated person must ensure that the script no longer runs at server launch, without modifying the script itself. To verify this point, the server will need to be restarted one last time. At startup, it must be verified that the script still exists in the same place, that its permissions have remained unchanged, and that it has not been modified. If any of the above points are not correct, the evaluation stops here.",
-					"yes_no": true,
-					"sheetId": "679e4de28c78a1cea9234f75",
-					"created_at": "2025-02-01T16:37:54.423Z",
-					"updated_at": "2025-02-01T16:41:12.149Z"
-				}
-			],
-
-			
-			"bonusSections" : [
-				{
-					"id": "679e4de28c78a1cea9234f81",
-					"description": "--The implementation of partitions will be worth 2 points\n--The setup of WordPress, with only the services listed in the subject, will be worth 2 points\n--The free-choice service will be worth 1 point. Verify and test the proper functioning and implementation of each additional service. For the free-choice bonus service, the evaluated person must provide a simple explanation of the service and explain the reasons for their choice. Be aware: NGINX and Apache2 are forbidden.\n",
-					"yes_no": false,
-					
-					"sheetId": "679e4de28c78a1cea9234f75",
-					"created_at": "2025-02-01T16:37:54.512Z",
-					"updated_at": "2025-02-01T16:41:12.194Z"
-				}
-			],
-			"gradingOptions" :[
-				{
-					"id": "679e45788c78a1cea9234f62",
-					"ok": true,
-					"outstanding": true,
-					"empty_work": true,
-					"incomplete_work": true,
-					"invalid_compilation": true,
-					"norme": true,
-					"cheat": true,
-					"crash": true,
-					"concerning_situations": true,
-					"leaks": true,
-					"forbidden_functions": true,
-					"cannot_support": true,
-					"sheetId": "679e45778c78a1cea9234f5f",
-					"created_at": "2025-02-01T16:02:00.638Z",
-					"updated_at": "2025-02-01T16:05:07.468Z"
-				}
-			]
-        }
+      {
+        "project_title": "Born2beroot",
+        "students": 1,
+        "status": "active",
+        "eval_points": 3,
+		"finish" : true,
+        "time": 60,
+        "introduction": {
+          "EN": "# Introduction\nPlease follow the rules below:\n- Remain polite, courteous, respectful, and constructive during the evaluation process. The well-being of the community depends on it.\n- Identify with the evaluated person or group any potential malfunctions in their work. Take the time to discuss and debate the identified issues.\n- You must take into account that there may be slight differences in interpretation between the project instructions, its scope, and its features. Keep an open mind and grade in the most honest way possible. The pedagogy is only valid if the peer evaluation is done seriously.\n\n",
+          "FR": "# Introduction\nVeuillez suivre les règles ci-dessous :\n- Restez poli, courtois, respectueux et constructif pendant le processus d'évaluation. Le bien-être de la communauté en dépend.\n- Identifiez avec la personne ou le groupe évalué tout dysfonctionnement potentiel dans leur travail. Prenez le temps de discuter et de débattre des problèmes identifiés.\n- Vous devez tenir compte du fait qu'il peut y avoir de légères différences d'interprétation entre les instructions du projet, sa portée et ses fonctionnalités. Gardez l'esprit ouvert et évaluez de la manière la plus honnête possible. La pédagogie n'est valable que si l'évaluation par les pairs est effectuée sérieusement.\n\n"
+        },
+        "languages": [
+          "EN",
+          "FR"
+        ],
+        "language": "EN",
+        "guidelines": {
+          "EN": "# Guidelines\n- Only grade what is contained in the student's or group's cloned Git repository.\n- Ensure that the Git repository actually belongs to the student or group, that the project is the one expected, and that \"git clone\" is used in an empty folder.\n- Thoroughly check that no alias has been used to deceive you and make sure you are evaluating the official submission.\n- To avoid any surprises, check with the student or group for any potential scripts used to facilitate the evaluation (for example, test or automation scripts).\n- If you have not done the project you are evaluating, you must read the subject in its entirety before starting the evaluation.\n- Use the available flags to report an empty submission, a non-working program, a Norme error, cheating, etc. In these cases, the evaluation is finished and the grade is 0, or -42 in case of cheating. However, except in cases of cheating, you are encouraged to continue the discussion on the work submitted, even if it is incomplete. This is to identify mistakes not to repeat in the future.",
+          "FR": "# Directives\n- N'évaluez que ce qui est contenu dans le dépôt Git cloné de l'étudiant ou du groupe.\n- Assurez-vous que le dépôt Git appartient réellement à l'étudiant ou au groupe, que le projet est celui attendu et que \"git clone\" est utilisé dans un dossier vide.\n- Vérifiez attentivement qu'aucun alias n'a été utilisé pour vous tromper et assurez-vous que vous évaluez la soumission officielle.\n- Pour éviter toute surprise, vérifiez auprès de l'étudiant ou du groupe tout script potentiel utilisé pour faciliter l'évaluation (par exemple, des scripts de test ou d'automatisation).\n- Si vous n'avez pas réalisé le projet que vous évaluez, vous devez lire le sujet dans son intégralité avant de commencer l'évaluation.\n- Utilisez les drapeaux disponibles pour signaler une soumission vide, un programme non fonctionnel, une erreur de Norme, une triche, etc. Dans ces cas, l'évaluation est terminée et la note est de 0, ou -42 en cas de triche. Cependant, sauf en cas de triche, vous êtes encouragé à poursuivre la discussion sur le travail soumis, même s'il est incomplet. Ceci afin d'identifier les erreurs à ne pas répéter à l'avenir."
+        },
+        "mandatorySections": [
+          {
+            "description": {
+              "EN": "# Preliminaries\n*If a case of cheating is suspected, grading and evaluation end immediately. To report it, select the \"Cheat\" flag. Be careful to use it calmly, cautiously, and judiciously.*\n\n---\n\n**Preliminary Tests**\nVerify the following points:\n- The conditions for access to the defense are met: the evaluated person(s) is present, the submission is non-empty and truly belongs to them, etc...\n- For this project, you must clone the Git repository on the computer of the person being evaluated.\n\n",
+              "FR": "# Préliminaires\n*Si un cas de triche est suspecté, la notation et l'évaluation se terminent immédiatement. Pour le signaler, sélectionnez le drapeau \"Triche\". Soyez prudent en l'utilisant calmement, avec précaution et judicieusement.*\n\n---\n\n**Tests Préliminaires**\nVérifiez les points suivants :\n- Les conditions d'accès à la défense sont remplies : la(les) personne(s) évaluée(s) est(sont) présente(s), la soumission est non vide et leur appartient réellement, etc...\n- Pour ce projet, vous devez cloner le dépôt Git sur l'ordinateur de la personne évaluée."
+            },
+            "yes_no": true,
+            "separator": "border-t-4",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "# General Instructions\n\n---\n\n**General Guidelines**\n- During the defense, as soon as you need help to verify a point, the evaluated person must assist you.\n- Check that the \"signature.txt\" file is present at the root of the cloned repository.\n- Ensure that the signature contained in \"signature.txt\" matches that of the \".vdi\" file of the virtual machine being evaluated. A simple diff should allow you to compare the two signatures. If needed, ask the evaluated person where their \".vdi\" file is located.\n- As a precaution, you may duplicate the original virtual machine to keep a copy.\n- Launch the virtual machine to be evaluated.\n- If something does not work as expected or the two signatures differ, the evaluation stops here.",
+              "FR": "# Instructions Générales\n\n---\n\n**Directives Générales**\n- Pendant la défense, dès que vous avez besoin d'aide pour vérifier un point, la personne évaluée doit vous aider.\n- Vérifiez que le fichier \"signature.txt\" est présent à la racine du dépôt cloné.\n- Assurez-vous que la signature contenue dans \"signature.txt\" correspond à celle du fichier \".vdi\" de la machine virtuelle évaluée. Un simple diff devrait vous permettre de comparer les deux signatures. Si nécessaire, demandez à la personne évaluée où se trouve son fichier \".vdi\".\n- Par précaution, vous pouvez dupliquer la machine virtuelle originale pour en conserver une copie.\n- Lancez la machine virtuelle à évaluer.\n- Si quelque chose ne fonctionne pas comme prévu ou si les deux signatures diffèrent, l'évaluation s'arrête ici."
+            },
+            "yes_no": true,
+            "separator": "border-t-4",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "# Mandatory Part\n*The project involves creating and configuring a virtual machine following strict rules. The evaluated person will need to assist you during the defense. Make sure all the following points are respected.*\n\n---\n\nProject Overview\n- The evaluated person must simply explain:\n  - The basic functioning of their virtual machine\n  - Their choice of operating system\n  - The basic differences between Rocky and Debian\n  - The benefits of virtual machines\n  - If the chosen operating system is Rocky, they must explain what SELinux and DNF are.\n  - If the chosen operating system is Debian, they must explain the difference between aptitude and apt, and what APPArmor is. During the defense, a script must display information every 10 minutes. Its operation will be checked in detail later. If the explanations are not clear, the evaluation stops here.",
+              "FR": "# Partie Obligatoire\n*Le projet implique la création et la configuration d'une machine virtuelle suivant des règles strictes. La personne évaluée devra vous aider pendant la défense. Assurez-vous que tous les points suivants sont respectés.*\n\n---\n\nAperçu du Projet\n- La personne évaluée doit simplement expliquer :\n  - Le fonctionnement de base de sa machine virtuelle\n  - Son choix de système d'exploitation\n  - Les différences fondamentales entre Rocky et Debian\n  - Les avantages des machines virtuelles\n  - Si le système d'exploitation choisi est Rocky, elle doit expliquer ce que sont SELinux et DNF.\n  - Si le système d'exploitation choisi est Debian, elle doit expliquer la différence entre aptitude et apt, et ce qu'est APPArmor. Pendant la défense, un script doit afficher des informations toutes les 10 minutes. Son fonctionnement sera vérifié en détail plus tard. Si les explications ne sont pas claires, l'évaluation s'arrête ici."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Simple Configuration**\nReminder: as soon as you need help to verify a point, the evaluated person must be able to assist you.\n- Verify that the machine does not have a graphical environment at startup. A password will be requested before any connection attempt on this machine. Log in with a non-root user. Verify that the chosen password respects the rules imposed in the subject. Then, with the help of the evaluator, make sure that:\n- The chosen operating system is indeed Debian or Rocky\n- The UFW service is properly launched\n- The SSH service is properly launched. If something does not work as expected or is not clearly explained, the evaluation stops here.",
+              "FR": "**Configuration Simple**\nRappel : dès que vous avez besoin d'aide pour vérifier un point, la personne évaluée doit être en mesure de vous aider.\n- Vérifiez que la machine n'a pas d'environnement graphique au démarrage. Un mot de passe sera demandé avant toute tentative de connexion sur cette machine. Connectez-vous avec un utilisateur non-root. Vérifiez que le mot de passe choisi respecte les règles imposées dans le sujet. Ensuite, avec l'aide de l'évaluateur, assurez-vous que :\n- Le système d'exploitation choisi est bien Debian ou Rocky\n- Le service UFW est correctement lancé\n- Le service SSH est correctement lancé. Si quelque chose ne fonctionne pas comme prévu ou n'est pas clairement expliqué, l'évaluation s'arrête ici."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**User**\nReminder: as soon as you need help to check a point, the evaluated person must be able to assist you.\n\nThe subject requires that a user with the login name of the evaluated person be present on the virtual machine. Verify that this user has been added and that they belong to the \"sudo\" and \"user42\" groups.\n\nEnsure the rules imposed in the subject concerning the password policy have been implemented by following the steps below.\nFirst, create a new user. Assign them a password of your choice, respecting the subject's rules.\nThe evaluated person must now explain how they were able to implement the requested rules on their virtual machine.\nNormally, one or two files would have been modified.\nIf there is any problem, the evaluation stops here.\n- Now that you have a new user, ask the evaluated person to create a group named \"evaluating\" in front of you and assign it to this user. \nFinally, check that this user indeed belongs to the \"evaluating\" group.\n- To finish, ask the evaluated person to explain the purpose of this password policy, as well as the advantages and disadvantages of its implementation. Of course, answering that it is because the subject requires it does not count.\nIf something does not work as expected or is not clearly explained, the evaluation stops here.",
+              "FR": "**Utilisateur**\nRappel : dès que vous avez besoin d'aide pour vérifier un point, la personne évaluée doit être en mesure de vous aider.\n\nLe sujet exige qu'un utilisateur avec le nom de connexion de la personne évaluée soit présent sur la machine virtuelle. Vérifiez que cet utilisateur a été ajouté et qu'il appartient aux groupes \"sudo\" et \"user42\".\n\nAssurez-vous que les règles imposées dans le sujet concernant la politique de mot de passe ont été mises en œuvre en suivant les étapes ci-dessous.\nTout d'abord, créez un nouvel utilisateur. Attribuez-lui un mot de passe de votre choix, en respectant les règles du sujet.\nLa personne évaluée doit maintenant expliquer comment elle a pu mettre en œuvre les règles demandées sur sa machine virtuelle.\nNormalement, un ou deux fichiers auraient été modifiés.\nEn cas de problème, l'évaluation s'arrête ici.\n- Maintenant que vous avez un nouvel utilisateur, demandez à la personne évaluée de créer un groupe nommé \"evaluating\" devant vous et de l'affecter à cet utilisateur.\nEnfin, vérifiez que cet utilisateur appartient bien au groupe \"evaluating\".\n- Pour terminer, demandez à la personne évaluée d'expliquer le but de cette politique de mot de passe, ainsi que les avantages et les inconvénients de sa mise en œuvre. Bien sûr, répondre que c'est parce que le sujet l'exige ne compte pas.\nSi quelque chose ne fonctionne pas comme prévu ou n'est pas clairement expliqué, l'évaluation s'arrête ici."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Hostname and Partitions**\nReminder: as soon as you need help to check a point, the evaluated person must be able to assist you.\n- Verify that the hostname of the machine is formatted as follows: login42 (login of the evaluated person).\n- Change this hostname by replacing the login with yours, then restart the machine. If upon restarting, the hostname has not been updated, the evaluation stops here.\n- You can now restore the original hostname of the machine.\n- Ask the evaluated person how to display the partitions of their virtual machine.\n- Compare the output with the example given in the subject. Note: if the evaluated person has done the bonuses, you should refer to the example from the bonus part.\n\nThis part is an opportunity to discuss partitions! The evaluated person must give you a brief explanation of how LVM works and why it's beneficial.\nIf something does not work as expected or is not clearly explained, the evaluation stops here.",
+              "FR": "**Nom d'hôte et Partitions**\nRappel : dès que vous avez besoin d'aide pour vérifier un point, la personne évaluée doit être en mesure de vous aider.\n- Vérifiez que le nom d'hôte de la machine est formaté comme suit : login42 (login de la personne évaluée).\n- Modifiez ce nom d'hôte en remplaçant le login par le vôtre, puis redémarrez la machine. Si, après le redémarrage, le nom d'hôte n'a pas été mis à jour, l'évaluation s'arrête ici.\n- Vous pouvez maintenant restaurer le nom d'hôte original de la machine.\n- Demandez à la personne évaluée comment afficher les partitions de sa machine virtuelle.\n- Comparez la sortie avec l'exemple donné dans le sujet. Remarque : si la personne évaluée a fait les bonus, vous devez vous référer à l'exemple de la partie bonus.\n\nCette partie est l'occasion de discuter des partitions ! La personne évaluée doit vous donner une brève explication du fonctionnement de LVM et de ses avantages.\nSi quelque chose ne fonctionne pas comme prévu ou n'est pas clairement expliqué, l'évaluation s'arrête ici."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**SUDO**\nReminder: as soon as you need help to check a point, the evaluated person must be able to assist you.\n- Verify that the \"sudo\" program is indeed installed on the virtual machine.\n- The evaluated person must now show how to assign your new user to the \"sudo\" group.\n- The subject imposes strict rules for sudo. The evaluated person must first explain the purpose and operation of sudo with examples of their choice. Then, they must demonstrate the implementation of the rules imposed by the subject.\n- Verify that the \"/var/log/sudo/\" directory exists and contains at least one file. Check the contents of the files in this directory; you should see a history of commands used with sudo. Finally, attempt to run a command via sudo. Check if the file(s) in the \"/var/log/sudo/\" directory have been updated. If something does not work as expected or is not clearly explained, the evaluation stops here.\n\n",
+              "FR": "**SUDO**\nRappel : dès que vous avez besoin d'aide pour vérifier un point, la personne évaluée doit être en mesure de vous aider.\n- Vérifiez que le programme \"sudo\" est bien installé sur la machine virtuelle.\n- La personne évaluée doit maintenant montrer comment affecter votre nouvel utilisateur au groupe \"sudo\".\n- Le sujet impose des règles strictes pour sudo. La personne évaluée doit d'abord expliquer le but et le fonctionnement de sudo avec des exemples de son choix. Ensuite, elle doit démontrer la mise en œuvre des règles imposées par le sujet.\n- Vérifiez que le répertoire \"/var/log/sudo/\" existe et contient au moins un fichier. Vérifiez le contenu des fichiers de ce répertoire ; vous devriez voir un historique des commandes utilisées avec sudo. Enfin, essayez d'exécuter une commande via sudo. Vérifiez si le(s) fichier(s) du répertoire \"/var/log/sudo/\" ont été mis à jour. Si quelque chose ne fonctionne pas comme prévu ou n'est pas clairement expliqué, l'évaluation s'arrête ici."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "UFW / Firewalld\nReminder: as soon as you need help to check a point, the evaluated person must be able to assist you.\n- Verify that the \"UFW\" (or \"Firewalld\" for rocky) program is indeed installed on the virtual machine.\n- Verify that it is functioning correctly.\n- The evaluated person must give you a basic explanation of what UFW (or \"Firewalld\") is and why it's important to use it.\n- List the active rules in UFW (or \"Firewalld\"). There should be a rule for port 4242.\n- Add a new rule to open port 8080. Verify that it has been added by listing the active rules.\n- Finally, with the help of the evaluated person, delete this new rule. If something does not work as expected or is not clearly explained, the evaluation stops here.",
+              "FR": "UFW / Firewalld\nRappel : dès que vous avez besoin d'aide pour vérifier un point, la personne évaluée doit être en mesure de vous aider.\n- Vérifiez que le programme \"UFW\" (ou \"Firewalld\" pour rocky) est bien installé sur la machine virtuelle.\n- Vérifiez qu'il fonctionne correctement.\n- La personne évaluée doit vous donner une explication de base de ce qu'est UFW (ou \"Firewalld\") et pourquoi il est important de l'utiliser.\n- Listez les règles actives dans UFW (ou \"Firewalld\"). Il devrait y avoir une règle pour le port 4242.\n- Ajoutez une nouvelle règle pour ouvrir le port 8080. Vérifiez qu'elle a été ajoutée en listant les règles actives.\n- Enfin, avec l'aide de la personne évaluée, supprimez cette nouvelle règle. Si quelque chose ne fonctionne pas comme prévu ou n'est pas clairement expliqué, l'évaluation s'arrête ici."
+            },
+            "yes_no": true,
+            "separator": false,
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**SSH**\nReminder: as soon as you need help to check a point, the evaluated person must be able to assist you.\n- Verify that the SSH service is indeed installed on the virtual machine.\n- Verify that it is functioning correctly.\n- The evaluated person must give you a basic explanation of what SSH is and why it's important to use it.\n- Verify that the SSH service uses only port 4242.\n- The evaluated person must help you use SSH to connect with the new user created. For this, you can use a key or a simple password, depending on the evaluated person. Of course, you must ensure that SSH cannot be used with the \"root\" user as indicated in the subject. If something does not work as expected or is not clearly explained, the evaluation stops here.\n**The evaluated person must simply explain:**\n",
+              "FR": "**SSH**\nRappel : dès que vous avez besoin d'aide pour vérifier un point, la personne évaluée doit être en mesure de vous aider.\n- Vérifiez que le service SSH est bien installé sur la machine virtuelle.\n- Vérifiez qu'il fonctionne correctement.\n- La personne évaluée doit vous donner une explication de base de ce qu'est SSH et pourquoi il est important de l'utiliser.\n- Vérifiez que le service SSH utilise uniquement le port 4242.\n- La personne évaluée doit vous aider à utiliser SSH pour vous connecter avec le nouvel utilisateur créé. Pour cela, vous pouvez utiliser une clé ou un simple mot de passe, selon la personne évaluée. Bien sûr, vous devez vous assurer que SSH ne peut pas être utilisé avec l'utilisateur \"root\" comme indiqué dans le sujet. Si quelque chose ne fonctionne pas comme prévu ou n'est pas clairement expliqué, l'évaluation s'arrête ici.\n**La personne évaluée doit simplement expliquer :**"
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Script Monitoring**\nReminder: as soon as you need help to check a point, the evaluated person must be able to assist you.\nThe evaluated person must simply explain:\n- The operation of their script by displaying its code\n- What \"cron\" is\n- How they have set up their script to execute every 10 minutes from server launch. Once the proper functioning of the script is verified, the evaluated person must make sure that this script executes every minute. You can launch whatever you wish to ensure that the script runs correctly with dynamic values. Finally, the evaluated person must ensure that the script no longer runs at server launch, without modifying the script itself. To verify this point, the server will need to be restarted one last time. At startup, it must be verified that the script still exists in the same place, that its permissions have remained unchanged, and that it has not been modified. If any of the above points are not correct, the evaluation stops here.",
+              "FR": "**Surveillance du Script**\nRappel : dès que vous avez besoin d'aide pour vérifier un point, la personne évaluée doit être en mesure de vous aider.\nLa personne évaluée doit simplement expliquer :\n- Le fonctionnement de son script en affichant son code\n- Ce qu'est \"cron\"\n- Comment elle a configuré son script pour qu'il s'exécute toutes les 10 minutes à partir du lancement du serveur. Une fois le bon fonctionnement du script vérifié, la personne évaluée doit s'assurer que ce script s'exécute toutes les minutes. Vous pouvez lancer ce que vous voulez pour vous assurer que le script fonctionne correctement avec des valeurs dynamiques. Enfin, la personne évaluée doit s'assurer que le script ne s'exécute plus au lancement du serveur, sans modifier le script lui-même. Pour vérifier ce point, le serveur devra être redémarré une dernière fois. Au démarrage, il doit être vérifié que le script existe toujours au même endroit, que ses permissions sont restées inchangées et qu'il n'a pas été modifié. Si l'un des points ci-dessus n'est pas correct, l'évaluation s'arrête ici."
+            },
+            "yes_no": true,
+            "separator": false,
+            "type": "mandatory"
+          }
+        ],
+        "bonusSections": [
+          {
+            "description": {
+              "EN": "# Bonus\n*Bonuses will only be examined if the mandatory part is excellent. This means that the mandatory part must have been completed from start to finish, with perfect error management even in cases of unexpected use. If all mandatory points have not been awarded during this defense, no bonus points will be counted.*\n\n---\n\n**Bonus**\nVerify with the help of the subject and the evaluated person the available bonuses for this project:\n- The implementation of partitions will be worth 2 points\n- The setup of WordPress, with only the services listed in the subject, will be worth 2 points\n- The free-choice service will be worth 1 point. Verify and test the proper functioning and implementation of each additional service. For the free-choice bonus service, the evaluated person must provide a simple explanation of the service and explain the reasons for their choice. Be aware: NGINX and Apache2 are forbidden.\n",
+              "FR": "# Bonus\n*Les bonus ne seront examinés que si la partie obligatoire est excellente. Cela signifie que la partie obligatoire doit avoir été réalisée du début à la fin, avec une gestion parfaite des erreurs, même en cas d'utilisation inattendue. Si tous les points obligatoires n'ont pas été attribués lors de cette défense, aucun point bonus ne sera comptabilisé.*\n\n---\n\n**Bonus**\nVérifiez avec l'aide du sujet et de la personne évaluée les bonus disponibles pour ce projet :\n- La mise en œuvre des partitions vaudra 2 points\n- La configuration de WordPress, avec uniquement les services énumérés dans le sujet, vaudra 2 points\n- Le service au choix vaudra 1 point. Vérifiez et testez le bon fonctionnement et la mise en œuvre de chaque service supplémentaire. Pour le service bonus au choix, la personne évaluée doit fournir une explication simple du service et expliquer les raisons de son choix. Attention : NGINX et Apache2 sont interdits."
+            },
+            "separator": false,
+            "yes_no": false,
+            "type": "bonus"
+          }
+        ],
+        "attachments": [
+          {
+            "title": "subject_en.pdf",
+            "url": "en.subject.pdf"
+          },
+          {
+            "title": "subject_fr.pdf",
+            "url": "fr.subject.pdf"
+          }
+        ],
+        "updated_at": "2023-07-31T22:00:00.000Z",
+        "gradingOptions": [
+          {
+            "ok": true,
+            "outstanding": true,
+            "empty_work": true,
+            "incomplete_work": true,
+            "invalid_compilation": true,
+            "norme": true,
+            "cheat": true,
+            "crash": true,
+            "concerning_situations": true,
+            "leaks": true,
+            "forbidden_functions": true,
+            "cannot_support": true
+          }
+        ]
+      }
     ],
-    "message": "Sheets found successfully"
-}
+    "message": "Sheet created successfully"
+  }
