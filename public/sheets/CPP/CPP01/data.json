@@ -1,0 +1,225 @@
+{
+  "success": true,
+  "data": [
+    {
+      "project_title": "CPP01",
+      "students": 1,
+      "status": "active",
+      "finish" : true,
+      "eval_points": 3,
+      "time": 30,
+      "id": 14,
+      "introduction": {
+        "FR": "# Introduction\n- Restez polis, courtois, respectueux et constructifs tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Identifiez avec l'étudiant ou le groupe dont le travail est évalué les dysfonctionnements possibles de leur projet. Prenez le temps de discuter et de débattre des problèmes qui ont pu être identifiés.\n- Vous devez tenir compte du fait qu'il peut y avoir des différences dans la façon dont vos pairs ont compris les instructions du projet et l'étendue de ses fonctionnalités. Gardez toujours l'esprit ouvert et évaluez-les aussi honnêtement que possible. La pédagogie n'est utile que si l'évaluation par les pairs est faite sérieusement.",
+        "EN": "# Introduction\n- Remain polite, courteous, respectful and constructive throughout the evaluation process. The well-being of the community depends on it.\n- Identify with the student or group whose work is evaluated the possible dysfunctions in their project. Take the time to discuss and debate the problems that may have been identified.\n- You must consider that there might be some differences in how your peers might have understood the project's instructions and the scope of its functionalities. Always keep an open mind and grade them as honestly as possible. The pedagogy is useful only and only if the peer-evaluation is done seriously."
+      },
+      "guidelines": {
+        "FR": "# Directives\n- Ne notez que le travail qui a été remis dans le dépôt Git de l'étudiant ou du groupe évalué.\n- Vérifiez que le dépôt Git appartient bien à l'étudiant(s). Assurez-vous que le projet est bien celui attendu. Vérifiez également que 'git clone' est utilisé dans un dossier vide.\n- Vérifiez attentivement qu'aucun alias malveillant n'a été utilisé pour vous tromper et vous faire évaluer quelque chose qui n'est pas le contenu du dépôt officiel.\n- Pour éviter toute surprise et, le cas échéant, examinez ensemble tous les scripts utilisés pour faciliter la notation (scripts de test ou d'automatisation).\n- Si vous n'avez pas terminé le devoir que vous allez évaluer, vous devez lire l'intégralité du sujet avant de commencer le processus d'évaluation.\n- Utilisez les drapeaux disponibles pour signaler un dépôt vide, un programme non fonctionnel, une erreur de Norme, une tricherie, etc. Dans ces cas, le processus d'évaluation se termine et la note finale est de 0, ou -42 en cas de tricherie. Toutefois, à l'exception de la tricherie, les étudiants sont fortement encouragés à examiner ensemble le travail qui a été remis, afin d'identifier les erreurs qui ne devraient pas être répétées à l'avenir.\n- Vous ne devriez jamais avoir à modifier un fichier, sauf le fichier de configuration s'il existe. Si vous voulez modifier un fichier, prenez le temps d'expliquer les raisons à l'étudiant évalué et assurez-vous que vous êtes tous d'accord.\n- Vous devez également vérifier l'absence de fuites de mémoire. Toute mémoire allouée sur le tas doit être correctement libérée avant la fin de l'exécution. Vous êtes autorisé à utiliser tous les outils disponibles sur l'ordinateur, tels que leaks, valgrind ou e_fence. En cas de fuites de mémoire, cochez le drapeau approprié.",
+        "EN": "# Guidelines\n- Only grade the work that was turned in the Git repository of the evaluated student or group.\n- Double-check that the Git repository belongs to the student(s). Ensure that the project is the one expected. Also, check that 'git clone' is used in an empty folder.\n- Check carefully that no malicious aliases was used to fool you and make you evaluate something that is not the content of the official repository.\n- To avoid any surprises and if applicable, review together any scripts used to facilitate the grading (scripts for testing or automation).\n- If you have not completed the assignment you are going to evaluate, you have to read the entire subject prior to starting the evaluation process.\n- Use the available flags to report an empty repository, a non-functioning program, a Norm error, cheating, and so forth. In these cases, the evaluation process ends and the final grade is 0, or -42 in case of cheating. However, except for cheating, student are strongly encouraged to review together the work that was turned in, in order to identify any mistakes that shouldn't be repeated in the future.\n- You should never have to edit any file except the configuration file if it exists. If you want to edit a file, take the time to explicit the reasons with the evaluated student and make sure both of you are okay with this.\n- You must also verify the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of execution. You are allowed to use any of the different tools available on the computer, such as leaks, valgrind, or e_fence. In case of memory leaks, tick the appropriate flag."
+      },
+      "attachments": [
+        {
+          "title": "subject_en.pdf",
+          "url": "en.subject.pdf"
+        },
+        {
+          "title": "subject_fr.pdf",
+          "url": "fr.subject.pdf"
+        },
+        {
+          "title": "extras",
+          "url": "/Extras"
+        }
+      ],
+      "mandatorySections": [
+        {
+          "description": {
+            "FR": "# Tests préliminaires\n*En cas de suspicion de tricherie, l'évaluation s'arrête ici. Utilisez le drapeau \"Triche\" pour le signaler. Prenez cette décision calmement, judicieusement et, s'il vous plaît, utilisez ce bouton avec prudence.*\n\n---\n\n**Prérequis**\nLe code doit être compilé avec c++ et les drapeaux -Wall -Wextra -Werror\nN'oubliez pas que ce projet doit suivre la norme C++98. Ainsi, les fonctions ou conteneurs C++11 (et ultérieurs) ne sont PAS attendus.\n\nL'un de ces éléments signifie que vous ne devez pas noter l'exercice en question :\n- Une fonction est implémentée dans un fichier d'en-tête (sauf pour les fonctions de modèle).\n- Un Makefile compile sans les drapeaux requis et/ou un autre compilateur que c++.\n\nL'un de ces éléments signifie que vous devez signaler le projet avec \"Fonction interdite\" :\n- Utilisation d'une fonction \"C\" (*alloc, *printf, free).\n- Utilisation d'une fonction non autorisée dans les directives de l'exercice.\n- Utilisation de \"using namespace <ns_name>\" ou du mot-clé \"friend\".\n- Utilisation d'une bibliothèque externe, ou de fonctionnalités provenant de versions autres que C++98.",
+            "EN": "# Tests préliminaires\n*If cheating is suspected, the evaluation stops here. Use the \"Cheat\" flag to report it. Take this decision calmly, wisely, and please, use this button with caution.*\n\n---\n\n**Prerequisites**\nThe code must compile with c++ and the flags -Wall -Wextra -Werror\nDon't forget this project has to follow the C++98 standard. Thus, C++11 (and later) functions or containers are NOT expected.\n\nAny of these means you must not grade the exercise in question:\n- A function is implemented in a header file (except for template functions).\n- A Makefile compiles without the required flags and/or another compiler than c++.\n\nAny of these means that you must flag the project with \"Forbidden Function\":\n- Use of a \"C\" function (*alloc, *printf, free).\n- Use of a function not allowed in the exercise guidelines.\n- Use of \"using namespace <ns_name>\" or the \"friend\" keyword.\n- Use of an external library, or features from versions other than C++98."
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "# Exercice 00 : BraiiiiiiinnnzzzZ\n*Le but de cet exercice est de comprendre comment allouer de la mémoire en C++.*\n\n---\n\n**Makefile et tests**\nIl existe un Makefile qui compile en utilisant les drapeaux appropriés.\nIl existe au moins un main pour tester l'exercice.",
+            "EN": "# Exercise 00: BraiiiiiiinnnzzzZ\n*The goal of this exercise is to understand how to allocate memory in C++.*\n\n---\n\n **Makefile and tests**\nThere is a Makefile that compiles using the appropriate flags.\nThere is at least a main to test the exercise."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Classe Zombie**\nIl existe une classe Zombie.\nElle possède un attribut de nom privé.\nElle possède au moins un constructeur.\nElle possède une fonction membre announce( void ) qui affiche : \"<nom> : BraiiiiiiinnnzzzZ...\"\nLe destructeur affiche un message de débogage qui inclut le nom du zombie.",
+            "EN": "**Zombie Class**\nThere is a Zombie Class.\nIt has a private name attribute.\nIt has at least a constructor.\nIt has a member function announce( void ) that prints: \"<name>: BraiiiiiiinnnzzzZ...\"\nThe destructor prints a debug message that includes the name of the zombie."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**newZombie**\nIl existe une fonction newZombie() prototypée comme suit : [ Zombie* newZombie( std::string name ); ]\nElle doit allouer un Zombie sur le tas et le renvoyer.\nIdéalement, elle devrait appeler le constructeur qui prend une chaîne de caractères et initialise le nom.\nL'exercice doit être marqué comme correct si le Zombie peut s'annoncer avec le nom passé à la fonction.\nIl existe des tests pour prouver que tout fonctionne.\nLe zombie est supprimé correctement avant la fin du programme.",
+            "EN": "**newZombie**\nThere is a newZombie() function prototyped as: [ Zombie* newZombie( std::string name ); ]\nIt should allocate a Zombie on the heap and return it.\nIdeally, it should call the constructor that takes a string and initializes the name.\nThe exercise should be marked as correct if the Zombie can announce itself with the name passed to the function.\nThere are tests to prove everything works.\nThe zombie is deleted correctly before the end of the program."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**randomChump**\nIl existe une fonction randomChump() prototypée comme suit : [ void randomChump( std::string name ); ]\nElle doit créer un Zombie sur la pile et le faire s'annoncer.\nIdéalement, le zombie devrait être alloué sur la pile (donc implicitement supprimé à la fin de la fonction). Il peut également être alloué sur le tas, puis supprimé explicitement.\nL'étudiant doit justifier ses choix.\nIl existe des tests pour prouver que tout fonctionne.",
+            "EN": "**randomChump**\nThere is a randomChump() function prototyped as: [ void randomChump( std::string name ); ]\nIt should create a Zombie on the stack, and make it announce itself.\nIdeally the zombie should be allocated on the stack (so implicitly deleted at the end of the function). It can also be allocated on the heap and then explicitly deleted.\nThe student must justify their choices.\nThere are tests to prove everything works."
+          },
+          "yes_no": false,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "# Exercice 01 : Encore plus de cerveaux !\n*Le but de cet exercice est d'allouer un certain nombre d'objets en même temps en utilisant new[], de les initialiser et de les supprimer correctement.*\n\n---\n\n**Makefile et tests**\nIl existe un Makefile qui compile en utilisant les drapeaux appropriés.\nIl existe au moins un main pour tester l'exercice.",
+            "EN": "# Exercise 01: Moar brainz!\n*The goal of this exercise is to allocate a number of objects at the same time using new[], initialize them, and to properly delete them.*\n\n---\n\n**Makefile and tests**\nThere is a Makefile that compiles using the appropriate flags.\nThere is at least a main to test the exercise."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**zombieHorde**\nLa classe Zombie a un constructeur par défaut.\nIl existe une fonction zombieHorde() prototypée comme suit : [ Zombie* zombieHorde( int N, std::string name ); ]\nElle alloue N zombies sur le tas explicitement en utilisant new[].\nAprès l'allocation, il y a une initialisation des objets pour définir leur nom.\nElle renvoie un pointeur vers le premier zombie.\nIl y a suffisamment de tests dans le main pour prouver les points précédents.\nPar exemple : appeler announce() sur tous les zombies.\nEnfin, tous les zombies doivent être supprimés en même temps dans le main.",
+            "EN": "**zombieHorde**\nThe Zombie Class has a default constructor.\nThere is a zombieHorde() function prototyped as: [ Zombie* zombieHorde( int N, std::string name ); ]\nIt allocates N zombies on the heap explicitly using new[].\nAfter the allocation, there is an initialization of the objects to set their name.\nIt returns a pointer to the first zombie.\nThere are enough tests in the main to prove the previous points.\nLike: calling announce() on all the zombies.\nLast, all the zombies should be deleted at the same time in the main."
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "# Exercice 02 : Salut, c'est le cerveau\n*Démystifiez les références ! Démystifiez les références ! Démystifiez les références ! Démystifiez les références ! Démystifiez les références ! Démystifiez les références ! Démystifiez les références ! Démystifiez les références ! Démystifiez les références ! Démystifiez les références ! Démystifiez les références ! Démystifiez les références !*",
+            "EN": "# Exercise 02: HI THIS IS BRAIN\n*Demystify references! Demystify references! Demystify references! Demystify references! Demystify references! Demystify references! Demystify references! Demystify references! Demystify references! Demystify references! Demystify references! Demystify references!*\n\n---\n\n**Makefile and tests**\nThere is a Makefile that compiles using the appropriate flags.\nThere is at least a main to test the exercise."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Salut, c'est le cerveau**\nIl existe une chaîne de caractères contenant \"HI THIS IS BRAIN\".\nstringPTR est un pointeur vers la chaîne de caractères.\nstringREF est une référence à la chaîne de caractères.\nL'adresse de la chaîne de caractères est affichée en utilisant la variable string, le stringPTR et le stringREF.\nLe contenu de la variable est affiché en utilisant le stringPTR et le stringREF.",
+            "EN": "**HI THIS IS BRAIN**\nThere is a string containing \"HI THIS IS BRAIN\".\nstringPTR is a pointer to the string.\nstringREF is a reference to the string.\nThe address of the string is displayed using the string variable, the\nstringPTR and the stringREF.\nThe variable content is displayed using the stringPTR and the stringREF."
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "# Exercice 03 : Violence inutile\n*L'objectif de cet exercice est de comprendre que les pointeurs et les références présentent de petites différences qui les rendent plus ou moins appropriés selon l'utilisation et le cycle de vie de l'objet utilisé.*\n\n---\n\n**Makefile et tests**\nIl existe un Makefile qui compile en utilisant les drapeaux appropriés.\nIl existe au moins un main pour tester l'exercice.",
+            "EN": "# Exercise 03: Unnecessary violence\n*The objective of this exercise is to understand that pointers and references present some small differences that make them less or more appropriate depending on the use and the lifecycle of the object used.\n\n---\n\n**Makefile and tests**\nThere is a Makefile that compiles using the appropriate flags.\nThere is at least a main to test the exercise."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Arme**\nIl existe une classe Weapon qui a une chaîne de caractères de type, un getType() et un setType().\nLa fonction getType() renvoie une référence const à la chaîne de caractères de type.",
+            "EN": "**Weapon**\nThere is a Weapon class that has a type string, a getType() and a setType().\nThe getType() function returns a const reference to the type string."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**HumanA et HumanB**\nHumanA peut avoir une référence ou un pointeur vers l'arme.\nIdéalement, elle devrait être implémentée comme une référence, car l'arme existe de la création à la destruction, et ne change jamais.\nHumanB doit avoir un pointeur vers une arme car le champ n'est pas défini au moment de la création, et l'arme peut être NULL.",
+            "EN": "**HumanA and HumanB**\nHumanA can have a reference or a pointer to the Weapon.\nIdeally, it should be implemented as a reference, since the Weapon exists from creation until destruction, and never changes.\nHumanB must have a pointer to a Weapon since the field is not set at creation time, and the weapon can be NULL."
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "# Exercice 04 : Sed est pour les perdants\n*Grâce à cet exercice, l'étudiant devrait s'être familiarisé avec ifstream et ofstream.*\n\n---\n\n**Makefile et tests**\nIl existe un Makefile qui compile en utilisant les drapeaux appropriés.\nIl existe au moins un main pour tester l'exercice.",
+            "EN": "# Exercise 04: Sed is for losers\n*Thanks to this exercise, the student should have gotten familiar with ifstream and ofstream.*\n\n---\n\n**Makefile and tests**\nThere is a Makefile that compiles using the appropriate flags.\nThere is at least a main to test the exercise."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Exercice 04**\nIl existe une fonction replace (ou autre nom) qui fonctionne comme spécifié dans le sujet.\nLa gestion des erreurs est efficace : essayez de passer un fichier qui n'existe pas, modifiez les autorisations, passez-le vide, etc.\nSi vous trouvez une erreur qui n'est pas gérée, et qui n'est pas complètement ésotérique, pas de points pour cet exercice.\nLe programme doit lire à partir du fichier en utilisant un ifstream ou équivalent, et écrire en utilisant un ofstream ou équivalent.\nL'implémentation de la fonction doit être faite en utilisant des fonctions de std::string, pas en lisant la chaîne de caractères caractère par caractère.\nCe n'est plus du C !\n\n",
+            "EN": "**Exercise 04**\nThere is a function replace (or other name) that works as specified in the subject.\nThe error management is efficient: try to pass a file that does not exist, change the permissions, pass it empty, etc.\nIf you can find an error that isn't handled, and isn't completely esoteric, no points for this exercise.\nThe program must read from the file using an ifstream or equivalent, and write using an ofstream or equivalent.\nThe implementation of the function should be done using functions from std::string, no by reading the string character by character.\nThis is not C anymore!\n\n"
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "# Exercice 05 : Harl 2.0\n*Le but de cet exercice est d'utiliser des pointeurs vers des fonctions membres de classe. C'est également l'occasion de découvrir les différents niveaux de journalisation.*\n\n---\n\n**Makefile et tests**\nIl existe un Makefile qui compile en utilisant les drapeaux appropriés.\nIl existe au moins un main pour tester l'exercice.",
+            "EN": "# Exercise 05: Harl 2.0\n*The goal of this exercise is to use pointers to class member functions. Also, this is the opportunity to discover the different log levels.*\n\n---\n\n**Makefile and tests**\nThere is a Makefile that compiles using the appropriate flags.\nThere is at least a main to test the exercise."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Notre bien-aimé Harl**\nIl existe une classe Harl avec au moins les 5 fonctions requises dans le sujet.\nLa fonction complain() exécute les autres fonctions en utilisant un pointeur vers celles-ci.\nIdéalement, l'étudiant aurait dû implémenter une façon de faire correspondre les différentes chaînes de caractères correspondant au niveau de journalisation aux pointeurs de la fonction membre correspondante.\nSi l'implémentation est différente mais que l'exercice fonctionne, vous devez le marquer comme valide. La seule chose qui n'est pas autorisée est d'utiliser un vilain if/elseif/else.\nL'étudiant aurait pu choisir de modifier le message que Harl affiche ou d'afficher les exemples donnés dans le sujet, les deux sont valides.",
+            "EN": "**Our beloved Harl**\nThere is a class Harl with at least the 5 functions required in the subject.\nThe function complain() executes the other functions using a pointer to them.\nIdeally, the student should have implemented a way of matching the different strings corresponding to the log level to the pointers of the corresponding member function.\nIf the implementation is different but the exercise works, you should mark it as valid. The only thing that is not allowed is using a ugly if/elseif/else.\nThe student could have chosen to change the message Harl displays or to display the examples given in the subject, both are valid."
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "# Exercice 06 : Filtre Harl\n*Maintenant que vous êtes des codeurs expérimentés, vous devriez utiliser de nouveaux types d'instructions, des instructions, des boucles, etc. Le but de ce dernier exercice est de vous faire découvrir l'instruction switch.*\n\n---\n\n**Makefile et tests**\nIl existe un Makefile qui compile en utilisant les drapeaux appropriés.\nIl existe au moins un main pour tester l'exercice.",
+            "EN": "# Exercise 06: Harl filter\n*Now that you are experienced coders, you should use new instruction types, statements, loops, etc. The goal of this last exercise is to make you discover the switch statement.*\n\n---\n\n**Makefile and tests**\nThere is a Makefile that compiles using the appropriate flags.\nThere is at least a main to test the exercise."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Désactivation de Harl**\nLe programme harlFilter prend comme argument l'un des niveaux de journalisation (\"DEBUG\", \"INFO\", \"WARNING\" ou \"ERROR\").\nIl devrait alors afficher uniquement les messages qui sont au même niveau ou au-dessus (DEBUG < INFO < WARNING < ERROR).\nCela doit être implémenté en utilisant une instruction switch avec un cas par défaut.\nEncore une fois, plus de if/elseif/else s'il vous plaît.",
+            "EN": "**Switching Harl Off**\nThe program harlFilter takes as argument any of the log levels (\"DEBUG\", \"INFO\", \"WARNING\" or \"ERROR\").\nIt should then display just the messages that are at the same level or above (DEBUG < INFO < WARNING < ERROR).\nThis must be implemented using a switch statement with a default case.\nOnce again, no if/elseif/else anymore please."
+          },
+          "yes_no": true,
+          "separator": false,
+          "type": "mandatory"
+        }
+      ],
+      "bonusSections": [],
+      "cursus_id": "1",
+      "updated_at": "2023-12-27T23:00:00.000Z",
+      "gradingOptions": [
+        {
+          "ok": true,
+          "outstanding": true,
+          "empty_work": true,
+          "incomplete_work": true,
+          "invalid_compilation": true,
+          "norme": true,
+          "cheat": true,
+          "crash": true,
+          "concerning_situations": true,
+          "leaks": true,
+          "forbidden_functions": true,
+          "cannot_support": false
+        }
+      ],
+      "languages": [
+        "EN",
+        "FR"
+      ],
+      "language": "EN"
+    }
+  ],
+  "message": "Sheet created successfully"
+}

@@ -16,13 +16,13 @@
 		},
 		"attachments": [
 			{
-			"title": "subject_fr.pdf",
-			"url": "fr.subject.pdf"
-			},
-		  {
 			"title": "subject_en.pdf",
 			"url": "en.subject.pdf"
-		  }
+			},
+			{
+			"title": "subject_fr.pdf",
+			"url": "fr.subject.pdf"
+			}
 		],
 		"time": 30,
 		"cursus_id": "1",
@@ -30,8 +30,8 @@
 		"student_number": 1,
 		"students": 1,
 		"eval_points": 3,
-		"languages" : ["FR", "EN"],
-		"language" : "FR",
+		"languages" : ["EN", "FR"],
+		"language" : "EN",
 		"mandatorySections": [
     {
       "description": {

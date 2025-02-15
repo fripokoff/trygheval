@@ -5,115 +5,127 @@
       "project_title": "CPP00",
       "students": 1,
       "status": "active",
+      "finish" : true,
       "eval_points": 3,
       "time": 30,
       "id": 14,
-      "introduction": [
-        "- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
-        "- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
-        "- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
-      ],
-      "guidelines": [
-        "- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
-        "- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
-        "- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
-        "- If applicable, review any **scripts** used for testing or automation together with the student.",
-        "- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
-        "- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
-        "- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
-        "- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
-        "- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
-        "- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
-      ],
+      "introduction": {
+        "FR": "# Introduction\n- Restez polis, courtois, respectueux et constructifs pendant le processus d'évaluation. Le bien-être de la communauté repose là-dessus.\n- Identifiez avec la personne évaluée ou le groupe évalué les éventuels dysfonctionnements de son travail. Prenez le temps d'en discuter et débattez des problèmes identifiés.\n- Vous devez prendre en compte qu'il peut y avoir de légères différences d'interprétation entre les instructions du projet, son scope et ses fonctionnalités. Gardez un esprit ouvert et notez de la manière la plus honnête possible. La pédagogie n'est valide que si la peer-évaluation est faite sérieusement.",
+        "EN": "# Introduction\n- Stay polite, courteous, respectful and constructive during the evaluation process. The well-being of the community depends on it.\n- Identify with the person being evaluated or the group being evaluated any malfunctions in their work. Take the time to discuss them and debate the problems identified.\n- You must take into account that there may be slight differences in interpretation between the project instructions, its scope and its functionalities. Keep an open mind and grade as honestly as possible. Pedagogy is only valid if peer review is done seriously."
+      },
+      "guidelines": {
+        "FR": "# Directives\n- Ne notez que ce qui est contenu dans le dépôt Git cloné de l'étudiant(e) ou du groupe.\n- Vérifiez que le dépôt Git appartient bien à l'étudiant(e) ou au groupe, que le projet est bien celui attendu, et que \"git clone\" est utilisé dans un dossier vide.\n- Vérifiez scrupuleusement qu'aucun alias n'a été utilisé pour vous tromper et assurez-vous que vous évaluez bien le rendu officiel.\n- Afin d'éviter toute surprise, vérifiez avec l'étudiant(e) ou le groupe les potentiels scripts utilisés pour faciliter l'évaluation (par exemple, des scripts de tests ou d'automatisation).\n- Si vous n'avez pas fait le projet que vous allez évaluer, vous devez lire le sujet en entier avant de commencer l'évaluation.\n- Utilisez les flags disponibles pour signaler un rendu vide, un programme ne fonctionnant pas, une erreur de Norme, de la triche... Dans ces situations, l'évaluation est terminée et la note est 0, ou -42 en cas de triche. Cependant, à l'exception des cas de triche, vous êtes encouragé(e)s à continuer la discussion sur le travail rendu, même si ce dernier est incomplet. Ceci afin d'identifier les erreurs à ne pas reproduire dans le futur.\n- Si le sujet requiert un fichier de configuration, vous ne devriez jamais avoir à le modifier. Si vous souhaitez éditer un fichier, prenez le temps d'expliquer pourquoi à la personne évaluée et de vous assurer que vous avez son accord.\n- Vous devez aussi vérifier l'absence de fuites mémoire. Toute mémoire allouée sur le tas doit être libérée proprement avant la fin de l'exécution du programme.\nVous avez le droit d'utiliser tout outil disponible sur la machine tel que leaks, valgrind ou e_fence. En cas de fuites mémoire, cochez le flag approprié.",
+        "EN": "# Guidelines\n- Only grade what is contained in the student's or group's cloned Git repository.\n- Verify that the Git repository belongs to the student or group, that the project is the one expected, and that \"git clone\" is used in an empty folder.\n- Scrupulously check that no alias has been used to deceive you and make sure that you are evaluating the official rendering.\n- In order to avoid any surprises, check with the student or group the potential scripts used to facilitate the evaluation (for example, test or automation scripts).\n- If you have not done the project you are going to evaluate, you must read the subject in its entirety before starting the evaluation.\n- Use the available flags to report an empty submission, a non-functioning program, a Norm error, cheating... In these situations, the evaluation is terminated and the grade is 0, or -42 in case of cheating. However, with the exception of cheating cases, you are encouraged to continue the discussion on the work submitted, even if the latter is incomplete. This is in order to identify the errors to avoid reproducing in the future.\n- If the subject requires a configuration file, you should never have to modify it. If you wish to edit a file, take the time to explain why to the person being evaluated and make sure you have their agreement.\n- You must also check for the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of the program's execution.\nYou have the right to use any tool available on the machine such as leaks, valgrind or e_fence. In case of memory leaks, check the appropriate flag."
+      },
       "attachments": [
-          {
-              "title": "subject_en.pdf",
-              "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/CPP_Modules/CPP00/en.subject.pdf"
-          },
-          {
-              "title": "subject_fr.pdf",
-              "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/CPP_Modules/CPP00/fr.subject.pdf"
-          },
-          {
-              "title": "extras",
-              "url": "https://github.com/ARuzgar/42-Subjects/tree/main/Cursus/CPP_Modules/CPP00/Extras"
-          }
+        {
+          "title": "subject_en.pdf",
+          "url": "en.subject.pdf"
+        },
+        {
+          "title": "subject_fr.pdf",
+          "url": "fr.subject.pdf"
+        },
+        {
+          "title": "extras",
+          "url": "/Extras"
+        }
       ],
       "mandatorySections": [
         {
-          "title": "Prérequis",
-          "subtitle": "Le code doit compiler avec c++ et les flags -Wall -Wextra -Werror Pour rappel, ce projet doit suivre le standard C++98. Par conséquent, des fonctions C++11 (ou autre standard) et les containers ne sont PAS attendus.",
-          "description": "**Ne notez pas l'exercice si vous trouvez :**\n--Une fonction implémentée dans un fichier d'en-tête (sauf pour les fonctions templates).\n--Un Makefile compilant sans les flags demandés et/ou avec autre chose que c++.\n\n**Sélectionnez le flag \"Fonction interdite\" (Forbidden function) si\nvous rencontrez :**\n--L'utilisation d'une fonction \"C\" (*alloc, *printf, free).\n--L'utilisation d'une fonction interdite dans le projet.\n--L'utilisation de \"using namespace <ns_name>\" ou du mot-clé \"friend\".\n--L'utilisation d'une bibliothèque externe, ou de fonctionnalités propres aux versions postérieures à C++98.",
-          "conclusion": "",
-          "yes_no": true
+          "description": {
+            "FR": "**Ne notez pas l'exercice si vous trouvez :**\n--Une fonction implémentée dans un fichier d'en-tête (sauf pour les fonctions templates).\n--Un Makefile compilant sans les flags demandés et/ou avec autre chose que c++.\n\n**Sélectionnez le flag \"Fonction interdite\" (Forbidden function) si\nvous rencontrez :**\n--L'utilisation d'une fonction \"C\" (*alloc, *printf, free).\n--L'utilisation d'une fonction interdite dans le projet.\n--L'utilisation de \"using namespace <ns_name>\" ou du mot-clé \"friend\".\n--L'utilisation d'une bibliothèque externe, ou de fonctionnalités propres aux versions postérieures à C++98.",
+            "EN": "# Tests préliminaires\n*Si un cas de triche est suspecté, la notation et l'évaluation prennent fin immédiatement. Pour le signaler, sélectionnez le flag \"Cheat\". Faites attention à l'utiliser avec calme, précaution et discernement.*\n\n---\n\n**Prérequis**\nLe code doit compiler avec c++ et les flags -Wall -Wextra -Werror\nPour rappel, ce projet doit suivre le standard C++98. Par conséquent,des fonctions C++11 (ou autre standard) et les containers ne sont PAS attendus.\n\nNe notez pas l'exercice si vous trouvez :\n- Une fonction implémentée dans un fichier d'en-tête (sauf pour les fonctions templates).\n- Un Makefile compilant sans les flags demandés et/ou avec autre chose que c++.\n\nSélectionnez le flag \"Fonction interdite\" (Forbidden function) si vous rencontrez :\n- L'utilisation d'une fonction \"C\" (*alloc, *printf, free).\n- L'utilisation d'une fonction interdite dans le projet.\n- L'utilisation de \"using namespace <ns_name>\" ou du mot-clé \"friend\".\n- L'utilisation d'une bibliothèque externe, ou de fonctionnalités propres aux versions postérieures à C++98"
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
         },
         {
-          "title": "Exercice 00 : Megaphone",
-          "subtitle": "Cet exercice est un échauffement pour découvrir les I/O en C++.",
-          "description": "**Fonctionnement**\nLe but de cet exercice est de développer un to_upper ayant un comportement spécifique si lancé sans paramètre.\nIl doit être résolu avec une approche C++ (string/upper).",
-          "conclusion": "",
-          "yes_no": true
+          "description": {
+            "FR": "**Fonctionnement**\nLe but de cet exercice est de développer un to_upper ayant un comportement spécifique si lancé sans paramètre.\nIl doit être résolu avec une approche C++ (string/upper).",
+            "EN": "# Exercice 00 : Megaphone\n*Cet exercice est un échauffement pour découvrir les I/O en C++.*\n\n---\n **Fonctionnement**\nLe but de cet exercice est de développer un to_upper ayant un comportement spécifique si lancé sans paramètre.\nIl doit être résolu avec une approche C++ (string/upper)."
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
         },
         {
-          "title": "Exercice 01 : My Awesome Phonebook",
-          "subtitle": "Cet exercice est une première approche pour écrire une classe simple et l'utiliser dans un programme interactif. Si l'exercice ne fonctionne pas parfaitement, notez ce qui peut l'être.",
-          "description": "**Gestion d'erreur**\nIl y a un peu de gestion d'erreur à faire dans ce programme mais les comportements ne sont pas précisés dans le sujet. Quitter le programme proprement ou gérer les erreurs est ok. Un segfault ne l'est pas ! :D",
-          "conclusion": "",
-          "yes_no": false
+          "description": {
+            "FR": "**Gestion d'erreur**\nIl y a un peu de gestion d'erreur à faire dans ce programme mais les comportements ne sont pas précisés dans le sujet. Quitter le programme proprement ou gérer les erreurs est ok. Un segfault ne l'est pas ! :D",
+            "EN": "# Exercice 01 : My Awesome Phonebook\n*Cet exercice est une première approche pour écrire une classe simple et l'utiliser dans un programme interactif. Si l'exercice ne fonctionne pas parfaitement, notez ce qui peut l'être.*\n\n---\n\n**Gestion d'erreur**\nIl y a un peu de gestion d'erreur à faire dans ce programme mais les comportements ne sont pas précisés dans le sujet. Quitter le programme proprement ou gérer les erreurs est ok. Un segfault ne l'est pas ! :D"
+          },
+          "yes_no": false,
+          "separator": false,
+          "type": "mandatory"
         },
         {
-          "title": "La commande EXIT",
-          "subtitle": "",
-          "description": "Notez la commande EXIT en vous basant sur ce qui est demandé dans le sujet.",
-          "conclusion": "",
-          "yes_no": true
+          "description": {
+            "FR": "Notez la commande EXIT en vous basant sur ce qui est demandé dans le sujet.",
+            "EN": "**La commande EXIT**\nNotez la commande EXIT en vous basant sur ce qui est demandé dans le sujet."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
         },
         {
-          "title": "Visibilité",
-          "subtitle": "",
-          "description": "--Les attributs de la classe Contact doivent être privés.\n--La classe doit exposer les accesseurs correspondants. Vérifiez également que tout ce qui n'est utilisé que dans une classe (et pas seulement la classe Contact) est privé et le reste public. \n--Les débutants ont tendance à tout mettre en public.\n",
-          "conclusion": "C'est ce que vous devez vérifier ici.",
-          "yes_no": false
+          "description": {
+            "FR": "--Les attributs de la classe Contact doivent être privés.\n--La classe doit exposer les accesseurs correspondants. Vérifiez également que tout ce qui n'est utilisé que dans une classe (et pas seulement la classe Contact) est privé et le reste public. \n--Les débutants ont tendance à tout mettre en public.\n",
+            "EN": "**Visibilité**\nLes attributs de la classe Contact doivent être privés. La classe doit exposer les accesseurs correspondants. Vérifiez également que tout ce qui n'est utilisé que dans une classe (et pas seulement la classe Contact) est privé et le reste public. Les débutants ont tendance à tout mettre en public.\n\n**C'est ce que vous devez vérifier ici.**"
+          },
+          "yes_no": false,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
         },
         {
-          "title": "La classe Contact et la classe Phonebook",
-          "subtitle": "",
-          "description": "--Le code doit inclure une classe Contact (ou autre nom).\n--La classe doit contenir les attributs demandés.\n--Le code doit contenir une classe Phonebook avec un tableau de Contacts à l'intérieur.",
-          "conclusion": "",
-          "yes_no": true
+          "description": {
+            "FR": "--Le code doit inclure une classe Contact (ou autre nom).\n--La classe doit contenir les attributs demandés.\n--Le code doit contenir une classe Phonebook avec un tableau de Contacts à l'intérieur.",
+            "EN": "**La classe Contact et la classe Phonebook**\n- Le code doit inclure une classe Contact (ou autre nom).\n- La classe doit contenir les attributs demandés.\n- Le code doit contenir une classe Phonebook avec un tableau de Contacts à l'intérieur."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
         },
         {
-          "title": "Boucle de Read/Eval",
-          "subtitle": "",
-          "description": "--Le programme doit proposer une sorte de boucle read/eval :\n--Lecture puis traitement d'entrée, ensuite attente de nouvelle entrée jusqu'à recevoir une commande EXIT.\n--La boucle devrait être faite de manière C++ (std::cin) !",
-          "conclusion": "",
-          "yes_no": true
+          "description": {
+            "FR": "--Le programme doit proposer une sorte de boucle read/eval :\n--Lecture puis traitement d'entrée, ensuite attente de nouvelle entrée jusqu'à recevoir une commande EXIT.\n--La boucle devrait être faite de manière C++ (std::cin) !",
+            "EN": "**Boucle de Read/Eval**\nLe programme doit proposer une sorte de boucle read/eval :\n- Lecture puis traitement d'entrée, ensuite attente de nouvelle entrée jusqu'à recevoir une commande EXIT.\n- La boucle devrait être faite de manière C++ (std::cin) !"
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
         },
         {
-          "title": "La commande ADD",
-          "subtitle": "",
-          "description": "Notez la commande ADD en vous basant sur ce qui est demandé dans le sujet.",
-          "conclusion": "",
-          "yes_no": false
+          "description": {
+            "FR": "Notez la commande ADD en vous basant sur ce qui est demandé dans le sujet.",
+            "EN": "**La commande ADD**\nNotez la commande ADD en vous basant sur ce qui est demandé dans le sujet."
+          },
+          "yes_no": false,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
         },
         {
-          "title": "La commande SEARCH",
-          "subtitle": "",
-          "description": "--Notez la commande SEARCH en vous basant sur ce qui est demandé dans le sujet.\n--Une légère divergence dans le format attendu n'est pas importante. Cette partie vise à utiliser les \"iomanips\" en C++ et c'est ce sur quoi vous devez vous concentrer.",
-          "conclusion": "",
-          "yes_no": true
+          "description": {
+            "FR": "--Notez la commande SEARCH en vous basant sur ce qui est demandé dans le sujet.\n--Une légère divergence dans le format attendu n'est pas importante. Cette partie vise à utiliser les \"iomanips\" en C++ et c'est ce sur quoi vous devez vous concentrer.",
+            "EN": "**La commande SEARCH**\nNotez la commande SEARCH en vous basant sur ce qui est demandé dans le sujet. Une légère divergence dans le format attendu n'est pas importante.\nCette partie vise à utiliser les \"iomanips\" en C++ et c'est ce sur quoi vous devez vous concentrer."
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
         },
         {
-          "title": "Exercice 02 : Le boulot de vos rêves",
-          "subtitle": "Le but de cet exercice est de récupérer les informations cachées au milieu du bruit et d'insérer du code dans un contexte existant.",
-          "description": "**Avez-vous sauvé le monde ?**\n--Cet exercice est plutôt simple. Soit Account.cpp marche, soit il ne marche pas.\n--Comparez la sortie du programme avec le fichier de logs fourni.\n--Toute différence (à l'exception des horodatages ou de l'ordre des destructors) signifie que l'exercice est incorrect.",
-          "conclusion": "",
-          "yes_no": true
+          "description": {
+            "FR": "**Avez-vous sauvé le monde ?**\n--Cet exercice est plutôt simple. Soit Account.cpp marche, soit il ne marche pas.\n--Comparez la sortie du programme avec le fichier de logs fourni.\n--Toute différence (à l'exception des horodatages ou de l'ordre des destructors) signifie que l'exercice est incorrect.",
+            "EN": "# Exercice 02 : Le boulot de vos rêves\n*Le but de cet exercice est de récupérer les informations cachées au milieu du bruit et d'insérer du code dans un contexte existant.*\n\n---\n\n**Avez-vous sauvé le monde ?**\nCet exercice est plutôt simple. Soit Account.cpp marche, soit il ne marche pas.\nComparez la sortie du programme avec le fichier de logs fourni.\nToute différence (à l'exception des horodatages ou de l'ordre des destructors) signifie que l'exercice est incorrect."
+          },
+          "yes_no": true,
+          "separator": false,
+          "type": "mandatory"
         }
       ],
-      "bonusSections": null,
+      "bonusSections": [],
       "cursus_id": "1",
-      "updated_at": "2023-12-28T00:00:00.136Z",
+      "updated_at": "2023-12-27T23:00:00.000Z",
       "gradingOptions": [
         {
           "ok": true,
@@ -129,8 +141,13 @@
           "forbidden_functions": true,
           "cannot_support": false
         }
-      ]
+      ],
+      "languages": [
+        "EN",
+    "FR"
+      ],
+      "language": "FR"
     }
   ],
-  "message": "Sheets added successfully"
+  "message": "Sheet created successfully"
 }

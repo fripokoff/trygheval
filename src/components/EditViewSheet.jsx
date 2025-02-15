@@ -26,10 +26,11 @@ import EditMandatorySection from "./sections/Edit/EditMandatorySection";
 import EditBonusSection from "./sections/Edit/EditBonusSection";
 import EditGradingOptionsSection from "./sections/Edit/EditGradingOptionsSection";
 import { useLoading } from '../contexts/LoadingContext'; 
+import { useNavigate } from "react-router-dom";
+import NavigationViewHeader from './navigation/NavigationViewHeader';
 
 function EditViewSheet({selectedDate, setSelectedDate}) {
-    const url = new URL(window.location.href);
-    let lang = url.searchParams.get("lang");
+    const navigate = useNavigate();
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
@@ -37,12 +38,16 @@ function EditViewSheet({selectedDate, setSelectedDate}) {
     let [isOpen, setIsOpen] = useState(false);
     const [isScrolling, setIsScrolling] = useState(false);
     const { handleSubmit } = useSubmit();
-    const [editMode, setEditMode] = useState(false);
+    const [projectInfo, setProjectInfo] = useState([]);
+    const [editMode, setEditMode] = useState(localStorage.getItem('editMode') === 'true');
     const [sheetData, setSheetData] = useState({});
-    const { isLoading, setIsLoading } = useLoading();
+    const { isLoading, setIsLoading } = useLoading(true);
+    const [isNotExam , setIsNotExam] = useState(true);
     const { okColor, outstandingColor, emptyWorkColor, incompleteWorkColor, invalidCompilationColor, normeColor, cheatColor, crashColor, concerningSituationsColor, leaksColor, forbiddenFunctionsColor, cannotSupportColor, handleOkColor, handleOutstandingColor, handleEmptyWorkColor, handleIncompleteWorkColor, handleInvalidCompilationColor, handleNormeColor, handleCheatColor, handleCrashColor, handleConcerningSituationsColor, handleLeaksColor, handleForbiddenFunctionsColor, handleCannotSupportColor } = useColorHandlers(greenColor, redColor);
     const { hasLoaded, setHasLoaded, options, setOptions, show, setShow, showBackToTop, yesColorBonus, noColorBonus, mandatoryYesColor, mandatoryNoColor, points, bonusPoints, handleImportData, handleYesColor, handleNoColor, handleYesColorBonus, handleNoColorBonus, handleMandatorySliderValues, handleBonusSliderValues } = useAddContentEffects({ okColor, outstandingColor, emptyWorkColor, incompleteWorkColor, invalidCompilationColor, normeColor, cheatColor, crashColor, concerningSituationsColor, leaksColor, forbiddenFunctionsColor, cannotSupportColor }, sheetData, setSheetData, selectedDate, setSelectedDate);
-    
+    let lang = localStorage.getItem("lang");
+    if(!lang)
+        sheetData?.language ? lang = sheetData.language : lang = 'EN';
     useEffect(() => {
         const handleScroll = () => {
             const elements = document.querySelectorAll('*[id]');
@@ -54,7 +59,7 @@ function EditViewSheet({selectedDate, setSelectedDate}) {
                     || element.id.includes('grading') || element.id.includes('introduction'))
                     {
                         
-                        if(!editMode && !isScrolling)
+                        if(!editMode && !isScrolling && hasLoaded)
                         {
                             localStorage.setItem('ActiveSection', element.id);
                         }
@@ -73,22 +78,17 @@ function EditViewSheet({selectedDate, setSelectedDate}) {
     
     const handleEdit = () => {
         const newEditMode = !editMode;
-        let newUrl;
         const mandatory_section = localStorage.getItem('ActiveSection');
         setIsLoading(true);
         setIsScrolling(true);
         window.scrollTo(0, 0);
-        if(!lang)
-            sheetData?.language ? lang = sheetData.language : lang = 'EN';
         if (newEditMode) {
-            newUrl = `${window.location.pathname}?project=${sheetData.project_title}&edit=true&lang=${lang}`;
+            localStorage.setItem('editMode', 'true');
         } else {
-            console.log(sheetData)
+            localStorage.setItem('editMode', 'false');
             getCurrentFormData(sheetData, setSheetData, handleSubmit)
-            newUrl = `${window.location.pathname}?project=${sheetData.project_title}&lang=${lang}`;
         }
-        window.history.pushState({}, "", newUrl);
-        
+
         setTimeout(() => {
             const container = document.getElementById(mandatory_section);
             if (container) {
@@ -120,26 +120,122 @@ function EditViewSheet({selectedDate, setSelectedDate}) {
         handleSubmit(true, getCurrentFormData(sheetData, setSheetData, handleSubmit));
     };
 
+    const test = {
+        "milestones": [
+          {
+            "milestone": "Milestone 1",
+            "projects": [
+              { "project": "Libft", "hours": 70, "hour" : true },
+            ]
+          },
+          {
+            "milestone": "Milestone 2",
+            "projects": [
+              { "project": "ft_printf", "hours": 70, "hour" : true },
+              { "project": "get_next_line", "hours": 70, "hour" : true },
+              { "project": "Born2beroot", "hours": 40, "hour" : true },
+            ]
+          },
+          {
+            "milestone": "Milestone 3",
+            "projects": [
+              { "project" : "Exam_rank_02", "hours" : 2},
+              { "project": "push_swap", "hours": 60, "hour" : true },
+              { "project": "so_long", "hours": 60, "hour" : true },
+              { "project": "fract-ol", "hours": 60 },
+              { "project": "FdF", "hours": 60 },
+              { "project": "pipex", "hours": 50, "hour" : true },
+              { "project": "minitalk", "hours": 50 }
+            ]
+          },
+          {
+            "milestone": "Milestone 4",
+            "projects": [
+              { "project" : "Exam_rank_03", "hours" : 2},
+              { "project": "minishell", "hours": 210, "hour" : true },
+              { "project": "philosophers", "hours": 70,"hour" : true  }
+            ]
+          },
+          {
+            "milestone": "Milestone 5",
+            "projects": [
+              { "project" : "Exam_rank_04", "hours" : 2},
+              { "project": "NetPractice", "hours": 50, "hour" : true },
+              { "project": "CPP", "hours": [22, 12, 12, 12, 12], "hour" : true },
+              { "project": "miniRT", "hours": 280 },
+              { "project": "cub3d", "hours": 280, "hour" : true}
+            ]
+          },
+          {
+            "milestone": "Milestone 6",
+            "projects": [
+              { "project" : "Exam_rank_05", "hours" : 2},
+              { "project": "Inception", "hours": 210, "hour" : true },
+              { "project": "CPP", "hours": [25, 25, 25, 25, 40], "hour" : true },
+              { "project": "Webserv", "hours": 175 },
+              { "project": "ft_irc", "hours": 175, "hour" : true }
+            ]
+          },
+          {
+            "milestone": "Milestone 7",
+            "projects": [
+              { "project" : "Exam_rank_06", "hours" : 2},
+              { "project": "ft_transcendence", "hours": 210, "hour" : true }
+            ]
+          }
+        ]
+      };
+
+    const findCurrentAndNextProject = (currentProject) => {
+    let found = false;
+    let nextProject = null;
+    
+    for (const milestone of test.milestones) {
+        for (let i = 0; i < milestone.projects.length; i++) {
+        if (found) {
+            nextProject = milestone.projects[i].project;
+            return { current: currentProject, next: nextProject };
+        }
+        if (milestone.projects[i].project === currentProject) {
+            found = true;
+            if (i + 1 < milestone.projects.length) {
+            nextProject = milestone.projects[i + 1].project;
+            return { current: currentProject, next: nextProject };
+            }
+        }
+        }
+    }
+    return { current: currentProject, next: null };
+    };
+
     useState(() => {
         if (!hasLoaded) {
             const fetchAllData = async () => {
                 const getQueryParams = () => {
                     const params = {};
-                    const queryString = window.location.search.substring(1);
-                    const queryArray = queryString.split("&");
-                    queryArray.forEach((param) => {
-                        const [key, value] = param.split("=");
-                        params[key] = decodeURIComponent(value);
-                    });
-                    if (params.edit && params.edit === "true") {
-                        setEditMode(true);
+                    const hash = window.location.hash;
+                    const queryString = hash.split('?')[1] || '';
+                    
+                    if (queryString) {
+                        const queryArray = queryString.split("&");
+                        queryArray.forEach((param) => {
+                            const [key, value] = param.split("=");
+                            if (key && value) {
+                                params[key] = decodeURIComponent(value);
+                            }
+                        });
                     }
                     return params;
                 };
-
+                if(localStorage.getItem('editMode') === 'true')
+                    setEditMode(true);
                 const queryParams = getQueryParams();
                 const projectName = queryParams.project;
                 let data = null;
+                if(projectName.includes('Exam'))
+                {
+                    setIsNotExam(false);
+                }
                 if (projectName) {
                     data = await fetchData(projectName);
                     setSheetData(data);
@@ -150,6 +246,9 @@ function EditViewSheet({selectedDate, setSelectedDate}) {
                     setIsLoading(false);
                 }, 1000);
             };
+
+
+            
             fetchAllData();
             setHasLoaded(true);
         }
@@ -204,11 +303,14 @@ if (editMode) {
                                 <EditMandatorySection 
                                 openModal={() => setIsOpen(true)}
                                 sheetData={sheetData}
+                                isNotExam={isNotExam}
                                 />
                                 <EditBonusSection
                                 openModal={() => setIsOpen(true)}
-                                sheetData={sheetData}/>
-                                <EditGradingOptionsSection/>
+                                sheetData={sheetData}
+                                isNotExam={isNotExam}
+                                />
+                                <EditGradingOptionsSection show={isNotExam}/>
                             </div>
                             </div>
                     </GradingProvider>
@@ -237,46 +339,20 @@ if (editMode) {
 return (
     <div className="bg-base-300 text-base-content min-h-screen">
         <div className="flex gap-3 justify-between max-w-7xl mx-auto px-3 sm:px-5 2xl:px-0 w-full pt-4">
-            <div className="grid grid-cols-[auto_1fr_auto] sm:grid-cols-3 gap-2 sm:gap-4 items-center w-full">
-                <div className="flex justify-start">
-                    <a href="./">
-                        <div className="flex items-center bg-base-100 text-base-content p-2 sm:p-3 rounded-md transition border border-base">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth={1.5}
-                                stroke="currentColor"
-                                className="size-4"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-                                />
-                            </svg>
-                        </div>
-                    </a>
-                </div>
-                <h1 className='text-xl sm:text-2xl font-bold text-center truncate px-1'>
-                    {sheetData.project_title}
-                </h1>
-                <div className="flex justify-end">
-                    <button
-                        onClick={handleEdit}
-                        className="w-16 sm:w-20 bg-orange-600 font-bold hover:bg-orange-800 text-white py-2 sm:py-3 px-3 sm:px-6 rounded-md transition text-sm sm:text-base"
-                    >
-                        EDIT
-                    </button>
-                </div>
-            </div>
+
+        <NavigationViewHeader 
+        handleEdit={handleEdit}
+        sheetData={sheetData}
+        inView={true}
+        />
+
         </div>
 
     <div className="max-w-7xl mx-auto pb-20 pt-4 px-5 2xl:px-0">
         <ViewGeneralInfo sheetData={sheetData} />
         <ViewIntroductionSection sheetData={sheetData} />
         <ViewGuidelinesSection sheetData={sheetData} />
-        <ViewAttachmentsSection sheetData={sheetData} />
+        <ViewAttachmentsSection sheetData={sheetData} isNotExam={isNotExam}/>
 
         {/* MANDATORY SECTIONS */}
         <ViewMandatorySections
@@ -288,6 +364,7 @@ return (
             initialYesColor={initialYesColor}
             initialNoColor={initialNoColor}
             handleMandatorySliderValues={handleMandatorySliderValues}
+            isNotExam={isNotExam}
         />
 
         {/* BONUS SECTIONS */}
@@ -300,6 +377,7 @@ return (
             handleBonusSliderValues={handleBonusSliderValues}
             initialYesColor={initialYesColor}
             initialNoColor={initialNoColor}
+            isNotExam={isNotExam}
             />
 
         {/* GRADING OPTIONS */}
@@ -329,6 +407,7 @@ return (
             forbiddenFunctionsColor={forbiddenFunctionsColor}
             handleCannotSupportColor={handleCannotSupportColor}
             cannotSupportColor={cannotSupportColor}
+            show={isNotExam}
         />
         <FloatingElementsViewSheet 
             showBackToTop={showBackToTop}

@@ -25,8 +25,12 @@ function ViewGradingOptions({
     handleForbiddenFunctionsColor,
     forbiddenFunctionsColor,
     handleCannotSupportColor,
-    cannotSupportColor
+    cannotSupportColor,
+    show
 }) {
+    if (!show) {
+        return null;
+    }
     return (
         <div
         className='mt-10 bg-base-100 p-5 lg:p-10 rounded-lg'

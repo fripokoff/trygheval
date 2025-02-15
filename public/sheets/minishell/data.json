@@ -1,251 +1,263 @@
 {
     "success": true,
     "data": [
-        {
-			"id": 11,
-			"status": "active",
-			"project_title": "minishell",
-			"introduction": [
-				"- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
-				"- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
-				"- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
-			],
-			"guidelines": [
-				"- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
-				"- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
-				"- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
-				"- If applicable, review any **scripts** used for testing or automation together with the student.",
-				"- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
-				"- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
-				"- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
-				"- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
-				"- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
-				"- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
-			],
-			"attachments": [
-				{
-					"title": "subject_en.pdf",
-					"url": "en.subject.pdf"
-				},
-				{
-					"title": "subject_fr.pdf",
-					"url": "fr.subject.pdf"
-				}
-			],
-			"cursus_id": "1",
-			"updated_at": "2023-08-01T16:28:15.940Z",
-			"students" : 2,
-			"eval_points" : 6,
-			"time" : 60,
-			"mandatorySections" : [
-				{
-					"id": "679e5b0b8c78a1cea9234fc6",
-					"description": "--Use \"make -n\" to see if compilation use \"-Wall -Wextra -Werror\". If not, select the \"invalid compilation\" flag.\n--minishell compiles without any errors. If not, select the flag.\n--The Makefile must not re-link. If not, select the flag.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fc7",
-					"description": "--Execute a simple command with an absolute path like /bin/ls, or any other command without any options.\n--How many global variables are used? Why? Ask the evaluated student to give you a concrete example of why it feels mandatory or logical.\n--Check the global variable. This global variable cannot provide any other information or data access than the number of a received signal.\n--Test an empty command.\n--Test only spaces or tabs.\n--If something crashes, select the \"crash\" flag.\n--If something doesn't work, select the \"incomplete work\" flag.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fc8",
-					"description": "--Execute a simple command with an absolute path like /bin/ls, or any other command with arguments but without any quotes or double quotes.\n--Repeat multiple times with different commands and arguments.\n--If something crashes, select the \"crash\" flag.\n--If something doesn't work, select the \"incomplete work\" flag.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fc9",
-					"description": "--Execute the echo command with or without arguments, or the -n option.\n--Repeat multiple times with different arguments.\n--If something crashes, select the \"crash\" flag.\n--If something doesn't work, select the \"incomplete work\" flag.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fca",
-					"description": "--Execute exit command with or without arguments.\n--Repeat multiple times with different arguments.\n--Don't forget to relaunch the minishell\n--If something crashes, select the \"crash\" flag.\n--If something doesn't work, select the \"incomplete work\" flag.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fcb",
-					"description": "--Execute a simple command with an absolute path like /bin/ls, or any other command with arguments but without any quotes and double quotes. Then execute echo $?\n--Check the printed value. You can do the same in bash in order to compare the results.\n--Repeat multiple times with different commands and arguments. Try some wrong commands like '/bin/ls filethatdoesntexist'\n--Try anything like expr $? + $?\n--If something crashes, select the \"crash\" flag.\n--If something doesn't work, select the \"incomplete work\" flag.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fcc",
-					"description": "--ctrl-C in an empty prompt should display a new line with a new prompt.\n--ctrl-\\ in an empty prompt should not do anything.\n--ctrl-D in an empty prompt should quit minishell --> RELAUNCH!\n--ctrl-C in a prompt after you wrote some stuff should display a new line with a new prompt.\n--The buffer should be clean too. Press \"Enter\" to make sure nothing from the previous line is executed.\n--ctrl-D in a prompt after you wrote some stuff should not do anything.\n--ctrl-\\ in a prompt after you wrote some stuff should not do anything.\n--Try ctrl-C after running a blocking command like cat without arguments or grep “something“.\n--Try ctrl-\\ after running a blocking command like cat without arguments or grep “something“.\n--Try ctrl-D after running a blocking command like cat without arguments or grep “something“.\n--Repeat multiple times using different commands.\n--If something crashes, select the \"crash\" flag.\n--If something doesn't work, select the \"incomplete work\" flag.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fcd",
-					"description": "--Execute a simple command with arguments and, this time, use also double quotes (you should try to include whitespaces too).\n--Try a command like : echo \"cat lol.c | cat > lol.c\"\n--Try anything except $.\n--If something crashes, select the \"crash\" flag.\n--If something doesn't work, select the \"incomplete work\" flag.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fce",
-					"description": "--Execute commands with single quotes as arguments.\n--Try empty arguments.\n--Try environment variables, whitespaces, pipes, redirection in the single quotes.\n--echo '$USER' must print \"$USER\".\n--Nothing should be interpreted.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fcf",
-					"description": "Check if env shows you the current environment variables.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fd0",
-					"description": "--Export environment variables, create new ones and replace old ones.\n--Check the result with env.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fd1",
-					"description": "--Export environment variables, create new ones and replace old ones.\n--Use unset to remove some of them.\n--Check the result with env.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fd2",
-					"description": "--Use the command cd to move the working directory and check if you are in the right directory with /bin/ls\n--Repeat multiple times with working and not working cd\n--Also, try '.' and '..' as arguments.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fd3",
-					"description": "--Use the command pwd.\n--Repeat multiple times in different directories.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fd4",
-					"description": "--Execute commands but this time use a relative path.\n--Repeat multiple times in different directories with a complex relative path (lots of ..).",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fd5",
-					"description": "--Execute commands but this time without any path (ls, wc, awk and so forth).\n--Unset the $PATH and ensure commands are not working anymore.\n--Set the $PATH to a multiple directory value (directory1:directory2) and ensure that directories are checked in order from left to right.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fd6",
-					"description": "--Execute commands with redirections < and/or >\n--Repeat multiple times with different commands and arguments and sometimes change > with >>\n--Check if multiple tries of the same redirections fail.\n--Test << redirection (it doesn't have to update the history).",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fd7",
-					"description": "--Execute commands with pipes like 'cat file | grep bla | more'\n--Repeat multiple times with different commands and arguments.\n--Try some wrong commands like 'ls filethatdoesntexist | grep bla | more'\n--Try to mix pipes and redirections.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fd8",
-					"description": "--Type a command line, then use ctrl-C and press \"Enter\". The buffer should be clean and there should be nothing left to execute.\n--Can we navigate through history using Up and Down? Can we retry some command?\n--Execute commands that should not work like 'dsbksdgbksdghsd'. Ensure minishell doesn't crash and prints an error. 'cat | cat | ls' should behave in a \"normal way\".\n--Try to execute a long command with a ton of arguments.\n--Have fun with that beautiful minishell and enjoy it!",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fd9",
-					"description": "--Execute echo with some environment variables ($variable) as arguments.\n--Check that $ is interpreted as an environment variable.\n--Check that double quotes interpolate $.\n--Check that USER exists. Otherwise, set it.\n--echo \"$USER\" should print the value of the USER variable.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.232Z",
-					"updated_at": "2025-02-01T17:34:03.232Z"
-				}
-			],
-			"bonusSections" : [
-				{
-					"id": "679e5b0b8c78a1cea9234fdb",
-					"description": "Use &&, || and parenthesis with commands and ensure minishell behaves the same way bash does.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.323Z",
-					"updated_at": "2025-02-01T17:34:03.323Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fdc",
-					"description": "Use wildcards in arguments in the current working directory.",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.323Z",
-					"updated_at": "2025-02-01T17:34:03.323Z"
-				},
-				{
-					"id": "679e5b0b8c78a1cea9234fdd",
-					"description": "--Set the USER environment variable.\n--echo \"'$USER'\" should print the value of the USER variable.\n--echo '\"$USER\"' should print \"$USER\".",
-					"yes_no": true,
-					"sheetId": "679e5b0b8c78a1cea9234fc5",
-					"created_at": "2025-02-01T17:34:03.323Z",
-					"updated_at": "2025-02-01T17:34:03.323Z"
-				}
-			],
-			"gradingOptions" :[
-				{
-					"id": "679e45788c78a1cea9234f62",
-					"ok": true,
-					"outstanding": true,
-					"empty_work": true,
-					"incomplete_work": true,
-					"invalid_compilation": true,
-					"norme": true,
-					"cheat": true,
-					"crash": true,
-					"concerning_situations": true,
-					"leaks": true,
-					"forbidden_functions": true,
-					"cannot_support": true,
-					"sheetId": "679e45778c78a1cea9234f5f",
-					"created_at": "2025-02-01T16:02:00.638Z",
-					"updated_at": "2025-02-01T16:05:07.468Z"
-				}
-			]
-        }
+      {
+        "id": 11,
+        "status": "active",
+        "finish": true,
+        "project_title": "minishell",
+        "introduction": {
+          "EN": "# Introduction\n- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.  \n- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.  \n- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously.",
+          "FR": "# Introduction\n- Restez poli, courtois, respectueux et constructif tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Travaillez avec l'étudiant ou le groupe évalué pour identifier les problèmes potentiels dans leur projet. Prenez le temps de discuter et de débattre des problèmes identifiés.\n- Comprenez qu'il peut y avoir des différences dans la façon dont les pairs interprètent les instructions et la portée du projet. Gardez toujours l'esprit ouvert et évaluez aussi honnêtement que possible. La pédagogie n'est efficace que lorsque les évaluations par les pairs sont prises au sérieux."
+        },
+        "guidelines": {
+          "EN": "# Guidelines\n- Only grade the work submitted to the **Git repository** of the evaluated student or group.  \n- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.  \n- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.  \n- If applicable, review any **scripts** used for testing or automation together with the student.  \n- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.  \n- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.  \n- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.  \n- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.  \n- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.  \n- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag.",
+          "FR": "# Directives\n- N'évaluez que le travail soumis au **dépôt Git** de l'étudiant ou du groupe évalué.\n- Vérifiez que le **dépôt Git** appartient bien à l'étudiant ou aux étudiants et que le projet est bien celui attendu. Assurez-vous que **git clone** est utilisé dans un dossier vide.\n- Vérifiez attentivement qu'aucun alias malveillant n'est utilisé pour tromper l'évaluateur en lui faisant évaluer un contenu non officiel.\n- Le cas échéant, examinez tous les **scripts** utilisés pour les tests ou l'automatisation avec l'étudiant.\n- Si vous n'avez pas terminé le devoir que vous évaluez, lisez l'intégralité du sujet avant de commencer l'évaluation.\n- Utilisez les drapeaux disponibles pour signaler un dépôt vide, un programme non fonctionnel, une erreur de **Norme** ou une tricherie. Le processus d'évaluation se termine par une note finale de 0 (ou -42 en cas de tricherie). Toutefois, sauf en cas de tricherie, les étudiants sont encouragés à revoir le travail ensemble afin d'identifier les erreurs à éviter à l'avenir.\n- N'oubliez pas qu'aucun **segfault** ou autre interruption inattendue du programme ne sera toléré pendant l'évaluation. Si cela se produit, la note finale est de 0. Utilisez le drapeau approprié.\n- Vous ne devriez pas avoir besoin de modifier les fichiers, à l'exception du fichier de configuration, s'il existe. Si la modification d'un fichier est nécessaire, expliquez les raisons à l'étudiant évalué et assurez-vous d'un accord mutuel.\n- Vérifiez l'absence de **fuites de mémoire**. Toute la mémoire allouée sur le tas doit être correctement libérée avant la fin du programme.\n- Vous pouvez utiliser des outils tels que leaks, **valgrind** ou **e_fence** pour vérifier les fuites de mémoire. Si des fuites de mémoire sont détectées, cochez le drapeau approprié."
+        },
+        "attachments": [
+          {
+            "title": "subject_en.pdf",
+            "url": "en.subject.pdf"
+          }
+        ],
+        "cursus_id": "1",
+        "updated_at": "2023-07-31T22:00:00.000Z",
+        "students": 2,
+        "eval_points": 6,
+        "time": 60,
+        "mandatorySections": [
+          {
+            "description": {
+              "EN": "# Mandatory Part\n\n---\n\n**Compile**\n- Use \"make -n\" to see if compilation use \"-Wall -Wextra -Werror\". If not, select the \"invalid compilation\" flag.\n- minishell compiles without any errors. If not, select the flag.\n- The Makefile must not re-link. If not, select the flag.",
+              "FR": "# Partie obligatoire\n\n---\n\n**Compilation**\n- Utilisez \"make -n\" pour vérifier si la compilation utilise \"-Wall -Wextra -Werror\". Si ce n'est pas le cas, sélectionnez le drapeau \"compilation invalide\".\n- minishell se compile sans erreur. Si ce n'est pas le cas, sélectionnez le drapeau.\n- Le Makefile ne doit pas être relié. Si ce n'est pas le cas, sélectionnez le drapeau."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Simple Command & global variables**\n- Execute a simple command with an absolute path like /bin/ls, or any other command without any options.\n- How many global variables are used? Why? Ask the evaluated student to give you a concrete example of why it feels mandatory or logical.\n- Check the global variable. This global variable cannot provide any other information or data access than the number of a received signal.\n- Test an empty command.\n- Test only spaces or tabs.\n- If something crashes, select the \"crash\" flag.\n- If something doesn't work, select the \"incomplete work\" flag.",
+              "FR": "**Commande simple et variables globales**\n- Exécutez une commande simple avec un chemin absolu comme /bin/ls, ou toute autre commande sans option.\n- Combien de variables globales sont utilisées ? Pourquoi ? Demandez à l'étudiant évalué de vous donner un exemple concret de la raison pour laquelle cela semble obligatoire ou logique.\n- Vérifiez la variable globale. Cette variable globale ne peut pas fournir d'autres informations ou accès aux données que le numéro d'un signal reçu.\n- Testez une commande vide.\n- Testez uniquement les espaces ou les tabulations.\n- Si quelque chose plante, sélectionnez le drapeau \"crash\".\n- Si quelque chose ne fonctionne pas, sélectionnez le drapeau \"travail incomplet\"."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Arguments**\n- Execute a simple command with an absolute path like /bin/ls, or any other command with arguments but without any quotes or double quotes.\n- Repeat multiple times with different commands and arguments.\n- If something crashes, select the \"crash\" flag.\n- If something doesn't work, select the \"incomplete work\" flag.",
+              "FR": "**Arguments**\n- Exécutez une commande simple avec un chemin absolu comme /bin/ls, ou toute autre commande avec des arguments mais sans guillemets simples ou doubles.\n- Répétez plusieurs fois avec différentes commandes et arguments.\n- Si quelque chose plante, sélectionnez le drapeau \"crash\".\n- Si quelque chose ne fonctionne pas, sélectionnez le drapeau \"travail incomplet\"."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**echo**\n- Execute the echo command with or without arguments, or the -n option.\n- Repeat multiple times with different arguments.\n- If something crashes, select the \"crash\" flag.\n- If something doesn't work, select the \"incomplete work\" flag.",
+              "FR": "**echo**\n- Exécutez la commande echo avec ou sans arguments, ou l'option -n.\n- Répétez plusieurs fois avec différents arguments.\n- Si quelque chose plante, sélectionnez le drapeau \"crash\".\n- Si quelque chose ne fonctionne pas, sélectionnez le drapeau \"travail incomplet\"."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**exit**\n- Execute exit command with or without arguments.\n- Repeat multiple times with different arguments.\n- Don't forget to relaunch the minishell\n- If something crashes, select the \"crash\" flag.\n- If something doesn't work, select the \"incomplete work\" flag.",
+              "FR": "**exit**\n- Exécutez la commande exit avec ou sans arguments.\n- Répétez plusieurs fois avec différents arguments.\n- N'oubliez pas de relancer le minishell.\n- Si quelque chose plante, sélectionnez le drapeau \"crash\".\n- Si quelque chose ne fonctionne pas, sélectionnez le drapeau \"travail incomplet\"."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Return value of a process**\n- Execute a simple command with an absolute path like /bin/ls, or any other command with arguments but without any quotes and double quotes. Then execute echo $?\n- Check the printed value. You can do the same in bash in order to compare the results.\n- Repeat multiple times with different commands and arguments. Try some wrong commands like '/bin/ls filethatdoesntexist'\n- Try anything like expr $? + $?\n- If something crashes, select the \"crash\" flag.\n- If something doesn't work, select the \"incomplete work\" flag.",
+              "FR": "**Valeur de retour d'un processus**\n- Exécutez une commande simple avec un chemin absolu comme /bin/ls, ou toute autre commande avec des arguments mais sans guillemets simples ou doubles. Ensuite, exécutez echo $ ?\n- Vérifiez la valeur imprimée. Vous pouvez faire de même dans bash afin de comparer les résultats.\n- Répétez plusieurs fois avec différentes commandes et arguments. Essayez des commandes erronées comme '/bin/ls fichierquiexistenpas'.\n- Essayez n'importe quoi comme expr $? + $?\n- Si quelque chose plante, sélectionnez le drapeau \"crash\".\n- Si quelque chose ne fonctionne pas, sélectionnez le drapeau \"travail incomplet\"."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Signals**\n- ctrl-C in an empty prompt should display a new line with a new prompt.\n- ctrl-\\ in an empty prompt should not do anything.\n- ctrl-D in an empty prompt should quit minishell - > RELAUNCH!\n- ctrl-C in a prompt after you wrote some stuff should display a new line with a new prompt.\n- The buffer should be clean too. Press \"Enter\" to make sure nothing from the previous line is executed.\n- ctrl-D in a prompt after you wrote some stuff should not do anything.\n- ctrl-\\ in a prompt after you wrote some stuff should not do anything.\n- Try ctrl-C after running a blocking command like cat without arguments or grep “something“.\n- Try ctrl-\\ after running a blocking command like cat without arguments or grep “something“.\n- Try ctrl-D after running a blocking command like cat without arguments or grep “something“.\n- Repeat multiple times using different commands.\n- If something crashes, select the \"crash\" flag.\n- If something doesn't work, select the \"incomplete work\" flag.",
+              "FR": "**Signaux**\n- ctrl-C dans une invite vide doit afficher une nouvelle ligne avec une nouvelle invite.\n- ctrl-\\ dans une invite vide ne doit rien faire.\n- ctrl-D dans une invite vide doit quitter minishell - > RELANCER !\n- ctrl-C dans une invite après avoir écrit quelque chose doit afficher une nouvelle ligne avec une nouvelle invite.\n- Le tampon doit également être propre. Appuyez sur \"Entrée\" pour vous assurer que rien de la ligne précédente n'est exécuté.\n- ctrl-D dans une invite après avoir écrit quelque chose ne doit rien faire.\n- ctrl-\\ dans une invite après avoir écrit quelque chose ne doit rien faire.\n- Essayez ctrl-C après avoir exécuté une commande bloquante comme cat sans arguments ou grep \"quelque chose\".\n- Essayez ctrl-\\ après avoir exécuté une commande bloquante comme cat sans arguments ou grep \"quelque chose\".\n- Essayez ctrl-D après avoir exécuté une commande bloquante comme cat sans arguments ou grep \"quelque chose\".\n- Répétez plusieurs fois en utilisant différentes commandes.\n- Si quelque chose plante, sélectionnez le drapeau \"crash\".\n- Si quelque chose ne fonctionne pas, sélectionnez le drapeau \"travail incomplet\"."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Double Quotes**\n- Execute a simple command with arguments and, this time, use also double quotes (you should try to include whitespaces too).\n- Try a command like : echo \"cat lol.c | cat > lol.c\"\n- Try anything except $.\n- If something crashes, select the \"crash\" flag.\n- If something doesn't work, select the \"incomplete work\" flag.",
+              "FR": "**Guillemets doubles**\n- Exécutez une commande simple avec des arguments et, cette fois, utilisez également des guillemets doubles (vous devriez essayer d'inclure des espaces également).\n- Essayez une commande comme : echo \"cat lol.c | cat > lol.c\".\n- Essayez n'importe quoi sauf $.\n- Si quelque chose plante, sélectionnez le drapeau \"crash\".\n- Si quelque chose ne fonctionne pas, sélectionnez le drapeau \"travail incomplet\"."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Single Quotes**\n- Execute commands with single quotes as arguments.\n- Try empty arguments.\n- Try environment variables, whitespaces, pipes, redirection in the single quotes.\n- echo '$USER' must print \"$USER\".\n- Nothing should be interpreted.",
+              "FR": "**Guillemets simples**\n- Exécutez des commandes avec des guillemets simples comme arguments.\n- Essayez des arguments vides.\n- Essayez les variables d'environnement, les espaces, les pipes, la redirection dans les guillemets simples.\n- echo '$USER' doit afficher \"$USER\".\n- Rien ne doit être interprété."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**env**\nCheck if env shows you the current environment variables.",
+              "FR": "**env**\nVérifiez si env vous montre les variables d'environnement actuelles."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**export**\n- Export environment variables, create new ones and replace old ones.\n- Check the result with env.",
+              "FR": "**export**\n- Exportez les variables d'environnement, créez-en de nouvelles et remplacez les anciennes.\n- Vérifiez le résultat avec env."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**unset**\n- Export environment variables, create new ones and replace old ones.\n- Use unset to remove some of them.\n- Check the result with env.",
+              "FR": "**unset**\n- Exportez les variables d'environnement, créez-en de nouvelles et remplacez les anciennes.\n- Utilisez unset pour en supprimer certaines.\n- Vérifiez le résultat avec env."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**cd**\n- Use the command cd to move the working directory and check if you are in the right directory with /bin/ls\n- Repeat multiple times with working and not working cd\n- Also, try '.' and '..' as arguments.",
+              "FR": "**cd**\n- Utilisez la commande cd pour déplacer le répertoire de travail et vérifiez si vous êtes dans le bon répertoire avec /bin/ls.\n- Répétez plusieurs fois avec cd fonctionnel et non fonctionnel.\n- Essayez également '.' et '..' comme arguments."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**pwd**\n- Use the command pwd.\n- Repeat multiple times in different directories.",
+              "FR": "**pwd**\n- Utilisez la commande pwd.\n- Répétez plusieurs fois dans différents répertoires."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Relative Path**\n- Execute commands but this time use a relative path.\n- Repeat multiple times in different directories with a complex relative path (lots of ..).",
+              "FR": "**Chemin relatif**\n- Exécutez des commandes, mais cette fois, utilisez un chemin relatif.\n- Répétez plusieurs fois dans différents répertoires avec un chemin relatif complexe (beaucoup de ..)."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Environment path**\n- Execute commands but this time without any path (ls, wc, awk and so forth).\n- Unset the $PATH and ensure commands are not working anymore.\n- Set the $PATH to a multiple directory value (directory1:directory2) and ensure that directories are checked in order from left to right.",
+              "FR": "**Chemin d'environnement**\n- Exécutez des commandes, mais cette fois sans aucun chemin (ls, wc, awk, etc.).\n- Supprimez la variable $PATH et assurez-vous que les commandes ne fonctionnent plus.\n- Définissez la variable $PATH sur une valeur de répertoire multiple (répertoire1:répertoire2) et assurez-vous que les répertoires sont vérifiés de gauche à droite."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Redirection**\n- Execute commands with redirections < and/or >\n- Repeat multiple times with different commands and arguments and sometimes change > with >>\n- Check if multiple tries of the same redirections fail.\n- Test << redirection (it doesn't have to update the history).",
+              "FR": "**Redirection**\n- Exécutez des commandes avec des redirections < et/ou >.\n- Répétez plusieurs fois avec différentes commandes et arguments et changez parfois > en >>.\n- Vérifiez si plusieurs tentatives des mêmes redirections échouent.\n- Testez la redirection << (elle n'a pas besoin de mettre à jour l'historique)."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Pipes**\n- Execute commands with pipes like 'cat file | grep bla | more'\n- Repeat multiple times with different commands and arguments.\n- Try some wrong commands like 'ls filethatdoesntexist | grep bla | more'\n- Try to mix pipes and redirections.",
+              "FR": "**Pipes**\n- Exécutez des commandes avec des pipes comme 'cat fichier | grep bla | more'.\n- Répétez plusieurs fois avec différentes commandes et arguments.\n- Essayez des commandes erronées comme 'ls fichierquiexistenpas | grep bla | more'.\n- Essayez de mélanger les pipes et les redirections."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Go Crazy and history**\n- Type a command line, then use ctrl-C and press \"Enter\". The buffer should be clean and there should be nothing left to execute.\n- Can we navigate through history using Up and Down? Can we retry some command?\n- Execute commands that should not work like 'dsbksdgbksdghsd'. Ensure minishell doesn't crash and prints an error. 'cat | cat | ls' should behave in a \"normal way\".\n- Try to execute a long command with a ton of arguments.\n- Have fun with that beautiful minishell and enjoy it!",
+              "FR": "**Devenez fou et historique**\n- Tapez une ligne de commande, puis utilisez ctrl-C et appuyez sur \"Entrée\". Le tampon doit être propre et il ne doit plus rien rester à exécuter.\n- Pouvons-nous naviguer dans l'historique en utilisant Haut et Bas ? Pouvons-nous réessayer une commande ?\n- Exécutez des commandes qui ne devraient pas fonctionner comme 'dsbksdgbksdghsd'. Assurez-vous que minishell ne plante pas et affiche une erreur. 'cat | cat | ls' devrait se comporter de manière \"normale\".\n- Essayez d'exécuter une longue commande avec une tonne d'arguments.\n- Amusez-vous avec ce magnifique minishell et profitez-en !"
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Environment variables**\n- Execute echo with some environment variables ($variable) as arguments.\n- Check that $ is interpreted as an environment variable.\n- Check that double quotes interpolate $.\n- Check that USER exists. Otherwise, set it.\n- echo \"$USER\" should print the value of the USER variable.",
+              "FR": "**Variables d'environnement**\n- Exécutez echo avec des variables d'environnement ($variable) comme arguments.\n- Vérifiez que $ est interprété comme une variable d'environnement.\n- Vérifiez que les guillemets doubles interpolent $.\n- Vérifiez que USER existe. Sinon, définissez-la.\n- echo \"$USER\" doit afficher la valeur de la variable USER."
+            },
+            "yes_no": true,
+            "separator": false,
+            "type": "mandatory"
+          }
+        ],
+        "bonusSections": [
+          {
+            "description": {
+              "EN": "# Bonus\n*Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.*\n\n---\n\n**And, Or**\nUse &&, || and parenthesis with commands and ensure minishell behaves the same way bash does.",
+              "FR": "# Bonus\n*Évaluez la partie bonus si, et seulement si, la partie obligatoire a été entièrement et parfaitement réalisée, et que la gestion des erreurs gère les utilisations inattendues ou incorrectes. Si tous les points obligatoires n'ont pas été validés lors de la défense, les points bonus doivent être totalement ignorés.*\n\n---\n\n**Et, Ou**\nUtilisez &&, || et les parenthèses avec les commandes et assurez-vous que minishell se comporte de la même manière que bash."
+            },
+            "separator": "border-t-[0.5px]",
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "EN": "**Wildcard**\nUse wildcards in arguments in the current working directory.",
+              "FR": "**Caractère générique**\nUtilisez des caractères génériques dans les arguments dans le répertoire de travail actuel."
+            },
+            "separator": "border-t-[0.5px]",
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "EN": "**Surprise! (or not...)**\n- Set the USER environment variable.\n- echo \"'$USER'\" should print the value of the USER variable.\n- echo '\"$USER\"' should print \"$USER\".",
+              "FR": "**Surprise ! (ou pas...)**\n- Définissez la variable d'environnement USER.\n- echo \"'$USER'\" doit afficher la valeur de la variable USER.\n- echo '\"$USER\"' doit afficher \"$USER\"."
+            },
+            "separator": false,
+            "yes_no": true,
+            "type": "bonus"
+          }
+        ],
+        "gradingOptions": [
+          {
+            "ok": true,
+            "outstanding": true,
+            "empty_work": true,
+            "incomplete_work": true,
+            "invalid_compilation": true,
+            "norme": true,
+            "cheat": true,
+            "crash": true,
+            "concerning_situations": true,
+            "leaks": true,
+            "forbidden_functions": true,
+            "cannot_support": true
+          }
+        ],
+        "languages": [
+          "EN",
+          "FR"
+        ],
+        "language": "EN"
+      }
     ],
-    "message": "Sheets found successfully"
-}
+    "message": "Sheet created successfully"
+  }

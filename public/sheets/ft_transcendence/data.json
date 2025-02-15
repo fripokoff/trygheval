@@ -1,0 +1,194 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 3,
+      "status": "active",
+      "finish": true,
+      "project_title": "ft_transcendence",
+      "introduction": {
+        "EN": "# Introduction\nPlease respect the following rules:\n\n- Be polite, courteous, respectful and constructive during the evaluation process. The well-being of the community depends on it.\n\n- Identify with the person being evaluated or the group being evaluated any malfunctions in their work. Take time to discuss and debate the problems identified.\n\n- You must take into account that there may be slight differences in interpretation between the project instructions, its scope and its functionalities. Keep an open mind and grade as honestly as possible. Pedagogy is only valid if peer-evaluation is done seriously.",
+        "FR": "# Introduction\nVeuillez respecter les règles suivantes :\n\n- Soyez poli, courtois, respectueux et constructif pendant le processus d'évaluation. Le bien-être de la communauté en dépend.\n\n- Identifiez avec la personne évaluée ou le groupe évalué tout dysfonctionnement dans son travail. Prenez le temps de discuter et de débattre des problèmes identifiés.\n\n- Vous devez tenir compte du fait qu'il peut y avoir de légères différences d'interprétation entre les instructions du projet, sa portée et ses fonctionnalités. Gardez l'esprit ouvert et notez aussi honnêtement que possible. La pédagogie n'est valable que si l'évaluation par les pairs est faite sérieusement."
+      },
+      "guidelines": {
+        "EN": "# Guidelines\n- Only grade what is contained in the cloned Git repository of the student or group.\n\n- Double-check that the Git repository belongs to the student(s). Ensure that the project is the one expected. Also, check that 'git clone' is used in an empty folder.\n\n- Check carefully that no malicious aliases was used to fool you and make you evaluate something that is not the content of the official repository.\n\n- In order to avoid any surprises, check with the student or group the potential scripts used to facilitate the evaluation (for example, test or automation scripts).\n\n- If you have not done the project you are going to evaluate, you must read the subject in its entirety before starting the evaluation.\n\n- Use the available flags to report an empty submission, a non-functioning program, a Norm error, cheating... In these situations, the evaluation is terminated and the grade is 0, or -42 in case of cheating. However, with the exception of cases of cheating, you are encouraged to continue the discussion on the work submitted, even if the latter is incomplete. This is in order to identify errors not to be reproduced in the future.\n\n- Throughout the duration of the evaluation, no segfault or other unexpected, premature or uncontrolled stop will be tolerated. In which case, the final grade will be 0. Use the appropriate flag. You should never have to edit a file except for a configuration file if it exists. In the event that you wish to modify a file, you must clearly explain the reasons for the modification and be in agreement with the student being evaluated before doing anything.\n\n- You must also check for the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of the program's execution. You have the right to use any tool available on the machine such as leaks, valgrind or e_fence. In case of memory leaks, check the appropriate flag.",
+        "FR": "# Directives\n- Ne notez que ce qui est contenu dans le dépôt Git cloné de l'étudiant ou du groupe.\n\n- Vérifiez que le dépôt Git appartient bien à l'étudiant(s). Assurez-vous que le projet est bien celui attendu. Vérifiez également que 'git clone' est utilisé dans un dossier vide.\n\n- Vérifiez attentivement qu'aucun alias malveillant n'a été utilisé pour vous tromper et vous faire évaluer quelque chose qui n'est pas le contenu du dépôt officiel.\n\n- Afin d'éviter toute surprise, vérifiez avec l'étudiant ou le groupe les scripts potentiels utilisés pour faciliter l'évaluation (par exemple, les scripts de test ou d'automatisation).\n\n- Si vous n'avez pas fait le projet que vous allez évaluer, vous devez lire le sujet dans son intégralité avant de commencer l'évaluation.\n\n- Utilisez les drapeaux disponibles pour signaler une soumission vide, un programme non fonctionnel, une erreur de Norme, une triche... Dans ces situations, l'évaluation est terminée et la note est de 0, ou -42 en cas de triche. Cependant, à l'exception des cas de triche, vous êtes encouragé à poursuivre la discussion sur le travail soumis, même si ce dernier est incomplet. Ceci afin d'identifier les erreurs à ne pas reproduire à l'avenir.\n\n- Pendant toute la durée de l'évaluation, aucun segfault ou autre arrêt inattendu, prématuré ou incontrôlé ne sera toléré. Dans ce cas, la note finale sera de 0. Utilisez le drapeau approprié. Vous ne devriez jamais avoir à modifier un fichier, sauf pour un fichier de configuration s'il existe. Si vous souhaitez modifier un fichier, vous devez clairement expliquer les raisons de la modification et être d'accord avec l'étudiant évalué avant de faire quoi que ce soit.\n\n- Vous devez également vérifier l'absence de fuites de mémoire. Toute mémoire allouée sur le tas doit être correctement libérée avant la fin de l'exécution du programme. Vous avez le droit d'utiliser n'importe quel outil disponible sur la machine tel que leaks, valgrind ou e_fence. En cas de fuites de mémoire, cochez le drapeau approprié."
+      },
+      "attachments": [
+        {
+          "title": "new_subject_en.pdf",
+          "url": "new_en.subject.pdf"
+        },
+        {
+          "title": "old_subject_en.pdf",
+          "url": "old_en.subject.pdf"
+        },
+        {
+          "title": "old_subject_fr.pdf",
+          "url": "old_fr.subject.pdf"
+        },
+        {
+          "title": "extras",
+          "url": "/Extras"
+        }
+      ],
+      "cursus_id": "1",
+      "updated_at": "2024-03-31T22:00:00.000Z",
+      "students": 3,
+      "eval_points": 9,
+      "time": 60,
+      "mandatorySections": [
+        {
+          "description": {
+            "EN": "# ⚠️ SUBJECT UPDATE 10/02/2025 ⚠️\n**I don't know if the correction has also changed count this as the old correction.**\n\n---\n\n# General instructions\n\n---\n\n**Preliminary tests**\n- Any credentials, API keys, environment variables must be set inside a .env file during the evaluation. In case any credentials, API keys are available in the git repository and outside of the .env file created during the evaluation, the evaluation stop and the mark is 0.\n- Ensure the docker compose file is at the root of the repository.\n- Run the \"docker-compose up --build\" command.\n- Since the rating of this project is more flexible, do not stop the evaluation process unless you encounter a 500 error, a crash, or anything that actually doesn't work within the project scope.",
+            "FR": "# ⚠️ MISE À JOUR DU SUJET 10/02/2025 ⚠️\n**Je ne sais pas si la correction a également changé, considérez ceci comme l'ancienne correction.**\n\n---\n\n# Instructions générales\n\n---\n\n**Tests préliminaires**\n- Tous les identifiants, clés API, variables d'environnement doivent être définis dans un fichier .env pendant l'évaluation. Si des identifiants, des clés API sont disponibles dans le dépôt git et en dehors du fichier .env créé pendant l'évaluation, l'évaluation s'arrête et la note est de 0.\n- Assurez-vous que le fichier docker compose est à la racine du dépôt.\n- Exécutez la commande \"docker-compose up --build\".\n- Étant donné que la notation de ce projet est plus flexible, n'arrêtez pas le processus d'évaluation à moins que vous ne rencontriez une erreur 500, un crash ou tout ce qui ne fonctionne pas dans le cadre du projet."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Basic checks**\n- The website is available.\n- The user can subscribe on the website.\n- Registered users can log in.\n- The website is a Single Page Application. The user can use the \"Back\" and \"Forward\" buttons of the web browser.\n- You can browse the website using the latest version of Chrome.\n",
+            "FR": "**Vérifications de base**\n- Le site web est disponible.\n- L'utilisateur peut s'abonner sur le site web.\n- Les utilisateurs enregistrés peuvent se connecter.\n- Le site web est une application monopage. L'utilisateur peut utiliser les boutons \"Retour\" et \"Suivant\" du navigateur web.\n- Vous pouvez naviguer sur le site web en utilisant la dernière version de Chrome."
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "# The website\n\n---\n\n**Security concerns**\n- Ensure that the website is secured.\n- Be carefull about TLS. If there is a backend or any other features, it must be available.\n- Check if there is a database the passwords must be hashed.\n- Check the server for server-side validation/sanitization on forms and any user input.\n- Ensure the security measures are properly implemented and thoroughly tested.\n- If there is any error, the evaluation ends now.",
+            "FR": "# Le site web\n\n---\n\n**Préoccupations de sécurité**\n- Assurez-vous que le site web est sécurisé.\n- Soyez attentif à TLS. S'il y a un backend ou d'autres fonctionnalités, il doit être disponible.\n- Vérifiez s'il y a une base de données, les mots de passe doivent être hachés.\n- Vérifiez le serveur pour la validation/assainissement côté serveur sur les formulaires et toute entrée utilisateur.\n- Assurez-vous que les mesures de sécurité sont correctement mises en œuvre et testées de manière approfondie.\n- S'il y a une erreur, l'évaluation se termine maintenant."
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "# The game\n\n---\n\n**Local game**\n- You should be able to use this game locally on the same computer using the keyboard.\n- Each player should be able to utilize a section of the keyboard.\n- You must also be able to initiate a tournament, and the tournament should offer a matchmaking system to connect local players.",
+            "FR": "# Le jeu\n\n---\n\n**Jeu local**\n- Vous devriez pouvoir utiliser ce jeu localement sur le même ordinateur en utilisant le clavier.\n- Chaque joueur devrait pouvoir utiliser une section du clavier.\n- Vous devez également pouvoir lancer un tournoi, et le tournoi devrait offrir un système de matchmaking pour connecter les joueurs locaux."
+          },
+          "yes_no": true,
+          "separator": "border-t-1",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Gameplay**\nThe game itself must be playable and respect the original Pong game.\nThe controls must be intuitive or correctly explained (with some rules or manual).\nWhen a game is over, either a kind of end-game screen is displayed or the game page just exits.",
+            "FR": "**Gameplay**\nLe jeu lui-même doit être jouable et respecter le jeu de Pong original.\nLes commandes doivent être intuitives ou correctement expliquées (avec des règles ou un manuel).\nQuand une partie est terminée, soit une sorte d'écran de fin de partie est affiché, soit la page du jeu se ferme."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Lags & disconnects**\nUnexpected disconnections and lags have to be handled. The game and the website must not crash when a user is experiencing lags or is disconnected.\nHandling such issues in an efficient way is appreciated but not mandatory:\n- Pause the game for a defined duration.\n- Disconnected users can reconnect.\n- Lagging users can catch up to the match.\n- And so forth. Any solution is acceptable. The only requirement is: the game should not crash.",
+            "FR": "**Lags & déconnexions**\nLes déconnexions et les lags inattendus doivent être gérés. Le jeu et le site web ne doivent pas planter lorsqu'un utilisateur subit des lags ou est déconnecté.\nLa gestion de ces problèmes de manière efficace est appréciée mais pas obligatoire :\n- Mettre le jeu en pause pendant une durée définie.\n- Les utilisateurs déconnectés peuvent se reconnecter.\n- Les utilisateurs qui laguent peuvent rattraper le match.\n- Et ainsi de suite. Toute solution est acceptable. La seule exigence est : le jeu ne doit pas planter."
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "# Modules\n*For this section, it is crucial to thoroughly read the PDF document detailing the requirements for each module, and provide clear and precise \n explanations for each choice made. In case of any doubt, do not hesitate to stop.*\n\n---\n\n**Major module 01**\nYou must now verify the chosen module(s) with each group participant.\nYou must comprehensively understand everything that will be explained, with the subject PDF as your reference.\nThe obligations for each module are clearly stated in the subject's PDF.\n\nDo not hesitate to ask any questions and request a demonstration of the proper functioning of these module(s).\n\nAs a reminder, one major module is equivalent to 2 minor modules, as specified in the subject.\n\nA module is considered valid under the following criteria:\n- There are no issues with the proper functioning of the presented module(s).\n- We understand how it works and why it was chosen.\n- No errors are visible\n- A comprehensive explanation allows for a detailed understanding of these module(s).\n\nWe would like to remind you that this is an important project, and that it is essential to carry out this evaluation properly.",
+            "FR": "# Modules\n*Pour cette section, il est crucial de lire attentivement le document PDF détaillant les exigences de chaque module, et de fournir des explications claires et précises pour chaque choix effectué. En cas de doute, n'hésitez pas à vous arrêter.*\n\n---\n\n**Module majeur 01**\nVous devez maintenant vérifier le(s) module(s) choisi(s) avec chaque participant du groupe.\nVous devez comprendre de manière exhaustive tout ce qui sera expliqué, avec le PDF du sujet comme référence.\nLes obligations pour chaque module sont clairement énoncées dans le PDF du sujet.\n\nN'hésitez pas à poser des questions et à demander une démonstration du bon fonctionnement de ce(s) module(s).\n\nPour rappel, un module majeur équivaut à 2 modules mineurs, comme spécifié dans le sujet.\n\nUn module est considéré comme valide selon les critères suivants :\n- Il n'y a aucun problème avec le bon fonctionnement du/des module(s) présenté(s).\n- Nous comprenons comment cela fonctionne et pourquoi cela a été choisi.\n- Aucune erreur n'est visible\n- Une explication complète permet une compréhension détaillée de ce(s) module(s).\n\nNous tenons à vous rappeler qu'il s'agit d'un projet important, et qu'il est essentiel de mener à bien cette évaluation."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Module 02**\nYou must now verify the chosen module(s) with each group participant.\nYou must comprehensively understand everything that will be explained, with the subject PDF as your reference.\nThe obligations for each module are clearly stated in the subject's PDF.\n\nDo not hesitate to ask any questions and request a demonstration of the proper functioning of these module(s).\n\nAs a reminder, one major module is equivalent to 2 minor modules, as specified in the subject.\n\nA module is considered valid under the following criteria:\n- There are no issues with the proper functioning of the presented module(s).\n- We understand how it works and why it was chosen.\n- No errors are visible\n- A comprehensive explanation allows for a detailed understanding of these module(s).\n\nWe would like to remind you that this is an important project, and that it is essential to carry out this evaluation properly.",
+            "FR": "**Module 02**\nVous devez maintenant vérifier le(s) module(s) choisi(s) avec chaque participant du groupe.\nVous devez comprendre de manière exhaustive tout ce qui sera expliqué, avec le PDF du sujet comme référence.\nLes obligations pour chaque module sont clairement énoncées dans le PDF du sujet.\n\nN'hésitez pas à poser des questions et à demander une démonstration du bon fonctionnement de ce(s) module(s).\n\nPour rappel, un module majeur équivaut à 2 modules mineurs, comme spécifié dans le sujet.\n\nUn module est considéré comme valide selon les critères suivants :\n- Il n'y a aucun problème avec le bon fonctionnement du/des module(s) présenté(s).\n- Nous comprenons comment cela fonctionne et pourquoi cela a été choisi.\n- Aucune erreur n'est visible\n- Une explication complète permet une compréhension détaillée de ce(s) module(s).\n\nNous tenons à vous rappeler qu'il s'agit d'un projet important, et qu'il est essentiel de mener à bien cette évaluation."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Module 03**\nYou must now verify the chosen module(s) with each group participant.\nYou must comprehensively understand everything that will be explained, with the subject PDF as your reference.\nThe obligations for each module are clearly stated in the subject's PDF.\n\nDo not hesitate to ask any questions and request a demonstration of the proper functioning of these module(s).\n\nAs a reminder, one major module is equivalent to 2 minor modules, as specified in the subject.\n\nA module is considered valid under the following criteria:\n- There are no issues with the proper functioning of the presented module(s).\n- We understand how it works and why it was chosen.\n- No errors are visible\n- A comprehensive explanation allows for a detailed understanding of these module(s).\n\nWe would like to remind you that this is an important project, and that it is essential to carry out this evaluation properly.",
+            "FR": "**Module 03**\nVous devez maintenant vérifier le(s) module(s) choisi(s) avec chaque participant du groupe.\nVous devez comprendre de manière exhaustive tout ce qui sera expliqué, avec le PDF du sujet comme référence.\nLes obligations pour chaque module sont clairement énoncées dans le PDF du sujet.\n\nN'hésitez pas à poser des questions et à demander une démonstration du bon fonctionnement de ce(s) module(s).\n\nPour rappel, un module majeur équivaut à 2 modules mineurs, comme spécifié dans le sujet.\n\nUn module est considéré comme valide selon les critères suivants :\n- Il n'y a aucun problème avec le bon fonctionnement du/des module(s) présenté(s).\n- Nous comprenons comment cela fonctionne et pourquoi cela a été choisi.\n- Aucune erreur n'est visible\n- Une explication complète permet une compréhension détaillée de ce(s) module(s).\n\nNous tenons à vous rappeler qu'il s'agit d'un projet important, et qu'il est essentiel de mener à bien cette évaluation."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Module 04**\nYou must now verify the chosen module(s) with each group participant.\nYou must comprehensively understand everything that will be explained, with the subject PDF as your reference.\nThe obligations for each module are clearly stated in the subject's PDF.\n\nDo not hesitate to ask any questions and request a demonstration of the proper functioning of these module(s).\n\nAs a reminder, one major module is equivalent to 2 minor modules, as specified in the subject.\n\nA module is considered valid under the following criteria:\n- There are no issues with the proper functioning of the presented module(s).\n- We understand how it works and why it was chosen.\n- No errors are visible\n- A comprehensive explanation allows for a detailed understanding of these module(s).\n\nWe would like to remind you that this is an important project, and that it is essential to carry out this evaluation properly.",
+            "FR": "**Module 04**\nVous devez maintenant vérifier le(s) module(s) choisi(s) avec chaque participant du groupe.\nVous devez comprendre de manière exhaustive tout ce qui sera expliqué, avec le PDF du sujet comme référence.\nLes obligations pour chaque module sont clairement énoncées dans le PDF du sujet.\n\nN'hésitez pas à poser des questions et à demander une démonstration du bon fonctionnement de ce(s) module(s).\n\nPour rappel, un module majeur équivaut à 2 modules mineurs, comme spécifié dans le sujet.\n\nUn module est considéré comme valide selon les critères suivants :\n- Il n'y a aucun problème avec le bon fonctionnement du/des module(s) présenté(s).\n- Nous comprenons comment cela fonctionne et pourquoi cela a été choisi.\n- Aucune erreur n'est visible\n- Une explication complète permet une compréhension détaillée de ce(s) module(s).\n\nNous tenons à vous rappeler qu'il s'agit d'un projet important, et qu'il est essentiel de mener à bien cette évaluation."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Module 05**\nYou must now verify the chosen module(s) with each group participant.\nYou must comprehensively understand everything that will be explained, with the subject PDF as your reference.\nThe obligations for each module are clearly stated in the subject's PDF.\n\nDo not hesitate to ask any questions and request a demonstration of the proper functioning of these module(s).\n\nAs a reminder, one major module is equivalent to 2 minor modules, as specified in the subject.\n\nA module is considered valid under the following criteria:\n- There are no issues with the proper functioning of the presented module(s).\n- We understand how it works and why it was chosen.\n- No errors are visible\n- A comprehensive explanation allows for a detailed understanding of these module(s).\n\nWe would like to remind you that this is an important project, and that it is essential to carry out this evaluation properly.",
+            "FR": "**Module 05**\nVous devez maintenant vérifier le(s) module(s) choisi(s) avec chaque participant du groupe.\nVous devez comprendre de manière exhaustive tout ce qui sera expliqué, avec le PDF du sujet comme référence.\nLes obligations pour chaque module sont clairement énoncées dans le PDF du sujet.\n\nN'hésitez pas à poser des questions et à demander une démonstration du bon fonctionnement de ce(s) module(s).\n\nPour rappel, un module majeur équivaut à 2 modules mineurs, comme spécifié dans le sujet.\n\nUn module est considéré comme valide selon les critères suivants :\n- Il n'y a aucun problème avec le bon fonctionnement du/des module(s) présenté(s).\n- Nous comprenons comment cela fonctionne et pourquoi cela a été choisi.\n- Aucune erreur n'est visible\n- Une explication complète permet une compréhension détaillée de ce(s) module(s).\n\nNous tenons à vous rappeler qu'il s'agit d'un projet important, et qu'il est essentiel de mener à bien cette évaluation."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Module 06**\nYou must now verify the chosen module(s) with each group participant.\nYou must comprehensively understand everything that will be explained, with the subject PDF as your reference.\nThe obligations for each module are clearly stated in the subject's PDF.\n\nDo not hesitate to ask any questions and request a demonstration of the proper functioning of these module(s).\n\nAs a reminder, one major module is equivalent to 2 minor modules, as specified in the subject.\n\nA module is considered valid under the following criteria:\n- There are no issues with the proper functioning of the presented module(s).\n- We understand how it works and why it was chosen.\n- No errors are visible\n- A comprehensive explanation allows for a detailed understanding of these module(s).\n\nWe would like to remind you that this is an important project, and that it is essential to carry out this evaluation properly.",
+            "FR": "**Module 06**\nVous devez maintenant vérifier le(s) module(s) choisi(s) avec chaque participant du groupe.\nVous devez comprendre de manière exhaustive tout ce qui sera expliqué, avec le PDF du sujet comme référence.\nLes obligations pour chaque module sont clairement énoncées dans le PDF du sujet.\n\nN'hésitez pas à poser des questions et à demander une démonstration du bon fonctionnement de ce(s) module(s).\n\nPour rappel, un module majeur équivaut à 2 modules mineurs, comme spécifié dans le sujet.\n\nUn module est considéré comme valide selon les critères suivants :\n- Il n'y a aucun problème avec le bon fonctionnement du/des module(s) présenté(s).\n- Nous comprenons comment cela fonctionne et pourquoi cela a été choisi.\n- Aucune erreur n'est visible\n- Une explication complète permet une compréhension détaillée de ce(s) module(s).\n\nNous tenons à vous rappeler qu'il s'agit d'un projet important, et qu'il est essentiel de mener à bien cette évaluation."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Module 07**\nYou must now verify the chosen module(s) with each group participant.\nYou must comprehensively understand everything that will be explained, with the subject PDF as your reference.\nThe obligations for each module are clearly stated in the subject's PDF.\n\nDo not hesitate to ask any questions and request a demonstration of the proper functioning of these module(s).\n\nAs a reminder, one major module is equivalent to 2 minor modules, as specified in the subject.\n\nA module is considered valid under the following criteria:\n- There are no issues with the proper functioning of the presented module(s).\n- We understand how it works and why it was chosen.\n- No errors are visible\n- A comprehensive explanation allows for a detailed understanding of these module(s).\n\nWe would like to remind you that this is an important project, and that it is essential to carry out this evaluation properly.",
+            "FR": "**Module 07**\nVous devez maintenant vérifier le(s) module(s) choisi(s) avec chaque participant du groupe.\nVous devez comprendre de manière exhaustive tout ce qui sera expliqué, avec le PDF du sujet comme référence.\nLes obligations pour chaque module sont clairement énoncées dans le PDF du sujet.\n\nN'hésitez pas à poser des questions et à demander une démonstration du bon fonctionnement de ce(s) module(s).\n\nPour rappel, un module majeur équivaut à 2 modules mineurs, comme spécifié dans le sujet.\n\nUn module est considéré comme valide selon les critères suivants :\n- Il n'y a aucun problème avec le bon fonctionnement du/des module(s) présenté(s).\n- Nous comprenons comment cela fonctionne et pourquoi cela a été choisi.\n- Aucune erreur n'est visible\n- Une explication complète permet une compréhension détaillée de ce(s) module(s).\n\nNous tenons à vous rappeler qu'il s'agit d'un projet important, et qu'il est essentiel de mener à bien cette évaluation."
+          },
+          "yes_no": true,
+          "separator": false,
+          "type": "mandatory"
+        }
+      ],
+      "bonusSections": [
+        {
+          "description": {
+            "EN": "# Bonus part\n*Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.*\n\n---\n\n**Extra Module**\nYou must now verify the extra chosen module(s) with each group participant.\nYou must comprehensively understand everything that will be explained, with the subject PDF as your reference. The obligations for each module are clearly stated in the subject's PDF.\n\nDo not hesitate to ask any questions and request a demonstration of the proper functioning of these module(s).\n\nAs a reminder, one major module is equivalent to 2 points. One minor module is equivalent to 1 point.\n\nA module is considered valid under the following criteria:\n- There are no issues with the proper functioning of the presented module(s).\n- We understand how it works and why it was chosen.\n- No errors are visible\n- A comprehensive explanation allows for a detailed understanding of these module(s).\n\nWe would like to remind you that this is an important project, and that it is essential to carry out this evaluation properly.",
+            "FR": "# Partie bonus\n*Évaluez la partie bonus si, et seulement si, la partie obligatoire a été entièrement et parfaitement réalisée, et que la gestion des erreurs gère une utilisation inattendue ou incorrecte. Si tous les points obligatoires n'ont pas été validés lors de la défense, les points bonus doivent être totalement ignorés.*\n\n---\n\n**Module supplémentaire**\nVous devez maintenant vérifier le(s) module(s) supplémentaire(s) choisi(s) avec chaque participant du groupe.\nVous devez comprendre de manière exhaustive tout ce qui sera expliqué, avec le PDF du sujet comme référence. Les obligations pour chaque module sont clairement énoncées dans le PDF du sujet.\n\nN'hésitez pas à poser des questions et à demander une démonstration du bon fonctionnement de ce(s) module(s).\n\nPour rappel, un module majeur équivaut à 2 points. Un module mineur équivaut à 1 point.\n\nUn module est considéré comme valide selon les critères suivants :\n- Il n'y a aucun problème avec le bon fonctionnement du/des module(s) présenté(s).\n- Nous comprenons comment cela fonctionne et pourquoi cela a été choisi.\n- Aucune erreur n'est visible\n- Une explication complète permet une compréhension détaillée de ce(s) module(s).\n\nNous tenons à vous rappeler qu'il s'agit d'un projet important, et qu'il est essentiel de mener à bien cette évaluation."
+          },
+          "separator": false,
+          "yes_no": false,
+          "type": "bonus"
+        }
+      ],
+      "gradingOptions": [
+        {
+          "ok": true,
+          "outstanding": true,
+          "empty_work": true,
+          "incomplete_work": true,
+          "invalid_compilation": true,
+          "norme": true,
+          "cheat": true,
+          "crash": true,
+          "concerning_situations": true,
+          "leaks": true,
+          "forbidden_functions": true,
+          "cannot_support": true
+        }
+      ],
+      "languages": [
+        "EN",
+        "FR"
+      ],
+      "language": "EN"
+    }
+  ],
+  "message": "Sheet created successfully"
+}

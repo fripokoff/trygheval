@@ -2,10 +2,9 @@ import { useSectionContext } from "../../../contexts/SectionContext";
 import { useMandatorySections } from "../../../hooks/sections/useMandatorySections";
 
 export default function EditMandatorySection({
-  openModal,sheetData
+  openModal,sheetData, isNotExam
 }) {
-  const url = new URL(window.location.href);
-  let lang = url.searchParams.get("lang");
+  let lang = localStorage.getItem("lang");
   if(!lang)
       sheetData?.language ? lang = sheetData.language : lang = 'EN';
   const {
@@ -14,10 +13,6 @@ export default function EditMandatorySection({
     numberOfMandatorySections,
     updateMandatorySection,
   } = useSectionContext();
-
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
 
   const { addMandatorySection, removeMandatorySection } =
     useMandatorySections();
@@ -75,7 +70,6 @@ export default function EditMandatorySection({
             id={`mandatory_section_${index + 1}`}
             onClick={() => localStorage.setItem("ActiveSection", `mandatory_section_${index + 1}`)}
           >
-            {/* Contenu de la section */}
             <div className="mt-2 mb-2 flex justify-between items-center">
               <h1 className="text-xl font-medium text-base-content">
                 Section {section.index + 1}
@@ -133,7 +127,7 @@ export default function EditMandatorySection({
 
               <textarea
                 defaultValue={
-                  mandatoryOptionsDataFromServer[index]?.description?.[lang] || ""
+                  typeof mandatoryOptionsDataFromServer[index]?.description?.[lang] === "string" ? mandatoryOptionsDataFromServer[index]?.description?.[lang] : typeof mandatoryOptionsDataFromServer[index]?.description === "string" ? mandatoryOptionsDataFromServer[index]?.description : ""
                 }
                 rows={20}
                 placeholder="Enter detailed description separated by a new line"
@@ -146,6 +140,7 @@ export default function EditMandatorySection({
             </div>
 
             {/* Switch */}
+            {isNotExam && (
             <div className="flex items-center justify-between mb-2 mt-4 font-bold text-base-content">
               <label className="relative inline-flex items-center cursor-pointer mr-4">
                 <input
@@ -171,7 +166,9 @@ export default function EditMandatorySection({
                 </button>
               </div>
             </div>
-
+            )}
+            {/* Slider */}
+            {isNotExam && (
             <div className="flex items-center justify-between mb-2 mt-4 font-bold text-base-content">
               <label className="relative inline-flex items-center cursor-pointer mr-4">
                 <input
@@ -205,6 +202,7 @@ export default function EditMandatorySection({
                 </div>
               </div>
             </div>
+          )}
             {index < numberOfMandatorySections - 1 && (
               <div>
                 <div className="flex items-center mb-2 mt-4 font-bold text-base-content">

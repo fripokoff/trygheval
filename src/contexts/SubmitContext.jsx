@@ -71,6 +71,8 @@ export function SubmitProvider({ children, setSheetData, sheetData }) {
         eval_points: formData?.eval_points || evalPoints,
         time: formData?.time || time,
         introduction : formData?.introduction || introductionData || [],
+        languages: formData?.languages || ['EN'],
+        language: 'EN',
         guidelines : formData?.guidelines || guidelinesData || [],
         mandatorySections: formData?.mandatorySections || formattedMandatorySections || [],
         bonusSections: formData?.bonusSections || formattedBonusSections || [],

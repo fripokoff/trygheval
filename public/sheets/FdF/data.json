@@ -1,185 +1,194 @@
 {
     "success": true,
     "data": [
-        {
-			"id": 8,
-			"status": "active",
-			"project_title": "FdF",
-			"introduction": [
-				"- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
-				"- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
-				"- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
-			],
-			"guidelines": [
-				"- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
-				"- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
-				"- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
-				"- If applicable, review any **scripts** used for testing or automation together with the student.",
-				"- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
-				"- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
-				"- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
-				"- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
-				"- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
-				"- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
-			],
-			"attachments": [
-				{
-					"title": "subject_en.pdf",
-					"url": "en.subject.pdf"
-				},
-				{
-					"title": "subject_fr.pdf",
-					"url": "fr.subject.pdf"
-				},
-				{
-					"title": "extras",
-					"url": "https://github.com/ARuzgar/42-Subjects/tree/main/Cursus/FdF/Extras"
-				}
-			],
-			"cursus_id": "1",
-			"updated_at": "2023-08-01T17:15:50.925Z",
-			"students" : 1,
-			"eval_points" : 3,
-			"time" : 30,
-			"preliminarySections" : [
-				{
-					"id": "679e56c78c78a1cea9234fa7",
-					"description": "--The repository isn't empty.\n--Norminette shows no errors.\n--No cheating.\n--No forbidden function/library.\n--The code compiles with the required options.\n--The executable is named as expected.\n--During execution, there is no brutal or unmanaged crash (segfault, bus error, and so forth).\n--No memory leaks.",
-					"yes_no": true,
-					"sheetId": "679e56c68c78a1cea9234fa6",
-					"created_at": "2025-02-01T17:15:51.018Z",
-					"updated_at": "2025-02-01T17:15:51.018Z"
-				}
-			],
-			"mandatorySections" : [
-				{
-					"id": "679e56c78c78a1cea9234fa7",
-					"description": "--The repository isn't empty.\n--Norminette shows no errors.\n--No cheating.\n--No forbidden function/library.\n--The code compiles with the required options.\n--The executable is named as expected.\n--During execution, there is no brutal or unmanaged crash (segfault, bus error, and so forth).\n--No memory leaks.",
-					"yes_no": true,
-					"sheetId": "679e56c68c78a1cea9234fa6",
-					"created_at": "2025-02-01T17:15:51.018Z",
-					"updated_at": "2025-02-01T17:15:51.018Z"
-				},
-				{
-					"id": "679e56c78c78a1cea9234fa8",
-					"description": "Test fdf without parameters, with too many parameters, a non-existing\nfile or on which you have no rights. If those tests are passed, then it's\nall good. This is the only error management that is required. For now on,\nthe maps inside the input files have to be formatted properly.",
-					"yes_no": true,
-					"sheetId": "679e56c68c78a1cea9234fa6",
-					"created_at": "2025-02-01T17:15:51.018Z",
-					"updated_at": "2025-02-01T17:15:51.018Z"
-				},
-				{
-					"id": "679e56c78c78a1cea9234fa9",
-					"description": "--A window opens\n--Something is drawn in the window\n--You can see a isometric projection of the 42 map\n--Pressing 'ESC' closes the window and exits the program in a clean way (no leaks).\n--Clicking on the cross on the window's frame closes the window and exits the program in a clean way (no leaks).",
-					"yes_no": true,
-					"sheetId": "679e56c68c78a1cea9234fa6",
-					"created_at": "2025-02-01T17:15:51.018Z",
-					"updated_at": "2025-02-01T17:15:51.018Z"
-				},
-				{
-					"id": "679e56c78c78a1cea9234faa",
-					"description": "--Use a flat map with nothing but 0, sized 4x4. We have a flat wireframe grid with a projection that is used to give a 3D concept.\n--Same map, with 1 point at a different altitude. Check that the result corresponds and that the 3D effect is rendered.",
-					"yes_no": true,
-					"sheetId": "679e56c68c78a1cea9234fa6",
-					"created_at": "2025-02-01T17:15:51.018Z",
-					"updated_at": "2025-02-01T17:15:51.018Z"
-				},
-				{
-					"id": "679e56c78c78a1cea9234fab",
-					"description": "Check whether the program handles a bigger map and an aleatory 16x16 map.",
-					"yes_no": true,
-					"sheetId": "679e56c68c78a1cea9234fa6",
-					"created_at": "2025-02-01T17:15:51.018Z",
-					"updated_at": "2025-02-01T17:15:51.018Z"
-				},
-				{
-					"id": "679e56c78c78a1cea9234fac",
-					"description": "Test with bigger, heavier maps. Either those provided in the intranet, the\nevaluated student, or your owns. Be logical and keep in mind the\nrequirements of the subject regarding what could contain your maps (colors\nfor example).",
-					"yes_no": true,
-					"sheetId": "679e56c68c78a1cea9234fa6",
-					"created_at": "2025-02-01T17:15:51.018Z",
-					"updated_at": "2025-02-01T17:15:51.018Z"
-				},
-				{
-					"id": "679e56c78c78a1cea9234fad",
-					"description": "If the graphical representation stayed fluid and pleasant in the last test\nwith heavy maps, then it's cool.\n\n",
-					"yes_no": true,
-					"sheetId": "679e56c68c78a1cea9234fa6",
-					"created_at": "2025-02-01T17:15:51.018Z",
-					"updated_at": "2025-02-01T17:15:51.018Z"
-				},
-				{
-					"id": "679e56c78c78a1cea9234fae",
-					"description": "Take a look at the code and check whether the student uses the images from\nthe MLX to draw the image instead of putting pixels one by one. ;)",
-					"yes_no": true,
-					"sheetId": "679e56c68c78a1cea9234fa6",
-					"created_at": "2025-02-01T17:15:51.018Z",
-					"updated_at": "2025-02-01T17:15:51.018Z"
-				}
-			],
-			"bonusSections" : [
-				{
-					"id": "679e56c78c78a1cea9234fb0",
-					"description": "Can the map be represented using another projection (such as parallel or conic)?",
-					"yes_no": true,
-					"sheetId": "679e56c68c78a1cea9234fa6",
-					"created_at": "2025-02-01T17:15:51.093Z",
-					"updated_at": "2025-02-01T17:15:51.093Z"
-				},
-				{
-					"id": "679e56c78c78a1cea9234fb1",
-					"description": "Is there a way to zoom in and out using the keyboard or mouse?",
-					"yes_no": true,
-					"sheetId": "679e56c68c78a1cea9234fa6",
-					"created_at": "2025-02-01T17:15:51.093Z",
-					"updated_at": "2025-02-01T17:15:51.093Z"
-				},
-				{
-					"id": "679e56c78c78a1cea9234fb2",
-					"description": "Is there a way to translate the projection using the keyboard or mouse?",
-					"yes_no": true,
-					"sheetId": "679e56c68c78a1cea9234fa6",
-					"created_at": "2025-02-01T17:15:51.093Z",
-					"updated_at": "2025-02-01T17:15:51.093Z"
-				},
-				{
-					"id": "679e56c78c78a1cea9234fb3",
-					"description": "Is there a way to rotate the projection using the keyboard or mouse?",
-					"yes_no": true,
-					"sheetId": "679e56c68c78a1cea9234fa6",
-					"created_at": "2025-02-01T17:15:51.093Z",
-					"updated_at": "2025-02-01T17:15:51.093Z"
-				},
-				{
-					"id": "679e56c78c78a1cea9234fb4",
-					"description": "Give one more point if there is any additional bonus you consider is fine.\nCreativity is an important point in your education and in the digital world.",
-					"yes_no": true,
-					"sheetId": "679e56c68c78a1cea9234fa6",
-					"created_at": "2025-02-01T17:15:51.093Z",
-					"updated_at": "2025-02-01T17:15:51.093Z"
-				}
-			],
-			"gradingOptions" :[
-				{
-					"id": "679e45788c78a1cea9234f62",
-					"ok": true,
-					"outstanding": true,
-					"empty_work": true,
-					"incomplete_work": true,
-					"invalid_compilation": true,
-					"norme": true,
-					"cheat": true,
-					"crash": true,
-					"concerning_situations": true,
-					"leaks": true,
-					"forbidden_functions": true,
-					"cannot_support": true,
-					"sheetId": "679e45778c78a1cea9234f5f",
-					"created_at": "2025-02-01T16:02:00.638Z",
-					"updated_at": "2025-02-01T16:05:07.468Z"
-				}
-			]
-        }
+      {
+        "id": 8,
+        "status": "active",
+        "project_title": "FdF",
+		"finish" : true,
+        "introduction": {
+          "EN": "# Introduction\n- Remain polite, courteous, respectful and constructive throughout the evaluation process. The well-being of the community depends on it.\n- Identify with the student or group whose work is evaluated the possible dysfunctions in their project. Take the time to discuss and debate the problems that may have been identified.\n- You must consider that there might be some differences in how your peers might have understood the project's instructions and the scope of its functionalities. Always keep an open mind and grade them as honestly as possible. The pedagogy is useful only and only if the peer-evaluation is done seriously",
+          "FR": "# Introduction\n- Restez poli, courtois, respectueux et constructif tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Identifiez avec l'étudiant ou le groupe dont le travail est évalué les dysfonctionnements possibles dans leur projet. Prenez le temps de discuter et de débattre des problèmes qui ont pu être identifiés.\n- Vous devez considérer qu'il peut y avoir des différences dans la façon dont vos pairs ont compris les instructions du projet et la portée de ses fonctionnalités. Gardez toujours l'esprit ouvert et évaluez-les aussi honnêtement que possible. La pédagogie n'est utile que si l'évaluation par les pairs est faite sérieusement"
+        },
+        "guidelines": {
+          "EN": "# Guidelines\n- Only grade the work that was turned in the Git repository of the evaluated student or group.\n- Double-check that the Git repository belongs to the student(s). Ensure that the project is the one expected. Also, check that 'git clone' is used in an empty folder.\n- Check carefully that no malicious aliases was used to fool you and make you evaluate something that is not the content of the official repository.\n- To avoid any surprises and if applicable, review together any scripts used to facilitate the grading (scripts for testing or automation).\n- If you have not completed the assignment you are going to evaluate, you have to read the entire subject prior to starting the evaluation process.\n- Use the available flags to report an empty repository, a non-functioning program, a Norm error, cheating, and so forth.\nIn these cases, the evaluation process ends and the final grade is 0,\nor -42 in case of cheating. However, except for cheating, student are strongly encouraged to review together the work that was turned in, in order to identify any mistakes that shouldn't be repeated in the future.\n- You must also verify the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of execution.\nYou are allowed to use any of the different tools available on the computer,\nsuch as leaks, valgrind, or e_fence. In case of memory leaks, tick the appropriate flag.\n\n",
+          "FR": "# Directives\n- N'évaluez que le travail qui a été remis dans le dépôt Git de l'étudiant ou du groupe évalué.\n- Vérifiez que le dépôt Git appartient bien à l'étudiant (aux étudiants). Assurez-vous que le projet est bien celui attendu. Vérifiez également que 'git clone' est utilisé dans un dossier vide.\n- Vérifiez attentivement qu'aucun alias malveillant n'a été utilisé pour vous tromper et vous faire évaluer quelque chose qui n'est pas le contenu du dépôt officiel.\n- Pour éviter toute surprise et le cas échéant, examinez ensemble tous les scripts utilisés pour faciliter la notation (scripts de test ou d'automatisation).\n- Si vous n'avez pas terminé le devoir que vous allez évaluer, vous devez lire l'intégralité du sujet avant de commencer le processus d'évaluation.\n- Utilisez les drapeaux disponibles pour signaler un dépôt vide, un programme non fonctionnel, une erreur de Norme, une tricherie, etc.\nDans ces cas, le processus d'évaluation se termine et la note finale est de 0, ou -42 en cas de tricherie. Cependant, à l'exception de la tricherie, les étudiants sont fortement encouragés à examiner ensemble le travail qui a été remis, afin d'identifier les erreurs qui ne devraient pas être répétées à l'avenir.\n- Vous devez également vérifier l'absence de fuites de mémoire. Toute mémoire allouée sur le tas doit être correctement libérée avant la fin de l'exécution.\nVous êtes autorisé à utiliser tous les différents outils disponibles sur l'ordinateur, tels que leaks, valgrind ou e_fence. En cas de fuites de mémoire, cochez le drapeau approprié."
+        },
+        "attachments": [
+          {
+            "title": "subject_en.pdf",
+            "url": "en.subject.pdf"
+          },
+          {
+            "title": "subject_fr.pdf",
+            "url": "fr.subject.pdf"
+          },
+          {
+            "title": "extras",
+            "url": "https://github.com/ARuzgar/42-Subjects/tree/main/Cursus/FdF/Extras"
+          }
+        ],
+        "cursus_id": "1",
+        "updated_at": "2023-07-31T22:00:00.000Z",
+        "students": 1,
+        "eval_points": 3,
+        "time": 30,
+        "preliminarySections": [
+          {
+            "id": "679e56c78c78a1cea9234fa7",
+            "description": {
+              "EN": "--The repository isn't empty.\n--Norminette shows no errors.\n--No cheating.\n--No forbidden function/library.\n--The code compiles with the required options.\n--The executable is named as expected.\n--During execution, there is no brutal or unmanaged crash (segfault, bus error, and so forth).\n--No memory leaks.",
+              "FR": "--Le dépôt n'est pas vide.\n--Norminette ne montre aucune erreur.\n--Pas de triche.\n--Pas de fonction/bibliothèque interdite.\n--Le code se compile avec les options requises.\n--L'exécutable est nommé comme prévu.\n--Pendant l'exécution, il n'y a pas de crash brutal ou non géré (segfault, erreur de bus, etc.).\n--Pas de fuites de mémoire."
+            },
+            "yes_no": true,
+            "sheetId": "679e56c68c78a1cea9234fa6",
+            "created_at": "2025-02-01T17:15:51.018Z",
+            "updated_at": "2025-02-01T17:15:51.018Z"
+          }
+        ],
+        "mandatorySections": [
+          {
+            "description": {
+              "EN": "# Preliminary tests\n\n---\n**Minimal requirements**\nDoes the assignment meet the minimal requirements?\n- The repository isn't empty.\n- Norminette shows no errors.\n- No cheating.\n- No forbidden function/library.\n- The code compiles with the required options.\n- The executable is named as expected.\n- During execution, there is no brutal or unmanaged crash (segfault, bus error, and so forth).\n- No memory leaks.",
+              "FR": "# Tests préliminaires\n\n---\n**Exigences minimales**\nLe devoir répond-il aux exigences minimales ?\n- Le dépôt n'est pas vide.\n- Norminette ne montre aucune erreur.\n- Pas de triche.\n- Pas de fonction/bibliothèque interdite.\n- Le code se compile avec les options requises.\n- L'exécutable est nommé comme prévu.\n- Pendant l'exécution, il n'y a pas de crash brutal ou non géré (segfault, erreur de bus, etc.).\n- Pas de fuites de mémoire."
+            },
+            "yes_no": true,
+            "separator": "border-t-4",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "# Mandatory part\n\n---\n\n**Error management**\nTest fdf without parameters, with too many parameters, a non-existing file or on which you have no rights. If those tests are passed, then it's all good. \nThis is the only error management that is required. For now on, the maps inside the input files have to be formatted properly.",
+              "FR": "# Partie obligatoire\n\n---\n\n**Gestion des erreurs**\nTestez fdf sans paramètres, avec trop de paramètres, un fichier inexistant ou sur lequel vous n'avez aucun droit. Si ces tests sont réussis, alors tout va bien.\nC'est la seule gestion des erreurs requise. Désormais, les cartes à l'intérieur des fichiers d'entrée doivent être formatées correctement."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Graphic management**\nRun the program with the 42 map provided from the project page and verify that:\n- A window opens\n- Something is drawn in the window\n- You can see a isometric projection of the 42 map\n- Pressing 'ESC' closes the window and exits the program in a clean way (no leaks).\n- Clicking on the cross on the window's frame closes the window and exits the program in a clean way (no leaks).",
+              "FR": "**Gestion graphique**\nExécutez le programme avec la carte 42 fournie sur la page du projet et vérifiez que :\n- Une fenêtre s'ouvre\n- Quelque chose est dessiné dans la fenêtre\n- Vous pouvez voir une projection isométrique de la carte 42\n- Appuyer sur 'ESC' ferme la fenêtre et quitte le programme de manière propre (pas de fuites).\n- Cliquer sur la croix sur le cadre de la fenêtre ferme la fenêtre et quitte le programme de manière propre (pas de fuites)."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Line tracing**\n- Use a flat map with nothing but 0, sized 4x4. We have a flat wireframe grid with a projection that is used to give a 3D concept.\n- Same map, with 1 point at a different altitude. Check that the result corresponds and that the 3D effect is rendered.",
+              "FR": "**Tracé de ligne**\n- Utilisez une carte plate avec rien que des 0, de taille 4x4. Nous avons une grille filaire plate avec une projection qui est utilisée pour donner un concept 3D.\n- Même carte, avec 1 point à une altitude différente. Vérifiez que le résultat correspond et que l'effet 3D est rendu."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Heavy map**\nCheck whether the program handles a bigger map and an aleatory 16x16 map.",
+              "FR": "**Carte lourde**\nVérifiez si le programme gère une carte plus grande et une carte aléatoire de 16x16."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Heavier map**\nTest with bigger, heavier maps. Either those provided in the intranet, theevaluated student, or your owns.\nBe logical and keep in mind therequirements of the subject regarding what could contain your maps (colors for example).",
+              "FR": "**Carte plus lourde**\nTestez avec des cartes plus grandes et plus lourdes. Soit celles fournies dans l'intranet, celles de l'étudiant évalué, soit les vôtres.\nSoyez logique et gardez à l'esprit les exigences du sujet concernant ce que vos cartes pourraient contenir (couleurs par exemple)."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Graphic responsive**\nIf the graphical representation stayed fluid and pleasant in the last testwith heavy maps, then it's cool.\n\n",
+              "FR": "**Réactivité graphique**\nSi la représentation graphique est restée fluide et agréable lors du dernier test avec des cartes lourdes, alors c'est cool."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**MiniLibX images**\nTake a look at the code and check whether the student uses the images fromthe MLX to draw the image instead of putting pixels one by one. ;)",
+              "FR": "**Images MiniLibX**\nJetez un coup d'œil au code et vérifiez si l'étudiant utilise les images de la MLX pour dessiner l'image au lieu de mettre des pixels un par un. ;)"
+            },
+            "yes_no": true,
+            "separator": false,
+            "type": "mandatory"
+          }
+        ],
+        "bonusSections": [
+          {
+            "description": {
+              "EN": "# Bonus part\nA lot of nice extras.\n---\n**Extra projection**\nCan the map be represented using another projection (such as parallel or conic)?",
+              "FR": "# Partie bonus\nBeaucoup de jolis extras.\n---\n**Projection supplémentaire**\nLa carte peut-elle être représentée en utilisant une autre projection (telle que parallèle ou conique) ?"
+            },
+            "separator": "border-t-[0.5px]",
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "EN": "**Zoooooooom**\nIs there a way to zoom in and out using the keyboard or mouse?",
+              "FR": "**Zoooooooom**\nExiste-t-il un moyen de zoomer et dézoomer à l'aide du clavier ou de la souris ?"
+            },
+            "separator": "border-t-[0.5px]",
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "EN": "**Translate**\nIs there a way to translate the projection using the keyboard or mouse?",
+              "FR": "**Translation**\nExiste-t-il un moyen de translater la projection à l'aide du clavier ou de la souris ?"
+            },
+            "separator": "border-t-[0.5px]",
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "EN": "**Rotation**\nIs there a way to rotate the projection using the keyboard or mouse?",
+              "FR": "**Rotation**\nExiste-t-il un moyen de faire pivoter la projection à l'aide du clavier ou de la souris ?"
+            },
+            "separator": "border-t-[0.5px]",
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "EN": "**Be crazy**\nGive one more point if there is any additional bonus you consider is fine.\nCreativity is an important point in your education and in the digital world.",
+              "FR": "**Soyez fou**\nDonnez un point de plus s'il y a un bonus supplémentaire que vous considérez comme bien.\nLa créativité est un point important dans votre éducation et dans le monde numérique."
+            },
+            "separator": false,
+            "yes_no": true,
+            "type": "bonus"
+          }
+        ],
+        "gradingOptions": [
+          {
+            "ok": true,
+            "outstanding": true,
+            "empty_work": true,
+            "incomplete_work": true,
+            "invalid_compilation": true,
+            "norme": true,
+            "cheat": true,
+            "crash": true,
+            "concerning_situations": true,
+            "leaks": true,
+            "forbidden_functions": true,
+            "cannot_support": true
+          }
+        ],
+        "languages": [
+          "EN",
+          "FR"
+        ],
+        "language": "EN"
+      }
     ],
-    "message": "Sheets found successfully"
-}
+    "message": "Sheet created successfully"
+  }

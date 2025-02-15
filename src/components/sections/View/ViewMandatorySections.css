@@ -1,0 +1,36 @@
+.markdown-container {
+	overflow-x: auto;
+	width: 100%;
+  }
+  
+  .markdown-container table {
+	width: 100%;
+	border-collapse: collapse;
+  }
+  
+  .markdown-container th,
+  .markdown-container td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+	word-break: break-word;
+  }
+
+  .markdown-container a {
+	text-decoration: none;
+	transition: color 0.2s ease;
+  }
+  
+  .markdown-container a:hover {
+	text-decoration: underline;
+  }
+
+  .markdown-container table td.cursor-pointer {
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+  }
+  
+  .markdown-container table td.cursor-pointer:hover {
+	color: #1d4ed8;
+	background-color: rgba(59, 130, 246, 0.1);
+  }

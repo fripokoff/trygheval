@@ -2,15 +2,14 @@ import { useSectionContext } from "../../../contexts/SectionContext";
 import { useBonusSections } from "../../../hooks/sections/useBonusSections";
 import { useState, useEffect } from "react";
 
-export default function EditBonusSection({ openModal, sheetData }) {
+export default function EditBonusSection({ openModal, sheetData, isNotExam }) {
   const {
     bonusSections,
     bonusSectionsDataFromServer,
     numberOfBonusSections,
-    updateBonusSection,
+    updateBonusSection
   } = useSectionContext();
-  const url = new URL(window.location.href);
-  let lang = url.searchParams.get("lang");
+  let lang = localStorage.getItem("lang");
   if(!lang)
       sheetData?.language ? lang = sheetData.language : lang = 'EN';
   const { addBonusSection, removeBonusSection } = useBonusSections();
@@ -30,7 +29,8 @@ export default function EditBonusSection({ openModal, sheetData }) {
     const sepSize = event.target.value;
     updateBonusSection(index, { separator: sepSize });
   };
-
+ if(!isNotExam)
+    return null;
   return (
     <div className="flex flex-col p-4 lg:p-5 rounded-xl gap-5 mt-10 bg-base-200">
       {numberOfBonusSections === 0 && (
@@ -127,7 +127,7 @@ export default function EditBonusSection({ openModal, sheetData }) {
               </div>
               <textarea
                 defaultValue={
-                  bonusSectionsDataFromServer[index]?.description?.[lang] || ""
+                  bonusSectionsDataFromServer[index]?.description?.[lang] || bonusSectionsDataFromServer[index]?.description || ""
                 }
                 rows={20}
                 placeholder="Enter detailed description separated by a new line"

@@ -27,7 +27,6 @@ export default function ThemeProvider({ children }) {
   )
 }
 
-// Hook personnalisé pour utiliser le thème
 export const useTheme = () => {
   const context = useContext(ThemeContext)
   if (!context) throw new Error('useTheme doit être utilisé dans ThemeProvider')

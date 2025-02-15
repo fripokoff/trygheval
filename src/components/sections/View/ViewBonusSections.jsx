@@ -10,17 +10,17 @@ function ViewBonusSections({
     handleNoColorBonus, 
     handleBonusSliderValues,
     initialYesColor,
-    initialNoColor 
+    initialNoColor,
+    isNotExam
   }) {
-    const url = new URL(window.location.href);
-    let lang = url.searchParams.get("lang");
+    let lang = localStorage.getItem("lang");
     if(!lang)
         sheetData?.language ? lang = sheetData.language : lang = 'EN';
     return (
         <>
             {
                 sheetData.bonusSections && sheetData.bonusSections.length > 0 ? (
-                    <div className='mt-10 bg-base-100 p-5 lg:p-5 rounded-lg'>                  
+                    <div className='mt-10 bg-base-100 p-5 lg:p-5 rounded-lg' id="bonus_sections">                  
                             {
                                 sheetData.bonusSections.map((section, index) => (
                                    
@@ -37,7 +37,7 @@ function ViewBonusSections({
                                         />
                                     </div>
                                         <div className='flex gap-1 items-center w-full mt-4'>
-                                        {section.yes_no ? (
+                                        {isNotExam && section.yes_no ? (
                                             <div className='flex gap-1 items-center w-full'>
                                             <button
                                                 onClick={() => handleYesColorBonus(index)}
@@ -54,7 +54,7 @@ function ViewBonusSections({
                                                 No
                                             </button>
                                         </div>
-                                        ) : (
+                                        ) : isNotExam && (
                                             <div className='w-full mx-auto'>
                                             <p className='text-sm font-medium text-center pb-2'>
                                                 Rate it from 0 (failed) through 5 (excellent)

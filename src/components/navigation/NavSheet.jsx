@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useContext } from 'react';
 import { ToastContext } from '../../contexts/ToastContext';
-
+import NavigationViewHeader from './NavigationViewHeader';
 
 export default function NavSheet({ handleEdit, addMode, sheetData, handleImportData, handleDownload }) {
   const [isImportModalOpen, setIsImportModalOpen] = useState(false);
@@ -89,41 +89,11 @@ export default function NavSheet({ handleEdit, addMode, sheetData, handleImportD
   return (
     <>
       <div className="flex gap-3 justify-between max-w-7xl mx-auto px-3 sm:px-5 2xl:px-0 w-full pt-4">
-        <div className="grid grid-cols-[auto_1fr_auto] sm:grid-cols-3 gap-2 sm:gap-4 items-center w-full">
-          <div className="flex justify-start">
-            <a href="./">
-              <div className="flex items-center bg-base-100 text-base-content p-2 sm:p-3 rounded-md transition border border-base">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-4"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-                  />
-                </svg>
-              </div>
-            </a>
-          </div>
-
-          <h1 className='text-xl sm:text-2xl font-bold text-center truncate px-1'>
-            {sheetData.project_title}
-          </h1>
-
-          <div className="flex justify-end">
-            <button
-              onClick={handleEdit}
-              className="w-16 sm:w-20 bg-blue-600 font-bold hover:bg-blue-800 text-white py-2 sm:py-3 px-3 sm:px-6 rounded-md transition text-sm sm:text-base"
-            >
-              VIEW
-            </button>
-          </div>
-        </div>
+        <NavigationViewHeader 
+                handleEdit={handleEdit}
+                sheetData={sheetData}
+                inView={false}
+                />
       </div>
       <div className="data-buttons fixed bottom-0 left-0 flex flex-col gap-2 items-center rounded-md p-4 py-3 px-3 transition">
         <div>
@@ -200,22 +170,32 @@ export default function NavSheet({ handleEdit, addMode, sheetData, handleImportD
       {/* Download Modal */}
       {isDownloadModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 rounded-md">
-          <div className="bg-base-200 p-6 rounded-md">
+          <div className="bg-base-200 p-6 rounded-md max-w-2xl w-full">
             <h2 className="text-xl font-semibold mb-4">Download sheet</h2>
+            <div className="mb-4">
+              <h3 className="text-sm font-medium text-base-content mb-2">Preview:</h3>
+              <pre className="bg-base-300 p-4 rounded-md overflow-auto max-h-[500px]">
+                <code className="text-sm">
+                  {JSON.stringify(sheetData, null, 2)}
+                </code>
+              </pre>
+            </div>
+            <button
+              onClick={handleCopyToClipboard}
+              className="btn bg-base-300 border border-base-content p-4 mt-2 w-full"
+            >
+              Copy to Clipboard
+            </button>
+
 
             <button
               onClick={handleDownload}
-              className="btn btn-base-100 border border-base-content p-4 mt-2 w-full"
+              className="btn bg-green-500 hover:bg-green-500 text-white border border-base-content p-4 mt-2 w-full"
             >
               Download as JSON
             </button>
 
-            <button
-              onClick={handleCopyToClipboard}
-              className="btn btn-base-100 border border-base-content p-4 mt-2 w-full"
-            >
-              Copy to Clipboard
-            </button>
+
 
             <div className="mt-6 flex justify-end">
               <button

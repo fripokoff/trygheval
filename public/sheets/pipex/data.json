@@ -1,85 +1,112 @@
 {
-	"success": true,
-	"data": [
-	  {
-		"project_title": "pipex",
-		"students": 1,
-		"status": "active",
-		"finish": true,
-		"eval_points": 3,
-		"time": 30,
-		"languages": ["FR"],
-		"language": "FR",
-		"introduction": "- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.,\n- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.\n- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously.",
-		"guidelines": "- Only grade the work submitted to the **Git repository** of the evaluated student or group.\n- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.\n- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.\n- If applicable, review any **scripts** used for testing or automation together with the student.\n- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.,\n- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.\n- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.\n You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.\n- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.\n- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag.",
-		"mandatorySections": [
-		  {
-			"description": "# Tests préliminaires\n*Si un cas de triche est suspecté, la notation et l'évaluation prennent fin immédiatement. Pour le signaler, sélectionnez le flag \"Cheat\". Faites attention à l'utiliser avec calme, précaution et discernement.*\n\n---\n\n### Prérequis\n\nVérifiez les points suivants :\n\n- Les conditions d'accès à la soutenance sont respectées : personne(s) évaluée(s) présente(s), un rendu non vide lui appartenant bien, etc...\n- Si aucun travail n'a été soumis (ou mauvais fichiers, mauvais répertoire, ou noms de fichiers erronés), la note est de 0 et le processus d'évaluation prend fin.\n- Pas de dépôt vide (= rien dans le dépôt Git).\n- Aucune erreur de Norme.\n- Tricherie (= -42).\n - Pas d'erreur de compilation ni de Makefile qui re-link.",
-			"yes_no": true,
-			"separator": "border-t-[0.5px]",
-			"type": "mandatory"
-		  },
-		  {
-			"description": "# Instructions générales\n\n---\n\n### Instructions générales\n\n- Si un crash ou une erreur se produit de manière inattendue (erreur de segmentation, bus error, affichage anormal, etc.), utilisez le flag \"Crash\" !\n- Le Makefile compile l'exécutable avec les options demandées.\n- L'exécutable est nommé \"pipex\".\n- Aucune fonction interdite n'est utilisée.",
-			"yes_no": true,
-			"separator": "border-t-[0.5px]",
-			"type": "mandatory"
-		  },
-		  {
-			"description": "# Partie obligatoire\n*La commande `\"./pipex file1 cmd1 cmd2 file2\"`\nDoit se comporter comme cette commande : `\"< file1 cmd1 | cmd2 > fichier2\"`*\n\n---\n\n### Gestion des erreurs et des arguments\n\n- Le programme prend 4 arguments, ni plus, ni moins (sauf pour la partie bonus) et uniquement dans le bon ordre.\n- La gestion des erreurs est correcte : fichiers (in)existants, droits des fichiers, binaire de commande (in)existants, etc.\n\nSi ces points sont respectés, cochez \"Oui\" et poursuivez l'évaluation.\nDans le cas contraire, l'évaluation s'arrête ici. Utilisez 'Incomplete work'\n(rendu incomplet) ou tout autre flag approprié.",
-			"yes_no": true,
-			"separator": "border-t-[0.5px]",
-			"type": "mandatory"
-		  },
-		  {
-			"description": "### Le programme\n\nLe programme fait ce qui est demandé dans le sujet sans afficher des informations/étapes supplémentaires par rapport à la commande shell.\nFaites vos propres tests et comparez les résultats du programme avec ceux de la sortie de la commande originale. N'hésitez pas à regarder le sujet et les exemples donnés.\nSi aucune erreur n'est détectée, cochez \"Oui\" et continuez. Dans le cas contraire, l'évaluation s'arrête ici.",
-			"yes_no": true,
-			"separator": false,
-			"type": "mandatory"
-		  }
-		],
-		"bonusSections": [
-		  {
-			"description": "# Partie bonus\n*Les bonus ne seront examinés que si la partie obligatoire est excellente. Cela signifie que la partie obligatoire doit avoir été réalisée du début à la fin, avec une gestion d'erreur parfaite même en cas d'usage inattendu. Si tous les points obligatoires n'ont pas été attribués pendant cette soutenance, aucun point bonus ne sera comptabilisé.*\n\n---\n\n### Plusieurs pipes\n\nLe programme gère l'utilisation de plusieurs pipes les uns après les autres.\nComme pour la partie obligatoire, testez avec les commandes shell afin de comparer avec la sortie du programme.\nSi c'est bon seulement pour 2 pipes dans la même commande mais pas pour 5, ce bonus ne doit pas être compté.",
-			"separator": "border-t-[0.5px]",
-			"yes_no": true,
-			"type": "bonus"
-		  },
-		  {
-			"description": "### << et >> avec le paramètre here_doc\n\nLe programme réplique l'utilisation de << et >>.\nTestez plusieurs fois quelque chose comme : `\"CMD << STOP_VALUE | CMD1 >> fichier1\"`",
-			"separator": false,
-			"yes_no": true,
-			"type": "bonus"
-		  }
-		],
-		"attachments": [
-		  {
-			"title": "subject_en.pdf",
-			"url": "en.subject.pdf"
-		  },
-		  {
-			"title": "subject_fr.pdf",
-			"url": "fr.subject.pdf"
-		  }
-		],
-		"updated_at": "2024-01-07T23:00:00.000Z",
-		"gradingOptions": [
-		  {
-			"ok": true,
-			"outstanding": true,
-			"empty_work": true,
-			"incomplete_work": true,
-			"invalid_compilation": true,
-			"norme": true,
-			"cheat": true,
-			"crash": true,
-			"concerning_situations": true,
-			"leaks": true,
-			"forbidden_functions": true,
-			"cannot_support": true
-		  }
-		]
-	  }
-	],
-	"message": "Sheet created successfully"
+    "success": true,
+    "data": [
+      {
+        "project_title": "pipex",
+        "students": 1,
+        "status": "active",
+		"finish" : true,
+        "eval_points": 3,
+        "time": 30,
+        "languages": [
+          "EN",
+          "FR"
+        ],
+        "language": "EN",
+        "introduction": {
+          "EN": "# Introduction\n- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.,\n- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.\n- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously.",
+          "FR": "# Introduction\n- Restez poli, courtois, respectueux et constructif tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Collaborez avec l'étudiant ou le groupe évalué pour identifier les problèmes potentiels de leur projet. Prenez le temps de discuter et de débattre des problèmes identifiés.\n- Comprenez qu'il peut y avoir des différences dans la façon dont les pairs interprètent les instructions et la portée du projet. Gardez toujours l'esprit ouvert et évaluez aussi honnêtement que possible. La pédagogie n'est efficace que lorsque les évaluations par les pairs sont prises au sérieux."
+        },
+        "guidelines": {
+          "EN": "# Guidelines\n- Only grade the work submitted to the **Git repository** of the evaluated student or group.\n- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.\n- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.\n- If applicable, review any **scripts** used for testing or automation together with the student.\n- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.,\n- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.\n- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.\n You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.\n- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.\n- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag.",
+          "FR": "# Directives\n- N'évaluez que le travail soumis au **dépôt Git** de l'étudiant ou du groupe évalué.\n- Vérifiez que le **dépôt Git** appartient bien à l'étudiant (aux étudiants) et que le projet est bien celui attendu. Assurez-vous que **git clone** est utilisé dans un dossier vide.\n- Vérifiez attentivement qu'aucun alias malveillant n'est utilisé pour tromper l'évaluateur et lui faire évaluer un contenu non officiel.\n- Le cas échéant, examinez tous les **scripts** utilisés pour les tests ou l'automatisation avec l'étudiant.\n- Si vous n'avez pas terminé le devoir que vous évaluez, lisez l'intégralité du sujet avant de commencer l'évaluation.\n- Utilisez les drapeaux disponibles pour signaler un dépôt vide, un programme non fonctionnel, une erreur de **Norme** ou une tricherie. Le processus d'évaluation se termine par une note finale de 0 (ou -42 en cas de tricherie). Toutefois, sauf en cas de tricherie, les étudiants sont encouragés à examiner ensemble le travail afin d'identifier les erreurs à éviter à l'avenir.\n- N'oubliez pas qu'aucun **segfault** ou autre arrêt inattendu du programme ne sera toléré pendant l'évaluation. Si cela se produit, la note finale est de 0. Utilisez le drapeau approprié.\nVous ne devriez pas avoir besoin de modifier les fichiers, sauf le fichier de configuration, s'il existe. Si la modification d'un fichier est nécessaire, expliquez les raisons à l'étudiant évalué et assurez-vous d'un accord mutuel.\n- Vérifiez l'absence de **fuites de mémoire**. Toute la mémoire allouée sur le tas doit être correctement libérée avant la fin du programme.\n- Vous pouvez utiliser des outils tels que leaks, **valgrind** ou **e_fence** pour vérifier les fuites de mémoire. Si des fuites de mémoire sont détectées, cochez le drapeau approprié."
+        },
+        "mandatorySections": [
+          {
+            "description": {
+              "EN": "# Tests préliminaires\n*Si un cas de triche est suspecté, la notation et l'évaluation prennent fin immédiatement. Pour le signaler, sélectionnez le flag \"Cheat\". Faites attention à l'utiliser avec calme, précaution et discernement.*\n\n---\n\n### Prérequis\n\nVérifiez les points suivants :\n\n- Les conditions d'accès à la soutenance sont respectées : personne(s) évaluée(s) présente(s), un rendu non vide lui appartenant bien, etc...\n- Si aucun travail n'a été soumis (ou mauvais fichiers, mauvais répertoire, ou noms de fichiers erronés), la note est de 0 et le processus d'évaluation prend fin.\n- Pas de dépôt vide (= rien dans le dépôt Git).\n- Aucune erreur de Norme.\n- Tricherie (= -42).\n - Pas d'erreur de compilation ni de Makefile qui re-link.",
+              "FR": "# Tests préliminaires\n*Si un cas de triche est suspecté, la notation et l'évaluation prennent fin immédiatement. Pour le signaler, sélectionnez le flag \"Cheat\". Faites attention à l'utiliser avec calme, précaution et discernement.*\n\n---\n\n### Prérequis\n\nVérifiez les points suivants :\n\n- Les conditions d'accès à la soutenance sont respectées : personne(s) évaluée(s) présente(s), un rendu non vide lui appartenant bien, etc...\n- Si aucun travail n'a été soumis (ou mauvais fichiers, mauvais répertoire, ou noms de fichiers erronés), la note est de 0 et le processus d'évaluation prend fin.\n- Pas de dépôt vide (= rien dans le dépôt Git).\n- Aucune erreur de Norme.\n- Tricherie (= -42).\n- Pas d'erreur de compilation ni de Makefile qui re-link."
+            },
+            "yes_no": true,
+            "separator": "border-t-4",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "# Instructions générales\n\n---\n\n### Instructions générales\n\n- Si un crash ou une erreur se produit de manière inattendue (erreur de segmentation, bus error, affichage anormal, etc.), utilisez le flag \"Crash\" !\n- Le Makefile compile l'exécutable avec les options demandées.\n- L'exécutable est nommé \"pipex\".\n- Aucune fonction interdite n'est utilisée.",
+              "FR": "# Instructions générales\n\n---\n\n### Instructions générales\n\n- Si un crash ou une erreur se produit de manière inattendue (erreur de segmentation, bus error, affichage anormal, etc.), utilisez le flag \"Crash\" !\n- Le Makefile compile l'exécutable avec les options demandées.\n- L'exécutable est nommé \"pipex\".\n- Aucune fonction interdite n'est utilisée."
+            },
+            "yes_no": true,
+            "separator": "border-t-4",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "# Partie obligatoire\n*La commande `\"./pipex file1 cmd1 cmd2 file2\"`\nDoit se comporter comme cette commande : `\"< file1 cmd1 | cmd2 > fichier2\"`*\n\n---\n\n### Gestion des erreurs et des arguments\n\n- Le programme prend 4 arguments, ni plus, ni moins (sauf pour la partie bonus) et uniquement dans le bon ordre.\n- La gestion des erreurs est correcte : fichiers (in)existants, droits des fichiers, binaire de commande (in)existants, etc.\n\nSi ces points sont respectés, cochez \"Oui\" et poursuivez l'évaluation.\nDans le cas contraire, l'évaluation s'arrête ici. Utilisez 'Incomplete work'\n(rendu incomplet) ou tout autre flag approprié.",
+              "FR": "# Partie obligatoire\n*La commande `\"./pipex file1 cmd1 cmd2 file2\"`\nDoit se comporter comme cette commande : `\"< file1 cmd1 | cmd2 > fichier2\"`*\n\n---\n\n### Gestion des erreurs et des arguments\n\n- Le programme prend 4 arguments, ni plus, ni moins (sauf pour la partie bonus) et uniquement dans le bon ordre.\n- La gestion des erreurs est correcte : fichiers (in)existants, droits des fichiers, binaire de commande (in)existants, etc.\n\nSi ces points sont respectés, cochez \"Oui\" et poursuivez l'évaluation.\nDans le cas contraire, l'évaluation s'arrête ici. Utilisez 'Incomplete work' (rendu incomplet) ou tout autre drapeau approprié."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "### Le programme\n\nLe programme fait ce qui est demandé dans le sujet sans afficher des informations/étapes supplémentaires par rapport à la commande shell.\nFaites vos propres tests et comparez les résultats du programme avec ceux de la sortie de la commande originale. N'hésitez pas à regarder le sujet et les exemples donnés.\nSi aucune erreur n'est détectée, cochez \"Oui\" et continuez. Dans le cas contraire, l'évaluation s'arrête ici.",
+              "FR": "### Le programme\n\nLe programme fait ce qui est demandé dans le sujet sans afficher des informations/étapes supplémentaires par rapport à la commande shell.\nFaites vos propres tests et comparez les résultats du programme avec ceux de la sortie de la commande originale. N'hésitez pas à regarder le sujet et les exemples donnés.\nSi aucune erreur n'est détectée, cochez \"Oui\" et continuez. Dans le cas contraire, l'évaluation s'arrête ici."
+            },
+            "yes_no": true,
+            "separator": false,
+            "type": "mandatory"
+          }
+        ],
+        "bonusSections": [
+          {
+            "description": {
+              "EN": "# Partie bonus\n*Les bonus ne seront examinés que si la partie obligatoire est excellente. Cela signifie que la partie obligatoire doit avoir été réalisée du début à la fin, avec une gestion d'erreur parfaite même en cas d'usage inattendu. Si tous les points obligatoires n'ont pas été attribués pendant cette soutenance, aucun point bonus ne sera comptabilisé.*\n\n---\n\n### Plusieurs pipes\n\nLe programme gère l'utilisation de plusieurs pipes les uns après les autres.\nComme pour la partie obligatoire, testez avec les commandes shell afin de comparer avec la sortie du programme.\nSi c'est bon seulement pour 2 pipes dans la même commande mais pas pour 5, ce bonus ne doit pas être compté.",
+              "FR": "# Partie bonus\n*Les bonus ne seront examinés que si la partie obligatoire est excellente. Cela signifie que la partie obligatoire doit avoir été réalisée du début à la fin, avec une gestion d'erreur parfaite même en cas d'usage inattendu. Si tous les points obligatoires n'ont pas été attribués pendant cette soutenance, aucun point bonus ne sera comptabilisé.*\n\n---\n\n### Plusieurs pipes\n\nLe programme gère l'utilisation de plusieurs pipes les uns après les autres.\nComme pour la partie obligatoire, testez avec les commandes shell afin de comparer avec la sortie du programme.\nSi c'est bon seulement pour 2 pipes dans la même commande mais pas pour 5, ce bonus ne doit pas être compté."
+            },
+            "separator": "border-t-[0.5px]",
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "EN": "### << et >> avec le paramètre here_doc\n\nLe programme réplique l'utilisation de << et >>.\nTestez plusieurs fois quelque chose comme : `\"CMD << STOP_VALUE | CMD1 >> fichier1\"`",
+              "FR": "### << et >> avec le paramètre here_doc\n\nLe programme réplique l'utilisation de << et >>.\nTestez plusieurs fois quelque chose comme : `\"CMD << STOP_VALUE | CMD1 >> fichier1\"`"
+            },
+            "separator": false,
+            "yes_no": true,
+            "type": "bonus"
+          }
+        ],
+        "attachments": [
+          {
+            "title": "subject_en.pdf",
+            "url": "en.subject.pdf"
+          },
+          {
+            "title": "subject_fr.pdf",
+            "url": "fr.subject.pdf"
+          }
+        ],
+        "updated_at": "2024-01-07T23:00:00.000Z",
+        "gradingOptions": [
+          {
+            "ok": true,
+            "outstanding": true,
+            "empty_work": true,
+            "incomplete_work": true,
+            "invalid_compilation": true,
+            "norme": true,
+            "cheat": true,
+            "crash": true,
+            "concerning_situations": true,
+            "leaks": true,
+            "forbidden_functions": true,
+            "cannot_support": true
+          }
+        ]
+      }
+    ],
+    "message": "Sheet created successfully"
   }

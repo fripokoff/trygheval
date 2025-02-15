@@ -1,103 +1,124 @@
 {
-	"success": true,
-	"data": [
-		{
-			"id": 13,
-			"status": "active",
-			"project_title": "NetPractice",
-			"introduction": [
-				"- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
-				"- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
-				"- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
-			],
-			"guidelines": [
-				"- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
-				"- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
-				"- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
-				"- If applicable, review any **scripts** used for testing or automation together with the student.",
-				"- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
-				"- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
-				"- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
-				"- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
-				"- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
-				"- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
-			],
-			"attachments": [
-					{
-							"title": "subject_en.pdf",
-							"url": "en.subject.pdf"
-					},
-					{
-							"title": "subject_fr.pdf",
-							"url": "fr.subject.pdf"
-					},
-					{
-							"title": "net_practice.1.4.tgz",
-							"url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/NetPractice/Extras/net_practice.1.4.tgz"
-					}
-			],
-			"preliminarySections" : [
-				{
-					"title": "Simple preliminaries",
-					"subtitle": "If cheating is suspected, the evaluation stops here. Use the \"Cheat\" flag of the scale. Please do this calmly, wisely and use this button with caution.",
-					"description": "--Defense can only happen if the student being evaluated is present. This way everybody improves: by exchanging ideas and - sharing knowledge with each other.\n--Nothing submitted (or wrong file or directory) means 0, and the evaluation process ends.\n--In order to grade your peer, you have to clone their Git repository on your machine.",
-					"conclusion": "",
-					"yes_no": true
-				},
-				{
-					"title": "General instructions",
-					"subtitle": "",
-					"description": "--Ensure that 10 files (1 per level) are present at the root of the repository. Ensure that they are not empty.",
-					"conclusion": "",
-					"yes_no": true
-				}
-			],
-			"mandatorySections": [
-				{
-					"title": "Level 1",
-					"subtitle": "- This project is about configuring small-scale networks that have issues to make them run. You have to download the file attached to the project's page (the evaluated student can show you where it is). Then, run the index.html file. A page will open in your web browser. Leave the login field empty to start the 'correction' mode. The evaluated student must solve correctly all of the levels in 15 minutes maximum. Using internet or any external resource to find answers is, of course, forbidden. The use of a simple calculator such as \"bc\" is tolerated but it will be the limit. You can ask questions about the different levels to the evaluated student.",
-					"description": "If something does not work as expected or is not clearly explained, the evaluation process ends now.",
-					"conclusion": "",
-					"yes_no": true
-				},
-				{
-					"title": "Level 2",
-					"subtitle": "",
-					"description": "If something does not work as expected or is not clearly explained, the evaluation process ends now.",
-					"conclusion": "",
-					"yes_no": true
-				},
-				{
-					"title": "Level 3",
-					"subtitle": "",
-					"description": "If something does not work as expected or is not clearly explained, the evaluation process ends now.",
-					"conclusion": "",
-					"yes_no": true
-				}
-			],
-			"bonusSections": null,
-			"cursus_id": "1",
-			"updated_at": "2023-07-31T22:00:00.000Z",
-			"students": 1,
-			"eval_points": 3,
-			"time": 45,
-			"gradingOptions": [
-				{
-					"ok": true,
-					"outstanding": true,
-					"empty_work": true,
-					"incomplete_work": true,
-					"invalid_compilation": true,
-					"norme": true,
-					"cheat": true,
-					"crash": true,
-					"concerning_situations": true,
-					"leaks": true,
-					"forbidden_functions": true,
-					"cannot_support": false
-				}
-			]
-		}
-	],
-	"message": "Sheets added successfully"
-}
+    "success": true,
+    "data": [
+      {
+        "id": 13,
+        "status": "active",
+		"finish" : true,
+        "project_title": "NetPractice",
+        "introduction": {
+          "EN": "# Introduction\n- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.  \n- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.  \n- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously.",
+          "FR": "# Introduction\n- Restez poli, courtois, respectueux et constructif tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Collaborez avec l'étudiant ou le groupe évalué pour identifier les problèmes potentiels de leur projet. Prenez le temps de discuter et de débattre des problèmes identifiés.\n- Comprenez qu'il peut y avoir des différences dans la façon dont les pairs interprètent les instructions et la portée du projet. Gardez toujours l'esprit ouvert et évaluez aussi honnêtement que possible. La pédagogie n'est efficace que lorsque les évaluations par les pairs sont prises au sérieux."
+        },
+        "guidelines": {
+          "EN": "# Guidelines\n- Only grade the work that is present in the Git repository of   or group.\n- Double-check that the Git repository belongs to the   the group. Ensure that the project is the one   also check that \"git clone\" is used in an empty folder.\n- Check carefully that no malicious aliases was used to fool   make you evaluate something that is not the content of   repository.\n- To avoid any surprises and if applicable, review together   used to facilitate the grading (scripts for testing  ).\n- As an evaluator, if you have not completed the assignment you   to grade, you then have to read the entire subject prior   the defence.\n- Use the flags available on this scale to signal an empty repository,\na non-functioning program, a norm error, cheating, and so forth.\nIn these cases, the evaluation process ends and the final grade is 0,\nor -42 in case of cheating. However, except for cheating, student   encouraged to discuss the work that was turned in together,\nin order to identify any mistakes that shouldn't be repeated in.",
+          "FR": "# Directives\n- N'évaluez que le travail qui est présent dans le dépôt Git de ou du groupe.\n- Vérifiez que le dépôt Git appartient bien à l'étudiant ou au groupe. Assurez-vous que le projet est bien celui attendu et vérifiez également que \"git clone\" est utilisé dans un dossier vide.\n- Vérifiez attentivement qu'aucun alias malveillant n'a été utilisé pour vous tromper et vous faire évaluer quelque chose qui n'est pas le contenu du dépôt.\n- Pour éviter toute surprise et le cas échéant, examinez ensemble les scripts utilisés pour faciliter la notation (scripts de test).\n- En tant qu'évaluateur, si vous n'avez pas terminé le devoir que vous allez noter, vous devez lire l'intégralité du sujet avant la défense.\n- Utilisez les drapeaux disponibles sur cette échelle pour signaler un dépôt vide, un programme non fonctionnel, une erreur de norme, une tricherie, etc.\nDans ces cas, le processus d'évaluation se termine et la note finale est de 0, ou -42 en cas de tricherie. Cependant, à l'exception de la tricherie, les étudiants sont encouragés à discuter ensemble du travail qui a été rendu, afin d'identifier les erreurs qui ne devraient pas être répétées à l'avenir."
+        },
+        "attachments": [
+          {
+            "title": "subject_en.pdf",
+            "url": "en.subject.pdf"
+          },
+          {
+            "title": "subject_fr.pdf",
+            "url": "fr.subject.pdf"
+          },
+          {
+            "title": "net_practice.1.4.tgz",
+            "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/NetPractice/Extras/net_practice.1.4.tgz"
+          }
+        ],
+        "preliminarySections": [
+          {
+            "title": "Simple preliminaries",
+            "subtitle": "If cheating is suspected, the evaluation stops here. Use the \"Cheat\" flag of the scale. Please do this calmly, wisely and use this button with caution.",
+            "description": "--Defense can only happen if the student being evaluated is present. This way everybody improves: by exchanging ideas and - sharing knowledge with each other.\n--Nothing submitted (or wrong file or directory) means 0, and the evaluation process ends.\n--In order to grade your peer, you have to clone their Git repository on your machine.",
+            "conclusion": "",
+            "yes_no": true
+          },
+          {
+            "title": "General instructions",
+            "subtitle": "",
+            "description": "--Ensure that 10 files (1 per level) are present at the root of the repository. Ensure that they are not empty.",
+            "conclusion": "",
+            "yes_no": true
+          }
+        ],
+        "mandatorySections": [
+          {
+            "description": {
+              "EN": "# Preliminaries\n*If cheating is suspected, the evaluation stops here. Use the \"Cheat\" flag of the scale. Please do this calmly, wisely and use this button with caution.*\n\n---\n\n**Simple preliminaries**\n- Defense can only happen if the student being evaluated is present. This way everybody improves: by exchanging ideas and sharing knowledge with each other.\n- Nothing submitted (or wrong file or directory) means 0, and the evaluation process ends.\n- In order to grade your peer, you have to clone their Git repository on your machine.",
+              "FR": "# Préliminaires\n*Si une tricherie est suspectée, l'évaluation s'arrête ici. Utilisez le drapeau \"Cheat\" de l'échelle. Veuillez le faire calmement, avec sagesse et utilisez ce bouton avec prudence.*\n\n---\n\n**Préliminaires simples**\n- La défense ne peut avoir lieu que si l'étudiant évalué est présent. De cette façon, tout le monde s'améliore : en échangeant des idées et en partageant des connaissances les uns avec les autres.\n- Rien de soumis (ou un mauvais fichier ou répertoire) signifie 0, et le processus d'évaluation se termine.\n- Afin de noter votre pair, vous devez cloner son dépôt Git sur votre machine."
+            },
+            "yes_no": true,
+            "separator": "border-t-4",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "# General instructions\n\n---\n\n**General instructions**\n- Ensure that 10 files (1 per level) are present at the root of the repository. Ensure that they are not empty.",
+              "FR": "# Instructions générales\n\n---\n\n**Instructions générales**\n- Assurez-vous que 10 fichiers (1 par niveau) sont présents à la racine du dépôt. Assurez-vous qu'ils ne sont pas vides."
+            },
+            "yes_no": true,
+            "separator": "border-t-4",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "# Mandatory part\n*This project is about configuring small-scale networks that have issues to make them run.\nYou have to download the file attached to the project's page (the evaluated student can show you where it is).\nThen, run the index.html file. A page will open in your web browser.\nLeave the login field empty to start the 'correction' mode. \nhe evaluated student must solve correctly all of the levels in 15 minutes maximum.\nUsing internet or any external resource to find answers is, of course, forbidden.\nThe use of a simple calculator such as \"bc\" is tolerated but it will be the limit.\nYou can ask questions about the different levels to the evaluated student.*\n\n---\n**Level 1**\nIf something does not work as expected or is not clearly explained, the evaluation process ends now.",
+              "FR": "# Partie obligatoire\n*Ce projet consiste à configurer des réseaux à petite échelle qui ont des problèmes pour les faire fonctionner.\nVous devez télécharger le fichier joint à la page du projet (l'étudiant évalué peut vous montrer où il se trouve).\nEnsuite, exécutez le fichier index.html. Une page s'ouvrira dans votre navigateur web.\nLaissez le champ de connexion vide pour démarrer le mode 'correction'.\nL'étudiant évalué doit résoudre correctement tous les niveaux en 15 minutes maximum.\nL'utilisation d'Internet ou de toute ressource externe pour trouver des réponses est, bien sûr, interdite.\nL'utilisation d'une simple calculatrice telle que \"bc\" est tolérée mais ce sera la limite.\nVous pouvez poser des questions sur les différents niveaux à l'étudiant évalué.*\n\n---\n**Niveau 1**\nSi quelque chose ne fonctionne pas comme prévu ou n'est pas clairement expliqué, le processus d'évaluation se termine maintenant."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Level 2**\nIf something does not work as expected or is not clearly explained, the evaluation process ends now.",
+              "FR": "**Niveau 2**\nSi quelque chose ne fonctionne pas comme prévu ou n'est pas clairement expliqué, le processus d'évaluation se termine maintenant."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Level 3**\nIf something does not work as expected or is not clearly explained, the evaluation process ends now.",
+              "FR": "**Niveau 3**\nSi quelque chose ne fonctionne pas comme prévu ou n'est pas clairement expliqué, le processus d'évaluation se termine maintenant."
+            },
+            "yes_no": true,
+            "separator": false,
+            "type": "mandatory"
+          }
+        ],
+        "bonusSections": [],
+        "cursus_id": "1",
+        "updated_at": "2023-07-31T22:00:00.000Z",
+        "students": 1,
+        "eval_points": 3,
+        "time": 45,
+        "gradingOptions": [
+          {
+            "ok": true,
+            "outstanding": true,
+            "empty_work": true,
+            "incomplete_work": true,
+            "invalid_compilation": true,
+            "norme": true,
+            "cheat": true,
+            "crash": true,
+            "concerning_situations": true,
+            "leaks": true,
+            "forbidden_functions": true,
+            "cannot_support": false
+          }
+        ],
+        "languages": [
+          "EN",
+          "FR"
+        ],
+        "language": "EN"
+      }
+    ],
+    "message": "Sheet created successfully"
+  }

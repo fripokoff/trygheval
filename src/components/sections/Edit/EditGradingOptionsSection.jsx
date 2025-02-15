@@ -1,10 +1,11 @@
 import { useGradingOptions } from "../../../hooks/sections/useGradingOptions";
 import { useGeneralContext } from "../../../contexts/GeneralContext";
 
-export default function EditGradingOptionsSection({}) {
+export default function EditGradingOptionsSection({show}) {
   const { gradingFields } = useGradingOptions();
   const { updateGradingOption, gradingOptions } = useGeneralContext();
-
+  if (!show)
+    return null;
   return (
     <div className="flex flex-col p-4 lg:p-5 rounded-xl gap-5 mt-10 bg-base-200 grading-options">
       <h1 className="text-2xl font-medium text-base-content font-bold">

@@ -14,6 +14,7 @@ export function GeneralProvider({ children, sheetData, setSelectedDate, selected
   const [numberOfAttachments, setNumberOfAttachments] = useState(0);
   const [attachments, setAttachments] = useState([]);
   const [projectTitle, setProjectTitle] = useState("");
+  const [languages, setLanguages] = useState([]);
   const [students, setStudents] = useState(0);
   const [status, setStatus] = useState("active");
   const [evalPoints, setEvalPoints] = useState(0);
@@ -68,6 +69,7 @@ export function GeneralProvider({ children, sheetData, setSelectedDate, selected
         projectTitle: sheetData.project_title || "",
         students: sheetData.students || 0,
         status: sheetData.status || "active",
+        languages: sheetData.languages || [],
         evalPoints: sheetData.eval_points || 0,
         time: sheetData.time || 0,
         language: sheetData.language || "EN"
@@ -83,7 +85,7 @@ export function GeneralProvider({ children, sheetData, setSelectedDate, selected
     setStatus(prev => prev !== updates.basic.status ? updates.basic.status : prev);
     setEvalPoints(prev => prev !== updates.basic.evalPoints ? updates.basic.evalPoints : prev);
     setTime(prev => prev !== updates.basic.time ? updates.basic.time : prev);
-
+    setLanguages(prev => JSON.stringify(prev) !== JSON.stringify(updates.basic.languages) ? updates.basic.languages : prev);
     setIntroductionData(prev => 
       JSON.stringify(prev) !== JSON.stringify(updates.content.introduction) 
         ? updates.content.introduction 
@@ -149,6 +151,8 @@ export function GeneralProvider({ children, sheetData, setSelectedDate, selected
     setEvalPoints,
     time,
     setTime,
+    languages,
+    setLanguages,
   };
 
   return (

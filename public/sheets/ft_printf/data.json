@@ -1,99 +1,92 @@
 {
-    "success": true,
-    "data": [
-        {
-            "id": 2,
-			"status": "active",
-			"project_title": "ft_printf",
-			"introduction": [
-				"- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
-				"- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
-				"- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
-			],
-			"guidelines": [
-				"- Only grade the work that was turned in the Git repository of the evaluated student or group.",
-				"- Double-check that the Git repository belongs to the student(s). Ensure that the project is the one expected. Also, check that 'git clone' is used in an empty folder.",
-				"- Check carefully that no malicious aliases was used to fool you and make you evaluate something that is not the content of the official repository.",
-				"- To avoid any surprises and if applicable, review together any scripts used to facilitate the grading (scripts for testing or automation).",
-				"- If you have not completed the assignment you are going to evaluate, you have to read the entire subject prior to starting the evaluation process.",
-				"- Use the available flags to report an empty repository, a non-functioning program, a Norm error, cheating, and so forth. In these cases, the evaluation process ends and the final grade is 0, or -42 in case of cheating. However, except for cheating, student are strongly encouraged to review together the work that was turned in, in order to identify any mistakes that shouldn't be repeated in the future.",
-				"- Remember that for the duration of the defence, no segfault, no other unexpected, premature, uncontrolled or unexpected termination of the program, else the final grade is 0. Use the appropriate flag.",
-				"You should never have to edit any file except the configuration file if it exists. If you want to edit a file, take the time to explicit the reasons with the evaluated student and make sure both of you are okay with this.",
-				"- You must also verify the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of execution.",
-				"You are allowed to use any of the different tools available on the computer, such as leaks, valgrind, or e_fence. In case of memory leaks, tick the appropriate flag."
-			],
-			"attachments": [
-				{
-					"title": "subject_en.pdf",
-					"url": "en.subject.pdf"
-				},
-				{
-					"title": "subject_fr.pdf",
-					"url": "fr.subject.pdf"
-				}
-			],
-            "cursus_id": "1",
-			"updated_at": "2024-01-10T16:05:07.360Z",
-			"students" : 1,
-			"eval_points" : 3,
-			"time" : 30,
-			"mandatorySections" : [
-				{
-					"id": "679e45788c78a1cea9234f60",
-					"description": "--Simply check each conversion without any flags `'cspdiuxX%'`\n--Try special cases like 0, or smallest int, or empty string, or NULL pointer.\n--Test multiple arguments/conversions.\n--Test various conversions in the middle of a sentence (put other characters before and/or after).",
-					"yes_no": true,
-					"sheetId": "679e45778c78a1cea9234f5f",
-					"created_at": "2025-02-01T16:02:00.093Z",
-					"updated_at": "2025-02-01T16:05:07.445Z"
-				},
-				{
-					"id": "679e45788c78a1cea9234f61",
-					"description": "--Redo every previous test but this time verify that the return value matches the one of the original printf.\n--Try any combination of conversions.\n--Check what happens with a series of identical conversions following each other.\n",
-					"yes_no": true,
-					"sheetId": "679e45778c78a1cea9234f5f",
-					"created_at": "2025-02-01T16:02:00.093Z",
-					"updated_at": "2025-02-01T16:05:07.445Z"
-				}
-			],
-			"bonusSections" : [
-				{
-					"id": "679e45788c78a1cea9234f63",
-					"description": "--Check the flags `'.', '-'` and 0.\n--Check the `%-d` with INT_MIN\n--Check the `-` flag with any value.\n--Check the `0` flag like `%04d`.\n--Check the `'.'` with multiple precisions.\n--For every test, verify the return value matches the original one.\n--For each working flag, give 1 point.\n--If all the flags work, give 2 bonus points.",
-					"yes_no": false,
-					"sheetId": "679e45778c78a1cea9234f5f",
-					"created_at": "2025-02-01T16:02:00.646Z",
-					"updated_at": "2025-02-01T16:05:07.489Z"
-				},
-				{
-					"id": "679e45788c78a1cea9234f64",
-					"description": "--Check all the conversions with the flags `'#', '+'` and space with all the other flag combinations.\n--For each working flag, give 1 point.\n--If all the flags work, give 2 bonus points.",
-					"yes_no": false,
-					"sheetId": "679e45778c78a1cea9234f5f",
-					"created_at": "2025-02-01T16:02:00.646Z",
-					"updated_at": "2025-02-01T16:05:07.489Z"
-				}
-			],
-			"gradingOptions" :[
-				{
-					"id": "679e45788c78a1cea9234f62",
-					"ok": true,
-					"outstanding": true,
-					"empty_work": true,
-					"incomplete_work": true,
-					"invalid_compilation": true,
-					"norme": true,
-					"cheat": true,
-					"crash": true,
-					"concerning_situations": true,
-					"leaks": true,
-					"forbidden_functions": true,
-					"cannot_support": true,
-					"sheetId": "679e45778c78a1cea9234f5f",
-					"created_at": "2025-02-01T16:02:00.638Z",
-					"updated_at": "2025-02-01T16:05:07.468Z"
-				}
-			]
-        }
-    ],
-    "message": "Sheets found successfully"
-}
+	"success": true,
+	"data": [
+	  {
+		"id": 2,
+		"status": "active",
+		"finish": true,
+		"project_title": "ft_printf",
+		"introduction": {
+		  "FR": "# Introduction\nVeuillez respecter les règles suivantes :\n\n- Restez poli, courtois, respectueux et constructif tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n\n- Identifiez avec l'étudiant ou le groupe dont le travail est évalué les éventuels dysfonctionnements de leur projet. Prenez le temps de discuter et de débattre des problèmes qui ont pu être identifiés.\n\n- Vous devez considérer qu'il peut y avoir des différences dans la façon dont vos pairs ont compris les instructions du projet et l'étendue de ses fonctionnalités. Gardez toujours l'esprit ouvert et notez-les aussi honnêtement que possible. La pédagogie n'est utile que si l'évaluation par les pairs est faite sérieusement.",
+		  "EN": "# Introduction\nPlease comply with the following rules:\n\n- Remain polite, courteous, respectful and constructive throughout the evaluation process. The well-being of the community depends on it.\n\n- Identify with the student or group whose work is evaluated the possible dysfunctions in their project. Take the time to discuss and debate the problems that may have been identified.\n\n- You must consider that there might be some differences in how your peers might have understood the project's instructions and the scope of its functionalities. Always keep an open mind and grade them as honestly as possible. The pedagogy is useful only and only if the peer-evaluation is done seriously."
+		},
+		"guidelines": {
+		  "FR": "# Directives\n- Ne notez que le travail qui a été remis dans le dépôt Git de l'étudiant ou du groupe évalué.\n\n- Vérifiez que le dépôt Git appartient bien à l'étudiant (aux étudiants). Assurez-vous que le projet est bien celui attendu. Vérifiez également que 'git clone' est utilisé dans un dossier vide.\n\n- Vérifiez attentivement qu'aucun alias malveillant n'a été utilisé pour vous tromper et vous faire évaluer quelque chose qui n'est pas le contenu du dépôt officiel.\n\n- Pour éviter toute surprise et le cas échéant, examinez ensemble tous les scripts utilisés pour faciliter la notation (scripts de test ou d'automatisation).\n\n- Si vous n'avez pas terminé le devoir que vous allez évaluer, vous devez lire l'intégralité du sujet avant de commencer le processus d'évaluation.\n\n- Utilisez les drapeaux disponibles pour signaler un dépôt vide, un programme non fonctionnel, une erreur de norme, une tricherie, etc. Dans ces cas, le processus d'évaluation se termine et la note finale est de 0, ou -42 en cas de tricherie. Toutefois, à l'exception de la tricherie, les étudiants sont fortement encouragés à examiner ensemble le travail qui a été remis, afin d'identifier les erreurs qui ne devraient pas être répétées à l'avenir.\n\n- N'oubliez pas que pendant toute la durée de la défense, pas de segfault, pas d'autre arrêt du programme inattendu, prématuré, incontrôlé ou inattendu, sinon la note finale est de 0. Utilisez le drapeau approprié.\nVous ne devriez jamais avoir à modifier un fichier, sauf le fichier de configuration s'il existe. Si vous voulez modifier un fichier, prenez le temps d'expliquer les raisons à l'étudiant évalué et assurez-vous que vous êtes tous les deux d'accord avec cela.\n\n- Vous devez également vérifier l'absence de fuites de mémoire. Toute mémoire allouée sur le tas doit être correctement libérée avant la fin de l'exécution.\nVous êtes autorisé à utiliser tous les différents outils disponibles sur l'ordinateur, tels que leaks, valgrind ou e_fence. En cas de fuites de mémoire, cochez le drapeau approprié.",
+		  "EN": "# Guidelines\n- Only grade the work that was turned in the Git repository of the evaluated student or group.\n\n- Double-check that the Git repository belongs to the student(s). Ensure that the project is the one expected. Also, check that 'git clone' is used in an empty folder.\n\n- Check carefully that no malicious aliases was used to fool you and make you evaluate something that is not the content of the official repository.\n\n- To avoid any surprises and if applicable, review together any scripts used to facilitate the grading (scripts for testing or automation).\n\n- If you have not completed the assignment you are going to evaluate, you have to read the entire subject prior to starting the evaluation process.\n\n- Use the available flags to report an empty repository, a non-functioning program, a Norm error, cheating, and so forth. In these cases, the evaluation process ends and the final grade is 0, or -42 in case of cheating. However, except for cheating, student are strongly encouraged to review together the work that was turned in, in order to identify any mistakes that shouldn't be repeated in the future.\n\n- Remember that for the duration of the defence, no segfault, no other unexpected, premature, uncontrolled or unexpected termination of the program, else the final grade is 0. Use the appropriate flag.\nYou should never have to edit any file except the configuration file if it exists. If you want to edit a file, take the time to explicit the reasons with the evaluated student and make sure both of you are okay with this.\n\n- You must also verify the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of execution.\nYou are allowed to use any of the different tools available on the computer, such as leaks, valgrind, or e_fence. In case of memory leaks, tick the appropriate flag."
+		},
+		"attachments": [
+		  {
+			"title": "subject_en.pdf",
+			"url": "en.subject.pdf"
+		  }
+		],
+		"cursus_id": "1",
+		"updated_at": "2024-01-09T23:00:00.000Z",
+		"students": 1,
+		"eval_points": 3,
+		"time": 30,
+		"languages": [
+		  "EN",
+		  "FR"
+		],
+		"mandatorySections": [
+		  {
+			"description": {
+			  "FR": "# Partie obligatoire\n\n---\n\n**Gestion simple des conversions**\n- Vérifiez simplement chaque conversion sans aucun drapeau `'cspdiuxX%'`\n- Essayez des cas spéciaux comme 0, ou le plus petit int, ou une chaîne vide, ou un pointeur NULL.\n- Testez plusieurs arguments/conversions.\n- Testez différentes conversions au milieu d'une phrase (mettez d'autres caractères avant et/ou après).",
+			  "EN": "# Mandatory Part\n\n---\n\n**Simple Conversion Management**\n- Simply check each conversion without any flags `'cspdiuxX%'`\n- Try special cases like 0, or smallest int, or empty string, or NULL pointer.\n- Test multiple arguments/conversions.\n- Test various conversions in the middle of a sentence (put other characters before and/or after)."
+			},
+			"yes_no": true,
+			"separator": "border-t-[0.5px]",
+			"type": "mandatory"
+		  },
+		  {
+			"description": {
+			  "FR": "**Devenez fou**\n- Refaites chaque test précédent, mais cette fois, vérifiez que la valeur de retour correspond à celle du printf original.\n- Essayez n'importe quelle combinaison de conversions.\n- Vérifiez ce qui se passe avec une série de conversions identiques qui se suivent.",
+			  "EN": "**Get Crazy**\n- Redo every previous test but this time verify that the return value matches the one of the original printf.\n- Try any combination of conversions.\n- Check what happens with a series of identical conversions following each other."
+			},
+			"yes_no": true,
+			"separator": false,
+			"type": "mandatory"
+		  }
+		],
+		"bonusSections": [
+		  {
+			"description": {
+			  "FR": "# Partie bonus\n\n---\n\n*Évaluez la partie bonus si, et seulement si, la partie obligatoire a été entièrement et parfaitement réalisée, et que la gestion des erreurs gère les utilisations inattendues ou incorrectes. Si tous les points obligatoires n'ont pas été validés pendant la défense, les points bonus doivent être totalement ignorés.*\n\n---\n\n**Gestion simple des drapeaux**\n- Vérifiez les drapeaux '.', '-' et 0.\n- Vérifiez le %-d avec INT_MIN\n- Vérifiez le drapeau - avec n'importe quelle valeur.\n- Vérifiez le drapeau 0 comme %04d.\n- Vérifiez le '.' avec plusieurs précisions.\n- Pour chaque test, vérifiez que la valeur de retour correspond à celle d'origine.\n- Pour chaque drapeau fonctionnel, donnez 1 point.\n- Si tous les drapeaux fonctionnent, donnez 2 points bonus.",
+			  "EN": "# Bonus part\n\n---\n\n*Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.*\n\n---\n\n**Simple flags management**\n- Check the flags '.', '-' and 0.\n- Check the %-d with INT_MIN\n- Check the - flag with any value.\n- Check the 0 flag like %04d.\n- Check the '.' with multiple precisions.\n- For every test, verify the return value matches the original one.\n- For each working flag, give 1 point.\n- If all the flags work, give 2 bonus points."
+			},
+			"separator": "border-t-[0.5px]",
+			"yes_no": false,
+			"type": "bonus"
+		  },
+		  {
+			"description": {
+			  "FR": "**# + espace**\n- Vérifiez toutes les conversions avec les drapeaux '#', '+' et espace avec toutes les autres combinaisons de drapeaux.\n- Pour chaque drapeau fonctionnel, donnez 1 point.\n- Si tous les drapeaux fonctionnent, donnez 2 points bonus.",
+			  "EN": "**# + space**\n- Check all the conversions with the flags '#', '+' and space with all the other flag combinations.\n- For each working flag, give 1 point.\n- If all the flags work, give 2 bonus points."
+			},
+			"separator": false,
+			"yes_no": false,
+			"type": "bonus"
+		  }
+		],
+		"gradingOptions": [
+		  {
+			"ok": true,
+			"outstanding": true,
+			"empty_work": true,
+			"incomplete_work": true,
+			"invalid_compilation": true,
+			"norme": true,
+			"cheat": true,
+			"crash": true,
+			"concerning_situations": true,
+			"leaks": true,
+			"forbidden_functions": true,
+			"cannot_support": true
+		  }
+		],
+		"language": "EN"
+	  }
+	],
+	"message": "Sheet created successfully"
+  }

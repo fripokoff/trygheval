@@ -1,8 +1,7 @@
 
 
 export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
-	const url = new URL(window.location.href);
-	let lang = url.searchParams.get("lang");
+	let lang = localStorage.getItem("lang");
 	if(!lang)
 		sheetData?.language ? lang = sheetData.language : lang = 'EN';
 	const GRADING_OPTIONS = [
@@ -19,8 +18,16 @@ export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
 		"forbidden_functions",
 		"cannot_support",
 	];
-	const introText = { ...sheetData.guidelines, [lang]: document.querySelector("#introduction")?.value || ""};
-	const guidelinesText = { ...sheetData.introduction, [lang]: document.querySelector("#guidelines")?.value || ""};
+	
+	if (Array.isArray(sheetData.introduction)) {
+		sheetData.introduction = {};
+	  }
+	if (Array.isArray(sheetData.guidelines)) {
+		sheetData.guidelines = {};
+	  }
+
+    const introText = { ...sheetData.introduction, [lang]: document.querySelector("#introduction")?.value || ""};
+    const guidelinesText = { ...sheetData.guidelines, [lang]: document.querySelector("#guidelines")?.value || ""};
 	const attachments = Array.from(document.querySelectorAll(".bg-base-300.text-base-content.mb-4")
 	).map((attachment) => ({
 		title: attachment.querySelector('input[placeholder="Enter attachment title"]')?.value || "",
@@ -33,11 +40,11 @@ export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
 		const separator = section.querySelector(`#mandatory_separator_${index}`)?.checked ? sepSize : false;
 		return {
 			description: {
-				...section.description,
+				...(typeof sheetData.mandatorySections[index]?.description === 'object' ? sheetData.mandatorySections[index]?.description : {}),
 				[lang]: description,
 			},
-			yes_no: section.querySelector(`#mandatory_yes_no_${index}`).checked ? true : false,
-			separator:separator,
+			yes_no: section.querySelector(`#mandatory_yes_no_${index}`)?.checked ? true : false,
+			separator: separator,
 			type: "mandatory",
 		};
 	});
@@ -49,7 +56,7 @@ export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
 			const separator = section.querySelector(`#bonus_separator_${index}`)?.checked ? sepSize : false;
 			return {
 				description: {
-					...section.description,
+					...(typeof sheetData.bonusSections[index]?.description === 'object' ? sheetData.bonusSections[index]?.description : {}),
 					[lang]: description,
 				},
 				separator : separator,
@@ -63,6 +70,7 @@ export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
 			return acc;
 		}, {});
 	};
+	const languages = Array.from(document.querySelector("#languages")?.options).map((option) => option.value);
 	const actual_date = new Date().toISOString();
 	const input_date = document.querySelector("#date")?.value;
 	let dateFormat = new Date(sheetData.updated_at);
@@ -77,6 +85,8 @@ export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
 		students: parseInt(document.querySelector("#students")?.value) || 0,
 		eval_points: parseInt(document.querySelector("#eval_points")?.value) || 0,
 		time: parseInt(document.querySelector("#time")?.value) || 0,
+		languages: languages,
+		language: 'EN',
 		introduction: introText || "",
 		guidelines: guidelinesText || "",
 		attachments: attachments || [],
@@ -92,16 +102,14 @@ export const getCurrentFormData = (sheetData, setSheetData, handleSubmit) => {
 
 
 export const fetchData = async (projects) => {
-	let cppID = 0;
 
 	if (typeof projects === "string")
-		projects = [projects];
+		projects = [projects.split("#")[0]];
 	
 	const fetchOne = async (project) => {
 		const reactBase = process.env.REACT_APP_BASENAME || '/';
 		if (project.includes("CPP")) {
-			project = "CPP/CPP0" + cppID;
-			cppID++;
+			project = "CPP/" + project;
 		}
 		const url = `${window.location.origin}${reactBase}/sheets/${project}/data.json`
 		try {
@@ -124,7 +132,7 @@ export const fetchData = async (projects) => {
 		}));
 		const flattenedData = data.flat();
 		const filteredData = flattenedData.filter(
-			(data) => data && data.project_title && data.project_title !== "empty"
+			(data) => data && data.project_title
 		);
 		const sortedData = filteredData.sort((a, b) => a.id - b.id);
 		return sortedData;

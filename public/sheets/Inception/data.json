@@ -1,0 +1,114 @@
+{
+    "success": true,
+    "data": [
+      {
+        "id": 3,
+        "status": "active",
+		"finish" : true,
+        "project_title": "Inception",
+        "introduction": {
+         
+          "EN": "# Introduction\nPlease respect the following rules:\n\n- Be polite, courteous, respectful and constructive during the evaluation process. The well-being of the community depends on it.\n\n- Identify with the person being evaluated or the group being evaluated any malfunctions in their work. Take time to discuss and debate the problems identified.\n\n- You must take into account that there may be slight differences in interpretation between the project instructions, its scope and its functionalities. Keep an open mind and grade as honestly as possible. Pedagogy is only valid if peer-evaluation is done seriously."
+        },
+        "guidelines": {
+         
+          "EN": "# Guidelines\n- Only grade what is contained in the cloned Git repository of the student or group.\n\n- Verify that the Git repository belongs to the student or group, that the project is the one expected, and that \"git clone\" is used in an empty folder.\n\n- Scrupulously check that no alias has been used to deceive you and make sure that you are evaluating the official submission.\n\n- In order to avoid any surprises, check with the student or group the potential scripts used to facilitate the evaluation (for example, test or automation scripts).\n\n- If you have not done the project you are going to evaluate, you must read the subject in its entirety before starting the evaluation.\n\n- Use the available flags to report an empty submission, a non-functioning program, a Norm error, cheating... In these situations, the evaluation is terminated and the grade is 0, or -42 in case of cheating. However, with the exception of cases of cheating, you are encouraged to continue the discussion on the work submitted, even if the latter is incomplete. This is in order to identify errors not to be reproduced in the future.\n\n- Throughout the duration of the evaluation, no segfault or other unexpected, premature or uncontrolled stop will be tolerated. In which case, the final grade will be 0. Use the appropriate flag. You should never have to edit a file except for a configuration file if it exists. In the event that you wish to modify a file, you must clearly explain the reasons for the modification and be in agreement with the student being evaluated before doing anything.\n\n- You must also check for the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of the program's execution. You have the right to use any tool available on the machine such as leaks, valgrind or e_fence. In case of memory leaks, check the appropriate flag."
+        },
+        "attachments": [
+          {
+            "title": "subject_en.pdf",
+            "url": "en.subject.pdf"
+          },
+          {
+            "title": "subject_fr.pdf",
+            "url": "fr.subject.pdf"
+          }
+        ],
+        "cursus_id": "1",
+        "updated_at": "2023-12-17T23:00:00.000Z",
+        "students": 1,
+        "eval_points": 3,
+        "time": 60,
+        "mandatorySections": [
+          {
+            "description": {
+             
+              "EN": "# Mandatory Part\n\n---\n\n**Norminette**\nRun Norminette. In case of error, the evaluation stops here.\nYou can continue and discuss the implementation of the code, but it will not be graded."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+             
+              "EN": "**Compilation**\n- It should be possible to compile the project with the usual flags and the -D BUFFER_SIZE flag.\n- It must be possible to compile this project with and without the latter in addition to the flags: -Wall -Wextra -Werror.\n\n**If there is an error, the evaluation stops here.**\n**You can continue and discuss the implementation of the code, but the defense will not be graded.**"
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+             
+              "EN": "**Error Management**\n- Pass an arbitrary fd to the get_next_line function, on which it is not possible to read (e.g. 42). The function must return NULL.\n- Check the error returns from malloc, read and open. If the \"error management\" part is false, please do not grade the following part, the correction stops here.\n**You can continue and discuss the implementation of the code, but it will not be graded.**"
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+             
+              "EN": "**Tests**\nAs an evaluator, you must write or bring a main that checks:\n- The return value of the get_next_line function is NULL in case of error.\n- Otherwise, the function returns the line read, always with a \\n at the end.\n\nTest all combinations of the following rules:\n\n- Large BUFFER_SIZE (> 1024)\n- Small BUFFER_SIZE (< 8, and 1)\n- BUFFER_SIZE of the size of the line to be read\n- 1 offset (+/-) between the BUFFER_SIZE and the line\n- Reading from stdin\n- Reading from a file\n- (Multiple/Simple) long line (2k+ characters)\n- (Multiple/Simple) short line (<4 characters, and 1)\n- (Multiple/Simple) Empty line"
+            },
+            "yes_no": true,
+            "separator": false,
+            "type": "mandatory"
+          }
+        ],
+        "bonusSections": [
+          {
+            "description": {
+             
+              "EN": "# Bonus Part\n*Bonuses will only be examined if the mandatory part is excellent. This means that the mandatory part must have been carried out from start to finish, with perfect error management even in the event of unexpected use. If all the mandatory points have not been awarded during this defense, no bonus points will be counted.*\n\n---\n\n**Reading on multiple fds**\nRepeat the tests performed previously but, this time, by launching several instances of get_next_line, each using a different file descriptor.\nMake sure each get_next_line returns the correct line.\nAdd an invalid file descriptor to test error handling."
+            },
+            "separator": "border-t-[0.5px]",
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+             
+              "EN": "**Only one static variable**\nRead the code and verify that there is indeed only one static variable.\nAward bonus points if this is the case."
+            },
+            "separator": false,
+            "yes_no": true,
+            "type": "bonus"
+          }
+        ],
+        "gradingOptions": [
+          {
+            "ok": true,
+            "outstanding": true,
+            "empty_work": true,
+            "incomplete_work": true,
+            "invalid_compilation": true,
+            "norme": true,
+            "cheat": true,
+            "crash": true,
+            "concerning_situations": true,
+            "leaks": true,
+            "forbidden_functions": true,
+            "cannot_support": true
+          }
+        ],
+        "languages": [
+          "EN",
+          "FR"
+        ],
+		"language" : "EN"
+      }
+    ],
+    "message": "Sheet created successfully"
+  }

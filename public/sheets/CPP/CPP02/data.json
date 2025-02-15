@@ -1,0 +1,234 @@
+{
+  "success": true,
+  "data": [
+    {
+      "project_title": "CPP02",
+      "students": 1,
+      "finish" : true,
+      "status": "active",
+      "eval_points": 3,
+      "time": 30,
+      "id": 14,
+      "introduction": {
+        "FR": "# Introduction\n- Restez polis, courtois, respectueux et constructifs tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Identifiez avec l'étudiant ou le groupe dont le travail est évalué les dysfonctionnements possibles de leur projet. Prenez le temps de discuter et de débattre des problèmes qui ont pu être identifiés.\n- Vous devez tenir compte du fait qu'il peut y avoir des différences dans la façon dont vos pairs ont compris les instructions du projet et l'étendue de ses fonctionnalités. Gardez toujours l'esprit ouvert et évaluez-les aussi honnêtement que possible. La pédagogie n'est utile que si l'évaluation par les pairs est faite sérieusement.",
+        "EN": "# Introduction\n- Remain polite, courteous, respectful and constructive throughout the evaluation process. The well-being of the community depends on it.\n- Identify with the student or group whose work is evaluated the possible dysfunctions in their project. Take the time to discuss and debate the problems that may have been identified.\n- You must consider that there might be some differences in how your peers might have understood the project's instructions and the scope of its functionalities. Always keep an open mind and grade them as honestly as possible. The pedagogy is useful only and only if the peer-evaluation is done seriously."
+      },
+      "guidelines": {
+        "FR": "# Directives\n- Ne notez que le travail qui a été remis dans le dépôt Git de l'étudiant ou du groupe évalué.\n- Vérifiez que le dépôt Git appartient bien à l'étudiant(s). Assurez-vous que le projet est bien celui attendu. Vérifiez également que 'git clone' est utilisé dans un dossier vide.\n- Vérifiez attentivement qu'aucun alias malveillant n'a été utilisé pour vous tromper et vous faire évaluer quelque chose qui n'est pas le contenu du dépôt officiel.\n- Pour éviter toute surprise et, le cas échéant, examinez ensemble tous les scripts utilisés pour faciliter la notation (scripts de test ou d'automatisation).\n- Si vous n'avez pas terminé le devoir que vous allez évaluer, vous devez lire l'intégralité du sujet avant de commencer le processus d'évaluation.\n- Utilisez les drapeaux disponibles pour signaler un dépôt vide, un programme non fonctionnel, une erreur de Norme, une tricherie, etc. Dans ces cas, le processus d'évaluation se termine et la note finale est de 0, ou -42 en cas de tricherie. Toutefois, à l'exception de la tricherie, les étudiants sont fortement encouragés à examiner ensemble le travail qui a été remis, afin d'identifier les erreurs qui ne devraient pas être répétées à l'avenir.\n- Vous ne devriez jamais avoir à modifier un fichier, sauf le fichier de configuration s'il existe. Si vous voulez modifier un fichier, prenez le temps d'expliquer les raisons à l'étudiant évalué et assurez-vous que vous êtes tous d'accord.\n- Vous devez également vérifier l'absence de fuites de mémoire. Toute mémoire allouée sur le tas doit être correctement libérée avant la fin de l'exécution. Vous êtes autorisé à utiliser tous les outils disponibles sur l'ordinateur, tels que leaks, valgrind ou e_fence. En cas de fuites de mémoire, cochez le drapeau approprié.",
+        "EN": "# Guidelines\n- Only grade the work that was turned in the Git repository of the evaluated student or group.\n- Double-check that the Git repository belongs to the student(s). Ensure that the project is the one expected. Also, check that 'git clone' is used in an empty folder.\n- Check carefully that no malicious aliases was used to fool you and make you evaluate something that is not the content of the official repository.\n- To avoid any surprises and if applicable, review together any scripts used to facilitate the grading (scripts for testing or automation).\n- If you have not completed the assignment you are going to evaluate, you have to read the entire subject prior to starting the evaluation process.\n- Use the available flags to report an empty repository, a non-functioning program, a Norm error, cheating, and so forth. In these cases, the evaluation process ends and the final grade is 0, or -42 in case of cheating. However, except for cheating, student are strongly encouraged to review together the work that was turned in, in order to identify any mistakes that shouldn't be repeated in the future.\n- You should never have to edit any file except the configuration file if it exists. If you want to edit a file, take the time to explicit the reasons with the evaluated student and make sure both of you are okay with this.\n- You must also verify the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of execution. You are allowed to use any of the different tools available on the computer, such as leaks, valgrind, or e_fence. In case of memory leaks, tick the appropriate flag."
+      },
+      "attachments": [
+        {
+          "title": "subject_en.pdf",
+          "url": "en.subject.pdf"
+        },
+        {
+          "title": "subject_fr.pdf",
+          "url": "fr.subject.pdf"
+        },
+        {
+          "title": "extras",
+          "url": "/Extras"
+        }
+      ],
+      "mandatorySections": [
+        {
+          "description": {
+            "FR": "# Tests préliminaires\n*Si un cas de triche est suspecté, la notation et l'évaluation prennent fin immédiatement. Pour le signaler, sélectionnez le flag \"Cheat\". Faites attention à l'utiliser avec calme, précaution et discernement.*\n\n---\n\n**Prérequis**\nLe code doit compiler avec c++ et les flags -Wall -Wextra -Werror\nPour rappel, ce projet doit suivre le standard C++98. Par conséquent,des fonctions C++11 (ou autre standard) et les containers ne sont PAS attendus.\n\nNe notez pas l'exercice si vous trouvez :\n- Une fonction implémentée dans un fichier d'en-tête (sauf pour les fonctions templates).\n- Un Makefile compilant sans les flags demandés et/ou avec autre chose que c++.\n\nSélectionnez le flag \"Fonction interdite\" (Forbidden function) si vous rencontrez :\n- L'utilisation d'une fonction \"C\" (*alloc, *printf, free).\n- L'utilisation d'une fonction interdite dans le projet.\n- L'utilisation de \"using namespace <ns_name>\" ou du mot-clé \"friend\".\n- L'utilisation d'une bibliothèque externe, ou de fonctionnalités propres aux versions postérieures à C++98",
+            "EN": "# Preliminary tests\n*If a cheating case is suspected, the grading and evaluation end immediately. To report it, select the \"Cheat\" flag. Be careful to use it calmly, carefully and with discernment.*\n\n---\n\n**Prerequisites**\nThe code must compile with c++ and the flags -Wall -Wextra -Werror\nAs a reminder, this project must follow the C++98 standard. Therefore, C++11 functions (or other standard) and containers are NOT expected.\n\nDo not rate the exercise if you find:\n- A function implemented in a header file (except for template functions).\n- A Makefile compiling without the requested flags and/or with something other than c++.\n\nSelect the \"Forbidden function\" flag if you encounter:\n- The use of a \"C\" function (*alloc, *printf, free).\n- The use of a forbidden function in the project.\n- The use of \"using namespace <ns_name>\" or the keyword \"friend\".\n- The use of an external library, or features specific to versions after C++98"
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "# Exercice 00 : Mon premier canon\n*Cet exercice introduit la notion de classe canonique avec un exercice arithmétique simple : les nombres à point fixe.*\n\n---\n **Makefile**\nIl y a un Makefile qui compile en utilisant les flags appropriés.",
+            "EN": "# Exercise 00: My first gun\n*This exercise introduces the notion of a canonical class with a simple arithmetic exercise: fixed-point numbers.*\n\n---\n **Makefile**\nThere is a Makefile that compiles using the appropriate flags."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Accesseurs**\nLa classe Fixed (ou autre) doit avoir des accesseurs pour la valeur brute :\n- int getRawBits( void ) const;\n- void setRawBits( int const raw ); Ces membres sont-ils présents et fonctionnels ?",
+            "EN": "**Accessors**\nThe Fixed class (or other) must have accessors for the raw value:\n- int getRawBits( void ) const;\n- void setRawBits( int const raw ); Are these members present and functional?"
+          },
+          "yes_no": true,
+          "separator": false,
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Classe canonique**\nUne classe canonique doit avoir au moins :\n- Un constructeur par défaut\n- Un destructeur\n- Un constructeur par recopie\n- Un opérateur d'affectation Ces élements sont-ils présents et fonctionnels ?",
+            "EN": "**Canonical class**\nA canonical class must have at least:\n- A default constructor\n- A destructor\n- A copy constructor\n- An assignment operator Are these elements present and functional?"
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "# Exercice 01 : Premiers pas vers une classe utile\n*L'exercice précédent était un bon premier pas. Cependant, la classe était peu utile puisqu'elle ne permettait de représenter que la valeur 0.0*\n\n---\n\n**Makefile**\nIl y a un Makefile qui compile en utilisant les flags appropriés.",
+            "EN": "# Exercise 01: First steps towards a useful class\n*The previous exercise was a good first step. However, the class was of little use since it only allowed the value 0.0 to be represented*\n\n---\n\n**Makefile**\nThere is a Makefile that compiles using the appropriate flags."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Constructeur via flottant**\nPeut-on construire une instance à partir d'un nombre flottant ?",
+            "EN": "**Constructor via float**\nCan an instance be constructed from a floating number?"
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**operateur <<**\nY a-t-il un opérateur << et est-il fonctionnel ?",
+            "EN": "**operator <<**\nIs there a << operator and is it functional?"
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Point fixe vers entier**\nLa classe doit inclure une fonction membre \"int toInt(void) const;\" qui convertit un nombre à point fixe en int.\nEst-elle présente et fonctionnelle ?",
+            "EN": "**Fixed point to integer**\nThe class must include a member function \"int toInt(void) const;\" which converts a fixed point number to int.\nIs it present and functional?"
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Point fixe vers float**\nLa classe doit inclure une fonction membre \"float toFloat(void) const;\" qui convertit un nombre à point fixe vers un float.\nEst-elle présente et fonctionnelle ?",
+            "EN": "**Fixed point to float**\nThe class must include a member function \"float toFloat(void) const;\" which converts a fixed point number to a float.\nIs it present and functional?"
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Construction avec un int**\nPeut-on instancier la classe avec le constructeur prenant un int ?",
+            "EN": "**Construction with an int**\nCan the class be instantiated with the constructor taking an int?"
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "# Exercice 02 : Maintenant, on peut parler\n*Cet exercice ajoute les opérateurs de comparaison et arithmétiques à la classe.*\n\n---\n\n**Makefile**\nIl y a un Makefile qui compile en utilisant les flags appropriés.",
+            "EN": "# Exercise 02: Now we can talk\n*This exercise adds the comparison and arithmetic operators to the class.*\n\n---\n\n**Makefile**\nThere is a Makefile that compiles using the appropriate flags."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Opérateurs de comparaison**\nLes 6 opérateurs de comparaison (>, <, >=, <=, == et !=) sont-ils présents et fonctionnels ?",
+            "EN": "**Comparison operators**\nAre the 6 comparison operators (>, <, >=, <=, == and !=) present and functional?"
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Opérateurs arithmétiques**\nLes 4 opérateurs arithmétiques (+, -, * et /) sont-ils présents et fonctionnels ?\n(Si vous effectuez une division par 0, il est acceptable que le programme crash.)",
+            "EN": "**Arithmetic operators**\nAre the 4 arithmetic operators (+, -, *, and /) present and functional?\n(If you perform a division by 0, it is acceptable for the program to crash.)"
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Autres opérateurs**\nLes quatre opérateurs d'incrémentation et de décrémentation (pré-incrémentation et post-incrémentation, pré-décrémentation et post-décrémentation) sont-ils présents et fonctionnels ?",
+            "EN": "**Other operators**\nAre the four increment and decrement operators (pre-increment and post-increment, pre-decrement and post-decrement) present and functional?"
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Surcharge de fonctions membres statiques publiques**\nPour finir, vérifiez que les fonctions membres statiques min() et max() sont implémentées et fonctionnelles.",
+            "EN": "**Overloading of public static member functions**\nFinally, check that the static member functions min() and max() are implemented and functional."
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "# Exercice 03 : BSP\n*Cet exercice devrait vous faire réaliser à quel point il est facile de mettre en œuvre des des algorithmes complexes une fois que les bases fonctionnent comme prévu.*\n\n---\n\n**Makefile**\nIl y a un Makefile qui compile en utilisant les flags appropriés.",
+            "EN": "# Exercise 03: BSP\n*This exercise should make you realize how easy it is to implement complex algorithms once the basics are working as expected.*\n\n---\n\n**Makefile**\nThere is a Makefile that compiles using the appropriate flags."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Classe Point**\nIl existe une classe Point qui possède deux attributs (x et y) de type Fixed const.\nElle possède également un constructeur qui prend deux flottants et initialise x et y avec ces valeurs.",
+            "EN": "**Point Class**\nThere is a Point class that has two attributes (x and y) of type Fixed const.\nIt also has a constructor that takes two floats and initializes x and y with these values."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Fonction bsp**\nIl existe une fonction bsp() dont le prototype est \"bool bsp( Point const a, Point const b, Point const c, Point const point)\".\nLa fonction renvoie True si le point est à l'intérieur du triangle décrit par les sommets a, b, et c. Sinon, elle renvoie False.",
+            "EN": "**bsp function**\nThere is a bsp() function whose prototype is \"bool bsp( Point const a, Point const b, Point const c, Point const point)\".\nThe function returns True if the point is inside the triangle described by the vertices a, b, and c. Otherwise, it returns False."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "FR": "**Main et tests**\nIl y a un main pour tester que la fonction bsp() fonctionne comme décrit ci-dessus. Exécutez plusieurs tests pour vous assurer que la valeur de retour est correcte.",
+            "EN": "**Main and tests**\nThere is a main to test that the bsp() function works as described above. Run several tests to make sure the return value is correct."
+          },
+          "yes_no": true,
+          "separator": false,
+          "type": "mandatory"
+        }
+      ],
+      "bonusSections": [],
+      "cursus_id": "1",
+      "updated_at": "2023-12-27T23:00:00.000Z",
+      "gradingOptions": [
+        {
+          "ok": true,
+          "outstanding": true,
+          "empty_work": true,
+          "incomplete_work": true,
+          "invalid_compilation": true,
+          "norme": true,
+          "cheat": true,
+          "crash": true,
+          "concerning_situations": true,
+          "leaks": true,
+          "forbidden_functions": true,
+          "cannot_support": false
+        }
+      ],
+      "languages": [
+        "EN",
+        "FR"
+      ],
+      "language": "EN"
+    }
+  ],
+  "message": "Sheet created successfully"
+}

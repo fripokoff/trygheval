@@ -1,153 +1,146 @@
 {
     "success": true,
     "data": [
-        {
-			"id": 5,
-			"status": "active",
-			"project_title": "push_swap",
-			"introduction": [
-				"- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
-				"- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
-				"- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
-			],
-			"guidelines": [
-				"- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
-				"- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
-				"- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
-				"- If applicable, review any **scripts** used for testing or automation together with the student.",
-				"- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
-				"- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
-				"- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
-				"- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
-				"- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
-				"- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
-			],
-			"attachments": [
-				{
-					"title": "subject_en.pdf",
-					"url": "en.subject.pdf"
-				},
-				{
-					"title": "subject_fr.pdf",
-					"url": "fr.subject.pdf"
-				},
-				{
-					"url": "https://cdn.intra.42.fr/document/document/23302/checker_Mac"
-				},
-				{
-					"url": "https://cdn.intra.42.fr/document/document/23303/checker_linux"
-				}
-			],
-			"cursus_id": "",
-			"updated_at": "2024-10-01T16:57:46.050Z",
-			"students" : 1,
-			"eval_points" : 3,
-			"time" : 30,
-			"mandatorySections" : [
-				{
-					"id": "679e515b8c78a1cea9234f83",
-					"description": "Throughout the defence, pay attention to the amount of memory\nused by push_swap (using the command top for example) in order\nto detect any anomalies and ensure that allocated memory is\nproperly freed. If there is one memory leak (or more), the final\ngrade is 0.",
-					"yes_no": true,
-					"sheetId": "679e515b8c78a1cea9234f82",
-					"created_at": "2025-02-01T16:52:43.899Z",
-					"updated_at": "2025-02-01T16:57:46.137Z"
-				},
-				{
-					"id": "679e515b8c78a1cea9234f84",
-					"description": "--Run push_swap with non numeric parameters. The program must display \"Error\".\n--Run push_swap with a duplicate numeric parameter. The program must display \"Error\".\n--Run push_swap with only numeric parameters including one greater than MAXINT. The program must display \"Error\".\n--Run push_swap without any parameters. The program must not display anything and give the prompt back.",
-					"yes_no": true,
-					"sheetId": "679e515b8c78a1cea9234f82",
-					"created_at": "2025-02-01T16:52:43.899Z",
-					"updated_at": "2025-02-01T16:57:46.137Z"
-				},
-				{
-					"id": "679e515b8c78a1cea9234f85",
-					"description": "--Run the following command \"$>./push_swap 42\". The program should display nothing (0 instruction).\n--Run the following command \"$>./push_swap 2 3\". The program should display nothing (0 instruction).\n--Run the following command \"$>./push_swap 0 1 2 3\". The program should display nothing (0 instruction).\n--Run the following command \"$>./push_swap 0 1 2 3 4 5 6 7 8 9\". The program should display nothing (0 instruction).\n--Run the following command \"$>./push_swap 'Between 0 and 9 randomly sorted values chosen>'. The program should display nothing (0 instruction).",
-					"yes_no": true,
-					"sheetId": "679e515b8c78a1cea9234f82",
-					"created_at": "2025-02-01T16:52:43.899Z",
-					"updated_at": "2025-02-01T16:57:46.138Z"
-				},
-				{
-					"id": "679e515b8c78a1cea9234f86",
-					"description": "--Run \"$>ARG=\"2 1 0\"; ./push_swap $ARG | ./checker_OS $ARG\". Check that the checker program displays \"OK\" and that the size of the list of instructions from push_swap is 2 OR 3. Otherwise the test fails.\n--Run \"$>ARG=\"'Between 0 and 3 randomly values chosen'\"; ./push_swap $ARG | ./checker_OS $ARG\". Check that the checker program displays \"OK\" and that the size of the list of instructions from push_swap is between 0 AND 3. Otherwise the test fails.",
-					"yes_no": true,
-					"sheetId": "679e515b8c78a1cea9234f82",
-					"created_at": "2025-02-01T16:52:43.899Z",
-					"updated_at": "2025-02-01T16:57:46.138Z"
-				},
-				{
-					"id": "679e515b8c78a1cea9234f87",
-					"description": "--Run \"$>ARG=\"1 5 2 4 3\"; ./push_swap $ARG | ./checker_OS $ARG\". Check that the checker program displays \"OK\" and that the size of the list of instructions from push_swap isn't more than 12. Kudos if the size of the list of instructions is 8.\n--Run \"$>ARG=\"<5 random values>\"; ./push_swap $ARG | ./checker_OS $ARG\" and replace the placeholder by 5 random valid values. Check that the checker program displays \"OK\" and that the size of the list of instructions from push_swap isn't more than 12. Otherwise this test fails. You'll have to specifically check that the program wasn't developed to only answer correctly on the test included in this scale. You should repeat this test couple of times with several permutations before you validate it.",
-					"yes_no": true,
-					"sheetId": "679e515b8c78a1cea9234f82",
-					"created_at": "2025-02-01T16:52:43.899Z",
-					"updated_at": "2025-02-01T16:57:46.138Z"
-				},
-				{
-					"id": "679e515b8c78a1cea9234f88",
-					"description": "--Run \"$>ARG=\"<100 random values>\"; ./push_swap $ARG | ./checker_OS $ARG\" and replace the placeholder by 100 random valid values. Check that the checker program displays \"OK\" and that the size of the list of instructions. Give points in accordance:\nless than 700: 5\nless than 900: 4\nless than 1100: 3\nless than 1300: 2\nless than 1500: 1",
-					"yes_no": false,
-					"sheetId": "679e515b8c78a1cea9234f82",
-					"created_at": "2025-02-01T16:52:43.899Z",
-					"updated_at": "2025-02-01T16:57:46.138Z"
-				},
-				{
-					"id": "679e515b8c78a1cea9234f89",
-					"description": "--Run \"$>ARG=\"<500 random values>\"; ./push_swap $ARG | ./checker_OS $ARG\" and replace the placeholder by 500 random valid values (One is not called John/Jane Script for nothing). Check that the checker program displays \"OK\" and that the size of the list of instructions\nless than 5500: 5\nless than 7000: 4\nless than 8500: 3\nless than 10000: 2\nless than 11500: 1",
-					"yes_no": false,
-					"sheetId": "679e515b8c78a1cea9234f82",
-					"created_at": "2025-02-01T16:52:43.899Z",
-					"updated_at": "2025-02-01T16:57:46.138Z"
-				}
-			],
-			"bonusSections" : [
-				{
-					"id": "679e515c8c78a1cea9234f8b",
-					"description": "--Run checker with non numeric parameters. The program must display \"Error\".\n--Run checker with a duplicate numeric parameter. The program must display \"Error\".\n--Run checker with only numeric parameters including one greater than MAXINT. The program must display \"Error\".\n--Run checker without any parameters. The program must not display anything and give the prompt back.\n--Run checker with valid parameters, and write an action that doesn't exist during the instruction phase. The program must display \"Error\".\n--Run checker with valid parameters, and write an action with one or several spaces before and/or after the action during the instruction phase. The program must display \"Error\".",
-					"yes_no": true,
-					"sheetId": "679e515b8c78a1cea9234f82",
-					"created_at": "2025-02-01T16:52:44.174Z",
-					"updated_at": "2025-02-01T16:57:46.186Z"
-				},
-				{
-					"id": "679e515c8c78a1cea9234f8c",
-					"description": "**Don't forget to press CTRL+D to stop reading during theintruction phase.**\n\n--Run checker with the following command \"$>./checker 0 9 1 8 2 7 3 6 4 5\" then write the following valid action list \"[sa, pb, rrr]\". Checker should display \"KO\".\n--Run checker with a valid list as parameter of your choice then write a valid instruction list that doesn't order the integers. Checker should display \"KO\". You'll have to specifically check that the program wasn't developed to only answer correctly on the test included in this scale. You should repeat this test couple of times with several permutations before you validate it.",
-					"yes_no": true,
-					"sheetId": "679e515b8c78a1cea9234f82",
-					"created_at": "2025-02-01T16:52:44.174Z",
-					"updated_at": "2025-02-01T16:57:46.186Z"
-				},
-				{
-					"id": "679e515c8c78a1cea9234f8d",
-					"description": "**Don't forget to press CTRL+D to stop reading during the instruction phase.**\n\n--Run checker with the following command \"$>./checker 0 1 2\" then press CTRL+D without writing any instruction. The program should display \"OK\".\n--Run checker with the following command \"$>./checker 0 9 1 8 2\" then write the following valid action list \n [pb, ra, pb, ra, sa, ra, pa, pa]\". The program should display \"OK\".\n--Run checker with a valid list as parameter of your choice then write a valid instruction list that order the integers. Checker must display \"OK\". You'll have to specifically check that the program wasn't developed to only answer correctly on the test included in this scale. You should repeat this test couple of times with several permutations before you validate it.",
-					"yes_no": true,
-					"sheetId": "679e515b8c78a1cea9234f82",
-					"created_at": "2025-02-01T16:52:44.174Z",
-					"updated_at": "2025-02-01T16:57:46.186Z"
-				}
-			],
-			"gradingOptions" :[
-				{
-					"id": "679e45788c78a1cea9234f62",
-					"ok": true,
-					"outstanding": true,
-					"empty_work": true,
-					"incomplete_work": true,
-					"invalid_compilation": true,
-					"norme": true,
-					"cheat": true,
-					"crash": true,
-					"concerning_situations": true,
-					"leaks": true,
-					"forbidden_functions": true,
-					"cannot_support": true,
-					"sheetId": "679e45778c78a1cea9234f5f",
-					"created_at": "2025-02-01T16:02:00.638Z",
-					"updated_at": "2025-02-01T16:05:07.468Z"
-				}
-			]
-        }
+      {
+        "id": 5,
+        "status": "active",
+		"finish" : true,
+        "project_title": "push_swap",
+        "introduction": {
+          "EN": "# Introduction\nPlease comply with the following rules:\n- Remain polite, courteous, respectful and constructive throughout the evaluation process. The well-being of the community depends on it.\n- Identify with the student or group whose work is evaluated the possible dysfunctions in their project. Take the time to discuss and debate the problems that may have been identified.\n- You must consider that there might be some differences in how your peers might have understood the project's instructions and the scope of its functionalities. Always keep an open mind and grade them as honestly as possible. The pedagogy is useful only and only if the peer-evaluation is done seriously.",
+          "FR": "# Introduction\nVeuillez respecter les règles suivantes :\n- Restez poli, courtois, respectueux et constructif tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Identifiez avec l'étudiant ou le groupe dont le travail est évalué les dysfonctionnements possibles dans leur projet. Prenez le temps de discuter et de débattre des problèmes qui ont pu être identifiés.\n- Vous devez considérer qu'il pourrait y avoir des différences dans la façon dont vos pairs pourraient avoir compris les instructions du projet et la portée de ses fonctionnalités. Gardez toujours l'esprit ouvert et notez-les aussi honnêtement que possible. La pédagogie n'est utile que si l'évaluation par les pairs est faite sérieusement."
+        },
+        "guidelines": {
+          "EN": "# Guidelines\n- Only grade the work that was turned in the Git repository of the evaluated student or group.\n- Double-check that the Git repository belongs to the student(s). Ensure that the project is the one expected. Also, check that 'git clone' is used in an empty folder.\n- Check carefully that no malicious aliases was used to fool you and make you evaluate something that is not the content of the official repository. \n- To avoid any surprises and if applicable, review together any scripts used to facilitate the grading (scripts for testing or automation).\n- If you have not completed the assignment you are going to evaluate, you have to read the entire subject prior to starting the evaluation process. \n- Use the available flags to report an empty repository, a non-functioning program, a Norm error, cheating, and so forth. In these cases, the evaluation process ends and the final grade is 0, or -42 in case of cheating. However, except for cheating, student are strongly encouraged to review together the work that was turned in, in order to identify any mistakes that shouldn't be repeated in the future. \n- You must also verify the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of execution. You are allowed to use any of the different tools available on the computer, such as leaks, valgrind, or e_fence. In case of memory leaks, tick the appropriate flag.",
+          "FR": "# Directives\n- N'évaluez que le travail qui a été remis dans le dépôt Git de l'étudiant ou du groupe évalué.\n- Vérifiez que le dépôt Git appartient bien à l'étudiant (aux étudiants). Assurez-vous que le projet est bien celui attendu. Vérifiez également que 'git clone' est utilisé dans un dossier vide.\n- Vérifiez attentivement qu'aucun alias malveillant n'a été utilisé pour vous tromper et vous faire évaluer quelque chose qui n'est pas le contenu du dépôt officiel.\n- Pour éviter toute surprise et le cas échéant, examinez ensemble tous les scripts utilisés pour faciliter la notation (scripts de test ou d'automatisation).\n- Si vous n'avez pas terminé le devoir que vous allez évaluer, vous devez lire l'intégralité du sujet avant de commencer le processus d'évaluation.\n- Utilisez les drapeaux disponibles pour signaler un dépôt vide, un programme non fonctionnel, une erreur de Norme, une tricherie, etc. Dans ces cas, le processus d'évaluation se termine et la note finale est de 0, ou -42 en cas de tricherie. Cependant, à l'exception de la tricherie, les étudiants sont fortement encouragés à examiner ensemble le travail qui a été remis, afin d'identifier les erreurs qui ne devraient pas être répétées à l'avenir.\n- Vous devez également vérifier l'absence de fuites de mémoire. Toute mémoire allouée sur le tas doit être correctement libérée avant la fin de l'exécution. Vous êtes autorisé à utiliser n'importe quel outil disponible sur l'ordinateur, tel que leaks, valgrind ou e_fence. En cas de fuites de mémoire, cochez le drapeau approprié."
+        },
+        "attachments": [
+          {
+            "title": "subject_en.pdf",
+            "url": "en.subject.pdf"
+          }
+        ],
+        "cursus_id": "",
+        "updated_at": "2024-09-30T22:00:00.000Z",
+        "students": 1,
+        "eval_points": 3,
+        "time": 30,
+        "mandatorySections": [
+          {
+            "description": {
+              "EN": "# Mandatory part\n*Reminder : Remember that for the duration of the defence, no segfault, nor other unexpected, premature, uncontrolled or unexpected termination of the program, else the final grade is 0. Use the appropriate flag. This rule is active thoughout the whole defence.*\n\n---\n\n**Memory leaks**\nThroughout the defence, pay attention to the amount of memory used by push_swap (using the command top for example) in order to detect any anomalies and ensure that allocated memory is properly freed. If there is one memory leak (or more), the final grade is 0.",
+              "FR": "# Partie obligatoire\n*Rappel : N'oubliez pas que pendant toute la durée de la défense, aucun segfault, ni autre terminaison inattendue, prématurée, incontrôlée ou inattendue du programme, sinon la note finale est de 0. Utilisez le drapeau approprié. Cette règle est active pendant toute la durée de la défense.*\n\n---\n\n**Fuites de mémoire**\nPendant toute la durée de la défense, faites attention à la quantité de mémoire utilisée par push_swap (en utilisant la commande top par exemple) afin de détecter toute anomalie et de vous assurer que la mémoire allouée est correctement libérée. S'il y a une fuite de mémoire (ou plus), la note finale est de 0."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Error management**\nIn this section, we'll evaluate the push_swap's error management.\nIf at least one fails, no points will be awarded for this section. Move to the next one.\n- Run push_swap with non numeric parameters. The program must display \"Error\".\n- Run push_swap with a duplicate numeric parameter. The program must display \"Error\".\n- Run push_swap with only numeric parameters including one greater than MAXINT. The program must display \"Error\".\n- Run push_swap without any parameters. The program must not display anything and give the prompt back.",
+              "FR": "**Gestion des erreurs**\nDans cette section, nous allons évaluer la gestion des erreurs de push_swap.\nSi au moins un test échoue, aucun point ne sera attribué pour cette section. Passez à la suivante.\n- Exécutez push_swap avec des paramètres non numériques. Le programme doit afficher \"Error\".\n- Exécutez push_swap avec un paramètre numérique en double. Le programme doit afficher \"Error\".\n- Exécutez push_swap avec uniquement des paramètres numériques, dont un supérieur à MAXINT. Le programme doit afficher \"Error\".\n- Exécutez push_swap sans aucun paramètre. Le programme ne doit rien afficher et redonner l'invite."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Push_swap - Identity test**\nIn this section, we'll evaluate push_swap's behavior when given a list, which has already been sorted. Execute the following 3 tests. If at least one fails, no points will be awarded for this section. Move to the next one.\n- Run the following command `$>./push_swap 42`. The program should display nothing (0 instruction).\n- Run the following command `$>./push_swap 2 3` The program should display nothing (0 instruction).\n- Run the following command `$>./push_swap 0 1 2 3`. The program should display nothing (0 instruction).\n- Run the following command `$>./push_swap 0 1 2 3 4 5 6 7 8 9`. The program should display nothing (0 instruction).\n- Run the following command `$>./push_swap 'Between 0 and 9 randomly sorted values chosen'`. The program should display nothing (0 instruction).",
+              "FR": "**Push_swap - Test d'identité**\nDans cette section, nous allons évaluer le comportement de push_swap lorsqu'on lui donne une liste déjà triée. Exécutez les 3 tests suivants. Si au moins un test échoue, aucun point ne sera attribué pour cette section. Passez à la suivante.\n- Exécutez la commande suivante `$>./push_swap 42`. Le programme ne doit rien afficher (0 instruction).\n- Exécutez la commande suivante `$>./push_swap 2 3`. Le programme ne doit rien afficher (0 instruction).\n- Exécutez la commande suivante `$>./push_swap 0 1 2 3`. Le programme ne doit rien afficher (0 instruction).\n- Exécutez la commande suivante `$>./push_swap 0 1 2 3 4 5 6 7 8 9`. Le programme ne doit rien afficher (0 instruction).\n- Exécutez la commande suivante `$>./push_swap 'Entre 0 et 9 valeurs triées aléatoirement choisies'`. Le programme ne doit rien afficher (0 instruction)."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Push_swap - Simple version**\nIf the following tests fails, no points will be awarded for this section. Move to the next one. Use the checker binary given on the attachments.\n- Run `$>ARG=\"2 1 0\"; ./push_swap $ARG | ./checker_OS $ARG`.\nCheck that the checker program displays \"OK\" and that the size of the list of instructions from push_swap is 2 OR 3. Otherwise the test fails.\n- Run `$>ARG=\"'Between 0 and 3 randomly values chosen'\"; ./push_swap $ARG | ./checker_OS $ARG`.\nCheck that the checker program displays \"OK\" and that the size of the list of instructions from push_swap is between 0 AND 3. Otherwise the test fails.",
+              "FR": "**Push_swap - Version simple**\nSi les tests suivants échouent, aucun point ne sera attribué pour cette section. Passez à la suivante. Utilisez le binaire checker fourni dans les pièces jointes.\n- Exécutez `$>ARG=\"2 1 0\"; ./push_swap $ARG | ./checker_OS $ARG`.\nVérifiez que le programme checker affiche \"OK\" et que la taille de la liste d'instructions de push_swap est de 2 OU 3. Sinon, le test échoue.\n- Exécutez `$>ARG=\"'Entre 0 et 3 valeurs choisies aléatoirement'\"; ./push_swap $ARG | ./checker_OS $ARG`.\nVérifiez que le programme checker affiche \"OK\" et que la taille de la liste d'instructions de push_swap est comprise entre 0 ET 3. Sinon, le test échoue."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Another simple version**\nExecute the following 2 tests. If at least one fails, no points will be awarded for this section. Move to the next one. Use the checker binary given on the attachments.\n- Run `$>ARG=\"1 5 2 4 3\"; ./push_swap $ARG | ./checker_OS $ARG`.\nCheck that the checker program displays \"OK\" and that the size of the list of instructions from push_swap isn't more than 12. Kudos if the\nsize of the list of instructions is 8.\n- Run `$>ARG=\"<5 random values>\"; ./push_swap $ARG | ./checker_OS $ARG` and replace the placeholder by 5 random valid values. Check that the checker program displays \"OK\" and that the size of the list of instructions from push_swap isn't more than 12. Otherwise this test fails. You'll have to specifically check that the program wasn't developed to only answer correctly on the test included in this scale. You should repeat this test couple of times with several permutations before you validate it.",
+              "FR": "**Une autre version simple**\nExécutez les 2 tests suivants. Si au moins un test échoue, aucun point ne sera attribué pour cette section. Passez à la suivante. Utilisez le binaire checker fourni dans les pièces jointes.\n- Exécutez `$>ARG=\"1 5 2 4 3\"; ./push_swap $ARG | ./checker_OS $ARG`.\nVérifiez que le programme checker affiche \"OK\" et que la taille de la liste d'instructions de push_swap n'est pas supérieure à 12. Bravo si la taille de la liste d'instructions est de 8.\n- Exécutez `$>ARG=\"<5 valeurs aléatoires>\"; ./push_swap $ARG | ./checker_OS $ARG` et remplacez l'espace réservé par 5 valeurs valides aléatoires. Vérifiez que le programme checker affiche \"OK\" et que la taille de la liste d'instructions de push_swap n'est pas supérieure à 12. Sinon, ce test échoue. Vous devrez vérifier spécifiquement que le programme n'a pas été développé pour répondre correctement uniquement au test inclus dans cette échelle. Vous devez répéter ce test plusieurs fois avec plusieurs permutations avant de le valider."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Push_swap - Middle version**\nIf the following test fails, no points will be awarded for this section. Move to the next one. Move to the next one. Use the checker binary given on the attachments.\n- Run `$>ARG=\"<100 random values>\"; ./push_swap $ARG | ./checker_OS $ARG` and replace the placeholder by 100 random valid values. Check that the checker program displays \"OK\" and that the size of the list of instructions. Give points in accordance:\n  - less than 700: 5\n  - less than 900: 4\n  - less than 1100: 3\n  - less than 1300: 2\n  - less than 1500: 1\n\n**You'll have to specifically check that the program wasn't developed to only answer correctly on the test included in this scale. You should repeat this test couple of times with several permutations before you validate it.**",
+              "FR": "**Push_swap - Version intermédiaire**\nSi le test suivant échoue, aucun point ne sera attribué pour cette section. Passez à la suivante. Passez à la suivante. Utilisez le binaire checker fourni dans les pièces jointes.\n- Exécutez `$>ARG=\"<100 valeurs aléatoires>\"; ./push_swap $ARG | ./checker_OS $ARG` et remplacez l'espace réservé par 100 valeurs valides aléatoires. Vérifiez que le programme checker affiche \"OK\" et que la taille de la liste d'instructions. Attribuez des points en conséquence :\n  - moins de 700 : 5\n  - moins de 900 : 4\n  - moins de 1 100 : 3\n  - moins de 1 300 : 2\n  - moins de 1 500 : 1\n\n**Vous devrez vérifier spécifiquement que le programme n'a pas été développé pour répondre correctement uniquement au test inclus dans cette échelle. Vous devez répéter ce test plusieurs fois avec plusieurs permutations avant de le valider.**"
+            },
+            "yes_no": false,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Push_swap - Advanced version**\nIf the following test fails, no points will be awarded for this\nsection. Move to the next one. Move to the next one. Use the checker\nbinary given on the attachments.\n- Run `$>ARG=\"<500 random values>\"; ./push_swap $ARG | ./checker_OS $ARG` and replace the placeholder by 500 random valid values (One is not called John/Jane Script for nothing). Check that the checker program displays \"OK\" and that the size of the list of instructions\n  - less than 5500: 5\n  - less than 7000: 4\n  - less than 8500: 3\n  - less than 10000: 2\n  - less than 11500: 1\n\n**You'll have to specifically check that the program wasn't developed to only answer correctly on the test included in this scale. You should repeat this test couple of times with several permutations before you validate it.**",
+              "FR": "**Push_swap - Version avancée**\nSi le test suivant échoue, aucun point ne sera attribué pour cette\nsection. Passez à la suivante. Passez à la suivante. Utilisez le checker\nbinaire fourni dans les pièces jointes.\n- Exécutez `$>ARG=\"<500 valeurs aléatoires>\"; ./push_swap $ARG | ./checker_OS $ARG` et remplacez l'espace réservé par 500 valeurs valides aléatoires (on ne s'appelle pas John/Jane Script pour rien). Vérifiez que le programme checker affiche \"OK\" et que la taille de la liste d'instructions\n  - moins de 5 500 : 5\n  - moins de 7 000 : 4\n  - moins de 8 500 : 3\n  - moins de 10 000 : 2\n  - moins de 11 500 : 1\n\n**Vous devrez vérifier spécifiquement que le programme n'a pas été développé pour répondre correctement uniquement au test inclus dans cette échelle. Vous devez répéter ce test plusieurs fois avec plusieurs permutations avant de le valider.**"
+            },
+            "yes_no": false,
+            "separator": false,
+            "type": "mandatory"
+          }
+        ],
+        "bonusSections": [
+          {
+            "description": {
+              "EN": "# Bonus\n\n---\n\n*Reminder : Remember that for the duration of the defence, no segfault, nor other unexpected, premature, uncontrolled or unexpected termination of the program, else the final grade is 0. Use the appropriate flag. This rule is active throughout the whole defence. We will look at your bonuses if and only if your mandatory part is EXCELLENT. This means that you must complete the mandatory part, beginning to end, and your error management needs to be flawless, even in cases of twisted or bad usage. So if the mandatory part didn't score all the point during this defence bonuses will be totally IGNORED.*\n- Run checker with non numeric parameters. The program must display \"Error\".\n- Run checker with a duplicate numeric parameter. The program must display \"Error\".\n- Run checker with only numeric parameters including one greater than MAXINT. The program must display \"Error\".\n- Run checker without any parameters. The program must not display anything and give the prompt back.\n- Run checker with valid parameters, and write an action that doesn't exist during the instruction phase. The program must display \"Error\".\n- Run checker with valid parameters, and write an action with one or several spaces before and/or after the action during the instruction phase. The program must display \"Error\".",
+              "FR": "# Bonus\n\n---\n\n*Rappel : N'oubliez pas que pendant toute la durée de la défense, aucun segfault, ni autre terminaison inattendue, prématurée, incontrôlée ou inattendue du programme, sinon la note finale est de 0. Utilisez le drapeau approprié. Cette règle est active pendant toute la durée de la défense. Nous examinerons vos bonus uniquement si votre partie obligatoire est EXCELLENTE. Cela signifie que vous devez terminer la partie obligatoire, du début à la fin, et que votre gestion des erreurs doit être impeccable, même en cas d'utilisation abusive ou incorrecte. Par conséquent, si la partie obligatoire n'a pas obtenu tous les points pendant cette défense, les bonus seront totalement IGNORÉS.*\n- Exécutez checker avec des paramètres non numériques. Le programme doit afficher « Error ».\n- Exécutez checker avec un paramètre numérique en double. Le programme doit afficher « Error ».\n- Exécutez checker avec uniquement des paramètres numériques, dont un supérieur à MAXINT. Le programme doit afficher « Error ».\n- Exécutez checker sans aucun paramètre. Le programme ne doit rien afficher et redonner l'invite.\n- Exécutez checker avec des paramètres valides, et écrivez une action qui n'existe pas pendant la phase d'instruction. Le programme doit afficher « Error ».\n- Exécutez checker avec des paramètres valides, et écrivez une action avec un ou plusieurs espaces avant et/ou après l'action pendant la phase d'instruction. Le programme doit afficher « Error »."
+            },
+            "separator": "border-t-[0.5px]",
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "EN": "**Checker program - False tests**\nIn this section, we'll evaluate the checker's ability to manage a list of instructions that doesn't sort the list. Execute the following 2 tests. If at least one fails, no points will be awarded for this section. Move to the next one.\n**Don't forget to press CTRL+D to stop reading during theintruction phase.**\n\n- Run checker with the following command `$>./checker 0 9 1 8 2 7 3 6 4 5` then write the following valid action list \"[sa, pb, rrr]\". **Checker should display \"KO\".**\n- Run checker with a valid list as parameter of your choice then write a valid instruction list that doesn't order the integers. Checker should display \"KO\". You'll have to specifically check that the program wasn't developed to only answer correctly on the test included in this scale. You should repeat this test couple of times with several permutations before you validate it.",
+              "FR": "**Programme Checker - Faux tests**\nDans cette section, nous allons évaluer la capacité du checker à gérer une liste d'instructions qui ne trie pas la liste. Exécutez les 2 tests suivants. Si au moins un test échoue, aucun point ne sera attribué pour cette section. Passez à la suivante.\n**N'oubliez pas d'appuyer sur CTRL+D pour arrêter la lecture pendant la phase d'instruction.**\n\n- Exécutez checker avec la commande suivante `$>./checker 0 9 1 8 2 7 3 6 4 5` puis écrivez la liste d'actions valides suivante \"[sa, pb, rrr]\". **Checker doit afficher \"KO\".**\n- Exécutez checker avec une liste valide comme paramètre de votre choix, puis écrivez une liste d'instructions valides qui ne trie pas les entiers. Checker doit afficher \"KO\". Vous devrez vérifier spécifiquement que le programme n'a pas été développé pour répondre correctement uniquement au test inclus dans cette échelle. Vous devez répéter ce test plusieurs fois avec plusieurs permutations avant de le valider."
+            },
+            "separator": false,
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "EN": "**Checker program - Right tests**\nIn this section, we'll evaluate the checker's ability to manage a list of instructions that sort the list. Execute the following 2 tests. If at least one fails, no points will be awarded for this section. Move to the next one.\n**Don't forget to press CTRL+D to stop reading during the instruction phase.**\n\n- Run checker with the following command `$>./checker 0 1 2` then press CTRL+D without writing any instruction. The program should display \"OK\".\n- Run checker with the following command `$>./checker 0 9 1 8 2` then write the following valid action list  [pb, ra, pb, ra, sa, ra, pa, pa]\". The program should display \"OK\".\n- Run checker with a valid list as parameter of your choice then write a valid instruction list that order the integers. Checker must display \"OK\". You'll have to specifically check that the program wasn't developed to only answer correctly on the test included in this scale. You should repeat this test couple of times with several permutations before you validate it.",
+              "FR": "**Programme Checker - Bons tests**\nDans cette section, nous allons évaluer la capacité du checker à gérer une liste d'instructions qui trie la liste. Exécutez les 2 tests suivants. Si au moins un test échoue, aucun point ne sera attribué pour cette section. Passez à la suivante.\n**N'oubliez pas d'appuyer sur CTRL+D pour arrêter la lecture pendant la phase d'instruction.**\n\n- Exécutez checker avec la commande suivante `$>./checker 0 1 2` puis appuyez sur CTRL+D sans écrire d'instruction. Le programme doit afficher \"OK\".\n- Exécutez checker avec la commande suivante `$>./checker 0 9 1 8 2` puis écrivez la liste d'actions valides suivante [pb, ra, pb, ra, sa, ra, pa, pa]\". Le programme doit afficher \"OK\".\n- Exécutez checker avec une liste valide comme paramètre de votre choix, puis écrivez une liste d'instructions valides qui trie les entiers. Checker doit afficher \"OK\". Vous devrez vérifier spécifiquement que le programme n'a pas été développé pour répondre correctement uniquement au test inclus dans cette échelle. Vous devez répéter ce test plusieurs fois avec plusieurs permutations avant de le valider."
+            },
+            "separator": false,
+            "yes_no": true,
+            "type": "bonus"
+          }
+        ],
+        "gradingOptions": [
+          {
+            "ok": true,
+            "outstanding": true,
+            "empty_work": true,
+            "incomplete_work": true,
+            "invalid_compilation": true,
+            "norme": true,
+            "cheat": true,
+            "crash": true,
+            "concerning_situations": true,
+            "leaks": true,
+            "forbidden_functions": true,
+            "cannot_support": true
+          }
+        ],
+        "languages": [
+          "EN",
+          "FR"
+        ],
+        "language": "EN"
+      }
     ],
-    "message": "Sheets found successfully"
-}
+    "message": "Sheet created successfully"
+  }

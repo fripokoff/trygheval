@@ -1,0 +1,163 @@
+{
+    "success": true,
+    "data": [
+      {
+        "project_title": "miniRT",
+        "students": 2,
+        "status": "active",
+        "finish": true,
+        "eval_points": 6,
+        "time": 60,
+        "id": 15,
+        "introduction": {
+          
+          "EN": "# Introduction\n- Remain polite, courteous, respectful and constructive throughout the evaluation process. The well-being of the community depends on it.\n- Identify with the person (or the group) evaluated the eventual dysfunctions of the work. Take the time to discuss and debate the problems that may have been identified.\n- You must consider that there might be some difference in how your peers might have understood the project's instructions and the scope of its functionalities. Always keep an open mind and grade them as honestly as possible. The pedagogy is valid only and only if the peer evaluation is done seriously.",
+          "FR": "# Introduction\n- Restez poli, courtois, respectueux et constructif tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Identifiez avec la personne (ou le groupe) évalué les éventuels dysfonctionnements du travail. Prenez le temps de discuter et de débattre des problèmes qui ont pu être identifiés.\n- Vous devez considérer qu'il peut y avoir une différence dans la façon dont vos pairs ont compris les instructions du projet et la portée de ses fonctionnalités. Gardez toujours l'esprit ouvert et évaluez-les aussi honnêtement que possible. La pédagogie n'est valable que si l'évaluation par les pairs est faite sérieusement."
+        },
+        "guidelines": {
+          
+          "EN": "# Guidelines\n- Only grade the work that is in the student or group's Git repository.\n- Double-check that the Git repository belongs to the student or the group. Ensure that the work is for the relevant project and also check that \"git clone\" is used in an empty folder.\n- Check carefully that no malicious aliases was used to fool you and make you evaluate something that is not the content of the official repository.\n- To avoid any surprises, carefully check that both the evaluating and the evaluated students have reviewed the possible scripts used to facilitate the grading.\n- If the evaluating student has not completed that particular project yet, it is mandatory for this student to read the entire subject before starting the defense.\n- Use the flags available on this scale to signal an empty repository, non-functioning program, norm error, cheating etc. In these cases, the grading is over and the final grade is 0 (or -42 in case cheating). However, except for cheating, you are encouraged to continue to discuss your work (even if you have not finished it) to identify any issues that may have caused this failure and avoid repeating the same mistake in the future.\n- Remember that for the duration of the defense, no segfault, no other unexpected, premature, uncontrolled or unexpected termination of the program, else the final grade is O. Use the appropriate flag.\n- You should never have to edit any file except the configuration file if it exists. If you want to edit a file, take the time to explicit the reasons with the evaluated student and make sure both of you are okay with this.\n- You must also verify the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of execution. You are allowed to use any of the different tools available on the computer, such as leaks, valgrind, or e_fence. In case of memory leaks, tick the appropriate flag.",
+          "FR": "# Directives\n- N'évaluez que le travail qui se trouve dans le dépôt Git de l'étudiant ou du groupe.\n- Vérifiez que le dépôt Git appartient à l'étudiant ou au groupe. Assurez-vous que le travail concerne le projet en question et vérifiez également que la commande \"git clone\" est utilisée dans un dossier vide.\n- Vérifiez attentivement qu'aucun alias malveillant n'a été utilisé pour vous tromper et vous faire évaluer quelque chose qui n'est pas le contenu du dépôt officiel.\n- Pour éviter toute surprise, vérifiez attentivement que l'étudiant évaluateur et l'étudiant évalué ont examiné les éventuels scripts utilisés pour faciliter la notation.\n- Si l'étudiant évaluateur n'a pas encore terminé ce projet, il est obligatoire pour cet étudiant de lire l'intégralité du sujet avant de commencer la défense.\n- Utilisez les drapeaux disponibles sur cette échelle pour signaler un dépôt vide, un programme non fonctionnel, une erreur de norme, une tricherie, etc. Dans ces cas, la notation est terminée et la note finale est de 0 (ou -42 en cas de tricherie). Cependant, à l'exception de la tricherie, vous êtes encouragé à continuer à discuter de votre travail (même si vous ne l'avez pas terminé) afin d'identifier les problèmes qui ont pu causer cet échec et d'éviter de répéter la même erreur à l'avenir.\n- N'oubliez pas que pendant toute la durée de la défense, aucun segfault, ni autre interruption inattendue, prématurée, incontrôlée ou inattendue du programme, sinon la note finale est de O. Utilisez le drapeau approprié.\n- Vous ne devriez jamais avoir à modifier un fichier, sauf le fichier de configuration s'il existe. Si vous voulez modifier un fichier, prenez le temps d'expliquer les raisons à l'étudiant évalué et assurez-vous que vous êtes tous les deux d'accord.\n- Vous devez également vérifier l'absence de fuites de mémoire. Toute mémoire allouée sur le tas doit être correctement libérée avant la fin de l'exécution. Vous êtes autorisé à utiliser tous les outils disponibles sur l'ordinateur, tels que leaks, valgrind ou e_fence. En cas de fuites de mémoire, cochez le drapeau approprié."
+        },
+        "attachments": [
+          {
+            "title": "subject_en.pdf",
+            "url": "en.subject.pdf"
+          },
+          {
+            "title": "subject_fr.pdf",
+            "url": "fr.subject.pdf"
+          },
+          {
+            "title": "extras",
+            "url": "Extras"
+          }
+        ],
+        "mandatorySections": [
+          {
+            "description": {
+              
+              "EN": "# Mandatory Part\n\n---\n\n**Executable name**\nCheck that the project compiles well (without re-link) when you excute the `make` command and that the executable name is `miniRT`.",
+              "FR": "# Partie obligatoire\n\n---\n\n**Nom de l'exécutable**\nVérifiez que le projet se compile bien (sans re-link) lorsque vous exécutez la commande `make` et que le nom de l'exécutable est `miniRT`."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              
+              "EN": "**Configuration file**\nCheck that you can configure camera, light, the ambient light ratio and simple objects in the configuration file in accordance with the format described in the subject. Also check that the program returns an error and exits properly when the configuration file is misconfigured or if the filename doesn't end with the `.rt` extension.\n\nIf not, the defence is over and the final grade will be 0.",
+              "FR": "**Fichier de configuration**\nVérifiez que vous pouvez configurer la caméra, la lumière, le ratio de lumière ambiante et les objets simples dans le fichier de configuration conformément au format décrit dans le sujet. Vérifiez également que le programme renvoie une erreur et se ferme correctement lorsque le fichier de configuration est mal configuré ou si le nom de fichier ne se termine pas par l'extension `.rt`.\n\nSi ce n'est pas le cas, la défense est terminée et la note finale sera de 0."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              
+              "EN": "**Technical elements of the display**\nIn this section we'll evaluate Technical elements of the display. Run the program and execute the following tests. If at least one fails, no points will be awarded for this section. Move to the next one.\n\n- With only one parameter a window must open when launching the program and stay open during the program's whole execution.\n- Hide either part of the window or the whole window with another window or the screen's borders, minimize the minirt window to the dock/taskbar and maximize it back. In every case, the window's content must remain consistant (minirt should not quit and should still display properly its content).\n- When you change the window resolution, the window's content must remain consistant.\n- Pressing `ESC` or clicking the red cross of the window exits the program properly.",
+              "FR": "**Éléments techniques de l'affichage**\nDans cette section, nous évaluerons les éléments techniques de l'affichage. Exécutez le programme et effectuez les tests suivants. Si au moins un échoue, aucun point ne sera attribué pour cette section. Passez à la suivante.\n\n- Avec un seul paramètre, une fenêtre doit s'ouvrir lors du lancement du programme et rester ouverte pendant toute l'exécution du programme.\n- Cachez une partie de la fenêtre ou toute la fenêtre avec une autre fenêtre ou les bordures de l'écran, réduisez la fenêtre minirt dans le dock/barre des tâches et agrandissez-la à nouveau. Dans tous les cas, le contenu de la fenêtre doit rester cohérent (minirt ne doit pas quitter et doit toujours afficher correctement son contenu).\n- Lorsque vous modifiez la résolution de la fenêtre, le contenu de la fenêtre doit rester cohérent.\n- Appuyer sur `ESC` ou cliquer sur la croix rouge de la fenêtre ferme correctement le programme."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              
+              "EN": "**The Basic Shapes**\nIn this section we'll evaluate the 3 basic shapes. Run the program and execute the following 3 tests. If at least one fails, no points will be awarded for this section.\nMove to the next one.\n- Place a sphere at the coordinates {0, 0, 0}. With the camera facing the sphere, display the rendered image. The sphere should be visible and displayed without glitching.\n- Place a plane with a 'z' value of null. With the camera facing the plane, display the rendered image. The plane should be visible and displayed without glitching.\n- Place a cylinder extending along the y axis. With the camera facing the cylinder, display the rendered image. The cylinder should be visible and displayed without glitching.",
+              "FR": "**Les formes de base**\nDans cette section, nous évaluerons les 3 formes de base. Exécutez le programme et effectuez les 3 tests suivants. Si au moins un échoue, aucun point ne sera attribué pour cette section.\nPassez à la suivante.\n- Placez une sphère aux coordonnées {0, 0, 0}. Avec la caméra face à la sphère, affichez l'image rendue. La sphère doit être visible et affichée sans problème.\n- Placez un plan avec une valeur 'z' nulle. Avec la caméra face au plan, affichez l'image rendue. Le plan doit être visible et affiché sans problème.\n- Placez un cylindre s'étendant le long de l'axe y. Avec la caméra face au cylindre, affichez l'image rendue. Le cylindre doit être visible et affiché sans problème."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              
+              "EN": "**Translations and rotations**\nIn this section we'll evaluate that rotation and translation transformations can be applied on the scene's objects. Run the program and execute the following tests. If at least one fails, no points will be awarded for this section. Move to the next one.\n- Place two spheres at the coordinates {0, 0, 0}, the camera facing those spheres. Then put a translation on one of the two spheres oriented in a direction parallel to the camera's, of a greater distance than the sphere's diameter and display the rendered image. Both spheres should be visible and displayed without glitching.\n- Place a cylinder extending along the y axis, the camera facing the cylinder. Then put a 90° rotation (PI/2 radian) along the z axis and display the rendered image. The cylinder should be visible and displayed without glitching.\n\n",
+              "FR": "**Translations et rotations**\nDans cette section, nous évaluerons si les transformations de rotation et de translation peuvent être appliquées aux objets de la scène. Exécutez le programme et effectuez les tests suivants. Si au moins un échoue, aucun point ne sera attribué pour cette section. Passez à la suivante.\n- Placez deux sphères aux coordonnées {0, 0, 0}, la caméra face à ces sphères. Ensuite, effectuez une translation sur l'une des deux sphères orientée dans une direction parallèle à celle de la caméra, d'une distance supérieure au diamètre de la sphère, et affichez l'image rendue. Les deux sphères doivent être visibles et affichées sans problème.\n- Placez un cylindre s'étendant le long de l'axe y, la caméra face au cylindre. Ensuite, effectuez une rotation de 90° (PI/2 radian) le long de l'axe z et affichez l'image rendue. Le cylindre doit être visible et affiché sans problème."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              
+              "EN": "**Multi-objects**\nIn this section we'll evaluate that it's possible to put several object in one scene. Run the program and execute the following tests. If at least one fails, no points will be awarded for this section. Move to the next one.\n- Place several intersecting objects on the scene, such as for example a sphere and a cylinder, and display the rendered image. Both objects should be visible and displayed without glitching. (especially where both object intersect)\n- Execute the same test, but ensure it's possible to place the same object several times, for example two cylinders, two spheres and a plane.",
+              "FR": "**Multi-objets**\nDans cette section, nous évaluerons s'il est possible de placer plusieurs objets dans une même scène. Exécutez le programme et effectuez les tests suivants. Si au moins un échoue, aucun point ne sera attribué pour cette section. Passez à la suivante.\n- Placez plusieurs objets qui se croisent sur la scène, comme par exemple une sphère et un cylindre, et affichez l'image rendue. Les deux objets doivent être visibles et affichés sans problème. (surtout là où les deux objets se croisent)\n- Exécutez le même test, mais assurez-vous qu'il est possible de placer le même objet plusieurs fois, par exemple deux cylindres, deux sphères et un plan."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              
+              "EN": "**Camera's position and direction**\nIn this section we'll evaluate that the camera conditions of the subject are respected. Run the program and execute the following tests. If at least one fails, no points will be awarded for this section. Move to the next one.\n- Generate a random scene and place the camera extending along the x axis pointed towards the coordinates {0, 0, 0} and display the rendered image. The scene must be visible and displayed without glitching.\n- Generate a random scene and place the camera extending along the y axis pointed towards the coordinates {0, 0, 0} and display the rendered image. The scene must be visible and displayed without glitching.\n- Generate a random scene and place the camera extending along the z axis pointed towards the coordinates {0, 0, 0} and display the rendered image. The scene must be visible and displayed without glitching.\n- Generate a random scene and place the camera at a random location which isn't on any axis or a diagonal, pointed towards the coordinates {0, 0, 0} and display the rendered image. The scene must be visible and displayed without glitching.",
+              "FR": "**Position et direction de la caméra**\nDans cette section, nous évaluerons si les conditions de la caméra du sujet sont respectées. Exécutez le programme et effectuez les tests suivants. Si au moins un échoue, aucun point ne sera attribué pour cette section. Passez à la suivante.\n- Générez une scène aléatoire et placez la caméra s'étendant le long de l'axe x pointant vers les coordonnées {0, 0, 0} et affichez l'image rendue. La scène doit être visible et affichée sans problème.\n- Générez une scène aléatoire et placez la caméra s'étendant le long de l'axe y pointant vers les coordonnées {0, 0, 0} et affichez l'image rendue. La scène doit être visible et affichée sans problème.\n- Générez une scène aléatoire et placez la caméra s'étendant le long de l'axe z pointant vers les coordonnées {0, 0, 0} et affichez l'image rendue. La scène doit être visible et affichée sans problème.\n- Générez une scène aléatoire et placez la caméra à un endroit aléatoire qui n'est sur aucun axe ou diagonale, pointant vers les coordonnées {0, 0, 0} et affichez l'image rendue. La scène doit être visible et affichée sans problème."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Brightness 1/2**\nIn this section we'll evaluate brightness on the scene's objects. Run the program and execute the following tests. If at least one fails, no points will be awarded for this section. Move to the next one.\n- Place a sphere at the coordinates {0, 0, 0}, the camera facing the sphere, and put a spot left or right of the camera but positioned in such a way that the sphere will be lit sideways.\nDisplay the rendered image. The sphere should be visible, illuminated and displayed without glitching.\n- Place a sphere at some coordinates resulting from a translation, the camera facing the sphere, and place a spot left or right of the camera but positioned in such a way that the sphere will be lit sideways. Display the rendered image. The sphere should be visible, properly illuminated and displayed without glitch. Properly means that the halo of light should be computed after translation not before.",
+              "FR": "**Luminosité 1/2**\nDans cette section, nous évaluerons la luminosité sur les objets de la scène. Exécutez le programme et effectuez les tests suivants. Si au moins un échoue, aucun point ne sera attribué pour cette section. Passez à la suivante.\n- Placez une sphère aux coordonnées {0, 0, 0}, la caméra face à la sphère, et placez un spot à gauche ou à droite de la caméra, mais positionné de manière à ce que la sphère soit éclairée latéralement.\nAffichez l'image rendue. La sphère doit être visible, illuminée et affichée sans problème.\n- Placez une sphère à des coordonnées résultant d'une translation, la caméra face à la sphère, et placez un spot à gauche ou à droite de la caméra, mais positionné de manière à ce que la sphère soit éclairée latéralement. Affichez l'image rendue. La sphère doit être visible, correctement illuminée et affichée sans problème. Correctement signifie que le halo de lumière doit être calculé après la translation, pas avant."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Brightness 2/2**\nIn this section we'll evaluate shadow management generated by the scene's objects. Run the program and execute the following tests. If at least one fails, no points will be awarded for this section.\nMove to the next one.\n- Place a vertical spot, a sphere and a plane. The spot lighting the sphere's position to create a sphere shadow on the plane. Put the camera aside so we can see the sphere, the plane and the sphere's shadow on the plane. The shadow must be properly displayed without glitching.\n- Put a complex scene together with several objects like on illustration V.6 page 10 of the subject. Shadows must be properly displayed without glitching.",
+              "FR": "**Luminosité 2/2**\nDans cette section, nous évaluerons la gestion des ombres générées par les objets de la scène. Exécutez le programme et effectuez les tests suivants. Si au moins un échoue, aucun point ne sera attribué pour cette section.\nPassez à la suivante.\n- Placez un spot vertical, une sphère et un plan. Le spot éclairant la position de la sphère pour créer une ombre de sphère sur le plan. Placez la caméra de côté afin que nous puissions voir la sphère, le plan et l'ombre de la sphère sur le plan. L'ombre doit être correctement affichée sans problème.\n- Assemblez une scène complexe avec plusieurs objets comme sur l'illustration V.6 page 10 du sujet. Les ombres doivent être correctement affichées sans problème."
+            },
+            "yes_no": true,
+            "separator": false,
+            "type": "mandatory"
+          }
+        ],
+        "bonusSections": [
+          {
+            "description": {
+              "EN": "# Bonus\n*We will look at your bonuses if and only if your mandatory part is excellent. This means that your must complete the mandatory part, beginning to end, and your error management must be flawless, even in cases of twisted or bad usage. So if the mandatory part didn't score all the point during this defence bonuses will be totally ignored.*\n\n---\n\n**Many bonuses?**\nOne point per bonus.\n- Specular reflection.\n- Color disruption: checkerboard.\n- Colored and multi-spot lights.\n- One other 2nd degree object: Cone, Hyperboloid, Paraboloid..\n- Handle bump map textures../../li>",
+              "FR": "# Bonus\n*Nous examinerons vos bonus uniquement si votre partie obligatoire est excellente. Cela signifie que vous devez terminer la partie obligatoire, du début à la fin, et que votre gestion des erreurs doit être impeccable, même en cas d'utilisation abusive ou tordue. Donc, si la partie obligatoire n'a pas obtenu tous les points pendant cette défense, les bonus seront totalement ignorés.*\n\n---\n\n**Quand je serai plus âgé, je serai John Carmack**\nConsultez la partie bonus du sujet et ajoutez un point pour chaque bonus mis en œuvre et pleinement fonctionnel."
+            },
+            "separator": false,
+            "yes_no": false,
+            "type": "bonus"
+          }
+        ],
+        "cursus_id": "1",
+        "updated_at": "2023-12-27T23:00:00.000Z",
+        "gradingOptions": [
+          {
+            "ok": true,
+            "outstanding": true,
+            "empty_work": true,
+            "incomplete_work": true,
+            "invalid_compilation": true,
+            "norme": true,
+            "cheat": true,
+            "crash": true,
+            "concerning_situations": true,
+            "leaks": true,
+            "forbidden_functions": true,
+            "cannot_support": false
+          }
+        ],
+        "languages": [
+          "EN",
+          "FR"
+        ],
+        "language": "EN"
+      }
+    ],
+    "message": "Sheet created successfully"
+  }

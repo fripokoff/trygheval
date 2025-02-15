@@ -122,74 +122,46 @@ function useAddContentEffects(
     }, []);
 
     useEffect(() => {
-
+        let tempYesBonus = [];
+        let tempNoBonus = [];
+        let tempMandatoryYes = [];
+        let tempMandatoryNo = [];
+        let tempSliderMandatory = [];
+        let tempSliderBonus = [];
+    
         if (sheetData.bonusSections && sheetData.bonusSections.length > 0) {
-            let temp = []
-            let temp2 = []
-
             for (let i = 0; i < sheetData.bonusSections.length; i++) {
-                temp.push(initialYesColor)
-                temp2.push(initialNoColor)
+                tempYesBonus.push(initialYesColor);
+                tempNoBonus.push(initialNoColor);
             }
-
-            setYesColorBonus(temp)
-            setNoColorBonus(temp2)
         }
-    }, [sheetData.bonusSections])
-
-
-    useEffect(() => {
-
+    
         if (sheetData.mandatorySections && sheetData.mandatorySections.length > 0) {
-            let temp = []
-            let temp2 = []
-
             for (let i = 0; i < sheetData.mandatorySections.length; i++) {
-                temp.push(initialYesColor)
-                temp2.push(initialNoColor)
+                tempMandatoryYes.push(initialYesColor);
+                tempMandatoryNo.push(initialNoColor);
             }
-
-
-            setMandatoryYesColor(temp)
-            setMandatoryNoColor(temp2)
         }
-    }, [sheetData.mandatorySections])
-
-
-    useEffect(() => {
+    
         if (sheetData.mandatorySections && sheetData.bonusSections) {
-            let temp = []
-            let temp2 = []
-
-            const mandatorySectionsWithSliders = sheetData.mandatorySections.filter((section) => {
-                if (section.yes_no === false) {
-                    return true
-                } else {
-                    return false
-                }
-            })
-
+            const mandatorySectionsWithSliders = sheetData.mandatorySections.filter((section) => !section.yes_no);
             for (let i = 0; i < mandatorySectionsWithSliders.length; i++) {
-                temp.push(0)
+                tempSliderMandatory.push(0);
             }
-
-            setMandatorySliderValues(temp)
-
-            const bonusSectionsWithSliders = sheetData.bonusSections.filter((section) => {
-                if (section.yes_no === false) {
-                    return true
-                } else {
-                    return false
-                }
-            })
-
+    
+            const bonusSectionsWithSliders = sheetData.bonusSections.filter((section) => !section.yes_no);
             for (let i = 0; i < bonusSectionsWithSliders.length; i++) {
-                temp2.push(0)
+                tempSliderBonus.push(0);
             }
-
-            setBonusSliderValues(temp2)
         }
-    }, [sheetData.mandatorySections, sheetData.bonusSections])
+    
+        setYesColorBonus(tempYesBonus);
+        setNoColorBonus(tempNoBonus);
+        setMandatoryYesColor(tempMandatoryYes);
+        setMandatoryNoColor(tempMandatoryNo);
+        setMandatorySliderValues(tempSliderMandatory);
+        setBonusSliderValues(tempSliderBonus);
+    }, [sheetData.mandatorySections, sheetData.bonusSections, setYesColorBonus, setNoColorBonus, setMandatoryYesColor, setMandatoryNoColor, setMandatorySliderValues, setBonusSliderValues]);
 
 
     const calculatePoints = useCallback(() => {

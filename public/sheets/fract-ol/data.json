@@ -1,155 +1,148 @@
 {
     "success": true,
     "data": [
-        {
-			"id": 7,
-			"status": "active",
-			"project_title": "fract-ol",
-			"introduction": [
-				"- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.",
-				"- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.",
-				"- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously."
-			],
-			"guidelines": [
-				"- Only grade the work submitted to the **Git repository** of the evaluated student or group.",
-				"- Double-check that the **Git repository** belongs to the student(s) and that the project is the one expected. Ensure that **git clone** is used in an empty folder.",
-				"- Carefully verify that no malicious aliases are used to deceive the evaluator into grading non-official content.",
-				"- If applicable, review any **scripts** used for testing or automation together with the student.",
-				"- If you haven’t completed the assignment you’re evaluating, read the entire subject before starting the evaluation.",
-				"- Use the available flags to report an empty repository, a non-functioning program, a **Norm** error, or cheating. The evaluation process ends with a final grade of 0 (or -42 for cheating). However, except in cases of cheating, students are encouraged to review the work together to identify mistakes to avoid in the future.",
-				"- Remember that no **segfaults** or other unexpected program terminations will be tolerated during the evaluation. If this occurs, the final grade is 0. Use the appropriate flag.",
-				"- You should not need to edit any files except the configuration file, if it exists. If editing a file is necessary, explain the reasons to the evaluated student and ensure mutual agreement.",
-				"- Verify the absence of **memory leaks.** All memory allocated on the heap must be properly freed before the program ends.",
-				"- You may use tools like leaks, **valgrind,** or **e_fence** to check for memory leaks. If memory leaks are found, tick the appropriate flag."
-			],
-			"attachments": [
-				{
-					"title": "subject_en.pdf",
-					"url": "en.subject.pdf"
-				},
-				{
-					"title": "subject_fr.pdf",
-					"url": "fr.subject.pdf"
-				},
-				{
-					"url": "https://cdn.intra.42.fr/document/document/23302/checker_Mac"
-				},
-				{
-					"url": "https://cdn.intra.42.fr/document/document/23303/checker_linux"
-				}
-			],
-			"cursus_id": "1",
-			"updated_at": "2023-08-01T16:57:46.050Z",
-			"students" : 1,
-			"eval_points" : 3,
-			"time" : 30,
-			"preliminarySections" : [
-				{
-					"id": "679e55678c78a1cea9234f9b",
-					"description": "**Does the assignment meet the minimal requirements?**\n--The repository isn't empty.\n--Norminette shows no errors.\n--No cheating.\n--No forbidden function/library.\n--There is no global variable.\n--The code compiles with the required options.\n--The executable is named as expected.\n--During execution, there is no brutal or unmanaged crash (segfault, bus error, and so forth).\n--No memory leaks.",
-					"yes_no": true,
-					"sheetId": "679e55678c78a1cea9234f9a",
-					"created_at": "2025-02-01T17:09:59.615Z",
-					"updated_at": "2025-02-01T17:09:59.615Z"
-				}
-			],
-			"mandatorySections" : [
-				{
-					"id": "679e55678c78a1cea9234f9c",
-					"description": "--When the program runs, there is at least a graphic window open.\n--Pressing the key ESC exits the program properly (no leaks).\n--There is a visual change when using the mouse wheel (even if wrong, this part is about checking the event management only).",
-					"yes_no": true,
-					"sheetId": "679e55678c78a1cea9234f9a",
-					"created_at": "2025-02-01T17:09:59.615Z",
-					"updated_at": "2025-02-01T17:09:59.615Z"
-				},
-				{
-					"id": "679e55678c78a1cea9234f9d",
-					"description": "--Does it looks like it should? Search for the Julia fractal set on the internet if you're not sure.\n--Is it possible to zoom in and out and the basic pattern repeats?\n--Search for some different Julia sets. You should be able to recreate them by passing different parameters to the program.\n--Are there colors to represent the depth of the fractal?",
-					"yes_no": true,
-					"sheetId": "679e55678c78a1cea9234f9a",
-					"created_at": "2025-02-01T17:09:59.615Z",
-					"updated_at": "2025-02-01T17:09:59.615Z"
-				},
-				{
-					"id": "679e55678c78a1cea9234f9e",
-					"description": "--Does it looks like it should?\n--Is it possible to zoom in and out and the basic pattern repeats?\n--Compare the result with some reference pictures: they all look alike, you can't miss them.\n--Are there colors to represent the depth of the fractal?",
-					"yes_no": true,
-					"sheetId": "679e55678c78a1cea9234f9a",
-					"created_at": "2025-02-01T17:09:59.615Z",
-					"updated_at": "2025-02-01T17:09:59.615Z"
-				},
-				{
-					"id": "679e55678c78a1cea9234f9f",
-					"description": "Is the parameter's management implemented according to the subject?\nAre wrong parameters correctly handled?\n(Some optional parameters could be handled, for example for the bonus part.)",
-					"yes_no": true,
-					"sheetId": "679e55678c78a1cea9234f9a",
-					"created_at": "2025-02-01T17:09:59.615Z",
-					"updated_at": "2025-02-01T17:09:59.615Z"
-				},
-				{
-					"id": "679e55678c78a1cea9234fa0",
-					"description": "Take a look at the code and check whether the student uses the images from\nthe MLX to draw the image instead of putting pixels one by one. ;)",
-					"yes_no": true,
-					"sheetId": "679e55678c78a1cea9234f9a",
-					"created_at": "2025-02-01T17:09:59.615Z",
-					"updated_at": "2025-02-01T17:09:59.615Z"
-				}
-			],
-			"bonusSections" : [
-				{
-					"id": "679e55678c78a1cea9234fa2",
-					"description": "The zoom works where the mouse is and not only at the center of the image.",
-					"yes_no": true,
-					"sheetId": "679e55678c78a1cea9234f9a",
-					"created_at": "2025-02-01T17:09:59.708Z",
-					"updated_at": "2025-02-01T17:09:59.708Z"
-				},
-				{
-					"id": "679e55678c78a1cea9234fa3",
-					"description": "It must be possible to move the view using the arrow keys. It should also work with the zoom: if an arrow is pressed, the view should move if the user didn't zoom in or out, but also if they did.",
-					"yes_no": true,
-					"sheetId": "679e55678c78a1cea9234f9a",
-					"created_at": "2025-02-01T17:09:59.708Z",
-					"updated_at": "2025-02-01T17:09:59.708Z"
-				},
-				{
-					"id": "679e55678c78a1cea9234fa4",
-					"description": "--Either you say Ouhaaa because it's very beautiful.\n--Either you say Ouhaaa because it's insanely psychedelic.\n--Either you say Ouhaaa because the colors change.",
-					"yes_no": true,
-					"sheetId": "679e55678c78a1cea9234f9a",
-					"created_at": "2025-02-01T17:09:59.708Z",
-					"updated_at": "2025-02-01T17:09:59.708Z"
-				},
-				{
-					"id": "679e55678c78a1cea9234fa5",
-					"description": "There is at least one more fractal!! Working, nice, and that is actually a fractal different than the two mandatory ones.",
-					"yes_no": true,
-					"sheetId": "679e55678c78a1cea9234f9a",
-					"created_at": "2025-02-01T17:09:59.708Z",
-					"updated_at": "2025-02-01T17:09:59.708Z"
-				}
-			],
-			"gradingOptions" :[
-				{
-					"id": "679e45788c78a1cea9234f62",
-					"ok": true,
-					"outstanding": true,
-					"empty_work": true,
-					"incomplete_work": true,
-					"invalid_compilation": true,
-					"norme": true,
-					"cheat": true,
-					"crash": true,
-					"concerning_situations": true,
-					"leaks": true,
-					"forbidden_functions": true,
-					"cannot_support": true,
-					"sheetId": "679e45778c78a1cea9234f5f",
-					"created_at": "2025-02-01T16:02:00.638Z",
-					"updated_at": "2025-02-01T16:05:07.468Z"
-				}
-			]
-        }
+      {
+        "project_title": "fract-ol",
+		"finish" : true,
+        "students": 1,
+        "status": "active",
+        "eval_points": 3,
+        "time": 30,
+        "introduction": {
+          "EN": "# Introduction\n\nPlease follow the rules below:\n\n---\n\n- Remain polite, courteous, respectful and constructive throughout the evaluation process. The well-being of the community depends on it.\n- Identify with the student or group whose work is evaluated the possible dysfunctions in their project. Take the time to discuss and debate the problems that may have been identified.\n- You must consider that there might be some differences in how your peers might have understood the project's instructions and the scope of its functionalities. Always keep an open mind and grade them as honestly as possible. The pedagogy is useful only and only if the peer-evaluation is done seriously.",
+          "FR": "# Introduction\n\nMerci de respecter les règles suivantes :\n\n---\n\n- Restez poli, courtois, respectueux et constructif tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Identifiez avec l'étudiant ou le groupe dont le travail est évalué les dysfonctionnements possibles dans leur projet. Prenez le temps de discuter et de débattre des problèmes qui ont pu être identifiés.\n- Vous devez considérer qu'il peut y avoir des différences dans la façon dont vos pairs ont compris les instructions du projet et la portée de ses fonctionnalités. Gardez toujours l'esprit ouvert et évaluez-les aussi honnêtement que possible. La pédagogie n'est utile que si l'évaluation par les pairs est faite sérieusement."
+        },
+        "languages": [
+          "EN",
+          "FR"
+        ],
+        "language": "EN",
+        "guidelines": {
+          "EN": "# Guidelines\n\n---\n\n- Only grade the work that was turned in the Git repository of the evaluated student or group.\n- Double-check that the Git repository belongs to the student(s). Ensure that the project is the one expected. Also, check that 'git clone' is used in an empty folder.\n- Check carefully that no malicious aliases was used to fool you and make you evaluate something that is not the content of the official repository.\n- To avoid any surprises and if applicable, review together any scripts used to facilitate the grading (scripts for testing or automation).\n- If you have not completed the assignment you are going to evaluate, you have to read the entire subject prior to starting the evaluation process.\n- Use the available flags to report an empty repository, a non-functioning program, a Norm error, cheating, and so forth.\nIn these cases, the evaluation process ends and the final grade is 0,\nor -42 in case of cheating. However, except for cheating, student are strongly encouraged to review together the work that was turned in, in order to identify any mistakes that shouldn't be repeated in the future.\n- You must also verify the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of execution.\nYou are allowed to use any of the different tools available on the computer,\nsuch as leaks, valgrind, or e_fence. In case of memory leaks, tick the appropriate flag.",
+          "FR": "# Directives\n\n---\n\n- N'évaluez que le travail qui a été remis dans le dépôt Git de l'étudiant ou du groupe évalué.\n- Vérifiez que le dépôt Git appartient bien à l'étudiant (aux étudiants). Assurez-vous que le projet est bien celui attendu. Vérifiez également que 'git clone' est utilisé dans un dossier vide.\n- Vérifiez attentivement qu'aucun alias malveillant n'a été utilisé pour vous tromper et vous faire évaluer quelque chose qui n'est pas le contenu du dépôt officiel.\n- Pour éviter toute surprise et le cas échéant, examinez ensemble tous les scripts utilisés pour faciliter la notation (scripts de test ou d'automatisation).\n- Si vous n'avez pas terminé le devoir que vous allez évaluer, vous devez lire l'intégralité du sujet avant de commencer le processus d'évaluation.\n- Utilisez les drapeaux disponibles pour signaler un dépôt vide, un programme non fonctionnel, une erreur de Norme, une tricherie, etc.\nDans ces cas, le processus d'évaluation se termine et la note finale est de 0, ou -42 en cas de tricherie. Cependant, à l'exception de la tricherie, les étudiants sont fortement encouragés à examiner ensemble le travail qui a été remis, afin d'identifier les erreurs qui ne devraient pas être répétées à l'avenir.\n- Vous devez également vérifier l'absence de fuites de mémoire. Toute mémoire allouée sur le tas doit être correctement libérée avant la fin de l'exécution.\nVous êtes autorisé à utiliser tous les différents outils disponibles sur l'ordinateur, tels que leaks, valgrind ou e_fence. En cas de fuites de mémoire, cochez le drapeau approprié."
+        },
+        "mandatorySections": [
+          {
+            "description": {
+              "EN": "# Preliminary tests\n\n*Search for Julia and Mandelbrot sets on Wikipedia, or watch the e-learning videos, to have an idea of what the rendering must look like.*\n\n---\n \n**Minimal requirements**\nDoes the assignment meet the minimal requirements?\n- The repository isn't empty.\n- Norminette shows no errors.\n- No cheating.\n- No forbidden function/library.\n- There is no global variable.\n- The code compiles with the required options.\n- The executable is named as expected.\n- During execution, there is no brutal or unmanaged crash (segfault, bus error, and so forth).\n- No memory leaks.",
+              "FR": "# Tests préliminaires\n\n*Recherchez les ensembles de Julia et de Mandelbrot sur Wikipédia, ou regardez les vidéos d'apprentissage en ligne, pour avoir une idée de ce à quoi le rendu doit ressembler.*\n\n---\n\n**Exigences minimales**\nLe devoir répond-il aux exigences minimales ?\n- Le dépôt n'est pas vide.\n- Norminette ne montre aucune erreur.\n- Pas de triche.\n- Pas de fonction/bibliothèque interdite.\n- Il n'y a pas de variable globale.\n- Le code se compile avec les options requises.\n- L'exécutable est nommé comme prévu.\n- Pendant l'exécution, il n'y a pas de crash brutal ou non géré (segfault, erreur de bus, etc.).\n- Pas de fuites de mémoire."
+            },
+            "yes_no": true,
+            "separator": "border-t-4",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "# Mandatory part\nEvaluate the following points.\n\n---\n\n**Graphic management**\nIs the graphic management functional?\n- When the program runs, there is at least a graphic window open.\n- Pressing the key ESC exits the program properly (no leaks).\n- There is a visual change when using the mouse wheel (even if wrong, this part is about checking the event management only).",
+              "FR": "# Partie obligatoire\nÉvaluez les points suivants.\n\n---\n\n**Gestion graphique**\nLa gestion graphique est-elle fonctionnelle ?\n- Lorsque le programme s'exécute, il y a au moins une fenêtre graphique ouverte.\n- Appuyer sur la touche ESC quitte le programme correctement (pas de fuites).\n- Il y a un changement visuel lors de l'utilisation de la molette de la souris (même si c'est faux, cette partie consiste uniquement à vérifier la gestion des événements)."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Julia**\nHow does the Julia set behave?\n- Does it looks like it should? Search for the Julia fractal set on the internet if you're not sure.\n- Is it possible to zoom in and out and the basic pattern repeats?\n- Search for some different Julia sets. You should be able to recreate them by passing different parameters to the program.\n- Are there colors to represent the depth of the fractal?",
+              "FR": "**Julia**\nComment se comporte l'ensemble de Julia ?\n- Est-ce qu'il ressemble à ce qu'il devrait être ? Recherchez l'ensemble fractal de Julia sur Internet si vous n'êtes pas sûr.\n- Est-il possible de zoomer et dézoomer et le motif de base se répète-t-il ?\n- Recherchez différents ensembles de Julia. Vous devriez être capable de les recréer en passant différents paramètres au programme.\n- Y a-t-il des couleurs pour représenter la profondeur de la fractale ?"
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Mandelbrot**\nHow does the Mandelbrot set behave?\n- Does it looks like it should?\n- Is it possible to zoom in and out and the basic pattern repeats?\n- Compare the result with some reference pictures: they all look alike, you can't miss them.\n- Are there colors to represent the depth of the fractal?",
+              "FR": "**Mandelbrot**\nComment se comporte l'ensemble de Mandelbrot ?\n- Est-ce qu'il ressemble à ce qu'il devrait être ?\n- Est-il possible de zoomer et dézoomer et le motif de base se répète-t-il ?\n- Comparez le résultat avec des images de référence : elles se ressemblent toutes, vous ne pouvez pas les manquer.\n- Y a-t-il des couleurs pour représenter la profondeur de la fractale ?"
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Parameters management**\nIs the parameter's management implemented according to the subject?\nAre wrong parameters correctly handled?\n(Some optional parameters could be handled, for example for the bonus part.)",
+              "FR": "**Gestion des paramètres**\nLa gestion des paramètres est-elle implémentée conformément au sujet ?\nLes mauvais paramètres sont-ils correctement gérés ?\n(Certains paramètres optionnels pourraient être gérés, par exemple pour la partie bonus.)"
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**MiniLibX images**\nTake a look at the code and check whether the student uses the images fromthe MLX to draw the image instead of putting pixels one by one. ;)",
+              "FR": "**Images MiniLibX**\nJetez un coup d'œil au code et vérifiez si l'étudiant utilise les images de la MLX pour dessiner l'image au lieu de mettre des pixels un par un. ;)"
+            },
+            "yes_no": true,
+            "separator": false,
+            "type": "mandatory"
+          }
+        ],
+        "bonusSections": [
+          {
+            "description": {
+              "EN": "# Bonus part\nA lot of nice extras.\n\n---\n\n**Zoom follows the mouse**\nThe zoom works where the mouse is and not only at the center of the image.",
+              "FR": "# Partie bonus\nBeaucoup de jolis extras.\n\n---\n\n**Le zoom suit la souris**\nLe zoom fonctionne là où se trouve la souris et pas seulement au centre de l'image."
+            },
+            "separator": "border-t-[0.5px]",
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "EN": "**Arrows**\nIt must be possible to move the view using the arrow keys.\nIt should also work with the zoom: if an arrow is pressed, the view should move if the user didn't zoom in or out, but also if they did.",
+              "FR": "**Flèches**\nIl doit être possible de déplacer la vue à l'aide des touches fléchées.\nCela devrait également fonctionner avec le zoom : si une flèche est pressée, la vue devrait se déplacer si l'utilisateur n'a pas zoomé ou dézoomé, mais aussi s'il l'a fait."
+            },
+            "separator": false,
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "EN": "**Colors**\nThe color palette is awesome.\n- Either you say Ouhaaa because it's very beautiful.\n- Either you say Ouhaaa because it's insanely psychedelic.\n- Either you say Ouhaaa because the colors change.",
+              "FR": "**Couleurs**\nLa palette de couleurs est géniale.\n- Soit vous dites Ouhaaa parce que c'est très beau.\n- Soit vous dites Ouhaaa parce que c'est incroyablement psychédélique.\n- Soit vous dites Ouhaaa parce que les couleurs changent."
+            },
+            "separator": "border-t-[0.5px]",
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "EN": "**A third fractal**\nThere is at least one more fractal!! Working, nice, and that is actually a fractal different than the two mandatory ones.",
+              "FR": "**Une troisième fractale**\nIl y a au moins une fractale de plus !! Qui fonctionne, qui est sympa, et qui est en fait une fractale différente des deux obligatoires."
+            },
+            "separator": false,
+            "yes_no": true,
+            "type": "bonus"
+          }
+        ],
+        "attachments": [
+          {
+            "title": "subject_en.pdf",
+            "url": "en.subject.pdf"
+          },
+          {
+            "title": "subject_fr.pdf",
+            "url": "fr.subject.pdf"
+          }
+        ],
+        "updated_at": "2023-07-31T22:00:00.000Z",
+        "gradingOptions": [
+          {
+            "ok": true,
+            "outstanding": true,
+            "empty_work": true,
+            "incomplete_work": true,
+            "invalid_compilation": true,
+            "norme": true,
+            "cheat": true,
+            "crash": true,
+            "concerning_situations": true,
+            "leaks": true,
+            "forbidden_functions": true,
+            "cannot_support": true
+          }
+        ]
+      }
     ],
-    "message": "Sheets found successfully"
-}
+    "message": "Sheet created successfully"
+  }
