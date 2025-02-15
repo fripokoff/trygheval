@@ -5,36 +5,37 @@
       "project_title": "CPP09",
       "students": 1,
       "status": "active",
+      "finish": true,
       "eval_points": 3,
       "time": 30,
       "id": 14,
       "introduction": {
-        "FR": "# Introduction\n- Restez polis, courtois, respectueux et constructifs pendant le processus d'évaluation. Le bien-être de la communauté repose là-dessus.\n- Identifiez avec la personne évaluée ou le groupe évalué les éventuels dysfonctionnements de son travail. Prenez le temps d'en discuter et débattez des problèmes identifiés.\n- Vous devez prendre en compte qu'il peut y avoir de légères différences d'interprétation entre les instructions du projet, son scope et ses fonctionnalités. Gardez un esprit ouvert et notez de la manière la plus honnête possible. La pédagogie n'est valide que si la peer-évaluation est faite sérieusement.",
-        "EN": ""
+        "EN": "# Introduction\n- Remain polite, courteous, respectful and constructive throughout the evaluation process. The well-being of the community depends on it.\n- Identify with the student or group whose work is evaluated the possible dysfunctions in their project. Take the time to discuss and debate the problems that may have been identified.\n- You must consider that there might be some differences in how your peers might have understood the project's instructions and the scope of its functionalities. Always keep an open mind and grade them as honestly as possible. The pedagogy is useful only and only if the peer-evaluation is done seriously.",
+        "FR": "# Introduction\n- Restez poli, courtois, respectueux et constructif tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Identifiez avec l'étudiant ou le groupe dont le travail est évalué les dysfonctionnements possibles dans leur projet. Prenez le temps de discuter et de débattre des problèmes qui ont pu être identifiés.\n- Vous devez considérer qu'il peut y avoir des différences dans la façon dont vos pairs ont compris les instructions du projet et la portée de ses fonctionnalités. Gardez toujours l'esprit ouvert et notez-les aussi honnêtement que possible. La pédagogie n'est utile que si l'évaluation par les pairs est faite sérieusement."
       },
       "guidelines": {
-        "FR": "# Directives\n- Ne notez que ce qui est contenu dans le dépôt Git cloné de l'étudiant(e) ou du groupe.\n- Vérifiez que le dépôt Git appartient bien à l'étudiant(e) ou au groupe, que le projet est bien celui attendu, et que \"git clone\" est utilisé dans un dossier vide.\n- Vérifiez scrupuleusement qu'aucun alias n'a été utilisé pour vous tromper et assurez-vous que vous évaluez bien le rendu officiel.\n- Afin d'éviter toute surprise, vérifiez avec l'étudiant(e) ou le groupe les potentiels scripts utilisés pour faciliter l'évaluation (par exemple, des scripts de tests ou d'automatisation).\n- Si vous n'avez pas fait le projet que vous allez évaluer, vous devez lire le sujet en entier avant de commencer l'évaluation.\n- Utilisez les flags disponibles pour signaler un rendu vide, un programme ne fonctionnant pas, une erreur de Norme, de la triche... Dans ces situations, l'évaluation est terminée et la note est 0, ou -42 en cas de triche. Cependant, à l'exception des cas de triche, vous êtes encouragé(e)s à continuer la discussion sur le travail rendu, même si ce dernier est incomplet. Ceci afin d'identifier les erreurs à ne pas reproduire dans le futur.\n- Si le sujet requiert un fichier de configuration, vous ne devriez jamais avoir à le modifier. Si vous souhaitez éditer un fichier, prenez le temps d'expliquer pourquoi à la personne évaluée et de vous assurer que vous avez son accord.\n- Vous devez aussi vérifier l'absence de fuites mémoire. Toute mémoire allouée sur le tas doit être libérée proprement avant la fin de l'exécution du programme.\nVous avez le droit d'utiliser tout outil disponible sur la machine tel que leaks, valgrind ou e_fence. En cas de fuites mémoire, cochez le flag approprié.",
-        "EN": ""
+        "EN": "# Guidelines\n- Only grade the work that was turned in the Git repository of the evaluated student or group.\n- Double-check that the Git repository belongs to the student(s). Ensure that the project is the one expected. Also, check that 'git clone' is used in an empty folder.\n- Check carefully that no malicious aliases was used to fool you and make you evaluate something that is not the content of the official repository.\n- To avoid any surprises and if applicable, review together any scripts used to facilitate the grading (scripts for testing or automation).\n- If you have not completed the assignment you are going to evaluate, you have to read the entire subject prior to starting the evaluation process.\n- Use the available flags to report an empty repository, a non-functioning program, a Norm error, cheating, and so forth. In these cases, the evaluation process ends and the final grade is 0, or -42 in case of cheating. However, except for cheating, student are strongly encouraged to review together the work that was turned in, in order to identify any mistakes that shouldn't be repeated in the future.\n- You should never have to edit any file except the configuration file if it exists. If you want to edit a file, take the time to explicit the reasons with the evaluated student and make sure both of you are okay with this.\n- You must also verify the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of execution. You are allowed to use any of the different tools available on the computer, such as leaks, valgrind, or e_fence. In case of memory leaks, tick the appropriate flag.",
+        "FR": "# Directives\n- Ne notez que le travail qui a été remis dans le dépôt Git de l'étudiant ou du groupe évalué.\n- Vérifiez que le dépôt Git appartient bien à l'étudiant (aux étudiants). Assurez-vous que le projet est bien celui attendu. Vérifiez également que 'git clone' est utilisé dans un dossier vide.\n- Vérifiez attentivement qu'aucun alias malveillant n'a été utilisé pour vous tromper et vous faire évaluer quelque chose qui n'est pas le contenu du dépôt officiel.\n- Pour éviter toute surprise et le cas échéant, examinez ensemble tous les scripts utilisés pour faciliter la notation (scripts de test ou d'automatisation).\n- Si vous n'avez pas terminé le devoir que vous allez évaluer, vous devez lire l'intégralité du sujet avant de commencer le processus d'évaluation.\n- Utilisez les drapeaux disponibles pour signaler un dépôt vide, un programme non fonctionnel, une erreur de Norme, une tricherie, etc. Dans ces cas, le processus d'évaluation se termine et la note finale est de 0, ou -42 en cas de tricherie. Cependant, à l'exception de la tricherie, les étudiants sont fortement encouragés à examiner ensemble le travail qui a été remis, afin d'identifier les erreurs qui ne devraient pas être répétées à l'avenir.\n- Vous ne devriez jamais avoir à modifier un fichier, sauf le fichier de configuration s'il existe. Si vous voulez modifier un fichier, prenez le temps d'expliquer les raisons à l'étudiant évalué et assurez-vous que vous êtes tous les deux d'accord.\n- Vous devez également vérifier l'absence de fuites de mémoire. Toute mémoire allouée sur le tas doit être correctement libérée avant la fin de l'exécution. Vous êtes autorisé à utiliser n'importe quel outil disponible sur l'ordinateur, tel que leaks, valgrind ou e_fence. En cas de fuites de mémoire, cochez le drapeau approprié."
       },
       "attachments": [
         {
           "title": "subject_en.pdf",
-          "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/CPP_Modules/CPP00/en.subject.pdf"
+          "url": "en.subject.pdf"
         },
         {
           "title": "subject_fr.pdf",
-          "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/CPP_Modules/CPP00/fr.subject.pdf"
+          "url": "fr.subject.pdf"
         },
         {
           "title": "extras",
-          "url": "https://github.com/ARuzgar/42-Subjects/tree/main/Cursus/CPP_Modules/CPP00/Extras"
+          "url": "/Extras"
         }
       ],
       "mandatorySections": [
         {
           "description": {
-            "FR": "**Ne notez pas l'exercice si vous trouvez :**\n--Une fonction implémentée dans un fichier d'en-tête (sauf pour les fonctions templates).\n--Un Makefile compilant sans les flags demandés et/ou avec autre chose que c++.\n\n**Sélectionnez le flag \"Fonction interdite\" (Forbidden function) si\nvous rencontrez :**\n--L'utilisation d'une fonction \"C\" (*alloc, *printf, free).\n--L'utilisation d'une fonction interdite dans le projet.\n--L'utilisation de \"using namespace <ns_name>\" ou du mot-clé \"friend\".\n--L'utilisation d'une bibliothèque externe, ou de fonctionnalités propres aux versions postérieures à C++98.",
-            "EN": "# Tests préliminaires\n*Si un cas de triche est suspecté, la notation et l'évaluation prennent fin immédiatement. Pour le signaler, sélectionnez le flag \"Cheat\". Faites attention à l'utiliser avec calme, précaution et discernement.*\n\n---\n\n**Prérequis**\nLe code doit compiler avec c++ et les flags -Wall -Wextra -Werror\nPour rappel, ce projet doit suivre le standard C++98. Par conséquent,des fonctions C++11 (ou autre standard) et les containers ne sont PAS attendus.\n\nNe notez pas l'exercice si vous trouvez :\n- Une fonction implémentée dans un fichier d'en-tête (sauf pour les fonctions templates).\n- Un Makefile compilant sans les flags demandés et/ou avec autre chose que c++.\n\nSélectionnez le flag \"Fonction interdite\" (Forbidden function) si vous rencontrez :\n- L'utilisation d'une fonction \"C\" (*alloc, *printf, free).\n- L'utilisation d'une fonction interdite dans le projet.\n- L'utilisation de \"using namespace <ns_name>\" ou du mot-clé \"friend\".\n- L'utilisation d'une bibliothèque externe, ou de fonctionnalités propres aux versions postérieures à C++98"
+            "EN": "# Preliminary tests\n*If a cheating case is suspected, the grading and evaluation end immediately. To report it, select the \"Cheat\" flag. Be careful to use it calmly, carefully, and with discernment.*\n\n---\n\n**Prerequisites**\nThe code must compile with c++ and the flags -Wall -Wextra -Werror.\nAs a reminder, this project must follow the C++98 standard. Therefore, C++11 functions (or other standards) and containers are NOT expected.\n\nDo not grade the exercise if you find:\n- A function implemented in a header file (except for template functions).\n- A Makefile compiling without the requested flags and/or with something other than c++.\n\nSelect the \"Forbidden Function\" flag if you encounter:\n- The use of a \"C\" function (*alloc, *printf, free).\n- The use of a forbidden function in the project.\n- The use of \"using namespace <ns_name>\" or the keyword \"friend\".\n- The use of an external library, or features specific to versions later than C++98.",
+            "FR": "# Tests préliminaires\n*Si un cas de tricherie est suspecté, la notation et l'évaluation se terminent immédiatement. Pour le signaler, sélectionnez le drapeau \"Triche\". Soyez prudent et utilisez-le calmement, attentivement et avec discernement.*\n\n---\n\n**Prérequis**\nLe code doit compiler avec c++ et les flags -Wall -Wextra -Werror.\nPour rappel, ce projet doit suivre la norme C++98. Par conséquent, les fonctions C++11 (ou autres normes) et les conteneurs ne sont PAS attendus.\n\nNe notez pas l'exercice si vous trouvez :\n- Une fonction implémentée dans un fichier d'en-tête (sauf pour les fonctions de modèle).\n- Un Makefile compilant sans les flags demandés et/ou avec autre chose que c++.\n\nSélectionnez le drapeau \"Fonction interdite\" si vous rencontrez :\n- L'utilisation d'une fonction \"C\" (*alloc, *printf, free).\n- L'utilisation d'une fonction interdite dans le projet.\n- L'utilisation de \"using namespace <ns_name>\" ou du mot-clé \"friend\".\n- L'utilisation d'une bibliothèque externe, ou des fonctionnalités spécifiques aux versions ultérieures à C++98."
           },
           "yes_no": true,
           "separator": "border-t-4",
@@ -42,8 +43,26 @@
         },
         {
           "description": {
-            "FR": "**Fonctionnement**\nLe but de cet exercice est de développer un to_upper ayant un comportement spécifique si lancé sans paramètre.\nIl doit être résolu avec une approche C++ (string/upper).",
-            "EN": "# Exercice 00 : Megaphone\n*Cet exercice est un échauffement pour découvrir les I/O en C++.*\n\n---\n **Fonctionnement**\nLe but de cet exercice est de développer un to_upper ayant un comportement spécifique si lancé sans paramètre.\nIl doit être résolu avec une approche C++ (string/upper)."
+            "EN": "# Exercise 00: Bitcoin Exchange\n*For this first exercise, you have to find a makefile with the usual compilation rules and the files requested in the subject.*\n\n---\n\n**Code review**\nCheck that a makefile is present with the usual compilation rules.\n\nCheck in the code that the program uses at least one container.\n\nThe person being evaluated must explain why they chose to use this container and not another?\n\nIf not, the evaluation stops here.",
+            "FR": "# Exercice 00 : Échange de Bitcoin\n*Pour ce premier exercice, vous devez trouver un makefile avec les règles de compilation habituelles et les fichiers demandés dans le sujet.*\n\n---\n\n**Revue de code**\nVérifiez qu'un makefile est présent avec les règles de compilation habituelles.\n\nVérifiez dans le code que le programme utilise au moins un conteneur.\n\nLa personne évaluée doit expliquer pourquoi elle a choisi d'utiliser ce conteneur et pas un autre ?\n\nSi ce n'est pas le cas, l'évaluation s'arrête ici."
+          },
+          "yes_no": true,
+          "separator": "border-t-2",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Error handle**\nYou must be able to use an empty file or a file with errors (a basic example exists in the subject). The program must not stop its execution before having performed the operations on the whole file passed as argument.\n\nYou can use a wrong date.\n\nYou can enter a value greater than 1000 or less than 0.\n\nIf there is any problem during the execution then the evaluation stops here.",
+            "FR": "**Gestion des erreurs**\nVous devez être capable d'utiliser un fichier vide ou un fichier avec des erreurs (un exemple de base existe dans le sujet). Le programme ne doit pas arrêter son exécution avant d'avoir effectué les opérations sur l'ensemble du fichier passé en argument.\n\nVous pouvez utiliser une date erronée.\n\nVous pouvez entrer une valeur supérieure à 1000 ou inférieure à 0.\n\nS'il y a un problème pendant l'exécution, l'évaluation s'arrête ici."
+          },
+          "yes_no": true,
+          "separator": "border-t-2",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Main usage**\nYou must now use the \"input.csv\" file located at the top of this page.\n\nYou can modify this file with the values you want.\n\nYou have to run the program with the input.csv file as parameter.\n\nPlease compare some dates manually with the specified value.\n\nIf the date does not exist in the database, the program will have to use the nearest lower date.",
+            "FR": "**Utilisation principale**\nVous devez maintenant utiliser le fichier \"input.csv\" situé en haut de cette page.\n\nVous pouvez modifier ce fichier avec les valeurs que vous souhaitez.\n\nVous devez exécuter le programme avec le fichier input.csv comme paramètre.\n\nVeuillez comparer manuellement certaines dates avec la valeur spécifiée.\n\nSi la date n'existe pas dans la base de données, le programme devra utiliser la date inférieure la plus proche."
           },
           "yes_no": true,
           "separator": "border-t-4",
@@ -51,62 +70,17 @@
         },
         {
           "description": {
-            "FR": "**Gestion d'erreur**\nIl y a un peu de gestion d'erreur à faire dans ce programme mais les comportements ne sont pas précisés dans le sujet. Quitter le programme proprement ou gérer les erreurs est ok. Un segfault ne l'est pas ! :D",
-            "EN": "# Exercice 01 : My Awesome Phonebook\n*Cet exercice est une première approche pour écrire une classe simple et l'utiliser dans un programme interactif. Si l'exercice ne fonctionne pas parfaitement, notez ce qui peut l'être.*\n\n---\n\n**Gestion d'erreur**\nIl y a un peu de gestion d'erreur à faire dans ce programme mais les comportements ne sont pas précisés dans le sujet. Quitter le programme proprement ou gérer les erreurs est ok. Un segfault ne l'est pas ! :D"
-          },
-          "yes_no": false,
-          "separator": false,
-          "type": "mandatory"
-        },
-        {
-          "description": {
-            "FR": "Notez la commande EXIT en vous basant sur ce qui est demandé dans le sujet.",
-            "EN": "**La commande EXIT**\nNotez la commande EXIT en vous basant sur ce qui est demandé dans le sujet."
+            "EN": "# Exercise 01: Reverse Polish Notation\n*For this second exercise, you have to find a makefile with the usual compilation rules and the files requested in the subject.*\n\n---\n\n**Code review**\nCheck that a makefile is present with the usual compilation rules.\n\nCheck in the code that the program uses at least one container.\n\nThe person being evaluated must explain why they chose to use this container and not another?\n\nIf not, the evaluation stops here.\n\nIf the container chosen here is present in the first exercise then the evaluation stops here.",
+            "FR": "# Exercice 01 : Notation polonaise inverse\n*Pour ce deuxième exercice, vous devez trouver un makefile avec les règles de compilation habituelles et les fichiers demandés dans le sujet.*\n\n---\n\n**Revue de code**\nVérifiez qu'un makefile est présent avec les règles de compilation habituelles.\n\nVérifiez dans le code que le programme utilise au moins un conteneur.\n\nLa personne évaluée doit expliquer pourquoi elle a choisi d'utiliser ce conteneur et pas un autre ?\n\nSi ce n'est pas le cas, l'évaluation s'arrête ici.\n\nSi le conteneur choisi ici est présent dans le premier exercice, l'évaluation s'arrête ici."
           },
           "yes_no": true,
-          "separator": "border-t-[0.5px]",
+          "separator": "border-t-2",
           "type": "mandatory"
         },
         {
           "description": {
-            "FR": "--Les attributs de la classe Contact doivent être privés.\n--La classe doit exposer les accesseurs correspondants. Vérifiez également que tout ce qui n'est utilisé que dans une classe (et pas seulement la classe Contact) est privé et le reste public. \n--Les débutants ont tendance à tout mettre en public.\n",
-            "EN": "**Visibilité**\nLes attributs de la classe Contact doivent être privés. La classe doit exposer les accesseurs correspondants. Vérifiez également que tout ce qui n'est utilisé que dans une classe (et pas seulement la classe Contact) est privé et le reste public. Les débutants ont tendance à tout mettre en public.\n\n**C'est ce que vous devez vérifier ici.**"
-          },
-          "yes_no": false,
-          "separator": "border-t-[0.5px]",
-          "type": "mandatory"
-        },
-        {
-          "description": {
-            "FR": "--Le code doit inclure une classe Contact (ou autre nom).\n--La classe doit contenir les attributs demandés.\n--Le code doit contenir une classe Phonebook avec un tableau de Contacts à l'intérieur.",
-            "EN": "**La classe Contact et la classe Phonebook**\n- Le code doit inclure une classe Contact (ou autre nom).\n- La classe doit contenir les attributs demandés.\n- Le code doit contenir une classe Phonebook avec un tableau de Contacts à l'intérieur."
-          },
-          "yes_no": true,
-          "separator": "border-t-[0.5px]",
-          "type": "mandatory"
-        },
-        {
-          "description": {
-            "FR": "--Le programme doit proposer une sorte de boucle read/eval :\n--Lecture puis traitement d'entrée, ensuite attente de nouvelle entrée jusqu'à recevoir une commande EXIT.\n--La boucle devrait être faite de manière C++ (std::cin) !",
-            "EN": "**Boucle de Read/Eval**\nLe programme doit proposer une sorte de boucle read/eval :\n- Lecture puis traitement d'entrée, ensuite attente de nouvelle entrée jusqu'à recevoir une commande EXIT.\n- La boucle devrait être faite de manière C++ (std::cin) !"
-          },
-          "yes_no": true,
-          "separator": "border-t-[0.5px]",
-          "type": "mandatory"
-        },
-        {
-          "description": {
-            "FR": "Notez la commande ADD en vous basant sur ce qui est demandé dans le sujet.",
-            "EN": "**La commande ADD**\nNotez la commande ADD en vous basant sur ce qui est demandé dans le sujet."
-          },
-          "yes_no": false,
-          "separator": "border-t-[0.5px]",
-          "type": "mandatory"
-        },
-        {
-          "description": {
-            "FR": "--Notez la commande SEARCH en vous basant sur ce qui est demandé dans le sujet.\n--Une légère divergence dans le format attendu n'est pas importante. Cette partie vise à utiliser les \"iomanips\" en C++ et c'est ce sur quoi vous devez vous concentrer.",
-            "EN": "**La commande SEARCH**\nNotez la commande SEARCH en vous basant sur ce qui est demandé dans le sujet. Une légère divergence dans le format attendu n'est pas importante.\nCette partie vise à utiliser les \"iomanips\" en C++ et c'est ce sur quoi vous devez vous concentrer."
+            "EN": "**Main usage**\nCheck that the program runs correctly using different formulas of your choice.\n\nThe program is not required to handle expressions with parenthesis or decimals number.\n\nIf there is any problem during the execution then the evaluation stops here.",
+            "FR": "**Utilisation principale**\nVérifiez que le programme fonctionne correctement en utilisant différentes formules de votre choix.\n\nLe programme n'est pas tenu de gérer les expressions avec des parenthèses ou des nombres décimaux.\n\nS'il y a un problème pendant l'exécution, l'évaluation s'arrête ici."
           },
           "yes_no": true,
           "separator": "border-t-4",
@@ -114,8 +88,26 @@
         },
         {
           "description": {
-            "FR": "**Avez-vous sauvé le monde ?**\n--Cet exercice est plutôt simple. Soit Account.cpp marche, soit il ne marche pas.\n--Comparez la sortie du programme avec le fichier de logs fourni.\n--Toute différence (à l'exception des horodatages ou de l'ordre des destructors) signifie que l'exercice est incorrect.",
-            "EN": "# Exercice 02 : Le boulot de vos rêves\n*Le but de cet exercice est de récupérer les informations cachées au milieu du bruit et d'insérer du code dans un contexte existant.*\n\n---\n\n**Avez-vous sauvé le monde ?**\nCet exercice est plutôt simple. Soit Account.cpp marche, soit il ne marche pas.\nComparez la sortie du programme avec le fichier de logs fourni.\nToute différence (à l'exception des horodatages ou de l'ordre des destructors) signifie que l'exercice est incorrect."
+            "EN": "**Usage advanced**\nCheck that the program runs correctly using different formulas of your choice.\n\nHere is some tests:\n```\n8 9 * 9 - 9 - 9 - 4 - 1 +\n\t> Result: 42\n\t\n\t9 8 * 4 * 4 / 2 + 9 - 8 - 8 - 1 - 6 -\n\t> Result: 42\n\t\n\t1 2 * 2 / 2 + 5 * 6 - 1 3 * - 4 5 * * 8 / \n\t> Result: 15\n```\nYou can use the examples in the topic if you don't know which formula to use.\n\nIf there is any problem during the execution then the evaluation stops here.",
+            "FR": "**Utilisation avancée**\nVérifiez que le programme fonctionne correctement en utilisant différentes formules de votre choix.\n\nVoici quelques tests :\n```\n8 9 * 9 - 9 - 9 - 4 - 1 +\n\t> Résultat : 42\n\t\n\t9 8 * 4 * 4 / 2 + 9 - 8 - 8 - 1 - 6 -\n\t> Résultat : 42\n\t\n\t1 2 * 2 / 2 + 5 * 6 - 1 3 * - 4 5 * * 8 / \n\t> Résultat : 15\n```\nVous pouvez utiliser les exemples du sujet si vous ne savez pas quelle formule utiliser.\n\nS'il y a un problème pendant l'exécution, l'évaluation s'arrête ici."
+          },
+          "yes_no": true,
+          "separator": "border-t-4",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "# Exercise 02: PmergeMe\n*As usual, there has to be enough tests to prove the program works as expected. If there isn't, do not grade this exercise. If any non-interface class is not in orthodox canonical class form, do not grade this exercise.*\n\n---\n\n**Code review**\nCheck that a makefile is included with the usual compilation rules rules.\n\nCheck in the code that the program uses at least two containers.\n\nIf not, the evaluation stops here.\n\nThe person being evaluated must explain why they chose to use these containers and not another?\n\nCheck in the code that the merge-insert sort algorithm is present and is used for each container. The Ford-Johnson algorithm must be used.\nA brief explanation is expected. In case of doubt, the evaluation stops here.\n\nIf one of the containers chosen here is included in one of the previous exercises then the evaluation stops here.",
+            "FR": "# Exercice 02 : PmergeMe\n*Comme d'habitude, il doit y avoir suffisamment de tests pour prouver que le programme fonctionne comme prévu. S'il n'y en a pas, ne notez pas cet exercice. Si une classe non-interface n'est pas sous forme de classe canonique orthodoxe, ne notez pas cet exercice.*\n\n---\n\n**Revue de code**\nVérifiez qu'un makefile est inclus avec les règles de compilation habituelles.\n\nVérifiez dans le code que le programme utilise au moins deux conteneurs.\n\nSi ce n'est pas le cas, l'évaluation s'arrête ici.\n\nLa personne évaluée doit expliquer pourquoi elle a choisi d'utiliser ces conteneurs et pas un autre ?\n\nVérifiez dans le code que l'algorithme de tri merge-insert est présent et est utilisé pour chaque conteneur. L'algorithme de Ford-Johnson doit être utilisé.\nUne brève explication est attendue. En cas de doute, l'évaluation s'arrête ici.\n\nSi l'un des conteneurs choisis ici est inclus dans l'un des exercices précédents, l'évaluation s'arrête ici."
+          },
+          "yes_no": true,
+          "separator": "border-t-2",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Main usage**\nYou can now manually check that the program works correctly by using between 5 and 10 different positive integers of your choice as program arguments.\n\nIf this first test works and gives a sorted sequence of numbers you can continue.\nIf not, the evaluation stops now.\n\nNow you have to check this operation by using the following command as an argument to the program:\n\nFor linux:\n```\n`shuf -i 1-1000 -n 3000 | tr \"\\n\" \" \" `\n```\n\nFor OSX:\n```\n`jot -r 3000 1 1000 | tr '\\n' ' '`\n```\n\nIf the command works correctly, the person being evaluated should be able to explain the difference in time used for each container selected.\n\nIf there are any problems during the execution and/or explanation then the evaluation stops here.",
+            "FR": "**Utilisation principale**\nVous pouvez maintenant vérifier manuellement que le programme fonctionne correctement en utilisant entre 5 et 10 entiers positifs différents de votre choix comme arguments du programme.\n\nSi ce premier test fonctionne et donne une séquence de nombres triée, vous pouvez continuer.\nSi ce n'est pas le cas, l'évaluation s'arrête maintenant.\n\nMaintenant, vous devez vérifier cette opération en utilisant la commande suivante comme argument du programme :\n\nPour Linux :\n```\n`shuf -i 1-1000 -n 3000 | tr \"\\n\" \" \" `\n```\n\nPour OSX :\n```\n`jot -r 3000 1 1000 | tr '\\n' ' '`\n```\n\nSi la commande fonctionne correctement, la personne évaluée doit être capable d'expliquer la différence de temps utilisé pour chaque conteneur sélectionné.\n\nS'il y a des problèmes pendant l'exécution et/ou l'explication, l'évaluation s'arrête ici."
           },
           "yes_no": true,
           "separator": false,
@@ -142,7 +134,8 @@
         }
       ],
       "languages": [
-        "EN"
+        "EN",
+        "FR"
       ],
       "language": "EN"
     }

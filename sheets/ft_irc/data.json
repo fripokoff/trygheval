@@ -1,0 +1,127 @@
+{
+    "success": true,
+    "data": [
+      {
+        "id": 3,
+        "status": "active",
+        "finish": true,
+        "project_title": "ft_irc",
+        "introduction": {
+          "EN": "# Introduction\nPlease respect the following rules:\n\n- Be polite, courteous, respectful and constructive during the evaluation process. The well-being of the community depends on it.\n\n- Identify with the person being evaluated or the group being evaluated any malfunctions in their work. Take time to discuss and debate the problems identified.\n\n- You must take into account that there may be slight differences in interpretation between the project instructions, its scope and its functionalities. Keep an open mind and grade as honestly as possible. Pedagogy is only valid if peer-evaluation is done seriously.",
+          "FR": "# Introduction\nVeuillez respecter les règles suivantes :\n\n- Soyez poli, courtois, respectueux et constructif pendant le processus d'évaluation. Le bien-être de la communauté en dépend.\n\n- Identifiez avec la personne évaluée ou le groupe évalué tout dysfonctionnement dans son travail. Prenez le temps de discuter et de débattre des problèmes identifiés.\n\n- Vous devez tenir compte du fait qu'il peut y avoir de légères différences d'interprétation entre les instructions du projet, sa portée et ses fonctionnalités. Gardez l'esprit ouvert et notez aussi honnêtement que possible. La pédagogie n'est valable que si l'évaluation par les pairs est faite sérieusement."
+        },
+        "guidelines": {
+          "EN": "# Guidelines\n- Only grade what is contained in the cloned Git repository of the student or group.\n\n- Double-check that the Git repository belongs to the student(s). Ensure that the project is the one expected. Also, check that 'git clone' is used in an empty folder.\n\n- Check carefully that no malicious aliases was used to fool you and make you evaluate something that is not the content of the official repository.\n\n- In order to avoid any surprises, check with the student or group the potential scripts used to facilitate the evaluation (for example, test or automation scripts).\n\n- If you have not done the project you are going to evaluate, you must read the subject in its entirety before starting the evaluation.\n\n- Use the available flags to report an empty submission, a non-functioning program, a Norm error, cheating... In these situations, the evaluation is terminated and the grade is 0, or -42 in case of cheating. However, with the exception of cases of cheating, you are encouraged to continue the discussion on the work submitted, even if the latter is incomplete. This is in order to identify errors not to be reproduced in the future.\n\n- Throughout the duration of the evaluation, no segfault or other unexpected, premature or uncontrolled stop will be tolerated. In which case, the final grade will be 0. Use the appropriate flag. You should never have to edit a file except for a configuration file if it exists. In the event that you wish to modify a file, you must clearly explain the reasons for the modification and be in agreement with the student being evaluated before doing anything.\n\n- You must also check for the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of the program's execution. You have the right to use any tool available on the machine such as leaks, valgrind or e_fence. In case of memory leaks, check the appropriate flag.",
+          "FR": "# Directives\n- Ne notez que ce qui est contenu dans le dépôt Git cloné de l'étudiant ou du groupe.\n\n- Vérifiez que le dépôt Git appartient bien à l'étudiant(s). Assurez-vous que le projet est bien celui attendu. Vérifiez également que 'git clone' est utilisé dans un dossier vide.\n\n- Vérifiez attentivement qu'aucun alias malveillant n'a été utilisé pour vous tromper et vous faire évaluer quelque chose qui n'est pas le contenu du dépôt officiel.\n\n- Afin d'éviter toute surprise, vérifiez avec l'étudiant ou le groupe les scripts potentiels utilisés pour faciliter l'évaluation (par exemple, les scripts de test ou d'automatisation).\n\n- Si vous n'avez pas fait le projet que vous allez évaluer, vous devez lire le sujet dans son intégralité avant de commencer l'évaluation.\n\n- Utilisez les drapeaux disponibles pour signaler une soumission vide, un programme non fonctionnel, une erreur de Norme, une triche... Dans ces situations, l'évaluation est terminée et la note est de 0, ou -42 en cas de triche. Cependant, à l'exception des cas de triche, vous êtes encouragé à poursuivre la discussion sur le travail soumis, même si ce dernier est incomplet. Ceci afin d'identifier les erreurs à ne pas reproduire à l'avenir.\n\n- Pendant toute la durée de l'évaluation, aucun segfault ou autre arrêt inattendu, prématuré ou incontrôlé ne sera toléré. Dans ce cas, la note finale sera de 0. Utilisez le drapeau approprié. Vous ne devriez jamais avoir à modifier un fichier, sauf pour un fichier de configuration s'il existe. Si vous souhaitez modifier un fichier, vous devez clairement expliquer les raisons de la modification et être d'accord avec l'étudiant évalué avant de faire quoi que ce soit.\n\n- Vous devez également vérifier l'absence de fuites de mémoire. Toute mémoire allouée sur le tas doit être correctement libérée avant la fin de l'exécution du programme. Vous avez le droit d'utiliser n'importe quel outil disponible sur la machine tel que leaks, valgrind ou e_fence. En cas de fuites de mémoire, cochez le drapeau approprié."
+        },
+        "attachments": [
+          {
+            "title": "subject_en.pdf",
+            "url": "en.subject.pdf"
+          },
+          {
+            "title": "subject_fr.pdf",
+            "url": "fr.subject.pdf"
+          },
+          {
+            "title": "extras",
+            "url": "/Extras"
+          }
+        ],
+        "cursus_id": "1",
+        "updated_at": "2023-12-17T23:00:00.000Z",
+        "students": 3,
+        "eval_points": 9,
+        "time": 60,
+        "mandatorySections": [
+          {
+            "description": {
+              "EN": "# Mandatory Part\n\n---\n\n**Basic checks**\n- There is a Makefile, the project compiles correctly with the required options, is written in C++, and the executable is called as expected.\n- Ask and check how many poll() (or equivalent) are present in the code. There must be only one.\n- Verify that the poll() (or equivalent) is called every time before each accept, read/recv, write/send. After these calls, errno should not be used to trigger - specific action (e.g. like reading again after errno == EAGAIN).\n- Verify that each call to fcntl() is done as follows: fcntl(fd, F_SETFL, O_NONBLOCK); Any other use of fcntl() is forbidden.\n- If any of these points is wrong, the evaluation ends now and the final mark is 0.",
+              "FR": "# Partie obligatoire\n\n---\n\n**Vérifications de base**\n- Il y a un Makefile, le projet compile correctement avec les options requises, est écrit en C++, et l'exécutable est appelé comme prévu.\n- Demandez et vérifiez combien de poll() (ou équivalent) sont présents dans le code. Il ne doit y en avoir qu'un seul.\n- Vérifiez que poll() (ou équivalent) est appelé à chaque fois avant chaque accept, read/recv, write/send. Après ces appels, errno ne doit pas être utilisé pour déclencher une action spécifique (par exemple, comme relire après errno == EAGAIN).\n- Vérifiez que chaque appel à fcntl() est effectué comme suit : fcntl(fd, F_SETFL, O_NONBLOCK) ; Toute autre utilisation de fcntl() est interdite.\n- Si l'un de ces points est faux, l'évaluation se termine maintenant et la note finale est de 0."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Networking**\nCheck the following requirements:\n- The server starts, and listens on all network interfaces on the port given from the command line.\n- Using the 'nc' tool, you can connect to the server, send commands, and the server answers you back.\n- Ask the team what is their reference IRC client.\n- Using this IRC client, you can connect to the server.\n- The server can handle multiple connections at the same time. The server should not block. It should be able to answer all demands. Do some test with the IRC client and nc at the same time.\n- Join a channel thanks to the appropriate command. Ensure that all messages from one client on that channel are sent to all other clients that joined the channel.",
+              "FR": "**Réseau**\nVérifiez les exigences suivantes :\n- Le serveur démarre et écoute sur toutes les interfaces réseau sur le port donné depuis la ligne de commande.\n- En utilisant l'outil 'nc', vous pouvez vous connecter au serveur, envoyer des commandes, et le serveur vous répond.\n- Demandez à l'équipe quel est leur client IRC de référence.\n- En utilisant ce client IRC, vous pouvez vous connecter au serveur.\n- Le serveur peut gérer plusieurs connexions en même temps. Le serveur ne doit pas se bloquer. Il doit être capable de répondre à toutes les demandes. Faites quelques tests avec le client IRC et nc en même temps.\n- Rejoignez un canal grâce à la commande appropriée. Assurez-vous que tous les messages d'un client sur ce canal sont envoyés à tous les autres clients qui ont rejoint le canal."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Networking specials**\nNetwork communications can be disturbed by many strange situations.\n- Just like in the subject, using nc, try to send partial commands. Check that the server answers correctly. With a partial command sent, ensure that other connections still run fine.\n- Unexpectedly kill a client. Then check that the server is still operational for the other connections and for any new incoming client.\n- Unexpectedly kill a nc with just half of a command sent. Check again that the server is not in an odd state or blocked.\n- Stop a client (^-Z) connected on a channel. Then flood the channel using another client. The server should not hang. When the client is live again, all stored commands should be processed normally. Also, check for memory leaks during this operation.",
+              "FR": "**Spéciaux réseau**\nLes communications réseau peuvent être perturbées par de nombreuses situations étranges.\n- Tout comme dans le sujet, en utilisant nc, essayez d'envoyer des commandes partielles. Vérifiez que le serveur répond correctement. Avec une commande partielle envoyée, assurez-vous que les autres connexions fonctionnent toujours correctement.\n- Tuez un client de manière inattendue. Vérifiez ensuite que le serveur est toujours opérationnel pour les autres connexions et pour tout nouveau client entrant.\n- Tuez un nc de manière inattendue avec seulement la moitié d'une commande envoyée. Vérifiez à nouveau que le serveur n'est pas dans un état bizarre ou bloqué.\n- Arrêtez un client (^-Z) connecté sur un canal. Ensuite, inondez le canal en utilisant un autre client. Le serveur ne doit pas se bloquer. Lorsque le client est de nouveau en ligne, toutes les commandes stockées doivent être traitées normalement. Vérifiez également les fuites de mémoire pendant cette opération."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Client Commands basic**\n- With both nc and the reference IRC client, check that you can authenticate, set a nickname, a username, join a channel. This should be fine (you should have already done this previously).\n- Verify that private messages (PRIVMSG) are fully functional with different parameters.",
+              "FR": "**Commandes client de base**\n- Avec nc et le client IRC de référence, vérifiez que vous pouvez vous authentifier, définir un surnom, un nom d'utilisateur, rejoindre un canal. Cela devrait bien se passer (vous auriez déjà dû le faire auparavant).\n- Vérifiez que les messages privés (PRIVMSG) sont pleinement fonctionnels avec différents paramètres."
+            },
+            "yes_no": true,
+            "separator": "border-t-[0.5px]",
+            "type": "mandatory"
+          },
+          {
+            "description": {
+              "EN": "**Client Commands channel operator**\nWith both nc and the reference IRC client, check that a regular user does not have privileges to do channel operator actions. Then test with an operator. All the channel operation commands should be tested (remove one point for each feature that is not working).",
+              "FR": "**Commandes client opérateur de canal**\nAvec nc et le client IRC de référence, vérifiez qu'un utilisateur normal n'a pas les privilèges pour effectuer des actions d'opérateur de canal. Testez ensuite avec un opérateur. Toutes les commandes d'opération de canal doivent être testées (retirez un point pour chaque fonctionnalité qui ne fonctionne pas)."
+            },
+            "yes_no": false,
+            "separator": false,
+            "type": "mandatory"
+          }
+        ],
+        "bonusSections": [
+          {
+            "description": {
+              "EN": "# Bonus part\n*Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.*\n\n---\n\n**File transfer**\nFile transfer works with the reference IRC client.",
+              "FR": "# Partie bonus\n*Évaluez la partie bonus si, et seulement si, la partie obligatoire a été entièrement et parfaitement réalisée, et que la gestion des erreurs gère une utilisation inattendue ou incorrecte. Si tous les points obligatoires n'ont pas été validés lors de la défense, les points bonus doivent être totalement ignorés.*\n\n---\n\n**Transfert de fichiers**\nLe transfert de fichiers fonctionne avec le client IRC de référence."
+            },
+            "separator": "border-t-[0.5px]",
+            "yes_no": true,
+            "type": "bonus"
+          },
+          {
+            "description": {
+              "EN": "**A small bot**\nThere's an IRC bot.",
+              "FR": "**Un petit bot**\nIl y a un bot IRC."
+            },
+            "separator": false,
+            "yes_no": true,
+            "type": "bonus"
+          }
+        ],
+        "gradingOptions": [
+          {
+            "ok": true,
+            "outstanding": true,
+            "empty_work": true,
+            "incomplete_work": true,
+            "invalid_compilation": true,
+            "norme": true,
+            "cheat": true,
+            "crash": true,
+            "concerning_situations": true,
+            "leaks": true,
+            "forbidden_functions": true,
+            "cannot_support": true
+          }
+        ],
+        "languages": [
+          "EN",
+          "FR"
+        ],
+        "language": "EN"
+      }
+    ],
+    "message": "Sheet created successfully"
+  }

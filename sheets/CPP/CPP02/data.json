@@ -70,8 +70,8 @@
         },
         {
           "description": {
-            "FR": "# Exercice 01 : Premiers pas vers une classe utile\n-L'exercice précédent était un bon premier pas. Cependant, la classe était peu utile puisqu'elle ne permettait de représenter que la valeur 0.0*\n\n---\n\n**Makefile**\nIl y a un Makefile qui compile en utilisant les flags appropriés.",
-            "EN": "# Exercise 01: First steps towards a useful class\n-The previous exercise was a good first step. However, the class was of little use since it only allowed the value 0.0 to be represented*\n\n---\n\n**Makefile**\nThere is a Makefile that compiles using the appropriate flags."
+            "FR": "# Exercice 01 : Premiers pas vers une classe utile\n*L'exercice précédent était un bon premier pas. Cependant, la classe était peu utile puisqu'elle ne permettait de représenter que la valeur 0.0*\n\n---\n\n**Makefile**\nIl y a un Makefile qui compile en utilisant les flags appropriés.",
+            "EN": "# Exercise 01: First steps towards a useful class\n*The previous exercise was a good first step. However, the class was of little use since it only allowed the value 0.0 to be represented*\n\n---\n\n**Makefile**\nThere is a Makefile that compiles using the appropriate flags."
           },
           "yes_no": true,
           "separator": "border-t-[0.5px]",

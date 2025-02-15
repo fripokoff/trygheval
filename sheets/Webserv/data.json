@@ -1,0 +1,145 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 3,
+      "status": "active",
+      "finish": true,
+      "project_title": "Webserv",
+      "introduction": {
+        "EN": "# Introduction\nPlease respect the following rules:\n\n- Be polite, courteous, respectful and constructive during the evaluation process. The well-being of the community depends on it.\n\n- Identify with the person being evaluated or the group being evaluated any malfunctions in their work. Take time to discuss and debate the problems identified.\n\n- You must take into account that there may be slight differences in interpretation between the project instructions, its scope and its functionalities. Keep an open mind and grade as honestly as possible. Pedagogy is only valid if peer-evaluation is done seriously.",
+        "FR": "# Introduction\nVeuillez respecter les règles suivantes :\n\n- Soyez poli, courtois, respectueux et constructif pendant le processus d'évaluation. Le bien-être de la communauté en dépend.\n\n- Identifiez avec la personne évaluée ou le groupe évalué tout dysfonctionnement dans son travail. Prenez le temps de discuter et de débattre des problèmes identifiés.\n\n- Vous devez tenir compte du fait qu'il peut y avoir de légères différences d'interprétation entre les instructions du projet, sa portée et ses fonctionnalités. Gardez l'esprit ouvert et notez aussi honnêtement que possible. La pédagogie n'est valable que si l'évaluation par les pairs est faite sérieusement."
+      },
+      "guidelines": {
+        "EN": "# Guidelines\n- Only grade what is contained in the cloned Git repository of the student or group.\n\n- Double-check that the Git repository belongs to the student(s). Ensure that the project is the one expected. Also, check that 'git clone' is used in an empty folder.\n\n- Check carefully that no malicious aliases was used to fool you and make you evaluate something that is not the content of the official repository.\n\n- In order to avoid any surprises, check with the student or group the potential scripts used to facilitate the evaluation (for example, test or automation scripts).\n\n- If you have not done the project you are going to evaluate, you must read the subject in its entirety before starting the evaluation.\n\n- Use the available flags to report an empty submission, a non-functioning program, a Norm error, cheating... In these situations, the evaluation is terminated and the grade is 0, or -42 in case of cheating. However, with the exception of cases of cheating, you are encouraged to continue the discussion on the work submitted, even if the latter is incomplete. This is in order to identify errors not to be reproduced in the future.\n\n- Throughout the duration of the evaluation, no segfault or other unexpected, premature or uncontrolled stop will be tolerated. In which case, the final grade will be 0. Use the appropriate flag. You should never have to edit a file except for a configuration file if it exists. In the event that you wish to modify a file, you must clearly explain the reasons for the modification and be in agreement with the student being evaluated before doing anything.\n\n- You must also check for the absence of memory leaks. Any memory allocated on the heap must be properly freed before the end of the program's execution. You have the right to use any tool available on the machine such as leaks, valgrind or e_fence. In case of memory leaks, check the appropriate flag.",
+        "FR": "# Directives\n- Ne notez que ce qui est contenu dans le dépôt Git cloné de l'étudiant ou du groupe.\n\n- Vérifiez que le dépôt Git appartient bien à l'étudiant(s). Assurez-vous que le projet est bien celui attendu. Vérifiez également que 'git clone' est utilisé dans un dossier vide.\n\n- Vérifiez attentivement qu'aucun alias malveillant n'a été utilisé pour vous tromper et vous faire évaluer quelque chose qui n'est pas le contenu du dépôt officiel.\n\n- Afin d'éviter toute surprise, vérifiez avec l'étudiant ou le groupe les scripts potentiels utilisés pour faciliter l'évaluation (par exemple, les scripts de test ou d'automatisation).\n\n- Si vous n'avez pas fait le projet que vous allez évaluer, vous devez lire le sujet dans son intégralité avant de commencer l'évaluation.\n\n- Utilisez les drapeaux disponibles pour signaler une soumission vide, un programme non fonctionnel, une erreur de Norme, une triche... Dans ces situations, l'évaluation est terminée et la note est de 0, ou -42 en cas de triche. Cependant, à l'exception des cas de triche, vous êtes encouragé à poursuivre la discussion sur le travail soumis, même si ce dernier est incomplet. Ceci afin d'identifier les erreurs à ne pas reproduire à l'avenir.\n\n- Pendant toute la durée de l'évaluation, aucun segfault ou autre arrêt inattendu, prématuré ou incontrôlé ne sera toléré. Dans ce cas, la note finale sera de 0. Utilisez le drapeau approprié. Vous ne devriez jamais avoir à modifier un fichier, sauf un fichier de configuration s'il existe. Si vous souhaitez modifier un fichier, vous devez clairement expliquer les raisons de la modification et être en accord avec l'étudiant évalué avant de faire quoi que ce soit.\n\n- Vous devez également vérifier l'absence de fuites de mémoire. Toute mémoire allouée sur le tas doit être correctement libérée avant la fin de l'exécution du programme. Vous avez le droit d'utiliser n'importe quel outil disponible sur la machine tel que leaks, valgrind ou e_fence. En cas de fuites de mémoire, cochez le drapeau approprié."
+      },
+      "attachments": [
+        {
+          "title": "subject_en.pdf",
+          "url": "en.subject.pdf"
+        },
+        {
+          "title": "subject_fr.pdf",
+          "url": "fr.subject.pdf"
+        },
+        {
+          "title": "extras",
+          "url": "/Extras"
+        }
+      ],
+      "cursus_id": "1",
+      "updated_at": "2023-12-17T23:00:00.000Z",
+      "students": 3,
+      "eval_points": 9,
+      "time": 60,
+      "mandatorySections": [
+        {
+          "description": {
+            "EN": "# Mandatory Part\n\n---\n\n**Check the code and ask questions**\n- Launch the installation of siege with homebrew.\n- Ask explanations about the basics of an HTTP server.\n- Ask what function the group used for I/O Multiplexing.\n- Ask for an explanation of how does select() (or equivalent) work.\n- Ask if they use only one select() (or equivalent) and how they've managed the server to accept and the client to read/write.\n- The select() (or equivalent) should be in the main loop and should check file descriptors for read and write AT THE SAME TIME. If not, the grade is 0 and the evaluation process ends now.\n- There should be only one read or one write per client per select() (or equivalent). Ask the group to show you the code from the select() (or equivalent) to the read and write of a client.\n- Search for all read/recv/write/send on a socket and check that, if an error is returned, the client is removed.\n- Search for all read/recv/write/send and check if the returned value is correctly checked (checking only -1 or 0 values is not enough, both should be checked).\n- If errno is checked after read/recv/write/send, the grade is 0 and the evaluation process ends now.\n- Writing or reading ANY file descriptor without going through the select() (or equivalent) is strictly FORBIDDEN.\n- The project must compile without any re-link issue. If not, use the 'Invalid compilation' flag.\n- If any point is unclear or is not correct, the evaluation stops.",
+            "FR": "# Partie obligatoire\n\n---\n\n**Vérifiez le code et posez des questions**\n- Lancez l'installation de siege avec homebrew.\n- Demandez des explications sur les bases d'un serveur HTTP.\n- Demandez quelle fonction le groupe a utilisée pour le multiplexage E/S.\n- Demandez une explication du fonctionnement de select() (ou équivalent).\n- Demandez s'ils utilisent un seul select() (ou équivalent) et comment ils ont géré le serveur pour accepter et le client pour lire/écrire.\n- Le select() (ou équivalent) doit être dans la boucle principale et doit vérifier les descripteurs de fichiers pour la lecture et l'écriture EN MÊME TEMPS. Si ce n'est pas le cas, la note est de 0 et le processus d'évaluation se termine maintenant.\n- Il ne doit y avoir qu'une seule lecture ou une seule écriture par client par select() (ou équivalent). Demandez au groupe de vous montrer le code du select() (ou équivalent) à la lecture et à l'écriture d'un client.\n- Recherchez tous les read/recv/write/send sur un socket et vérifiez que, si une erreur est renvoyée, le client est supprimé.\n- Recherchez tous les read/recv/write/send et vérifiez si la valeur renvoyée est correctement vérifiée (vérifier uniquement les valeurs -1 ou 0 n'est pas suffisant, les deux doivent être vérifiées).\n- Si errno est vérifié après read/recv/write/send, la note est de 0 et le processus d'évaluation se termine maintenant.\n- L'écriture ou la lecture de TOUT descripteur de fichier sans passer par le select() (ou équivalent) est strictement INTERDITE.\n- Le projet doit compiler sans aucun problème de re-liaison. Si ce n'est pas le cas, utilisez le drapeau 'Compilation invalide'.\n- Si un point n'est pas clair ou n'est pas correct, l'évaluation s'arrête."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Configuration**\nIn the configuration file, check whether you can do the following and test the result:\n- Search for the HTTP response status codes list on the internet. During this evaluation, if any status codes is wrong, don't give any related points.\n- Setup multiple servers with different ports.\n- Setup multiple servers with different hostnames (use something like: curl --resolve example.com:80:127.0.0.1 http://example.com/).\n- Setup default error page (try to change the error 404).\n- Limit the client body (use: curl -X POST -H \"Content-Type: plain/text\" --data \"BODY IS HERE write something shorter or longer than body limit\").\n- Setup routes in a server to different directories.\n- Setup a default file to search for if you ask for a directory.\n- Setup a list of methods accepted for a certain route (e.g., try to delete something with and without permission).",
+            "FR": "**Configuration**\nDans le fichier de configuration, vérifiez si vous pouvez faire ce qui suit et testez le résultat :\n- Recherchez la liste des codes d'état de réponse HTTP sur Internet. Pendant cette évaluation, si un code d'état est incorrect, n'accordez aucun point lié.\n- Configurez plusieurs serveurs avec des ports différents.\n- Configurez plusieurs serveurs avec des noms d'hôte différents (utilisez quelque chose comme : curl --resolve example.com:80:127.0.0.1 http://example.com/).\n- Configurez une page d'erreur par défaut (essayez de modifier l'erreur 404).\n- Limitez le corps du client (utilisez : curl -X POST -H \"Content-Type: plain/text\" --data \"BODY IS HERE write something shorter or longer than body limit\").\n- Configurez des routes dans un serveur vers différents répertoires.\n- Configurez un fichier par défaut à rechercher si vous demandez un répertoire.\n- Configurez une liste de méthodes acceptées pour une certaine route (par exemple, essayez de supprimer quelque chose avec et sans permission)."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Basic checks**\nUsing telnet, curl, prepared files, demonstrate that the following features work properly:\n- GET, POST and DELETE requests should work.\n- UNKNOWN requests should not result in a crash.\n- For every test you should receive the appropriate status code.\n- Upload some file to the server and get it back.",
+            "FR": "**Vérifications de base**\nEn utilisant telnet, curl, des fichiers préparés, démontrez que les fonctionnalités suivantes fonctionnent correctement :\n- Les requêtes GET, POST et DELETE doivent fonctionner.\n- Les requêtes INCONNUES ne doivent pas entraîner de crash.\n- Pour chaque test, vous devez recevoir le code d'état approprié.\n- Téléchargez un fichier sur le serveur et récupérez-le."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Check CGI**\nPay attention to the following:\n- The server is working fine using a CGI.\n- The CGI should be run in the correct directory for relative path file access.\n- With the help of the students you should check that everything is working properly. You have to test the CGI with the \"GET\" and \"POST\" methods.\n- You need to test with files containing errors to see if the error handling works properly. You can use a script containing an infinite loop or an error; you are free to do whatever tests you want within the limits of acceptability that remain at your discretion. The group being evaluated should help you with this.\nThe server should never crash and an error should be visible in case of a problem.",
+            "FR": "**Vérifiez CGI**\nPortez attention à ce qui suit :\n- Le serveur fonctionne correctement en utilisant un CGI.\n- Le CGI doit être exécuté dans le bon répertoire pour l'accès aux fichiers par chemin relatif.\n- Avec l'aide des étudiants, vous devez vérifier que tout fonctionne correctement. Vous devez tester le CGI avec les méthodes \"GET\" et \"POST\".\n- Vous devez tester avec des fichiers contenant des erreurs pour voir si la gestion des erreurs fonctionne correctement. Vous pouvez utiliser un script contenant une boucle infinie ou une erreur ; vous êtes libre de faire tous les tests que vous voulez dans les limites de l'acceptabilité qui restent à votre discrétion. Le groupe évalué doit vous aider dans cette tâche.\nLe serveur ne doit jamais planter et une erreur doit être visible en cas de problème."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Check with a browser**\n- Use the reference browser of the team. Open the network part of it, and try to connect to the server using it.\n- Look at the request header and response header.\n- It should be compatible to serve a fully static website.\n- Try a wrong URL on the server.\n- Try to list a directory.\n- Try a redirected URL.\n- Try anything you want to.",
+            "FR": "**Vérifiez avec un navigateur**\n- Utilisez le navigateur de référence de l'équipe. Ouvrez la partie réseau de celui-ci et essayez de vous connecter au serveur en l'utilisant.\n- Regardez l'en-tête de requête et l'en-tête de réponse.\n- Il doit être compatible pour servir un site web entièrement statique.\n- Essayez une URL incorrecte sur le serveur.\n- Essayez de lister un répertoire.\n- Essayez une URL redirigée.\n- Essayez tout ce que vous voulez."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Port issues**\n- In the configuration file setup multiple ports and use different websites. Use the browser to ensure that the configuration works as expected and shows the right website.\n- In the configuration, try to setup the same port multiple times. It should not work.\n- Launch multiple servers at the same time with different configurations but with common ports. Does it work? If it does, ask why the server should work if one of the configurations isn't functional. Keep going.",
+            "FR": "**Problèmes de port**\n- Dans le fichier de configuration, configurez plusieurs ports et utilisez différents sites web. Utilisez le navigateur pour vous assurer que la configuration fonctionne comme prévu et affiche le bon site web.\n- Dans la configuration, essayez de configurer le même port plusieurs fois. Cela ne devrait pas fonctionner.\n- Lancez plusieurs serveurs en même temps avec des configurations différentes mais avec des ports communs. Est-ce que cela fonctionne ? Si c'est le cas, demandez pourquoi le serveur devrait fonctionner si l'une des configurations n'est pas fonctionnelle. Continuez."
+          },
+          "yes_no": true,
+          "separator": "border-t-[0.5px]",
+          "type": "mandatory"
+        },
+        {
+          "description": {
+            "EN": "**Siege & stress test**\n- Use Siege to run some stress tests.\n- Availability should be above 99.5% for a simple GET on an empty page with a siege -b on that page.\n- Verify there is no memory leak (Monitor the process memory usage. It should not go up indefinitely).\n- Check if there is no hanging connection.\n- You should be able to use siege indefinitely without having to restart the server (take a look at siege -b).",
+            "FR": "**Siege & test de stress**\n- Utilisez Siege pour effectuer des tests de stress.\n- La disponibilité doit être supérieure à 99,5 % pour un simple GET sur une page vide avec un siege -b sur cette page.\n- Vérifiez qu'il n'y a pas de fuite de mémoire (surveillez l'utilisation de la mémoire du processus. Elle ne doit pas augmenter indéfiniment).\n- Vérifiez qu'il n'y a pas de connexion suspendue.\n- Vous devriez pouvoir utiliser siege indéfiniment sans avoir à redémarrer le serveur (jetez un coup d'œil à siege -b)."
+          },
+          "yes_no": true,
+          "separator": false,
+          "type": "mandatory"
+        }
+      ],
+      "bonusSections": [
+        {
+          "description": {
+            "EN": "# Bonus part\n*Evaluate the bonus part if, and only if, the mandatory part has been entirely and perfectly done, and the error management handles unexpected or bad usage. In case all the mandatory points were not passed during the defense, bonus points must be totally ignored.*\n\n---\n\n**Cookies and session**\nThere is a working session and cookies system on the webserver.",
+            "FR": "# Partie bonus\n*Évaluez la partie bonus si, et seulement si, la partie obligatoire a été entièrement et parfaitement réalisée, et que la gestion des erreurs gère les utilisations inattendues ou incorrectes. Si tous les points obligatoires n'ont pas été validés lors de la défense, les points bonus doivent être totalement ignorés.*\n\n---\n\n**Cookies et session**\nIl existe un système de session et de cookies fonctionnel sur le serveur web."
+          },
+          "separator": "border-t-[0.5px]",
+          "yes_no": true,
+          "type": "bonus"
+        },
+        {
+          "description": {
+            "EN": "**CGI**\nThere is more than one CGI system.",
+            "FR": "**CGI**\nIl existe plus d'un système CGI."
+          },
+          "separator": false,
+          "yes_no": true,
+          "type": "bonus"
+        }
+      ],
+      "gradingOptions": [
+        {
+          "ok": true,
+          "outstanding": true,
+          "empty_work": true,
+          "incomplete_work": true,
+          "invalid_compilation": true,
+          "norme": true,
+          "cheat": true,
+          "crash": true,
+          "concerning_situations": true,
+          "leaks": true,
+          "forbidden_functions": true,
+          "cannot_support": true
+        }
+      ],
+      "languages": [
+        "EN",
+        "FR"
+      ],
+      "language": "EN"
+    }
+  ],
+  "message": "Sheet created successfully"
+}

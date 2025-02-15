@@ -28,7 +28,7 @@
         "updated_at": "2023-12-17T23:00:00.000Z",
         "students": 1,
         "eval_points": 3,
-        "time": 30,
+        "time": 60,
         "mandatorySections": [
           {
             "description": {

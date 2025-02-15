@@ -1,19 +1,24 @@
 {
   "files": {
-    "main.css": "/trygheval/static/css/main.9d5af5aa.css",
-    "main.js": "/trygheval/static/js/main.ebb8e893.js",
+    "main.css": "/trygheval/static/css/main.4d550423.css",
+    "main.js": "/trygheval/static/js/main.41445548.js",
     "static/media/fr.subject.pdf": "/trygheval/static/media/fr.subject.ce65893180cd8b447cb5.pdf",
     "static/media/en.subject.pdf": "/trygheval/static/media/en.subject.c6f7eb169af67197dc19.pdf",
     "static/media/tester": "/trygheval/static/media/tester.7f356c8ce35f5952ed95",
     "static/media/ubuntu_tester": "/trygheval/static/media/ubuntu_tester.d290d52cdaa1ae764b10",
     "static/media/ubuntu_cgi_tester": "/trygheval/static/media/ubuntu_cgi_tester.684b84974beef5a0ee9d",
     "static/media/cgi_tester": "/trygheval/static/media/cgi_tester.2950b8548483e27e0e13",
+    "static/media/header.png": "/trygheval/static/media/header.8712a29672684728700a.png",
+    "static/media/new_en.subject.pdf": "/trygheval/static/media/new_en.subject.8304abcb87cbe673dc4f.pdf",
+    "static/media/old_fr.subject.pdf": "/trygheval/static/media/old_fr.subject.84b6ca48f93292510293.pdf",
+    "static/media/old_en.subject.pdf": "/trygheval/static/media/old_en.subject.605b9d54a5b2b6f3a4f7.pdf",
     "static/media/pdf.worker.min.mjs": "/trygheval/static/media/pdf.worker.min.48ec784a5edb8e2894b8.mjs",
     "static/media/net_practice.1.4.tgz": "/trygheval/static/media/net_practice.1.4.ad875f0e6e7e02492939.tgz",
     "static/media/minilibx-linux.tgz": "/trygheval/static/media/minilibx-linux.80f6ed36cdfb38ba9ba8.tgz",
     "static/media/maps.zip": "/trygheval/static/media/maps.8d3529ba5fa1164f6f0f.zip",
     "static/media/fdf": "/trygheval/static/media/fdf.364ed6e4f5ea3b191a40",
     "static/media/sources.tgz": "/trygheval/static/media/sources.c251120b96c5048c7360.tgz",
+    "static/media/logo.png": "/trygheval/static/media/logo.bf7d1fd54c9ec539aef6.png",
     "static/media/minilibx_opengl.tgz": "/trygheval/static/media/minilibx_opengl.e831ee8609f3bf825cb0.tgz",
     "static/media/minilibx_macos_sierra_20161017.tgz": "/trygheval/static/media/minilibx_macos_sierra_20161017.c258c266aac0d233361d.tgz",
     "static/media/minilibx_mms_20200219_beta.tgz": "/trygheval/static/media/minilibx_mms_20200219_beta.c21bde465b4dd68e699f.tgz",
@@ -27,11 +32,11 @@
     "static/media/Account.hpp": "/trygheval/static/media/Account.c91afdfc42646ca4e5aa.hpp",
     "static/media/main.cpp": "/trygheval/static/media/main.b94d59aeabaec6d39605.cpp",
     "index.html": "/trygheval/index.html",
-    "main.9d5af5aa.css.map": "/trygheval/static/css/main.9d5af5aa.css.map",
-    "main.ebb8e893.js.map": "/trygheval/static/js/main.ebb8e893.js.map"
+    "main.4d550423.css.map": "/trygheval/static/css/main.4d550423.css.map",
+    "main.41445548.js.map": "/trygheval/static/js/main.41445548.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d5af5aa.css",
-    "static/js/main.ebb8e893.js"
+    "static/css/main.4d550423.css",
+    "static/js/main.41445548.js"
   ]
 }
