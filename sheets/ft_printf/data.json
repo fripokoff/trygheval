@@ -3,7 +3,9 @@
 	"data": [
 	  {
 		"id": 2,
-		"status": "active",
+		"milestone": 2,
+		"hours": 70,
+		"countHour" : true,	
 		"finish": true,
 		"project_title": "ft_printf",
 		"introduction": {

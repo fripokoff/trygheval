@@ -2,8 +2,10 @@
   "success": true,
   "data": [
     {
-      "id": 3,
-      "status": "active",
+      "id": 33,
+      "milestone": 7,
+      "hours": 210,
+      "countHour" : true,
       "finish": true,
       "project_title": "ft_transcendence",
       "introduction": {
@@ -26,10 +28,6 @@
         {
           "title": "old_subject_fr.pdf",
           "url": "old_fr.subject.pdf"
-        },
-        {
-          "title": "extras",
-          "url": "/Extras"
         }
       ],
       "cursus_id": "1",

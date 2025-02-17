@@ -4,11 +4,13 @@
     {
       "project_title": "CPP00",
       "students": 1,
-      "status": "active",
+      "milestone": 5,
+      "hours": 22,
+      "countHour" : true,
       "finish" : true,
       "eval_points": 3,
       "time": 30,
-      "id": 14,
+      "id": 16,
       "introduction": {
         "FR": "# Introduction\n- Restez polis, courtois, respectueux et constructifs pendant le processus d'évaluation. Le bien-être de la communauté repose là-dessus.\n- Identifiez avec la personne évaluée ou le groupe évalué les éventuels dysfonctionnements de son travail. Prenez le temps d'en discuter et débattez des problèmes identifiés.\n- Vous devez prendre en compte qu'il peut y avoir de légères différences d'interprétation entre les instructions du projet, son scope et ses fonctionnalités. Gardez un esprit ouvert et notez de la manière la plus honnête possible. La pédagogie n'est valide que si la peer-évaluation est faite sérieusement.",
         "EN": "# Introduction\n- Stay polite, courteous, respectful and constructive during the evaluation process. The well-being of the community depends on it.\n- Identify with the person being evaluated or the group being evaluated any malfunctions in their work. Take the time to discuss them and debate the problems identified.\n- You must take into account that there may be slight differences in interpretation between the project instructions, its scope and its functionalities. Keep an open mind and grade as honestly as possible. Pedagogy is only valid if peer review is done seriously."
@@ -27,7 +29,7 @@
           "url": "fr.subject.pdf"
         },
         {
-          "title": "extras",
+          "title": "Extras",
           "url": "/Extras"
         }
       ],

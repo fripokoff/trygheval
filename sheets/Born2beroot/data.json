@@ -2,11 +2,14 @@
     "success": true,
     "data": [
       {
+        "id": 4,
         "project_title": "Born2beroot",
         "students": 1,
-        "status": "active",
         "eval_points": 3,
-		"finish" : true,
+        "milestone": 2,
+        "hours": 40,
+        "countHour" : true,	
+        "finish" : true,
         "time": 60,
         "introduction": {
           "EN": "# Introduction\nPlease follow the rules below:\n- Remain polite, courteous, respectful, and constructive during the evaluation process. The well-being of the community depends on it.\n- Identify with the evaluated person or group any potential malfunctions in their work. Take the time to discuss and debate the identified issues.\n- You must take into account that there may be slight differences in interpretation between the project instructions, its scope, and its features. Keep an open mind and grade in the most honest way possible. The pedagogy is only valid if the peer evaluation is done seriously.\n\n",

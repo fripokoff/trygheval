@@ -2,9 +2,11 @@
     "success": true,
     "data": [
       {
-        "id": 13,
-        "status": "active",
-		"finish" : true,
+        "id": 21,
+        "milestone": 5,
+        "hours": 50,
+        "countHour" : true,
+        "finish" : true,
         "project_title": "NetPractice",
         "introduction": {
           "EN": "# Introduction\n- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.  \n- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.  \n- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously.",
@@ -24,8 +26,8 @@
             "url": "fr.subject.pdf"
           },
           {
-            "title": "net_practice.1.4.tgz",
-            "url": "https://github.com/ARuzgar/42-Subjects/blob/main/Cursus/NetPractice/Extras/net_practice.1.4.tgz"
+            "title": "Extras",
+            "url": "/Extras"
           }
         ],
         "preliminarySections": [

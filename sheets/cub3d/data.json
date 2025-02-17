@@ -4,11 +4,13 @@
 	  {
 		"project_title": "cub3d",
 		"students": 2,
-		"status": "active",
+		"milestone": 5,
+        "hours": 280,
+        "countHour" : true,
 		"finish" : true,
 		"eval_points": 6,
 		"time": 60,
-		"id": 15,
+		"id": 23,
 		"introduction": {
           "FR": "# Introduction\n- Restez poli, courtois, respectueux et constructif tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Identifiez avec la personne (ou le groupe) évaluée les éventuels dysfonctionnements du travail. Prenez le temps de discuter et de débattre des problèmes qui ont pu être identifiés.\n- Vous devez tenir compte du fait qu'il peut y avoir une certaine différence dans la façon dont vos pairs ont compris les instructions du projet et la portée de ses fonctionnalités. Gardez toujours l'esprit ouvert et évaluez-les aussi honnêtement que possible. La pédagogie n'est valable que si l'évaluation par les pairs est faite sérieusement.",
           "EN": "# Introduction\n- Remain polite, courteous, respectful and constructive throughout the evaluation process. The well-being of the community depends on it.\n- Identify with the person (or the group) evaluated the eventual dysfunctions of the work. Take the time to discuss and debate the problems that may have been identified.\n- You must consider that there might be some difference in how your peers might have understood the project's instructions and the scope of its functionalities. Always keep an open mind and grade them as honestly as possible. The pedagogy is valid only and only if the peer evaluation is done seriously."
@@ -27,8 +29,8 @@
 			"url": "fr.subject.pdf"
 		  },
 		  {
-			"title": "extras",
-			"url": "Extras"
+			"title": "Extras",
+			"url": "/Extras"
 		  }
 		],
 		"mandatorySections": [

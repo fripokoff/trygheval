@@ -2,9 +2,11 @@
     "success": true,
     "data": [
       {
-        "id": 5,
-        "status": "active",
-		"finish" : true,
+        "id": 6,
+        "milestone": 3,
+        "hours": 60,
+        "countHour" : true,
+        "finish" : true,
         "project_title": "push_swap",
         "introduction": {
           "EN": "# Introduction\nPlease comply with the following rules:\n- Remain polite, courteous, respectful and constructive throughout the evaluation process. The well-being of the community depends on it.\n- Identify with the student or group whose work is evaluated the possible dysfunctions in their project. Take the time to discuss and debate the problems that may have been identified.\n- You must consider that there might be some differences in how your peers might have understood the project's instructions and the scope of its functionalities. Always keep an open mind and grade them as honestly as possible. The pedagogy is useful only and only if the peer-evaluation is done seriously.",

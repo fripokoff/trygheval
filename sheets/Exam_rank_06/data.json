@@ -2,8 +2,10 @@
   "success": true,
   "data": [
     {
-      "id": 8,
-      "status": "active",
+      "id": 32,
+      "milestone": 7,
+      "hours": 3,
+      "countHour" : false,
       "project_title": "Exam_rank_06",
       "finish": true,
       "attachments": [],

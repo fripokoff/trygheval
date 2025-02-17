@@ -2,10 +2,13 @@
     "success": true,
     "data": [
       {
+        "id": 8,
         "project_title": "fract-ol",
-		"finish" : true,
+		    "finish" : true,
         "students": 1,
-        "status": "active",
+        "milestone": 3,
+        "hours": 60,
+        "countHour" : false,
         "eval_points": 3,
         "time": 30,
         "introduction": {
@@ -123,6 +126,10 @@
           {
             "title": "subject_fr.pdf",
             "url": "fr.subject.pdf"
+          },
+          {
+            "title": "Extras",
+            "url": "/Extras"
           }
         ],
         "updated_at": "2023-07-31T22:00:00.000Z",

@@ -2,10 +2,13 @@
     "success": true,
     "data": [
       {
+        "id": 10,
         "project_title": "pipex",
         "students": 1,
-        "status": "active",
-		"finish" : true,
+        "milestone": 3,
+        "hours": 50,
+        "countHour" : true,
+		    "finish" : true,
         "eval_points": 3,
         "time": 30,
         "languages": [

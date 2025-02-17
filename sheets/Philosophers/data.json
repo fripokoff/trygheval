@@ -2,8 +2,10 @@
   "success": true,
   "data": [
     {
-      "id": 12,
-      "status": "active",
+      "id": 14,
+      "milestone": 4,
+      "hours": 70,
+      "countHour" : true,
       "finish": true,
       "project_title": "Philosophers",
       "introduction": {

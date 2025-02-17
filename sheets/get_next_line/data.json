@@ -3,8 +3,10 @@
     "data": [
       {
         "id": 3,
-        "status": "active",
-		"finish" : true,
+        "milestone": 2,
+        "hours": 70,
+        "countHour" : true,	
+        "finish" : true,
         "project_title": "get_next_line",
         "introduction": {
           "FR": "# Introduction\nMerci de respecter les règles suivantes:\n\n- Restez polis, courtois, respectueux et constructifs pendant le processus d'évaluation. Le bien-être de la communauté repose là-dessus.\n\n- Identifiez avec la personne évaluée ou le groupe évalué les éventuels dysfonctionnements de son travail. Prenez le temps d'en discuter et débattez des problèmes identifiés.\n\n- Vous devez prendre en compte qu'il peut y avoir de légères différences d'interprétation entre les instructions du projet, son scope et ses fonctionnalités. Gardez un esprit ouvert et notez de la manière la plushonnête possible. La pédagogie n'est valide que si la peer-évaluation est faite sérieusement.",

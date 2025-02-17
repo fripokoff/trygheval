@@ -2,9 +2,11 @@
     "success": true,
     "data": [
       {
-        "id": 10,
-        "status": "active",
-		"finished": true,
+        "id": 11,
+        "milestone": 3,
+        "hours": 50,
+        "countHour" : false,
+		    "finished": true,
         "project_title": "minitalk",
         "introduction": {
           "EN": "# Introduction\n- Remain polite, courteous, respectful, and constructive throughout the evaluation process. The community's well-being depends on it.  \n- Work with the student or group being evaluated to identify potential issues in their project. Take time to discuss and debate the problems identified.  \n- Understand that there may be differences in how peers interpret the project instructions and scope. Always keep an open mind and grade as honestly as possible. Pedagogy is effective only when peer evaluations are taken seriously.",

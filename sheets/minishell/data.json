@@ -2,8 +2,10 @@
     "success": true,
     "data": [
       {
-        "id": 11,
-        "status": "active",
+        "id": 13,
+        "milestone": 4,
+        "hours": 210,
+        "countHour" : true,
         "finish": true,
         "project_title": "minishell",
         "introduction": {

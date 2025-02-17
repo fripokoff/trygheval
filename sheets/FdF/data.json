@@ -2,10 +2,12 @@
     "success": true,
     "data": [
       {
-        "id": 8,
-        "status": "active",
+        "id": 9,
         "project_title": "FdF",
-		"finish" : true,
+        "milestone": 3,
+        "hours": 60,
+        "countHour" : false,
+		    "finish" : true,
         "introduction": {
           "EN": "# Introduction\n- Remain polite, courteous, respectful and constructive throughout the evaluation process. The well-being of the community depends on it.\n- Identify with the student or group whose work is evaluated the possible dysfunctions in their project. Take the time to discuss and debate the problems that may have been identified.\n- You must consider that there might be some differences in how your peers might have understood the project's instructions and the scope of its functionalities. Always keep an open mind and grade them as honestly as possible. The pedagogy is useful only and only if the peer-evaluation is done seriously",
           "FR": "# Introduction\n- Restez poli, courtois, respectueux et constructif tout au long du processus d'évaluation. Le bien-être de la communauté en dépend.\n- Identifiez avec l'étudiant ou le groupe dont le travail est évalué les dysfonctionnements possibles dans leur projet. Prenez le temps de discuter et de débattre des problèmes qui ont pu être identifiés.\n- Vous devez considérer qu'il peut y avoir des différences dans la façon dont vos pairs ont compris les instructions du projet et la portée de ses fonctionnalités. Gardez toujours l'esprit ouvert et évaluez-les aussi honnêtement que possible. La pédagogie n'est utile que si l'évaluation par les pairs est faite sérieusement"
@@ -24,8 +26,8 @@
             "url": "fr.subject.pdf"
           },
           {
-            "title": "extras",
-            "url": "https://github.com/ARuzgar/42-Subjects/tree/main/Cursus/FdF/Extras"
+            "title": "Extras",
+            "url": "/Extras"
           }
         ],
         "cursus_id": "1",
