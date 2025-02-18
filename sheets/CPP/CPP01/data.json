@@ -71,7 +71,7 @@
             "FR": "**randomChump**\nIl existe une fonction randomChump() prototypée comme suit : [ void randomChump( std::string name ); ]\nElle doit créer un Zombie sur la pile et le faire s'annoncer.\nIdéalement, le zombie devrait être alloué sur la pile (donc implicitement supprimé à la fin de la fonction). Il peut également être alloué sur le tas, puis supprimé explicitement.\nL'étudiant doit justifier ses choix.\nIl existe des tests pour prouver que tout fonctionne.",
             "EN": "**randomChump**\nThere is a randomChump() function prototyped as: [ void randomChump( std::string name ); ]\nIt should create a Zombie on the stack, and make it announce itself.\nIdeally the zombie should be allocated on the stack (so implicitly deleted at the end of the function). It can also be allocated on the heap and then explicitly deleted.\nThe student must justify their choices.\nThere are tests to prove everything works."
           },
-          "yes_no": false,
+          "yes_no": true,
           "separator": "border-t-4",
           "type": "mandatory"
         },

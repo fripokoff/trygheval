@@ -6,8 +6,8 @@
       "students": 1,
       "milestone": 5,
       "hours": 22,
-      "countHour" : true,
-      "finish" : true,
+      "countHour": true,
+      "finish": true,
       "eval_points": 3,
       "time": 30,
       "id": 16,
@@ -36,8 +36,8 @@
       "mandatorySections": [
         {
           "description": {
-            "FR": "**Ne notez pas l'exercice si vous trouvez :**\n--Une fonction implémentée dans un fichier d'en-tête (sauf pour les fonctions templates).\n--Un Makefile compilant sans les flags demandés et/ou avec autre chose que c++.\n\n**Sélectionnez le flag \"Fonction interdite\" (Forbidden function) si\nvous rencontrez :**\n--L'utilisation d'une fonction \"C\" (*alloc, *printf, free).\n--L'utilisation d'une fonction interdite dans le projet.\n--L'utilisation de \"using namespace <ns_name>\" ou du mot-clé \"friend\".\n--L'utilisation d'une bibliothèque externe, ou de fonctionnalités propres aux versions postérieures à C++98.",
-            "EN": "# Tests préliminaires\n*Si un cas de triche est suspecté, la notation et l'évaluation prennent fin immédiatement. Pour le signaler, sélectionnez le flag \"Cheat\". Faites attention à l'utiliser avec calme, précaution et discernement.*\n\n---\n\n**Prérequis**\nLe code doit compiler avec c++ et les flags -Wall -Wextra -Werror\nPour rappel, ce projet doit suivre le standard C++98. Par conséquent,des fonctions C++11 (ou autre standard) et les containers ne sont PAS attendus.\n\nNe notez pas l'exercice si vous trouvez :\n- Une fonction implémentée dans un fichier d'en-tête (sauf pour les fonctions templates).\n- Un Makefile compilant sans les flags demandés et/ou avec autre chose que c++.\n\nSélectionnez le flag \"Fonction interdite\" (Forbidden function) si vous rencontrez :\n- L'utilisation d'une fonction \"C\" (*alloc, *printf, free).\n- L'utilisation d'une fonction interdite dans le projet.\n- L'utilisation de \"using namespace <ns_name>\" ou du mot-clé \"friend\".\n- L'utilisation d'une bibliothèque externe, ou de fonctionnalités propres aux versions postérieures à C++98"
+            "FR": "# Tests préliminaires\n*Si un cas de triche est suspecté, la notation et l'évaluation prennent fin immédiatement. Pour le signaler, sélectionnez le flag \"Cheat\". Faites attention à l'utiliser avec calme, précaution et discernement.*\n\n---\n\n**Prérequis**\nLe code doit compiler avec c++ et les flags -Wall -Wextra -Werror\nPour rappel, ce projet doit suivre le standard C++98. Par conséquent,des fonctions C++11 (ou autre standard) et les containers ne sont PAS attendus.\n\nNe notez pas l'exercice si vous trouvez :\n- Une fonction implémentée dans un fichier d'en-tête (sauf pour les fonctions templates).\n- Un Makefile compilant sans les flags demandés et/ou avec autre chose que c++.\n\nSélectionnez le flag \"Fonction interdite\" (Forbidden function) si vous rencontrez :\n- L'utilisation d'une fonction \"C\" (*alloc, *printf, free).\n- L'utilisation d'une fonction interdite dans le projet.\n- L'utilisation de \"using namespace <ns_name>\" ou du mot-clé \"friend\".\n- L'utilisation d'une bibliothèque externe, ou de fonctionnalités propres aux versions postérieures à C++98",
+            "EN": "# Preliminary tests\n*If a case of cheating is suspected, the grading and evaluation end immediately. To report it, select the \"Cheat\" flag. Be careful to use it calmly, cautiously and with discernment.*\n\n---\n\n**Prerequisites**\nThe code must compile with c++ and the flags -Wall -Wextra -Werror\nAs a reminder, this project must follow the C++98 standard. Therefore, C++11 (or other standard) functions and containers are NOT expected.\n\nDo not grade the exercise if you find:\n- A function implemented in a header file (except for template functions).\n- A Makefile compiling without the required flags and/or with something other than c++.\n\nSelect the \"Forbidden function\" flag if you encounter:\n- The use of a \"C\" function (*alloc, *printf, free).\n- The use of a function prohibited in the project.\n- The use of \"using namespace <ns_name>\" or the keyword \"friend\".\n- The use of an external library, or features specific to versions later than C++98"
           },
           "yes_no": true,
           "separator": "border-t-4",
@@ -45,8 +45,8 @@
         },
         {
           "description": {
-            "FR": "**Fonctionnement**\nLe but de cet exercice est de développer un to_upper ayant un comportement spécifique si lancé sans paramètre.\nIl doit être résolu avec une approche C++ (string/upper).",
-            "EN": "# Exercice 00 : Megaphone\n*Cet exercice est un échauffement pour découvrir les I/O en C++.*\n\n---\n **Fonctionnement**\nLe but de cet exercice est de développer un to_upper ayant un comportement spécifique si lancé sans paramètre.\nIl doit être résolu avec une approche C++ (string/upper)."
+            "FR": "# Exercice 00 : Megaphone\n*Cet exercice est un échauffement pour découvrir les I/O en C++.*\n\n---\n **Fonctionnement**\nLe but de cet exercice est de développer un to_upper ayant un comportement spécifique si lancé sans paramètre.\nIl doit être résolu avec une approche C++ (string/upper).",
+            "EN": "# Exercise 00: Megaphone\n*This exercise is a warm-up to discover I/O in C++.*\n\n---\n**Functioning**\nThe goal of this exercise is to develop a to_upper with a specific behavior if launched without a parameter.\nIt must be solved with a C++ approach (string/upper)."
           },
           "yes_no": true,
           "separator": "border-t-4",
@@ -54,8 +54,8 @@
         },
         {
           "description": {
-            "FR": "**Gestion d'erreur**\nIl y a un peu de gestion d'erreur à faire dans ce programme mais les comportements ne sont pas précisés dans le sujet. Quitter le programme proprement ou gérer les erreurs est ok. Un segfault ne l'est pas ! :D",
-            "EN": "# Exercice 01 : My Awesome Phonebook\n*Cet exercice est une première approche pour écrire une classe simple et l'utiliser dans un programme interactif. Si l'exercice ne fonctionne pas parfaitement, notez ce qui peut l'être.*\n\n---\n\n**Gestion d'erreur**\nIl y a un peu de gestion d'erreur à faire dans ce programme mais les comportements ne sont pas précisés dans le sujet. Quitter le programme proprement ou gérer les erreurs est ok. Un segfault ne l'est pas ! :D"
+            "FR": "# Exercice 01 : My Awesome Phonebook\n*Cet exercice est une première approche pour écrire une classe simple et l'utiliser dans un programme interactif. Si l'exercice ne fonctionne pas parfaitement, notez ce qui peut l'être.*\n\n---\n\n**Gestion d'erreur**\nIl y a un peu de gestion d'erreur à faire dans ce programme mais les comportements ne sont pas précisés dans le sujet. Quitter le programme proprement ou gérer les erreurs est ok. Un segfault ne l'est pas ! :D",
+            "EN": "# Exercise 01: My Awesome Phonebook\n*This exercise is a first approach to writing a simple class and using it in an interactive program. If the exercise does not work perfectly, note what can be.*\n\n---\n\n**Error management**\nThere is some error management to do in this program but the behaviors are not specified in the subject. Exiting the program cleanly or handling errors is ok. A segfault is not! :D"
           },
           "yes_no": false,
           "separator": false,
@@ -63,8 +63,8 @@
         },
         {
           "description": {
-            "FR": "Notez la commande EXIT en vous basant sur ce qui est demandé dans le sujet.",
-            "EN": "**La commande EXIT**\nNotez la commande EXIT en vous basant sur ce qui est demandé dans le sujet."
+            "FR": "**La commande EXIT**\nNotez la commande EXIT en vous basant sur ce qui est demandé dans le sujet.",
+            "EN": "**The EXIT command**\nGrade the EXIT command based on what is asked in the subject."
           },
           "yes_no": true,
           "separator": "border-t-[0.5px]",
@@ -72,8 +72,8 @@
         },
         {
           "description": {
-            "FR": "--Les attributs de la classe Contact doivent être privés.\n--La classe doit exposer les accesseurs correspondants. Vérifiez également que tout ce qui n'est utilisé que dans une classe (et pas seulement la classe Contact) est privé et le reste public. \n--Les débutants ont tendance à tout mettre en public.\n",
-            "EN": "**Visibilité**\nLes attributs de la classe Contact doivent être privés. La classe doit exposer les accesseurs correspondants. Vérifiez également que tout ce qui n'est utilisé que dans une classe (et pas seulement la classe Contact) est privé et le reste public. Les débutants ont tendance à tout mettre en public.\n\n**C'est ce que vous devez vérifier ici.**"
+            "FR": "**Visibilité**\nLes attributs de la classe Contact doivent être privés. La classe doit exposer les accesseurs correspondants. Vérifiez également que tout ce qui n'est utilisé que dans une classe (et pas seulement la classe Contact) est privé et le reste public. Les débutants ont tendance à tout mettre en public.\n\n**C'est ce que vous devez vérifier ici.**",
+            "EN": "**Visibility**\nThe attributes of the Contact class must be private. The class must expose the corresponding accessors. Also check that everything that is only used in a class (and not just the Contact class) is private and the rest public. Beginners tend to put everything in public.\n\n**This is what you need to check here.**"
           },
           "yes_no": false,
           "separator": "border-t-[0.5px]",
@@ -81,8 +81,8 @@
         },
         {
           "description": {
-            "FR": "--Le code doit inclure une classe Contact (ou autre nom).\n--La classe doit contenir les attributs demandés.\n--Le code doit contenir une classe Phonebook avec un tableau de Contacts à l'intérieur.",
-            "EN": "**La classe Contact et la classe Phonebook**\n- Le code doit inclure une classe Contact (ou autre nom).\n- La classe doit contenir les attributs demandés.\n- Le code doit contenir une classe Phonebook avec un tableau de Contacts à l'intérieur."
+            "FR": "**La classe Contact et la classe Phonebook**\n- Le code doit inclure une classe Contact (ou autre nom).\n- La classe doit contenir les attributs demandés.\n- Le code doit contenir une classe Phonebook avec un tableau de Contacts à l'intérieur.",
+            "EN": "**The Contact class and the Phonebook class**\n- The code must include a Contact class (or other name).\n- The class must contain the requested attributes.\n- The code must contain a Phonebook class with an array of Contacts inside."
           },
           "yes_no": true,
           "separator": "border-t-[0.5px]",
@@ -90,8 +90,8 @@
         },
         {
           "description": {
-            "FR": "--Le programme doit proposer une sorte de boucle read/eval :\n--Lecture puis traitement d'entrée, ensuite attente de nouvelle entrée jusqu'à recevoir une commande EXIT.\n--La boucle devrait être faite de manière C++ (std::cin) !",
-            "EN": "**Boucle de Read/Eval**\nLe programme doit proposer une sorte de boucle read/eval :\n- Lecture puis traitement d'entrée, ensuite attente de nouvelle entrée jusqu'à recevoir une commande EXIT.\n- La boucle devrait être faite de manière C++ (std::cin) !"
+            "FR": "**Boucle de Read/Eval**\nLe programme doit proposer une sorte de boucle read/eval :\n- Lecture puis traitement d'entrée, ensuite attente de nouvelle entrée jusqu'à recevoir une commande EXIT.\n- La boucle devrait être faite de manière C++ (std::cin) !",
+            "EN": "**Read/Eval Loop**\nThe program must offer some kind of read/eval loop:\n- Reading then processing input, then waiting for new input until receiving an EXIT command.\n- The loop should be done in a C++ way (std::cin)!"
           },
           "yes_no": true,
           "separator": "border-t-[0.5px]",
@@ -99,8 +99,8 @@
         },
         {
           "description": {
-            "FR": "Notez la commande ADD en vous basant sur ce qui est demandé dans le sujet.",
-            "EN": "**La commande ADD**\nNotez la commande ADD en vous basant sur ce qui est demandé dans le sujet."
+            "FR": "**La commande ADD**\nNotez la commande ADD en vous basant sur ce qui est demandé dans le sujet.",
+            "EN": "**The ADD command**\nGrade the ADD command based on what is asked in the subject."
           },
           "yes_no": false,
           "separator": "border-t-[0.5px]",
@@ -108,8 +108,8 @@
         },
         {
           "description": {
-            "FR": "--Notez la commande SEARCH en vous basant sur ce qui est demandé dans le sujet.\n--Une légère divergence dans le format attendu n'est pas importante. Cette partie vise à utiliser les \"iomanips\" en C++ et c'est ce sur quoi vous devez vous concentrer.",
-            "EN": "**La commande SEARCH**\nNotez la commande SEARCH en vous basant sur ce qui est demandé dans le sujet. Une légère divergence dans le format attendu n'est pas importante.\nCette partie vise à utiliser les \"iomanips\" en C++ et c'est ce sur quoi vous devez vous concentrer."
+            "FR": "**La commande SEARCH**\nNotez la commande SEARCH en vous basant sur ce qui est demandé dans le sujet. Une légère divergence dans le format attendu n'est pas importante.\nCette partie vise à utiliser les \"iomanips\" en C++ et c'est ce sur quoi vous devez vous concentrer.",
+            "EN": "**The SEARCH command**\nGrade the SEARCH command based on what is asked in the subject. A slight divergence in the expected format is not important.\nThis part aims to use the \"iomanips\" in C++ and that is what you should focus on."
           },
           "yes_no": true,
           "separator": "border-t-4",
@@ -117,8 +117,8 @@
         },
         {
           "description": {
-            "FR": "**Avez-vous sauvé le monde ?**\n--Cet exercice est plutôt simple. Soit Account.cpp marche, soit il ne marche pas.\n--Comparez la sortie du programme avec le fichier de logs fourni.\n--Toute différence (à l'exception des horodatages ou de l'ordre des destructors) signifie que l'exercice est incorrect.",
-            "EN": "# Exercice 02 : Le boulot de vos rêves\n*Le but de cet exercice est de récupérer les informations cachées au milieu du bruit et d'insérer du code dans un contexte existant.*\n\n---\n\n**Avez-vous sauvé le monde ?**\nCet exercice est plutôt simple. Soit Account.cpp marche, soit il ne marche pas.\nComparez la sortie du programme avec le fichier de logs fourni.\nToute différence (à l'exception des horodatages ou de l'ordre des destructors) signifie que l'exercice est incorrect."
+            "FR": "# Exercice 02 : Le boulot de vos rêves\n*Le but de cet exercice est de récupérer les informations cachées au milieu du bruit et d'insérer du code dans un contexte existant.*\n\n---\n\n**Avez-vous sauvé le monde ?**\nCet exercice est plutôt simple. Soit Account.cpp marche, soit il ne marche pas.\nComparez la sortie du programme avec le fichier de logs fourni.\nToute différence (à l'exception des horodatages ou de l'ordre des destructors) signifie que l'exercice est incorrect.",
+            "EN": "# Exercise 02: The job of your dreams\n*The goal of this exercise is to retrieve the information hidden in the middle of the noise and insert code into an existing context.*\n\n---\n\n**Did you save the world?**\nThis exercise is quite simple. Either Account.cpp works, or it doesn't.\nCompare the output of the program with the log file provided.\nAny difference (with the exception of timestamps or the order of destructors) means that the exercise is incorrect."
           },
           "yes_no": true,
           "separator": false,
@@ -146,9 +146,9 @@
       ],
       "languages": [
         "EN",
-    "FR"
+        "FR"
       ],
-      "language": "FR"
+      "language": "EN"
     }
   ],
   "message": "Sheet created successfully"
